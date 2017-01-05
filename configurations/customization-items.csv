@@ -261,8 +261,16 @@ Security-2,1,セキュリティ,独自のルート証明書の自動再登録の
 Security-2,2,,,,自動的に再登録しない（既定）,"1. アドオン「Cert Importer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.certimporter.allowRegisterAgain"", false);",,"lockPref(""extensions.certimporter.allowRegisterAgain"", false);",変更無し,"lockPref(""extensions.certimporter.allowRegisterAgain"", false);"
 Security-3,1,セキュリティ,アドオンのインストールの可否,○,確認の上で許可する（既定）,-,-,,-,,
-Security-3,2,,,,特定サイトのみ許可する,"1. アドオン「Permission Auto Registerer」を導入する
+Security-3,2,,,,特定サイトのみ常に許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する",-,,-,,
+Security-3,5,,,,特定サイトのみ初期状態で許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する","default.permissions:
+host<\t>install<\t>1<\t>http://example.com
+# または
+origin<\t>install<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""permissions.manager.defaultsUrl"", ""file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"");",新規,,,
 Security-3,3,,,,禁止する,"1. アドオン「Disable Addons」を導入する
 2. アドオン「Permission Auto Registerer」を導入する
 3. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.addons.mozilla.org"", ""install=0"");
@@ -274,8 +282,10 @@ lockPref(""extensions.autopermission.sites.getpersonas.com"", ""install=0"");",,
 Security-3,4,,,,禁止するが、設定の変更は許可する,"1. アドオン「Disable Addons」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.disableaddons@clear-code.com.disable.manager"", false);",,"lockPref(""extensions.disableaddons@clear-code.com.disable.manager"", false);",,
 Security-4,1,セキュリティ,広告などのポップアップの表示の可否,○,確認の上で許可する（既定）,-,-,,-,,
-Security-4,2,,,,特定サイトのみ確認無しで許可する,"1. アドオン「Permission Auto Registerer」を導入する
+Security-4,2,,,,特定サイトのみ常に確認無しで許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""popup=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""popup=1"");",,
+Security-4,5,,,,特定サイトのみ初期状態で確認無しで許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する",,,,,
 Security-4,3,,,,すべて確認無しで許可する,MCDで設定を反映する,"lockPref(""dom.disable_open_during_load"", false);",,"lockPref(""dom.disable_open_during_load"", false);",変更無し,"lockPref(""dom.disable_open_during_load"", false);"
 Security-4,4,,,,禁止する,-,"MCDで
 lockPref(""dom.disable_open_during_load"", true);
@@ -1033,6 +1043,14 @@ globalChrome.css:
 Privacy-6,1,プライバシー,Webアプリのオフラインキャッシュの利用の可否,○,確認の上で許可する（既定）,MCDで設定を反映する,"lockPref(""browser.offline-apps.notify"", true);",,"lockPref(""browser.offline-apps.notify"", true);",変更無し,"lockPref(""browser.offline-apps.notify"", true);"
 Privacy-6,2,,,,特定サイトのみ確認なしで許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""offline-app=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""offline-app=1"");",,
+Privacy-6,4,,,,特定サイトのみ初期状態で確認無しで許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する","default.permissions:
+host<\t>offline-app<\t>1<\t>http://example.com
+# または
+origin<\t>offline-app<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""""permissions.manager.defaultsUrl"""", """"file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"""");""",新規,,,
 Privacy-6,3,,,,禁止する,"1. MCDで設定を反映する
 2. アドオン「globalChrome.css」を導入する
 3. globalChrome.cssで設定を反映する","MCD:
@@ -1207,6 +1225,14 @@ lockPref(""network.cookie.lifetimePolicy"", 0);",,"lockPref(""network.cookie.coo
 lockPref(""network.cookie.lifetimePolicy"", 0);",変更無し,"lockPref(""dom.storage.enabled"", true);"
 Privacy-11,2,,,,特定サイトのみ永続的に許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""cookie=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""cookie=1"");",,
+Privacy-11,5,,,,特定サイトのみ初期状態で永続的に許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する","default.permissions:
+host<\t>cookie<\t>1<\t>http://example.com
+# または
+origin<\t>cookie<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""""permissions.manager.defaultsUrl"""", """"file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"""");""",新規,,,
 Privacy-11,3,,,,セッション中のみ許可する,MCDで設定を反映する,"lockPref(""network.cookie.cookieBehavior"", 0);
 lockPref(""network.cookie.lifetimePolicy"", 2);",,"lockPref(""network.cookie.cookieBehavior"", 0);
 lockPref(""network.cookie.lifetimePolicy"", 2);",,
@@ -1218,10 +1244,26 @@ Privacy-12,2,,,,禁止する,MCDで設定を反映する,"lockPref(""dom.storage
 Privacy-13,1,プライバシー,Indexed DBの利用の可否,○,確認の上で許可する（既定）,MCDで設定を反映する,"lockPref(""dom.indexedDB.enabled"", true);",,"lockPref(""dom.indexedDB.enabled"", true);",変更無し,"lockPref(""dom.storage.enabled"", true);"
 Privacy-13,2,,,,特定サイトのみ確認なしで許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""indexedDB=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""indexedDB=1"");",,
+Privacy-13,5,,,,特定サイトのみ初期状態で確認なしで許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する","default.permissions:
+host<\t>indexedDB<\t>1<\t>http://example.com
+# または
+origin<\t>indexedDB<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""""permissions.manager.defaultsUrl"""", """"file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"""");""",新規,,,
 Privacy-13,3,,,,禁止する,MCDで設定を反映する,"lockPref(""dom.indexedDB.enabled"", false);",,"lockPref(""dom.indexedDB.enabled"", false);",変更無し,"lockPref(""dom.storage.enabled"", false);"
 Privacy-14,1,プライバシー,位置情報の利用の可否,○,確認の上で許可する（既定）,MCDで設定を反映する,"lockPref(""geo.enabled"", true);",,"lockPref(""geo.enabled"", true);",変更無し,"lockPref(""geo.enabled"", true);"
 Privacy-14,2,,,,特定サイトのみ確認なしで許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""geo=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""geo=1"");",,
+Privacy-14,4,,,,特定サイトのみ初期状態で確認なしで許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する","default.permissions:
+host<\t>geo<\t>1<\t>http://example.com
+# または
+origin<\t>geo<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""""permissions.manager.defaultsUrl"""", """"file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"""");""",新規,,,
 Privacy-14,3,,,,禁止する,MCDで設定を反映する,"lockPref(""geo.enabled"", false);",,"lockPref(""geo.enabled"", false);",変更無し,"lockPref(""geo.enabled"", false);"
 Privacy-15,1,プライバシー,検索結果のローカライズ用地域コードの位置情報に基づく推定の可否,-,許可する（既定）,-,-,,-,,
 Privacy-15,2,,,,禁止する,MCDで設定を反映する,"lockPref(""browser.search.geoip.url"", """");",,"lockPref(""browser.search.geoip.url"", """");",,
@@ -2394,6 +2436,14 @@ Script-2,1,Webアプリの動作,プッシュ通知の可否,○,確認の上で
 lockPref(""dom.serviceWorkers.enabled"", true);",○,"lockPref(""dom.push.enabled"", true);",,
 Script-2,2,,,,特定サイトのみ確認なしで許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""push=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""push=1"");",,
+Script-2,4,,,,特定サイトのみ初期状態で確認なしで許可する,"1. 「default.permissions」を作成する
+2. MCDで設定を反映する","default.permissions:
+host<\t>push<\t>1<\t>http://example.com
+# または
+origin<\t>push<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""""permissions.manager.defaultsUrl"""", """"file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"""");""",新規,,,
 Script-2,3,,,,禁止する（ESR版・既定 ※MCDの設定のみ既定。globalChrome.cssの設定は別途必要。）,"1. MCDで設定を反映する
 2. アドオン「globalChrome.css」を導入する
 3. globalChrome.cssで設定を反映する","MCD:
