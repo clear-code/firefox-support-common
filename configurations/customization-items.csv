@@ -285,7 +285,13 @@ Security-4,1,セキュリティ,広告などのポップアップの表示の可
 Security-4,2,,,,特定サイトのみ常に確認無しで許可する,"1. アドオン「Permission Auto Registerer」を導入する
 2. MCDで設定を反映する","lockPref(""extensions.autopermission.sites.(site)"", ""popup=1"");",,"lockPref(""extensions.autopermission.sites.(site)"", ""popup=1"");",,
 Security-4,5,,,,特定サイトのみ初期状態で確認無しで許可する,"1. 「default.permissions」を作成する
-2. MCDで設定を反映する",,,,,
+2. MCDで設定を反映する","default.permissions:
+host<\t>popup<\t>1<\t>http://example.com
+# または
+origin<\t>popup<\t>1<\t>http://example.com
+
+MCD:
+lockPref(""""permissions.manager.defaultsUrl"""", """"file://\C:/Program Files (x86)/Mozilla%20Firefox/defaults/default.permissions"""");""",,,,
 Security-4,3,,,,すべて確認無しで許可する,MCDで設定を反映する,"lockPref(""dom.disable_open_during_load"", false);",,"lockPref(""dom.disable_open_during_load"", false);",変更無し,"lockPref(""dom.disable_open_during_load"", false);"
 Security-4,4,,,,禁止する,-,"MCDで
 lockPref(""dom.disable_open_during_load"", true);
