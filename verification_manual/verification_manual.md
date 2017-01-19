@@ -153,7 +153,7 @@
 
 - Application-1-3 
 
-- Appliaction-2-3 
+- Application-2-3 
 
 - Application-6-\* 
 
