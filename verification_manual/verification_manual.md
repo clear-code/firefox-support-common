@@ -427,7 +427,7 @@
 
         1. ブックマークツールバー上に既定の項目が作成されていない。(Startup-5-2) 
 
-12. ロケーションバーに「 https://www.mozilla.org/ja/firefox/44.0/tour/ 」と入力し、ページを開く。(Startup-8-\*) 
+12. ロケーションバーに「 https://www.mozilla.org/ja/firefox/{{meta_installer_version}}/tour/ 」と入力し、ページを開く。(Startup-8-\*) 
 
     - 確認方法 
 
