@@ -348,7 +348,7 @@
 
     1. Disable about:config 
 
-    2. globalChrone.css 
+    2. globalChrome.css 
 
 ### 3.1.3 検証
 
@@ -446,7 +446,7 @@
 
 15. Firefoxを終了し、以下のアドオンを有効化する。 
 
-    - globalChrone.css 
+    - globalChrome.css 
 
 16. Firefoxを起動し、パネルメニューを開き、パネルメニュー内の「オプション」をクリックする。
      
@@ -464,7 +464,7 @@
 
     1. Disable about:config 
 
-    2. globalChrone.css 
+    2. globalChrome.css 
 
 ## 3.2 アドオンの署名確認の無効化
 
