@@ -368,6 +368,7 @@
 {{#Startup-6}} - Startup-6-\* {{/Startup-6}}
 {{#Startup-7}} - Startup-7-\* {{/Startup-7}}
 {{#Startup-8}} - Startup-8-\* {{/Startup-8}}
+{{#Startup-10-2}} - Startup-10-2 {{/Startup-10-2}}
 {{#Update-4-2}} - Update-4-2 {{/Update-4-2}}
 
 ### 準備
@@ -431,6 +432,9 @@
 {{#Startup-4-2}}
         1. `browser.startup.homepage_override.mstone` の値が `ignore` である。(Startup-4-2)
 {{/Startup-4-2}}
+{{#Startup-10-2}}
+        1. `media.hardware-video-decoding.failed` の値が `true` に設定されている。(Startup-10-2)
+{{/Startup-10-2}}
 {{#Admin-3}}
 1. 詳細設定において、`extensions.lastAppVersion` を `1.0` に変更する。
 1. Firefoxを再起動する。
