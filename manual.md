@@ -24,10 +24,12 @@
   {{/install_path_32bit}}
   とする。
 - デスクトップのショートカットは  
-  `{{desktop_shortcut_path}}`  
+  `{{desktop_shortcut_path}}`  {{#desktop_shortcut_path_32bit}}
+  （32bit環境では `{{desktop_shortcut_path_32bit}}`）  {{/desktop_shortcut_path_32bit}}
   に作成するものとする。
 - スタートメニューのショートカットは  
-  `{{start_menu_shortcut_path}}`  
+  `{{start_menu_shortcut_path}}`  {{#start_menu_shortcut_path_32bit}}
+  （32bit環境では `{{start_menu_shortcut_path_32bit}}`）  {{/start_menu_shortcut_path_32bit}}
   に作成するものとする。
 - 検証環境のWindowsは以下の状態を整えておく。
     - ワークグループ名： `ワークグループ`（日本語名）
@@ -1130,7 +1132,7 @@
 
 ### 検証
 
-1. `{{desktop_shortcut_path}}` がある場合はそれを、なければ{{exe_name}}.exeをダブルクリックしてFirefoxを起動する。
+1. `{{desktop_shortcut_path}}` {{#desktop_shortcut_path_32bit}}（32bit環境では `{{desktop_shortcut_path_32bit}}`）{{/desktop_shortcut_path_32bit}} がある場合はそれを、なければ{{exe_name}}.exeをダブルクリックしてFirefoxを起動する。
 {{#Admin-2-1}}
 1. アドオンを有効化した上で、Firefoxを再起動する。
 {{/Admin-2-1}}
