@@ -325,21 +325,23 @@
 1. デスクトップのショートカットのプロパティを開く。
     - 確認項目
         1. 作業フォルダが `"（Firefoxの実行ファイルがあるフォルダパス）"` である。（Application-1-3）
-        2. 「リンク先」末尾にプロファイルを指定するオプションが設定されている。（Application-1-3）
+{{#Application-6-2}}
+        2. 「リンク先」末尾にプロファイルを指定する以下のオプションが設定されている。（Application-1-3）
             ```
-            -profile {{special_profile_path}}\{{special_profile_name}}
             -p {{special_profile_name}}
             ```
+{{/Application-6-2}}
 {{/Application-1-3}}
 {{#Application-2-3}}
 1. スタートメニューのショートカットのプロパティを開く。
     - 確認項目
         1. 作業フォルダが `"（Firefoxの実行ファイルがあるフォルダパス）"` である。（Application-2-3）
-        2. 「リンク先」末尾にプロファイルを指定するオプションが設定されている。（Application-2-3）
+{{#Application-6-2}}
+        2. 「リンク先」末尾にプロファイルを指定する以下のオプションが設定されている。（Application-6-2）
             ```
-            -profile {{special_profile_path}}\{{special_profile_name}}
             -p {{special_profile_name}}
             ```
+{{/Application-6-2}}
 {{/Application-2-3}}
 {{#Application-6-2}}
 1. Windowsエクスプローラを開き、アドレスバーに`{{special_profile_path}}\{{special_profile_name}}` と入力してEnterを押す。

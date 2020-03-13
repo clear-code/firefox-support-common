@@ -120,7 +120,7 @@ Application-6: プロファイルの位置
     [desktop-shortcut]
     Name="Mozilla Firefox"
     Path=%AppDir%/firefox.exe
-    Options=-profile X:\Path\To\RootDir\Profiles\NameOfProfile
+    Options=-p NameOfProfile
     TargetUser=all
     TargetLocation=C:/Users/Public/Desktop/
 
