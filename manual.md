@@ -326,7 +326,7 @@
     - 確認項目
         1. 作業フォルダが `"（Firefoxの実行ファイルがあるフォルダパス）"` である。（Application-1-3）
 {{#Application-6-2}}
-        2. 「リンク先」末尾にプロファイルを指定する以下のオプションのうち、fainstall.iniの指定と一致する物が設定されている。（Application-1-3）
+        2. 「リンク先」末尾にプロファイルを指定する以下のオプションのうち、fainstall.iniの指定と一致する物が設定されている。（Application-6-2）
             ```
             -p {{special_profile_name}}
             ```
