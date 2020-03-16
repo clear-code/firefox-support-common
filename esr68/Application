@@ -121,6 +121,10 @@ Application-6: プロファイルの位置
     Name="Mozilla Firefox"
     Path=%AppDir%/firefox.exe
     Options=-p NameOfProfile
+    ;;フルパス指定の場合は以下の通り
+    ;;（フォルダ名をプロファイル名と一致させているため、
+    ;;「-p NameOfProfile」と等価に扱われる）
+    ;Options=-profile X:/Path/To/RootDir\NameOfProfile
     TargetUser=all
     TargetLocation=C:/Users/Public/Desktop/
 
