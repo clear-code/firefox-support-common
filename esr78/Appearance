@@ -178,3 +178,42 @@ Appearance-11: 「新着情報」の通知の表示
     GPO:
     カテゴリ「Firefox」→「User Messaging」
     → 「What's New」を無効化（設定値の固定は不可能）
+
+Appearance-12: 「ホーム」ボタンの表示
+
+    :1: 表示する
+
+    distribution\policies.json:
+    "ShowHomeButton": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Show Home button on toolbar」を有効化（設定値の固定は不可能）
+
+    :2: 表示しない（既定）
+
+    -
+
+Appearance-13: 「ローカルワンオフ検索」ショートカットの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    *.cfg / *.jsc:
+    lockPref("browser.browser.urlbar.shortcuts.bookmarks", false);
+    lockPref("browser.browser.urlbar.shortcuts.history", false);
+    lockPref("browser.browser.urlbar.shortcuts.tab", false);
+
+Appearance-14: UIの表示言語の変更・カスタマイズの可否
+
+    :1: 許可する
+
+    -
+
+    :2: 禁止する
+
+    *.cfg / *.jsc:
+    lockPref("extensions.getAddons.langpacks.url", "");
