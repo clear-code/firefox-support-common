@@ -88,13 +88,13 @@ Download-2: ファイルの既定のダウンロード先
 
 Download-3: ファイルのダウンロード先ディレクトリの制御
 
-    :1: 全体で共通のディレクトリにダウンロードする（既定）
+    :1: 全体で共通のディレクトリにダウンロードする
 
     *.cfg / *.jsc:
     lockPref("browser.download.useDownloadDir", true);
     lockPref("browser.download.lastDir.savePerSite", false);
 
-    :2: サイトごとにダウンロード先ディレクトリを保持する
+    :2: サイトごとにダウンロード先ディレクトリを保持する（既定）
 
     *.cfg / *.jsc:
     lockPref("browser.download.useDownloadDir", true);
