@@ -314,6 +314,7 @@ def create_template(manual, config, vars):
     vars['use_meta_installer'] = vars['use_meta_installer'] == 'true'
     vars['desktop_shortcut'] = vars['desktop_shortcut'] == 'true'
     vars['start_menu_shortcut'] = vars['start_menu_shortcut'] == 'true'
+    vars['show_bookmarks_toolbar_on_startup'] = False
 
     for items in manual.values():
         for item in items[1:]:
@@ -364,6 +365,12 @@ def create_template(manual, config, vars):
     vars['not DisabledStatistics'] = not vars['DisabledStatistics']
 
     vars['PromptForDownloadLocation'] = vars['Download_3_4']
+
+    missing_any_of_startup_2 = not any([vars['Startup_2_1'],
+                                        vars['Startup_2_4'],
+                                        vars['Startup_2_5'],
+                                        vars['Startup_2_6']])
+    vars['show_bookmarks_toolbar_on_startup'] = (vars['Startup_2_1'] or missing_any_of_startup_2) and vars['Appearance_5_2']
 
     chapters                  = {}
     chapter_options           = []

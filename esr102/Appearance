@@ -98,6 +98,9 @@ Appearance-5: 初期状態でのブックマークツールバーの表示
 
     :2: 表示しない
 
+    // Startup-2の選択肢をいずれも選択していない場合、about:homeが新規タブ扱いされるため
+    // 起動直後はブックマークツールバーが表示される仕様。
+    // 任意のサイトにアクセスしてブックマークツールバーが表示されなければ期待通り
     distribution\policies.json:
     "DisplayBookmarksToolbar": false,
 
