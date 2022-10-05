@@ -595,8 +595,14 @@ Network-28: 古いバージョンのTLS(1.0/1.1)での3DESの使用
 
     // TLS1.0/1.1で通信するときに3DESが使えるようにするにはNetwork-17-1,Network-17-2でTLS1.0/1.1を
     // 許可するだけでは不十分で以下の設定を併用して明示的に有効化する必要がある
-    *.cfg / *.jsc:
-    lockPref("security.tls.version.enable-deprecated", true);
+    distribution\policies.json:
+    "Preferences": {
+      "security.tls.version.enable-deprecated": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
 
     GPO:
     カテゴリ「Firefox」
