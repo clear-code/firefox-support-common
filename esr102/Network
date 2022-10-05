@@ -370,6 +370,7 @@ Network-17: 脆弱なバージョンのTLSの使用
 
     :1: TLS 1.0/1.1の使用を許可する
 
+    // 暗号スイートとして3DESが必要ならNetwork-28を併用する
     distribution\policies.json:
     "SSLVersionMin": "tls1",
 
@@ -379,6 +380,7 @@ Network-17: 脆弱なバージョンのTLSの使用
 
     :2: 特定バージョン以上のTLSの使用を強制
 
+    // 暗号スイートとして3DESが必要ならNetwork-28を併用する
     distribution\policies.json:
     "SSLVersionMin": "tls1.1", // "tls1", "tls1.1", "tls1.2", "tls1.3" のいずれか
 
@@ -582,6 +584,23 @@ Network-27: 古いバージョンのTLS以外での3DESの使用
     カテゴリ「Firefox」
     →「Disabled Ciphers」
     →「TLS_RSA_WITH_3DES_EDE_CBC_SHA」を無効化
+
+    :2: 禁止する（既定）
+
+    -
+
+Network-28: 古いバージョンのTLS(1.0/1.1)での3DESの使用
+
+    :1: 許可する
+
+    // TLS1.0/1.1で通信するときに3DESが使えるようにするにはNetwork-17-1,Network-17-2でTLS1.0/1.1を
+    // 許可するだけでは不十分で以下の設定を併用して明示的に有効化する必要がある
+    *.cfg / *.jsc:
+    lockPref("security.tls.version.enable-deprecated", true);
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: 禁止する（既定）
 

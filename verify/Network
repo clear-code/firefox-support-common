@@ -450,3 +450,17 @@ Network-27: 古いバージョンのTLS以外での3DESの使用
     ABOUT_CONFIG
 
     - `security.ssl3.deprecated.rsa_des_ede3_sha` の値が `true` である。
+
+Network-28: 古いバージョンのTLS(1.0/1.1)での3DESの使用
+
+    :1: 許可する
+
+    ABOUT_CONFIG
+
+    - `security.tls.version.enable-deprecated` の値が `true` である。
+
+    :2: 禁止する（既定）
+
+    ABOUT_CONFIG
+
+    - `security.tls.version.enable-deprecated` の値が `false` である。
