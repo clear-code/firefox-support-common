@@ -113,12 +113,6 @@ Performance-5: GCの実行頻度
     // 初期値は100。
     lockPref("javascript.options.mem.gc_high_frequency_low_limit_mb", 100);
     
-    // GCを行うしきい値となるゾーンごとのGC対象のメモリ使用量（単位：MB）。
-    // 数値を小さくする事で、より頻繁にGCが実行されるようになり、
-    // パフォーマンス低下と引き替えにメモリ使用量を削減できると考えられる。
-    // 初期値は128。
-    lockPref("javascript.options.mem.high_water_mark", 16);
-
 Performance-6: 同時に開けるタブの個数を制限する
 
     :1: 制限しない。（既定）
