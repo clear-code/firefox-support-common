@@ -74,6 +74,14 @@ Performance-5: GCの実行頻度
     ABOUT_CONFIG
 
     {%if use_browser_cache_check_doc_frequency %}- `browser.cache.check_doc_frequency` の値が指定値の通りである。{% else %}- `javascript.options.mem.gc_allocation_threshold_mb` の値が指定値の通りである。{% endif %}
+    {%if ui_prefersReducedMotion %}- `ui.prefersReducedMotion` の値が{{ ui_prefersReducedMotion }}である。{% endif %}
+    {%if general_smoothScroll %}- `general.smoothScroll` の値が{{ general_smoothScroll }}である。{% endif %}
+    {%if browser_sessionstore_interval %}- `browser.sessionstore.interval` の値が{{ browser_sessionstore_interval }}である。{% endif %}
+    {%if javascript_options_mem_gc_allocation_threshold_mb %}- `javascript.options.mem.gc_allocation_threshold_mb` の値が{{ javascript_options_mem_gc_allocation_threshold_mb }}である。{% endif %}
+    {%if javascript_options_mem_gc_high_frequency_small_heap_growth %}- `javascript.options.mem.gc_high_frequency_small_heap_growth` の値が{{ javascript_options_mem_gc_high_frequency_small_heap_growth }}である。{% endif %}
+    {%if javascript_options_mem_gc_high_frequency_large_heap_growth %}- `javascript.options.mem.gc_high_frequency_large_heap_growth` の値が{{ javascript_options_mem_gc_high_frequency_large_heap_growth }}である。{% endif %}
+    {%if javascript_options_mem_gc_large_heap_size_min_mb %}- `javascript.options.mem.gc_large_heap_size_min_mb` の値が{{ javascript_options_mem_gc_large_heap_size_min_mb }}である。{% endif %}
+    {%if javascript_options_mem_gc_small_heap_size_max_mb %}- `javascript.options.mem.gc_small_heap_size_max_mb` の値が{{ javascript_options_mem_gc_small_heap_size_max_mb }}である。{% endif %}
 
 Performance-6: 同時に開けるタブの個数を制限する
 
