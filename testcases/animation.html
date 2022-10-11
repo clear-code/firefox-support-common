@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <style type="text/css">
+      .animation {
+          animation: pulse 1s linear infinite both;
+          background-color: #306;
+          color: #fff;
+          padding: 1em;
+          border-radius: 1em;
+      }
+
+      /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+      @media (prefers-reduced-motion) {
+          .animation {
+              animation-name: dissolve;
+          }
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        25% { transform: scale(.9); }
+        50% { transform: scale(1); }
+        75% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+
+      @keyframes dissolve {
+        0% { opacity: 1; }
+        50% { opacity: 0.8; }
+        100% { opacity: 1; }
+      }
+    </style>
+    <title>prefers-reduced-motion - examples - code sample</title>
+  </head>
+  <body>
+    <section>
+      <h2>ui.prefersReducedMotion</h2>
+      <p>
+        See <a href="https://developer.mozilla.org/ja/docs/Web/CSS/@media/prefers-reduced-motion">https://developer.mozilla.org/ja/docs/Web/CSS/@media/prefers-reduced-motion</a>
+        As ui.prefersReducedMotion is set to 0, so pulse animation is enabled by default.
+        If ui.prefersReducedMotion is set to 1, dissolve will be applied.
+      </p>
+      <div class="animation">animated box</div>
+    </section>
+  </body>
+</html>
