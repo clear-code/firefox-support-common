@@ -69,8 +69,8 @@ Performance-5: GCの実行頻度
     *.cfg / *.jsc:
     //セッションごとにページの更新を確認する。
     lockPref("browser.cache.check_doc_frequency", 0);
-    //アニメーションの無効化
-    lockPref("toolkit.cosmeticAnimations.enabled", false);
+    // 拡大縮小等の過剰なアニメーションを抑制する
+    lockPref("ui.prefersReducedMotion", 1);
     //スムーズスクロールの無効化
     lockPref("general.smoothScroll", false);
     ////セッション復元のための保存間隔の設定
