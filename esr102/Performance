@@ -85,33 +85,33 @@ Performance-5: GCの実行頻度
     // 初期値は30。
     lockPref("javascript.options.mem.gc_allocation_threshold_mb", 3);
     
-    // 高頻度でGCとメモリ領域の確保が実行される場面での、最大の
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より小さい場合の
     // メモリ確保増加量（パーセンテージ）。
     // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
     // 削減できる可能性がある。
     // 初期値は300。
-    lockPref("javascript.options.mem.gc_high_frequency_heap_growth_max", 150);
+    lockPref("javascript.options.mem.gc_high_frequency_small_heap_growth", 150);
     
-    // 高頻度でGCとメモリ領域の確保が実行される場面での、最小の
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より小さい場合の
     // メモリ確保増加量（パーセンテージ）。
     // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
     // 削減できる可能性がある。
     // 初期値は150。
-    lockPref("javascript.options.mem.gc_high_frequency_heap_growth_min", 150);
+    lockPref("javascript.options.mem.gc_high_frequency_large_heap_growth", 150);
     
-    // 高頻度でGCとメモリ領域の確保が実行される場面での、最大の
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より大きい場合の最小の
     // メモリ確保増加量（単位：MB）。
     // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
     // 削減できる可能性がある。
     // 初期値は500。
-    lockPref("javascript.options.mem.gc_high_frequency_high_limit_mb", 100);
+    lockPref("javascript.options.mem.gc_large_heap_size_min_mb", 100);
     
-    // 高頻度でGCとメモリ領域の確保が実行される場面での、最小の
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より小さい場合の最大の
     // メモリ確保増加量（単位：MB）。
     // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
     // 削減できる可能性がある。
     // 初期値は100。
-    lockPref("javascript.options.mem.gc_high_frequency_low_limit_mb", 100);
+    lockPref("javascript.options.mem.gc_small_heap_size_max_mb", 100);
     
 Performance-6: 同時に開けるタブの個数を制限する
 
