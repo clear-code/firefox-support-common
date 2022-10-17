@@ -424,7 +424,8 @@ Security-15: その他、バックグラウンドで行われる外部への通�
                  - `https://safebrowsing.googleapis.com/v4/～`
                  - `https://shaver.services.mozila.com/～`
                  - `ocsp.pki.goog`
-                 - `ocsp.digicert.com`{% endif %}{%if not Script_2_3 %}
+                 - `ocsp.digicert.com`
+                 - `r3.o.lencr.org`{% endif %}{%if not Script_2_3 %}
              - プッシュ通知のための通信、およびそれに関連するOCSPの通信
                  - `push.services.mozilla.com` など{% endif %}{%if not DisabledSponsoredTopSites %}
              - トップサイトの情報取得のための通信
