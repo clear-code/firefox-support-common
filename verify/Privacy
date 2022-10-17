@@ -1712,8 +1712,10 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
       `https://piro.sakura.ne.jp/test/iframe-referrer-policy-unsafe-url.html` \
       を開く。
     - **確認**
-        1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/` \
+        - `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/` \
            とオリジンのみが表示される。
+    - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
+        - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `true` で固定されている。
     {% endif %}
 
     :2: クロスオリジンで情報が通知されるような形でのポリシーの緩和を許可する
