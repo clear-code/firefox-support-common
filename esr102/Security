@@ -1329,7 +1329,7 @@ Security-46: CRLiteの使用
 
 Security-47: OSの証明書ストアのクライアント証明書の利用
 
-    :1: 使用する
+    :1: 使用する（既定）
 
     distribution\policies.json:
     "Preferences": {
@@ -1344,9 +1344,20 @@ Security-47: OSの証明書ストアのクライアント証明書の利用
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :2: 使用しない（既定）
+    :2: 使用しない
 
-    -
+    distribution\policies.json:
+    "Preferences": {
+      "security.osclientcerts.autoload": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Security-48: クロスオリジンでのCookieの設定を初期状態で許可する
 
