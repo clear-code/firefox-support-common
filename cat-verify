@@ -373,6 +373,8 @@ def create_template(manual, config, vars):
     vars['show_bookmarks_toolbar_on_startup'] = (vars['Startup_2_1'] or missing_any_of_startup_2) and vars['Appearance_5_2']
 
     vars['show_home_button'] = (vars['Startup_2_4'] or vars['Startup_2_5']) or vars['Appearance_12_1']
+    if vars['Appearance_12_2']:
+        vars['show_home_button'] = False
 
     chapters                  = {}
     chapter_options           = []
