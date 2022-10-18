@@ -37,6 +37,7 @@ Startup-2: 起動時のホームページの指定
 
     :5: 管理者が指定し、変更を許可
 
+    // Homepageを指定するとHomeボタンが表示されるようになる(Apperance-12に影響する)
     distribution\policies.json:
     "Homepage": {
       "URL": "http://example.com",

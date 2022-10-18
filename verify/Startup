@@ -41,7 +41,7 @@ Startup-2: 起動時のホームページの指定
     - **確認**
         - 起動直後に {%if home_page %}{{home_page}} （またはそのリダイレクト先）{% else %}空白ページ{% endif %}が表示される。
     - 任意のWebページ（例： `http://example.com/` ）を開く。
-    {%if not Appearance_12_1 %}
+    {%if not show_home_button %}
     - ツールバーをカスタマイズし、「ホーム」ボタンを表示させる。
     {% endif %}
     - Webページ内のリンクをドラッグし、ツールバー上の「ホーム」ボタンにドロップする。

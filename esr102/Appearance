@@ -209,6 +209,8 @@ Appearance-12: 「ホーム」ボタンの表示
 
     :1: 表示する
 
+    // Startup-2-4,Startup-2-5を選択すると自動的にこの挙動になる
+    // ただし、Appearance-12-2を明示的に選択して表示させないようにすることもできる
     distribution\policies.json:
     "ShowHomeButton": true,
 
