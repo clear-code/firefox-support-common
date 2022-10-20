@@ -258,14 +258,14 @@ Script-13: サンドボックス化されたiframeの自動ダウンロードの
     :1: ブロックする（既定）
 
     - Firefoxを起動する。
-    - テストケースの`https://cr.kungfoo.net/yao/downloads/auto_download_in_sandbox.html` を開く。
+    - テストケースの`block_allow_downloads.html` を開く。
     - **確認**
       - ダウンロードが自動的に開始しない。
 
     :2: ブロックしない
 
     - Firefoxを起動する
-    - テストケースの`https://cr.kungfoo.net/yao/downloads/auto_download_in_sandbox.html` を開く。
+    - テストケースの`block_allow_downloads.html` を開く。
     - **確認**
       - ダウンロードが自動的に開始する。
 
