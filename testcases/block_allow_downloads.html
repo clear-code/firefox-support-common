@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <h1>Script-13: Check whether allow-downloads is allowed?</h1>
+    <div>
+      <p>
+        The value of sandbox attribute is set to empty "", then
+      .mar file will be BLOCKED automatically.
+      </p>
+      <p>
+        This behavior is changed whether <tt>dom.block_download_insecure</tt>
+        is set to true or false. (true by default)
+      </p>
+      <p>
+        See https://developer.mozilla.org/ja/docs/Web/HTML/Element/iframe.
+      </p>
+    </div>
+    <div>
+      <iframe src="https://ftp.mozilla.org/pub/firefox/releases/102.0esr/update/win64/ja/firefox-91.10.0esr-102.0esr.partial.mar"
+              sandbox=""></iframe>
+      </div>
+  </body>
+</html>
