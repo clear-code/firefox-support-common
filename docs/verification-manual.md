@@ -66,23 +66,6 @@ Admin-0: 管理用設定の検証
 選択した項目は、`カテゴリ名_番号_選択肢の番号`というように変数が定義されるため、
 `{%if Security_3_3 %}`などとして、選択されたときのみ有効な検証手順を記述することができます。
 
-### 特定の条件を満たす変数を定義する
-
-設定項目の組み合わせによっては、検証手順を生成するプログラム側で条件を定義したほうがすっきり書ける場合があります。
-
-その場合には、[cat-verify](../cat-verify)の`def create_template`あたりに`vars`定義を追加します。
-
-例えば、Homeボタンを表示するかどうかは、起動時のホームページ設定がなされているか、`ShowHomeButton`ポリシーを有効にしていれば表示しますが、
-`ShowHomeButton`が明示的に無効にされていれば表示しません。
-
-```
-vars['show_home_button'] = (vars['Startup_2_4'] or vars['Startup_2_5']) or vars['Appearance_12_1']
-    if vars['Appearance_12_2']:
-        vars['show_home_button'] = False
-```
-
-そこで上記のように`show_home_button`を定義しておけば、検証手順を記述するときに`{%if show_home_button %}`とすっきり記述できます。
-
 ### 検証手順を独立した章にまとめる場合
 
 通常検証手順はカテゴリごとにまとめられますが、次の独立した章にまとめることもできます。
@@ -116,7 +99,26 @@ ABOUT_POLICIES
 - about:policiesを使って設定値による確認を行いたい場合に記載
 ```
 
-### 検証環境の構築について
+## FAQ
+
+### 特定の条件を満たす変数を定義する方法
+
+設定項目の組み合わせによっては、検証手順の記述側ではなく、検証手順を生成するプログラム側で条件を定義したほうがすっきり書ける場合があります。
+
+その場合には、[cat-verify](../cat-verify)の`def create_template`あたりに`vars`定義を追加します。
+
+例えば、Homeボタンを表示するかどうかは、起動時のホームページ設定がなされているか、`ShowHomeButton`ポリシーを有効にしていれば表示しますが、
+`ShowHomeButton`が明示的に無効にされていれば表示しません。
+
+```
+vars['show_home_button'] = (vars['Startup_2_4'] or vars['Startup_2_5']) or vars['Appearance_12_1']
+    if vars['Appearance_12_2']:
+        vars['show_home_button'] = False
+```
+
+そこで上記のように`show_home_button`を定義しておけば、検証手順を記述するときに`{%if show_home_button %}`とすっきり記述できます。
+
+### 検証環境を構築する方法
 
 カスタマイズしたメタインストーラーの検証は`terraform`を用いて検証環境を構築する。
 [verify/terraform](../verify/terraform)配下に各種バージョンごとの雛形が用意されている。
