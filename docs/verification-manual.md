@@ -115,3 +115,37 @@ ABOUT_POLICIES
 
 - about:policiesを使って設定値による確認を行いたい場合に記載
 ```
+
+### 検証環境の構築について
+
+カスタマイズしたメタインストーラーの検証は`terraform`を用いて検証環境を構築する。
+[verify/terraform](../verify/terraform)配下に各種バージョンごとの雛形が用意されている。
+
+あらかじめ次の値を設定しておけば、makeを実行するだけでインスタンスを立ち上げることができる。
+
+```
+export ARM_SUBSCRIPTION_ID=""
+export ARM_TENANT_ID=""
+export ARM_CLIENT_ID=""
+export ARM_CLIENT_SECRET=""
+```
+
+上記を取得するのに必要な情報は、サブスクリプションIDをもとに、AzureのCloud Shellでコマンドを実行することにより取得できる。
+
+```
+export SUBSCRIPTION_ID=""
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/${SUBSCRIPTION_ID}"
+```
+
+なお、検証対象となる環境に変更があったときなど、Windows 10のどのSKUを指定できるかは次のコマンドで調べられる。
+
+```
+az vm image list-skus --location japaneast --publisher MicrosoftWindowsDesktop --offer Windows-10
+```
+
+対象がWindows Serverの場合は次のコマンドで調べられる。
+
+```
+az vm image list-skus --location japaneast --publisher MicrosoftWindowsServer --offer WindowsServer
+```
+
