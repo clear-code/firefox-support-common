@@ -92,9 +92,29 @@ Admin-1: 管理者による設定の制御
 
 なお、既定の選択肢には`(既定)`を明記し、その適用する値には`-`を記述し、実際の設定ファイルには反映しない。
 
+# FAQ
+
 ## 検証手順書対応番号が省略になっている場合
 
 設定ファイルを更新して、設定シートを生成しなおしたが検証手順書対応番号が「省略」となっていて
 期待通りに番号が振られない場合には、対象項目と章番号をひもづけるverify-targets-to-chapters.csvが古いせいの場合がある。
 
 その場合、CSVを削除し再度生成しなおすと解消する。
+
+## MCDからポリシーのPreferencesに移行したが反映されない
+
+従来autoconfig.cfgで設定を反映していたものをPreferencesポリシーに移行する際、
+設定が反映されないということがある。
+
+記述の誤り等がない場合、あるいはabout:policiesのエラーに何も表示されていない場合には、Preferencesに指定可能な
+ものかを確認するとよい。
+
+Preferencesポリシーでは設定可能な項目が制限されているためである。
+
+* [Preferencesポリシーに指定可能なもの(mozilla-central)](https://searchfox.org/mozilla-central/source/browser/components/enterprisepolicies/Policies.sys.mjs#1682-1727)
+* [ESR102の場合のPreferencesポリシーに指定可能なもの](https://searchfox.org/mozilla-esr102/source/browser/components/enterprisepolicies/Policies.jsm#1675-1721)
+
+なお、Policies.jsmだったのはESR102までで、最近のバージョンではjsmはsys.mjsに変更されている。
+
+
+
