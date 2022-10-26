@@ -294,7 +294,7 @@ PRETEXT_OPTION_MATCHER = re.compile('^[^-]+-0-[0-9]+\Z')
 LIST_ITEM_MATCHER = re.compile('^(\s*)(- )?(.*[^\\\\])$', re.MULTILINE)
 LIST_LINE_MATCHER = re.compile('^(\s*)(- )?(.+)$', re.MULTILINE)
 
-def create_template(manual, config, vars):
+def create_template(manual, config, vars, options):
     items_options               = []
     items_about_config          = []
     items_about_policies        = []
@@ -490,8 +490,15 @@ def create_template(manual, config, vars):
             else:
                 suffix = ' (%s)' % (option_id)
             config_list.append(re.sub(LIST_LINE_MATCHER, '\\1    \\2\\3', re.sub(LIST_ITEM_MATCHER, '\\1\\2\\3 %s' % (suffix), text)))
-        config_list.sort()
-        template += '\n'.join(config_list)
+        if options['sort-about-config'] == 'pref':
+            config_list.sort()
+            template += '\n'.join(config_list)
+        elif options['sort-about-config'] == 'option':
+            # Align by Install, Application, Admin...
+            for key in chapter_about_config:
+                for line in config_list:
+                    if re.search('\(%s\s?' % key, line):
+                        template += '\n'.join(config_list)
         template += TEMPLATE_ABOUT_CONFIG_END
         template += '\n'
         chapters['%s' % (first_level_chapter)] = chapter_about_config
@@ -585,11 +592,13 @@ def usage(err):
 def main(args):
     config = {}
     vars   = {}
+    options = {}
+    options['sort-about-config'] = 'pref'
 
     only_index_output = False
     only_checklist_output = False
 
-    opts, args = getopt.getopt(args, 'c:a:il')
+    opts, args = getopt.getopt(args, 'c:a:il', ["sort-about-config="])
     for key, value in opts:
         if key == '-c':
             config = adlib.load_as_dict(value)
@@ -599,6 +608,9 @@ def main(args):
             only_index_output = True
         elif key == '-l':
             only_checklist_output = True
+        elif key == '--sort-about-config' and value in ['pref', 'option']:
+            # type of sort: pref or option
+            options['sort-about-config'] = value
 
     vars = {**DEFAULT_VAR, **vars}
     manual = collections.OrderedDict()
@@ -619,7 +631,7 @@ def main(args):
     if invalid_option_id_count > 0:
         exit(1)
 
-    template, chapters = create_template(manual, config, vars)
+    template, chapters = create_template(manual, config, vars, options)
 
     if only_index_output:
         # Generate a mapping file of (option_id -> chapter) for
