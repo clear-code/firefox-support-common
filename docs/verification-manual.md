@@ -17,6 +17,9 @@ cat-verifyには次のオプションがある。
   * 選択した検証項目と検証手順書の項番号の対応を示すverify-targets-to-chapters.csvを生成する。
 * -l
   * 見出し番号、検証対象項目、検証結果のチェックリストverify-$(DATE)-checklist.csvを生成する。
+* --sort-about-config={pref,option}
+  * 「about:configを使用した検証」の検証項目の並びを制御する。既定値はprefでプリファレンス名でソート(昇順)する。
+  optionを指定した場合、オプションIDの順(設定シートのカテゴリ出現順)にソート(昇順)する。
 
 ## 設定ファイルと定義ファイル
 
