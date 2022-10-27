@@ -1,0 +1,200 @@
+#!/usr/bin/env python3
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# migrate-configuration-format
+#
+# USAGE
+#
+# Migrate old format to new configuration one.
+#
+#   $ migrate-configuration-format esr102
+#
+# DEFINITION OF TERMS IN THIS MODULE
+#
+#     For example, about "Security-9-3 about:configの利用の可否：禁止する" on Firefox ESR102:
+#
+#     * category:   "Security", this is same to the name of the file under "esr102/"
+#     * item:       "Security-9"
+#       * items:    "Security-1", "Security-2", "Security-3", and others defined in the file "esr102/Security"
+#     * option:     "Security-9-1", "Security-9-2", "Security-9-3", and others
+#       * config:   `"BlockAboutConfig": true,` or others, defined in the given "conf" file like "esr102.txt"
+#       * template: `"BlockAboutConfig": true,` or others, defined in the file "esr102/Security"
+#
+#     * conf:       A file listing chosen options. Please note this is not an abbr of "config".
+#     * curr/prev:  curr=ESR102, prev=ESR91 (versions)
+
+import re
+import sys
+import glob
+import getopt
+import csv
+import os
+import yaml
+import pprint
+
+BASEDIR = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(BASEDIR)
+TOPDIR = os.path.realpath(os.path.join(BASEDIR, '..'))
+sys.path.append(TOPDIR)
+
+import adlib
+
+#
+# Global settings
+#
+
+WORKBOOKS = [
+    ('基本設定', [
+        'Install',
+        'Application',
+        'Admin',
+        'Security',
+        'Privacy',
+        'Startup',
+        'Websearch',
+        'Location',
+        'Download',
+        'Tab',
+        'Network',
+        'Update',
+        'Ui',
+        'Script',
+        'Plugin',
+        'External',
+        'Stability',
+        'Appearance',
+        'Performance',
+        'Addon-IEView',
+        'Addon-FireIE',
+        'Addon-Acrobat',
+        'Addon-Skysea',
+    ]),
+    ('機能無効化', [
+        'MenuShortcut',
+    ]),
+]
+
+license_text = """
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+"""
+
+def generate_migrated_configuration(confs):
+    indent = "    "
+    for title, sources in WORKBOOKS:
+        for source in sources:
+            base_items = adlib.load(os.path.join(TOPDIR, confs['INPUT'], source))
+            contents = [license_text]
+            for item in base_items:
+                # item contains:
+                # {
+                #   id: 'Install-N'
+                #   category: 'Install'
+                #   index: 'N'
+                #   title: ''
+                #   options: ...
+                # }
+                content = ["%s: %s\n" % (item['id'], item['title'])]
+                
+                for option in item['options']:
+                    # option contains:
+                    # {
+                    #   option_id:
+                    #   option_index:
+                    #   option_title:
+                    #   dependency:
+                    #   config:
+                    # }
+                    #print(":%s: %s\n" % (option['option_index'], option['option_title']))
+                    content.append("%s:%s: %s\n" % (indent, option['option_index'], option['option_title']))
+                    if is_default_configuration(option['config']):
+                        content.append("%s%s\n" % (indent, option['config']))
+                    elif is_config_nsh(option['config']):
+                        # apply config_nsh:
+                        content.append("%sconfig_nsh: |\n%s  %s\n" % (indent, indent, option['config']))
+                    elif is_fainstall_ini(option['config']):
+                        # apply fainstall_ini:
+                        replaced = option['config'].replace('\n', '\n%s%s' % (indent, '  '))
+                        replaced = replaced.replace('fainstall.ini:\n', 'fainstall_ini: |\n')
+                        content.append("%s%s\n" % (indent, replaced))
+                    elif is_setup_ini(option['config']):
+                        # apply firefox_setup_ini:
+                        replaced = option['config'].replace('\n', '\n%s%s' % (indent, '  '))
+                        replaced = replaced.replace('Firefox-setup.ini/Thunderbird-setup.ini:', 'firefox_setup_ini: |')
+                        content.append("%s%s\n" % (indent, replaced))
+                    elif is_only_cfg(option['config']):
+                        pass
+                    else:
+                        content.append("%s**FIXME**\n%s%s\n" % (indent, indent, option['config']))
+                contents.append("\n".join(content))
+            out_dir = os.path.join(TOPDIR, confs['OUTPUT'])
+            if not os.path.isdir(out_dir):
+                os.mkdir(out_dir)
+
+            source_path = os.path.realpath(os.path.join(TOPDIR, confs['INPUT'], source))
+            destination_path = os.path.realpath(os.path.join(out_dir, source))
+            
+            with open(destination_path, "w+") as file:
+                print('Convert %s -> %s' % (source_path.replace(TOPDIR, ""),
+                                            destination_path.replace(TOPDIR, "")))
+                file.write("\n".join(contents))
+
+                    
+def is_default_configuration(config):
+    if config == '-':
+        return True
+    else:
+        return False
+
+def is_config_nsh(config):
+    if re.search('!define ', config):
+        return True
+    else:
+        return False
+
+def is_fainstall_ini(config):
+    if re.search('fainstall.ini:', config):
+        #pprint.pp(config)
+        return True
+    else:
+        return False
+
+def is_setup_ini(config):
+    if re.search('Firefox-setup.ini/Thunderbird-setup.ini:', config):
+        #pprint.pp(config)
+        return True
+    else:
+        #pprint.pp(config)
+        return False
+
+def is_only_cfg(config):
+    if re.search('lockPref\(', config):
+        return True
+    else:
+        return False
+
+#
+# main
+#
+
+def main(args):
+    confs = {}
+
+    opts, args = getopt.getopt(args, 'o:x:p:c:d:i:', ["--input="])
+    for key, value in opts:
+        if key in ['-o', '--output']:
+            confs['OUTPUT'] = value
+        elif key in ['-i', '--input']:
+            confs['INPUT'] = value
+        elif key == '-d':
+            parts = value.split(':', 1)
+            confs[parts[0]] = parts[1]
+
+    generate_migrated_configuration(confs)
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))
