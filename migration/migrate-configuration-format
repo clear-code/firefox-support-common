@@ -127,6 +127,27 @@ def generate_migrated_configuration(confs):
                         content.append("%s%s\n" % (indent, replaced))
                     elif is_only_cfg(option['config']):
                         pass
+                    elif is_abolished(option['config']):
+                        content.append("%s%s\n" % (indent, option['config']))
+                    elif is_default_pref_js(option['config']):
+                        replaced = re.sub('defaults\\\\pref\\\\.*\.js:', 'defaults_pref_js: |', option['config'])
+                        replaced = replaced.replace('\n', '\n%s%s' % (indent, '  '))
+                        content.append("%s%s\n" % (indent, replaced))
+                    elif is_policies_json(option['config']):
+                        if is_gpo(option['config']):
+                            index = option['config'].find('GPO:')
+                            policies_json = option['config'][0:index]
+                            policies_json = policies_json.replace('\n', '\n%s%s' % (indent, '  '))
+                            policies_json = policies_json.replace('distribution\\policies.json:', 'policies_json: |')
+                            gpo = option['config'][index:]
+                            gpo = gpo.replace('\n', '\n%s%s' % (indent, '  '))
+                            gpo = gpo.replace('GPO:', 'GPO: |')
+                            content.append("%s%s" % (indent, policies_json))
+                            content.append("%s%s\n" % (indent, gpo))
+                        else:
+                            policies_json = option['config'].replace('\n', '\n%s%s' % (indent, '  '))
+                            policies_json = policies_json.replace('distribution\\policies.json:', 'policies_json: |')
+                            content.append("%s%s" % (indent, policies_json))
                     else:
                         content.append("%s**FIXME**\n%s%s\n" % (indent, indent, option['config']))
                 contents.append("\n".join(content))
@@ -172,6 +193,30 @@ def is_setup_ini(config):
 
 def is_only_cfg(config):
     if re.search('lockPref\(', config):
+        return True
+    else:
+        return False
+
+def is_policies_json(config):
+    if re.search('distribution\\\\policies.json:', config):
+        return True
+    else:
+        return False
+
+def is_gpo(config):
+    if re.search('GPO:', config):
+        return True
+    else:
+        return False
+
+def is_abolished(config):
+    if re.search('[廃止]', config):
+        return True
+    else:
+        return False
+
+def is_default_pref_js(config):
+    if re.search('defaults\\\\pref\\\\\\*.js:', config):
         return True
     else:
         return False
