@@ -125,10 +125,6 @@ def generate_migrated_configuration(confs):
                         replaced = option['config'].replace('\n', '\n%s%s' % (indent, '  '))
                         replaced = replaced.replace('Firefox-setup.ini/Thunderbird-setup.ini:', 'firefox_setup_ini: |')
                         content.append("%s%s\n" % (indent, replaced))
-                    elif is_only_cfg(option['config']):
-                        pass
-                    elif is_abolished(option['config']):
-                        content.append("%s%s\n" % (indent, option['config']))
                     elif is_default_pref_js(option['config']):
                         # apply defaults_pref_js:
                         replaced = re.sub('defaults\\\\pref\\\\.*\.js:', 'defaults_pref_js: |', option['config'])
@@ -138,6 +134,10 @@ def generate_migrated_configuration(confs):
                         replaced = option['config'].replace('\n', '\n%s%s' % (indent, '  '))
                         replaced = replaced.replace('*.cfg / *.jsc:', 'cfg_or_jsc: |')
                         content.append("%s%s\n" % (indent, replaced))
+                    elif is_only_cfg(option['config']):
+                        content.append("%s**CFG ONLY**\n%s%s\n" % (indent, indent, option['config']))
+                    elif is_abolished(option['config']):
+                        content.append("%s%s\n" % (indent, option['config']))
                     elif is_policies_json(option['config']):
                         if is_gpo(option['config']):
                             index = option['config'].find('GPO:')
