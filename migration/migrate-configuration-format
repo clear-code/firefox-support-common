@@ -130,6 +130,7 @@ def generate_migrated_configuration(confs):
                     elif is_abolished(option['config']):
                         content.append("%s%s\n" % (indent, option['config']))
                     elif is_default_pref_js(option['config']):
+                        # apply defaults_pref_js:
                         replaced = re.sub('defaults\\\\pref\\\\.*\.js:', 'defaults_pref_js: |', option['config'])
                         replaced = replaced.replace('\n', '\n%s%s' % (indent, '  '))
                         content.append("%s%s\n" % (indent, replaced))
