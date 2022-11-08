@@ -134,6 +134,10 @@ def generate_migrated_configuration(confs):
                         replaced = re.sub('defaults\\\\pref\\\\.*\.js:', 'defaults_pref_js: |', option['config'])
                         replaced = replaced.replace('\n', '\n%s%s' % (indent, '  '))
                         content.append("%s%s\n" % (indent, replaced))
+                    elif is_cfg_or_jsc(option['config']):
+                        replaced = option['config'].replace('\n', '\n%s%s' % (indent, '  '))
+                        replaced = replaced.replace('*.cfg / *.jsc:', 'cfg_or_jsc: |')
+                        content.append("%s%s\n" % (indent, replaced))
                     elif is_policies_json(option['config']):
                         if is_gpo(option['config']):
                             index = option['config'].find('GPO:')
@@ -218,6 +222,12 @@ def is_abolished(config):
 
 def is_default_pref_js(config):
     if re.search('defaults\\\\pref\\\\\\*.js:', config):
+        return True
+    else:
+        return False
+
+def is_cfg_or_jsc(config):
+    if re.search('\\*\.cfg / \\*\.jsc:', config):
         return True
     else:
         return False
