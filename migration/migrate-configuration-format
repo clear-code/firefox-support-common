@@ -135,7 +135,9 @@ def generate_migrated_configuration(confs):
                         replaced = replaced.replace('*.cfg / *.jsc:', 'cfg_or_jsc: |')
                         content.append("%s%s\n" % (indent, replaced))
                     elif is_only_cfg(option['config']):
-                        content.append("%s**CFG ONLY**\n%s%s\n" % (indent, indent, option['config']))
+                        replaced = re.sub('\\*\.cfg:', 'cfg: |', option['config'])
+                        replaced = replaced.replace('\n', '\n%s%s' % (indent, '  '))
+                        content.append("%s%s\n" % (indent, replaced))
                     elif is_abolished(option['config']):
                         content.append("%s%s\n" % (indent, option['config']))
                     elif is_policies_json(option['config']):
