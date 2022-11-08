@@ -154,7 +154,9 @@ def generate_migrated_configuration(confs):
                             policies_json = policies_json.replace('distribution\\policies.json:', 'policies_json: |')
                             content.append("%s%s" % (indent, policies_json))
                     else:
-                        content.append("%s**FIXME**\n%s%s\n" % (indent, indent, option['config']))
+                        # Just apply only indent
+                        replaced = option['config'].replace('\n', '\n%s' % (indent))
+                        content.append("%s%s\n" % (indent, replaced))
                 contents.append("\n".join(content))
             out_dir = os.path.join(TOPDIR, confs['OUTPUT'])
             if not os.path.isdir(out_dir):
