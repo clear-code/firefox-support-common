@@ -1028,6 +1028,11 @@ Security-36: DNS over HTTPSの使用
 
     :3: 使用を禁止する
 
+    // 設定の副作用としてbrowser.search.region=JPが設定されなくなるため、
+    // プライバシー設定UIに「住所を自動入力」「クレジットカード情報を自動入力する」が
+    // 表示されるようになってしまう(JPは既定では対象外になるはずのもの)
+    // 設定UIから削除するには明示的に lockPref("browser.search.region", "JP"); を設定する
+    // Privacy-58: を併用しただけでは設定項目を非表示にできない
     distribution\policies.json:
     "DNSOverHTTPS": {
       "Enabled": false,
