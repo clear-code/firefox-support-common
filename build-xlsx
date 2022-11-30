@@ -131,6 +131,7 @@ PREV_VERSION_COLUNBS = [ # label, width, key, format
 ]
 
 check_template_mode = False
+verbose_mode = False
 
 #
 # XLSX writer
@@ -573,10 +574,11 @@ def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
             # We always output items based on sources for the current version.
             # In other words, the "current version" needs to define all deprecated/obsolete items
             # if they still need to be visible in the output sheet.
-            print("Loading: %s" % os.path.join(BASEDIR, ESR_CURRENT, source))
             base_items = adlib.load(os.path.join(BASEDIR, ESR_CURRENT, source))
-            print("Loading: %s" % os.path.join(BASEDIR, ESR_PREVIOUS, source))
             prev_items = adlib.load_as_dict(os.path.join(BASEDIR, ESR_PREVIOUS, source))
+            if verbose_mode:
+                print("Loading: %s" % os.path.join(BASEDIR, ESR_CURRENT, source))
+                print("Loading: %s" % os.path.join(BASEDIR, ESR_PREVIOUS, source))
 
             sheet.merge_category_heading(row_index, base_items)
 
@@ -631,7 +633,7 @@ def main(args):
     outfile = 'config.xlsx'
     exclude_worksheets = []
 
-    opts, args = getopt.getopt(args, 'o:x:p:c:d:t')
+    opts, args = getopt.getopt(args, 'o:x:p:c:d:tv')
     for key, value in opts:
         if key == '-o':
             outfile = value
@@ -644,6 +646,8 @@ def main(args):
         elif key == '-d':
             parts = value.split(':', 1)
             confs[parts[0]] = parts[1]
+        elif key == '-v':
+            verbose_mode = True
         elif key == '-t':
             # Compare template configuration and finally applied configuration.
             # Do not use this option for sheet in production. This option is intended to be used with checking.
