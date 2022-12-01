@@ -1495,3 +1495,20 @@ Security-55: コンテンツプロセスからのWin32 APIの呼び出し可否
 
     *.cfg / *.jsc:
     lockPref("security.sandbox.content.win32k-disable", false);
+
+Security-56: カスタムURLスキームによるアプリケーションの起動の可否
+
+    :1: 確認の上で許可する（既定）
+
+    -
+
+    :2: 特定サイトのみ初期状態で許可する
+
+    // resource://app/defaults/permissionsが既定設定のため、それに加えて次の設定を追加する
+    // カスタムURLスキームはあらかじめレジストリもしくはHandlersポリシーのschemesで設定済みとする
+    default.permissions:
+    origin<\t>open-protocol-handler^(ここにカスタムURLスキーム登録名)<\t>1<\t>http://example.com
+
+    // permissions.manager.defaultsUrlで既存のpermissionsを上書き指定する
+    *.cfg / *.jsc:
+    lockPref("permissions.manager.defaultsUrl", "file:///C:/Program Files/Mozilla Firefox/defaults/default.permissions");
