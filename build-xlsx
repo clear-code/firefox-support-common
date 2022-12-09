@@ -136,12 +136,15 @@ verbose_mode = False
 #
 # XLSX writer
 
+import pprint
+
 class ConfigurationSheet:
 
     def __init__(self, confs, formats, sheet):
         self._confs   = confs
         self._formats = formats
         self._sheet   = sheet
+        self._metadata = {}
 
     def iterate_all_confs(self):
         return self._confs.items()
@@ -216,10 +219,58 @@ class ConfigurationSheet:
             self.write_cell(row + 4, 1, '',                                   'invalid')
             self.write_cell(row + 4, 2, '設定値の記述書式が誤っている項目',       'noborder')
 
+    def _parse_config(self, config):
+        try:
+            parsed = yaml.safe_load(config)
+            return parsed
+        except yaml.YAMLError as e:
+            return {}
+
+    def build_metadata(self, key, items):
+        conflict_with = self._build_metadata_for('conflict_with', items)
+        forced_by = self._build_metadata_for('forced_by', items)
+        if key in self._metadata.keys():
+            conflict_with.update(self._metadata[key]['conflict_with'])
+            forced_by.update(self._metadata[key]['forced_by'])
+        self._metadata[key] = {
+            'conflict_with': conflict_with,
+            'forced_by': forced_by
+        }
+
+    def _get_meta_config(self, key, config):
+        data = None
+        parsed = self._parse_config(config)
+        if type(parsed) is str:
+            pass
+        elif parsed == [None]:
+            pass
+        elif parsed == None:
+            pass
+        elif key in parsed.keys():
+            data = parsed[key]
+        return data
+
+    def _build_metadata_for(self, key, items):
+        data = {}
+        for item in items:
+            if type(item) is str:
+                config = items[item]['config']
+                values = self._get_meta_config(key, config)
+                if values:
+                    data[item] = values
+            else:
+                for option in item['options']:
+                    option_id = option['option_id']
+                    config = option['config']
+                    values = self._get_meta_config(key, config)
+                    if values:
+                        data[option_id] = values
+        return data
+
 class ConfigurationRow:
 
     def __init__(self, sheet, index, item, option, category,
-                 prev_conf, prev_items, verification_chapters):
+                 prev_conf, prev_items, verification_chapters, base_items):
         self._sheet                 = sheet
         self._index                 = index
         self._item                  = item
@@ -228,6 +279,7 @@ class ConfigurationRow:
         self._prev_conf             = prev_conf
         self._verification_chapters = verification_chapters
         self._verification_chapter  = ''
+        self._base_items            = base_items
 
         self._prev_config           = self._get_option_config(self._prev_conf)
         self._template_prev_config  = self._get_option_config(prev_items)
@@ -328,8 +380,31 @@ class ConfigurationRow:
             if option_id in conf:
                 self._verification_chapter = self._verification_chapters.get(option_id, '省略')
 
+                # check conflict with (selected option -> candidates)
+                conflict_with = None
+                if self._esr_current_version.upper() in self._sheet._metadata.keys():
+                    conflict_with = self._sheet._metadata[self._esr_current_version.upper()]['conflict_with']
+                conflicted = False
+                if conflict_with != None:
+                    if option_id in conflict_with:
+                        for conflicted_id in conflict_with[option_id]:
+                            if conflicted_id in conf.keys():
+                                message = "%s と %s は同時に選択することができない項目です。" % (option_id, conflicted_id)
+                                self._write_comment(column_offset + column_count + 2, message,
+                                                    {'visible': True, 'color': '#ff4b00', 'font_size': 7})
+                                conflicted = True
+                if conflicted is False and conflict_with:
+                    # check reverse conflicted rule (option is candidates of other selected option)
+                    for key in conflict_with.keys():
+                        for candidate in conflict_with[key]:
+                            if option_id == candidate and key in conf.keys():
+                                message = "%s と %s は同時に選択することができない項目です。" % (option_id, key)
+                                self._write_comment(column_offset + column_count + 2, message,
+                                                    {'visible': True, 'color': '#ff4b00', 'font_size': 7})
+
             self._write_column(column_offset + column_count,     self._concat_column_value(None, config), format)
             self._write_column(column_offset + column_count + 1, status, format)
+
 
             if format == 'invalid':
                 message = "設定値の記述に誤りがあります。\n例: 反映する設定値にタブが含まれている\n不要な,が含まれている"
@@ -570,6 +645,14 @@ def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
         sheet.write_header()
 
         row_index = 1
+
+        # Generate metadata for conflict, forced by dependency
+        for source in sources:
+            base_items = adlib.load(os.path.join(BASEDIR, ESR_CURRENT, source))
+            prev_items = adlib.load_as_dict(os.path.join(BASEDIR, ESR_PREVIOUS, source))
+            sheet.build_metadata(ESR_PREVIOUS.upper(), prev_items)
+            sheet.build_metadata(ESR_CURRENT.upper(), base_items)
+
         for source in sources:
             # We always output items based on sources for the current version.
             # In other words, the "current version" needs to define all deprecated/obsolete items
@@ -595,6 +678,7 @@ def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
                         prev_conf,
                         prev_items,
                         verification_chapters,
+                        base_items
                     )
                     row.write()
                     row_index += 1
