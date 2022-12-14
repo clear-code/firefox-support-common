@@ -1,3 +1,4 @@
+
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -6,523 +7,547 @@ MenuShortcut-1: [廃止] 閉じたタブを開き直す (Ctrl-Shift-T)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-2: [廃止] 閉じたウィンドウを開き直す (Ctrl-Shift-N)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-3: ファイル＞新しいプライベートウィンドウを開く (Ctrl-Shift-P)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisablePrivateBrowsing": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Private Browsing」を有効化
+    policies_json: |
+      "DisablePrivateBrowsing": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Private Browsing」を有効化
 
 MenuShortcut-4: [廃止] ファイル＞ページのURLをメールで送信（ページのURLをメールで送信ボタン）
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-5: [廃止] ファイル＞オフライン作業
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-6: [廃止] ツール＞プライベートブラウジングの開始 (Firefox 31で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-7: [廃止] ツール＞ダウンロード（旧バージョンでは「ダウンロードマネージャ」） (Ctrl-Shift-Y(旧バージョンではCtrl+J))
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-8: [廃止] ツール＞ページの調査 (Firefox 31で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-9: [廃止] ツール＞アプリ (Firefox 45で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-10: ツール＞その他のツール（開発ツールボタン）
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-11: ツール＞その他のツール＞ウェブ開発ツール (Ctrl-Shift-I,F12)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-12: ツール＞その他のツール＞インスペクタ (Ctrl-Shift-C)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-13: ツール＞その他のツール＞Webコンソール (Ctrl-Shift-K)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-14: ツール＞その他のツール＞デバッガー (Ctrl-Shift-S)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-15: ツール＞その他のツール＞スタイルエディタ (Shift-F7)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-16: ツール＞その他のツール＞パフォーマンス（旧バージョンでは「プロファイラ」） (Shift-F5)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-17: ツール＞その他のツール＞ネットワーク (Ctrl-Shift-E)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-18: ツール＞その他のツール＞開発ツールバー (Shift-F2)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-19: [廃止] ツール＞その他のツール＞アプリマネージャ (Firefox 38で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-20: [廃止] ツール＞その他のツール＞WebIDE (Shift-F8)
 
     :1: [廃止] 無効化する
 
-    [廃止] Firefox 71でWebIDEが削除されたため廃止
+    deprecated: true Firefox 71でWebIDEが削除されたため廃止
 
 MenuShortcut-21: ツール＞その他のツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-22: ツール＞その他のツール＞ブラウザーコンソール (Ctrl-Shift-J)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-23: ツール＞その他のツール＞レスポンシブデザインビュー (Ctrl-Shift-M)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-24: ツール＞その他のツール＞スポイト
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-25: ツール＞その他のツール＞スクラッチパッド (Shift-F4)
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-26: [廃止] ツール＞その他のツール＞ページのソース (Ctrl-U)
 
     :1: [廃止] 無効化する
 
-    [廃止]
-    Firefox 91移行では開発ツールの一部として無効化はされないようになった。
+    deprecated: true
+
+    comment: |
+      Firefox 91移行では開発ツールの一部として無効化はされないようになった。
 
 MenuShortcut-27: [廃止] ツール＞その他のツール＞エラーコンソール (Firefox 48で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-28: ツール＞その他のツール＞接続...
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-29: ツール＞その他のツール＞その他のツールを入手
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-30: [廃止] ヘルプ＞Firefoxヘルプ（旧バージョンでは「ヘルプ」）
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-31: [廃止] ヘルプ＞Firefoxツアー
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-32: [廃止] ヘルプ＞キーボードショートカット
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-33: [廃止] ヘルプ＞Firefoxヘルスレポート (Firefox 59で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-34: [廃止] ヘルプ＞使いこなそう (Firefox 31で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-35: ヘルプ＞他のトラブルシューティング情報
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "BlockAboutSupport": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Block Troubleshooting Information」を有効化
+    policies_json: |
+      "BlockAboutSupport": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Block Troubleshooting Information」を有効化
 
 MenuShortcut-36: ヘルプ＞フィードバックを送信
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableFeedbackCommands": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Feedback Commands」を有効化
+    policies_json: |
+      "DisableFeedbackCommands": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Feedback Commands」を有効化
 
 MenuShortcut-37: ヘルプ＞トラブルシューティングモード
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableSafeMode": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Safe Mode」を有効化
+    policies_json: |
+      "DisableSafeMode": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Safe Mode」を有効化
 
 MenuShortcut-38: ヘルプ＞詐欺サイトを報告
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableFeedbackCommands": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Feedback Commands」を有効化
+    policies_json: |
+      "DisableFeedbackCommands": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Feedback Commands」を有効化
 
 MenuShortcut-39: ヘルプ＞誤警告を報告
 
     :1: 無効化する
 
-    // Security-6-2 選択時は指定不要
-
-    distribution\policies.json:
-    "DisableFeedbackCommands": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Feedback Commands」を有効化
+    comment: // Security-6-2 選択時は指定不要
+      
+    policies_json: |
+      "DisableFeedbackCommands": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Feedback Commands」を有効化
 
 MenuShortcut-40: [廃止] ヘルプ＞Firefoxについて のセパレータ
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-41: [廃止] 編集＞テキストの記述方向を切り替える (Ctrl-Shift-X)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-42: [廃止] 表示＞ページの記述方向を切り替える
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-43: [廃止] 履歴＞（メニュー内のセパレータ）
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-44: ブックマーク＞ブックマークツールバー（およびそれに付随する各項目）
 
     :1: 無効化する
 
-
+    
 
 MenuShortcut-45: [廃止] コンテンツ領域のコンテキストメニュー＞リンクを保存する... (Firefox 51で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-46: [廃止] コンテンツ領域のコンテキストメニュー＞このリンクを共有 (Firefox 57で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-47: [廃止] コンテンツ領域のコンテキストメニュー＞画像のURLをメールで送信
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-48: [廃止] コンテンツ領域のコンテキストメニュー＞この画像を共有 (Firefox 57で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-49: [廃止] コンテンツ領域のコンテキストメニュー＞動画のURLをメールで送信
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-50: [廃止] コンテンツ領域のコンテキストメニュー＞この動画を共有 (Firefox 57で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-51: [廃止] コンテンツ領域のコンテキストメニュー＞オーディオのURLをメールで送信
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-52: [廃止] コンテンツ領域のコンテキストメニュー＞このページを共有 (Firefox 57で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-53: [廃止] コンテンツ領域のコンテキストメニュー＞ページを保存する... (Firefox 51で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-54: [廃止] コンテンツ領域のコンテキストメニュー＞選択範囲を共有 (Firefox 57で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-55: コンテンツ領域のコンテキストメニュー＞デスクトップの背景に設定
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableSetDesktopBackground": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Set Desktop Background」を有効化
+    policies_json: |
+      "DisableSetDesktopBackground": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Set Desktop Background」を有効化
 
 MenuShortcut-56: [廃止] コンテンツ領域のコンテキストメニュー＞画像をブロック (Firefox 31で廃止)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-57: コンテンツ領域のコンテキストメニュー＞調査
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-58: [廃止] ポップアップブロック＞このサイトによるポップアップを許可する
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-59: [廃止] ポップアップブロック＞ポップアップブロック設定を変更
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-60: [廃止] ポップアップブロック、アドオンのインストール警告、オフラインデータの許可の編集（Cookie以外の権限に関するサイトごとの権限設定）
 
     :1: [廃止] 無効化する
 
-    [廃止]
-    Hide-4に移動
+    deprecated: true
+    comment: Hide-4に移動
 
 MenuShortcut-61: [廃止] キャレットブラウズモード
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-62: [廃止] ファイル＞新しいタブ (Ctrl-T)
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-63: [廃止] コンテンツ領域のコンテキストメニュー＞新しいタブで開く
 
     :1: [廃止] 無効化する
 
-    [廃止]
+    deprecated: true
 
 MenuShortcut-64: ツール＞その他のツール＞Service Worker
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    policies_json: |
+      "DisableDeveloperTools": true
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化
 
 MenuShortcut-65: ツール＞その他のツール＞ブラウザーコンテンツツールボックス
 
     :1: 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
-
+    policies_json: |
+      "DisableDeveloperTools": true,
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Developer Tools」を有効化

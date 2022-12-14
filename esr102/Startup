@@ -10,9 +10,9 @@ Startup-1: 初回起動時の設定移行ウィザード
 
     :2: 表示しない
 
-    override.ini:
-    [XRE]
-    EnableProfileMigrator=0
+    override_ini: |
+      [XRE]
+      EnableProfileMigrator=0
 
 Startup-2: 起動時のホームページの指定
 
@@ -22,88 +22,88 @@ Startup-2: 起動時のホームページの指定
 
     :2: [廃止] 管理者が指定し、変更を許可（distribution.ini）
 
-    distribution.ini:
-    [Global]
-    id=（導入先ID）
-    version=（バージョン）
-    about=Mozilla Firefox
+    distribution_ini: |
+      [Global]
+      id=（導入先ID）
+      version=（バージョン）
+      about=Mozilla Firefox
 
-    [LocalizablePreferences]
-    browser.startup.homepage="（URL）"
+      [LocalizablePreferences]
+      browser.startup.homepage="（URL）"
 
     :3: [廃止] 管理者が指定し、変更を禁止（MCD）
 
-    [廃止]
+    deprecated: true
 
     :5: 管理者が指定し、変更を許可
 
-    // Homepageを指定するとHomeボタンが表示されるようになる(Apperance-12に影響する)
-    distribution\policies.json:
-    "Homepage": {
-      "URL": "http://example.com",
-      "Locked": false,
-      "Additional": [
-        "https://example.org:8080",
-        ...
-      ]
-    },
+    comment: |
+      // Homepageを指定するとHomeボタンが表示されるようになる(Apperance-12に影響する)
 
-    GPO:
-    カテゴリ「Firefox」→「Home page」
-    → 「URL for Home page」を有効化し、オプションでURLを設定
-    → 「URL for Home page」のオプションの「Don't allow the homepage to be changed.」のチェックをOFF
-    → 「Additional Homepages」を有効化し、オプションでURLを設定
+    policies_json: |
+      "Homepage": {
+        "URL": "http://example.com",
+        "Locked": false,
+        "Additional": [
+          "https://example.org:8080"
+        ]
+      }      
+      
+    GPO: |
+      カテゴリ「Firefox」→「Home page」
+      → 「URL for Home page」を有効化し、オプションでURLを設定
+      → 「URL for Home page」のオプションの「Don't allow the homepage to be changed.」のチェックをOFF
+      → 「Additional Homepages」を有効化し、オプションでURLを設定
 
     :4: 管理者が指定し、変更を禁止
 
-    distribution\policies.json:
-    "Homepage": {
-      "URL": "http://example.com",
-      "Locked": true,
-      "Additional": [
-        "https://example.org:8080",
-        ...
-      ]
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Home page」
-    → 「URL for Home page」を有効化し、オプションでURLを設定
-    → 「URL for Home page」のオプションの「Don't allow the homepage to be changed.」のチェックをON
-    → 「Additional Homepages」を有効化し、オプションでURLを設定
+    policies_json: |
+      "Homepage": {
+        "URL": "http://example.com",
+        "Locked": true,
+        "Additional": [
+          "https://example.org:8080"
+        ]
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」→「Home page」
+      → 「URL for Home page」を有効化し、オプションでURLを設定
+      → 「URL for Home page」のオプションの「Don't allow the homepage to be changed.」のチェックをON
+      → 「Additional Homepages」を有効化し、オプションでURLを設定
 
     :6: 前回の状態を常に復元
 
-    distribution\policies.json:
-    "Homepage": {
-      "StartPage": "previous-session",
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Home page」
-    → 「Start Page」を有効化し、オプションで「Previous Session」を選択
-    → 「URL for Home page」を有効化し、オプションの「Don't allow the homepage to be changed.」のチェックをON
+    policies_json: |
+      "Homepage": {
+        "StartPage": "previous-session",
+        "Locked": true
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」→「Home page」
+      → 「Start Page」を有効化し、オプションで「Previous Session」を選択
+      → 「URL for Home page」を有効化し、オプションの「Don't allow the homepage to be changed.」のチェックをON
 
 Startup-3: 既定のブラウザーでなかった場合の、起動時における既定のブラウザーにするかどうかの確認の可否
 
     :1: 確認する（既定）
 
-    *.cfg / *.jsc:
-    lockPref("browser.shell.checkDefaultBrowser", true);
+    cfg_or_jsc: |
+      lockPref("browser.shell.checkDefaultBrowser", true);
 
     :2: [廃止] 確認しない（MCD）
 
-    [廃止]
+    deprecated: true
 
     :3: 確認しない
 
-    distribution\policies.json:
-    "DontCheckDefaultBrowser": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Don't Check Default Browser」を有効化
+    policies_json: |
+      "DontCheckDefaultBrowser": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Don't Check Default Browser」を有効化
 
 Startup-4: バージョンアップ後の初回起動時における、バージョンアップ完了案内のタブの表示の可否
 
@@ -113,17 +113,19 @@ Startup-4: バージョンアップ後の初回起動時における、バージ
 
     :2: [廃止] 禁止する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :3: 禁止する
 
-    // Startup-12の指定より優先される
-    distribution\policies.json:
-    "OverridePostUpdatePage": "",
+    comment: |
+      // Startup-12の指定より優先される
 
-    GPO:
-    カテゴリ「Firefox」
-    → 「Override the upgrade page」を有効化し、オプションでURLを入力
+    policies_json: |
+      "OverridePostUpdatePage": ""
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Override the upgrade page」を有効化し、オプションでURLを入力
 
 Startup-5: 初期状態のブックマーク
 
@@ -133,86 +135,88 @@ Startup-5: 初期状態のブックマーク
 
     :2: [廃止] 空にする（MCD）
 
-    [廃止]
+    deprecated: true
 
     :4: 空にする
 
-    distribution\policies.json:
-    "NoDefaultBookmarks": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「No Default Bookmarks」を有効化
+    policies_json: |
+      "NoDefaultBookmarks": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「No Default Bookmarks」を有効化
 
     :3: 管理者が指定したブックマークを追加する
 
-    // ブックマークのアップデートは起動ごとに行われる。
-    // JSONの定義から削除したサイトは次回起動時に自動的に削除される。
-    distribution\policies.json:
-    "Bookmarks": [
-      {
-        "Title": "Clear Code",
-        "URL": "http://www.clear-code.com",
-        "Favicon": "http://www.clear-code.com/favicon.ico",
-        "Placement": "toolbar",
-        "Folder": "Company"
-      }
-    ],
+    comment: |
+      // ブックマークのアップデートは起動ごとに行われる。
+      // JSONの定義から削除したサイトは次回起動時に自動的に削除される。
 
-    GPO:
-    カテゴリ「Firefox」→「Bookmarks」
-    → 「Bookmark 00」から「Bookmark 50」について、必要な分を有効化し、それぞれオプションで項目の情報を定義する
+    policies_json: |
+      "Bookmarks": [
+        {
+          "Title": "Clear Code",
+          "URL": "http://www.clear-code.com",
+          "Favicon": "http://www.clear-code.com/favicon.ico",
+          "Placement": "toolbar",
+          "Folder": "Company"
+        }
+      ]
+      
+    GPO: |
+      カテゴリ「Firefox」→「Bookmarks」
+      → 「Bookmark 00」から「Bookmark 50」について、必要な分を有効化し、それぞれオプションで項目の情報を定義する
 
 Startup-6: [廃止] 「あなたの権利」の表示の可否
 
     :1: [廃止] 許可する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 禁止する
 
-    [廃止]
+    deprecated: true
 
 Startup-7: 60日以上Firefoxを使用しなかった場合の、次の起動時における設定のリセットの提案の可否
 
     :1: リセットを提案する（既定）
 
-    *.cfg / *.jsc:
-    lockPref("browser.disableResetPrompt", false);
+    cfg_or_jsc: |
+      lockPref("browser.disableResetPrompt", false);
 
     :2: リセットを提案しない
 
-    *.cfg / *.jsc:
-    lockPref("browser.disableResetPrompt", true);
+    cfg_or_jsc: |
+      lockPref("browser.disableResetPrompt", true);
 
     :3: リセットを提案せず、ユーザーの任意操作でのリセットも禁止
 
-    distribution\policies.json:
-    "DisableProfileRefresh": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Profile Refresh」を有効化
+    policies_json: |
+      "DisableProfileRefresh": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Profile Refresh」を有効化
 
 Startup-8: [廃止] UIの変更点を解説するツアーの表示の可否
 
     :1: [廃止] ツアーを表示する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] ツアーを表示しない
 
-    [廃止]
+    deprecated: true
 
 Startup-9: [廃止] マルチプロセスモードのフィードバックを促すメッセージの表示の可否
 
     :1: [廃止] 表示する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 表示しない
 
-    [廃止]
+    deprecated: true
 
 Startup-10: 初回起動時などにダミーのウィンドウを使用してハードウェア性能をテストする
 
@@ -222,43 +226,44 @@ Startup-10: 初回起動時などにダミーのウィンドウを使用して�
 
     :2: ハードウェア情報の変更を無視し、性能を測定しない
 
-    *.cfg / *.jsc:
-    lockPref("sanity-test.running", true);
+    cfg_or_jsc: |
+      lockPref("sanity-test.running", true);
 
 Startup-11: [廃止] 起動時のActiviyStream(新規タブページの改良版)の表示の可否
 
     :1: [廃止] 表示する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 表示しない
 
-    [廃止]
+    deprecated: true
 
 Startup-12: 初回起動時のみの特別なスタートページ
 
     :1: 表示する（既定）
 
-    // Startup-4-3 が選択されている場合は初回起動ページは常に表示されない
-    -
+    comment: |
+      // Startup-4-3 が選択されている場合は初回起動ページは常に表示されない
+    default: true
 
     :2: 任意のページを表示する
 
-    distribution\policies.json:
-    "OverrideFirstRunPage": "http://www.example.com/",
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Override the first run page」を有効化し、オプションでURLを入力
+    policies_json: |
+      "OverrideFirstRunPage": "http://www.example.com/"
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Override the first run page」を有効化し、オプションでURLを入力
 
     :3: 表示しない
 
-    distribution\policies.json:
-    "OverrideFirstRunPage": "",
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Override the first run page」を有効化し、オプションでURLを空に指定
+    policies_json: |
+      "OverrideFirstRunPage": ""
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Override the first run page」を有効化し、オプションでURLを空に指定
 
 Startup-13: Windows 10の再起動後の自動起動
 
@@ -268,8 +273,8 @@ Startup-13: Windows 10の再起動後の自動起動
 
     :2: 自動起動しない
 
-    *.cfg / *.jsc:
-    lockPref("toolkit.winRegisterApplicationRestart", false);
+    cfg_or_jsc: |
+      lockPref("toolkit.winRegisterApplicationRestart", false);
 
 Startup-14: [廃止] RSSフィードの自動マイグレーション
 
@@ -289,30 +294,28 @@ Startup-15: ブックマークツールバーに固定で表示する項目
 
     :2: 作成する
 
-    distribution\policies.json:
-    "ManagedBookmarks ": [
-      { "toplevel_name": "ブックマークツールバーに作成するフォルダー名" },
-      { "url": "https://example.com/",
-        "name": "Example.com" },
-      { "name": "フォルダー名",
-        "children": [
-          { "url": "https://example.org",
-            "name": "Example.org" },
-          { "url": "https://example.jp",
-            "name": "Example.jp" },
-          ...
-        ]
-      },
-      ...
-    ],
+    policies_json: |
+      "ManagedBookmarks ": [
+        { "toplevel_name": "ブックマークツールバーに作成するフォルダー名" },
+        { "url": "https://example.com/",
+          "name": "Example.com" },
+        { "name": "フォルダー名",
+          "children": [
+            { "url": "https://example.org",
+              "name": "Example.org" },
+            { "url": "https://example.jp",
+              "name": "Example.jp" }
+          ]
+        }
+      ]
 
 Startup-16: 古いバージョンのFirefoxに戻した後のユーザープロファイルの流用
 
     :1: 許可する
 
-    fainstall.ini:
-    [fainstall]
-    AppAllowReuseProfileAfterDowngrade=true
+    fainstall_ini: |
+      [fainstall]
+      AppAllowReuseProfileAfterDowngrade=true
 
     :2: 禁止する（既定）
 

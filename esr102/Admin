@@ -1,3 +1,4 @@
+
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -6,30 +7,30 @@ Admin-1: 管理者による設定の制御
 
     :1: ローカルのファイルで設定する
 
-    defaults\pref\*.js:
-    pref("general.config.obscure_value", 0);
-    pref("general.config.filename", "autoconfig.cfg");
-    pref("general.config.vendor", "autoconfig");
-    pref("general.config.sandbox_enabled", false);
-
-    *.cfg / *.jsc:
-    // the first line is always ignored by Firefox itself
-    …
+    defaults_pref_js: |
+      pref("general.config.obscure_value", 0);
+      pref("general.config.filename", "autoconfig.cfg");
+      pref("general.config.vendor", "autoconfig");
+      pref("general.config.sandbox_enabled", false);
+      
+    cfg_or_jsc: |
+      // the first line is always ignored by Firefox itself
+      …
 
     :2: リモートのファイルで設定する
 
-    defaults\pref\*.js:
-    pref("general.config.obscure_value", 0);
-    pref("general.config.filename", "autoconfig.cfg");
-    pref("general.config.vendor", "autoconfig");
-    pref("general.config.sandbox_enabled", false);
-
-    *.cfg:
-    // the first line is always ignored by Firefox itself
-    lockPref("autoadmin.global_config_url", "schema://path/to/autoconfig.jsc");
-
-    *.jsc:
-    …
+    defaults_pref_js: |
+      pref("general.config.obscure_value", 0);
+      pref("general.config.filename", "autoconfig.cfg");
+      pref("general.config.vendor", "autoconfig");
+      pref("general.config.sandbox_enabled", false);
+      
+    cfg: |
+      // the first line is always ignored by Firefox itself
+      lockPref("autoadmin.global_config_url", "schema://path/to/autoconfig.jsc");
+      
+    jsc: |
+      …
 
     :3: 設定しない（既定）
 
@@ -39,77 +40,75 @@ Admin-2: 初回起動時のアドオン導入警告の可否
 
     :1: 警告する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "extensions.autoDisableScopes": {
-        "Value": 15,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "extensions.autoDisableScopes": {
+          "Value": 15,
+          "Status": "locked"
+        }
+      }
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: 警告しない
 
-    distribution\policies.json:
-    "Preferences": {
-      "extensions.autoDisableScopes": {
-        "Value": 11,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "extensions.autoDisableScopes": {
+          "Value": 11,
+          "Status": "locked"
+        }
+      }
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Admin-3: [廃止] Firefoxバージョンアップ時のアドオン更新確認の可否
 
     :1: [廃止] 確認する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 確認しない
 
-    [廃止]
+    deprecated: true
 
 Admin-4: Mozillaにより署名されていないアドオンのインストールパッケージの使用の可否
 
     :1: 許可する
 
-    *.cfg / *.jsc:
-    lockPref("xpinstall.signatures.required", false);
+    cfg_or_jsc: |
+      lockPref("xpinstall.signatures.required", false);
 
     :2: 禁止する（既定）
 
-    *.cfg / *.jsc:
-    lockPref("xpinstall.signatures.required", true);
+    cfg_or_jsc: |
+      lockPref("xpinstall.signatures.required", true);
 
 Admin-5: ポリシー設定の使用の可否
 
     :1: 使用する
 
-    distribution\policies.json:
-    {
-      "policies": {
-        "Preferences": {
-          "browser.policies.loglevel": {
-            "Value": "debug",
-            "Status": "locked"
-          },
-          ...
-        },
-        ...
+    policies_json: |
+      {
+        "policies": {
+          "Preferences": {
+            "browser.policies.loglevel": {
+              "Value": "debug",
+              "Status": "locked"
+            }
+          }
+        }
       }
-    }
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: 使用しない
 
@@ -123,16 +122,16 @@ Admin-6: ユーザーが導入済みのアドオンの取り扱い
 
     :2: 使用を許可するアドオン以外すべて削除する
 
-    distribution\policies.json:
-    "ExtensionSettings": {
-      "*": {
-        "installation_mode": "blocked"
+    policies_json: |
+      "ExtensionSettings": {
+        "*": {
+          "installation_mode": "blocked"
+        }
       }
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Extensions」
-    → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
+      
+    GPO: |
+      カテゴリ「Firefox」→「Extensions」
+      → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
 
 Admin-7: アドオンのインストール
 
@@ -143,14 +142,14 @@ Admin-7: アドオンのインストール
 
     :2: アドオンを強制的にインストールする
 
-    distribution\policies.json:
-    "ExtensionSettings": {
-      "to-be-installed@example.com": {
-        "installation_mode": "force_installed",
-        "install_url": "file:///..."
-      }
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Extensions」
-    → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
+    policies_json: |
+      "ExtensionSettings": {
+        "to-be-installed@example.com": {
+          "installation_mode": "force_installed",
+          "install_url": "file:///..."
+        }
+      }      
+      
+    GPO: |
+      カテゴリ「Firefox」→「Extensions」
+      → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述

@@ -1,3 +1,4 @@
+
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -10,20 +11,21 @@ Update-1: Firefoxの自動更新の可否
 
     :2: [廃止] セキュリティアップデートのみ許可する
 
-    [廃止]
+    deprecated: true
 
     :3: [廃止] 禁止する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :4: 禁止する
 
-    distribution\policies.json:
-    "DisableAppUpdate": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Update」を有効化
+    policies_json: |
+      "DisableAppUpdate": true,
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Update」を有効化
 
 Update-2: アドオンの自動更新の可否
 
@@ -33,29 +35,28 @@ Update-2: アドオンの自動更新の可否
 
     :2: [廃止] 禁止する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :3: 禁止する
 
-    distribution\policies.json:
-    "ExtensionUpdate": false,
-    "Preferences": {
-      "extensions.update.background.url": {
-        "Value": "",
-        "Status": "locked"
-      },
-      "extensions.update.url": {
-        "Value": "",
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Extensions」
-    → 「Extension Update」を無効化
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "ExtensionUpdate": false,
+      "Preferences": {
+        "extensions.update.background.url": {
+          "Value": "",
+          "Status": "locked"
+        },
+        "extensions.update.url": {
+          "Value": "",
+          "Status": "locked"
+        }
+      }
+            
+    GPO: |
+      カテゴリ「Firefox」→「Extensions」
+      → 「Extension Update」を無効化
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Update-3: 検索エンジンの自動更新の可否
 
@@ -65,58 +66,59 @@ Update-3: 検索エンジンの自動更新の可否
 
     :2: [廃止] 禁止する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :3: 禁止する
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.search.update": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "browser.search.update": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Update-4: 「Mozilla Maintenance Service」のインストールの可否
 
     :1: 許可する（既定）
 
-    Install-15-2との併用は不可能。
-    Install-15-2選択時は常にUpdate-4-2を選択する必要がある。
+    comment: |
+      Install-15-2との併用は不可能。
+      Install-15-2選択時は常にUpdate-4-2を選択する必要がある。
+    conflict_with:
+      - Install-15-2
 
     :2: 禁止する
 
-    Firefox-setup.ini/Thunderbird-setup.ini:
-    [Install]
-    MaintenanceService=false
-
-    distribution\policies.json:
-    "Preferences": {
-      "app.update.service.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    firefox_setup_ini: |
+      [Install]
+      MaintenanceService=false
+      
+    policies_json: |
+      "Preferences": {
+        "app.update.service.enabled": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Update-5: [廃止] 軽量テーマの自動更新の可否
 
     :1: [廃止] 許可する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 禁止する
 
-    [廃止]
+    deprecated: true
 
 Update-6: システムアドオンの自動更新の可否
 
@@ -126,12 +128,12 @@ Update-6: システムアドオンの自動更新の可否
 
     :2: 禁止する
 
-    distribution\policies.json:
-    "DisableSystemAddonUpdate": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable System Addon Updates」を有効化
+    policies_json: |
+      "DisableSystemAddonUpdate": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable System Addon Updates」を有効化
 
 Update-7: アプリケーションの自動更新情報取得先
 
@@ -141,12 +143,12 @@ Update-7: アプリケーションの自動更新情報取得先
 
     :2: 任意のサーバー
 
-    distribution\policies.json:
-    "AppUpdateURL": "（URL）",
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Custom Update URL」を有効化し、任意のURLを入力
+    policies_json: |
+      "AppUpdateURL": "（URL）"
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Custom Update URL」を有効化し、任意のURLを入力
 
 Update-8: Firefoxのバックグラウンドでの自動更新の可否
 
@@ -156,11 +158,13 @@ Update-8: Firefoxのバックグラウンドでの自動更新の可否
 
     :2: 禁止する
 
-    // Update-1-4を選択した場合常にこの挙動になる
-    distribution\policies.json:
-    "BackgroundAppUpdate": false,
-
-    GPO:
-    カテゴリ「Firefox」→「Extensions」
-    → 「Background updater」を無効化
-
+    comment: |
+      // Update-1-4を選択した場合常にこの挙動になる
+    policies_json: |
+      "BackgroundAppUpdate": false,
+    forced_by:
+     - Update-1-4  
+      
+    GPO: |
+      カテゴリ「Firefox」→「Extensions」
+      → 「Background updater」を無効化

@@ -1,3 +1,4 @@
+
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -6,8 +7,8 @@ Network-1: Microsoft .NET Frameworkによって変更されたUA文字列の初�
 
     :1: 初期化する
 
-    *.cfg / *.jsc:
-    clearPref("general.useragent.extra.microsoftdotnet");
+    cfg_or_jsc: |
+      clearPref("general.useragent.extra.microsoftdotnet");
 
     :2: 初期化しない（既定）
 
@@ -17,70 +18,71 @@ Network-2: プロキシの利用
 
     :1: [廃止] 利用しない（MCD）
 
-    [廃止]
+    deprecated: true
 
     :6: 利用しない
 
-    distribution\policies.json:
-    "Proxy": {
-      "Mode": "none",
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Proxy Settings」を有効化し、「Connection Type:」で「No Proxy」を選択、「Don't allow proxy settings to be changed.」のチェックをON
+    policies_json: |
+      "Proxy": {
+        "Mode": "none",
+        "Locked": true
+      }      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Proxy Settings」を有効化し、「Connection Type:」で「No Proxy」を選択、「Don't allow proxy settings to be changed.」のチェックをON
 
     :2: [廃止] 固定のプロキシを利用する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :7: 固定のプロキシを利用する
 
-    distribution\policies.json:
-    "Proxy": {
-      "Mode": "manual",
-      "HTTPProxy": "（ホスト名）:（ポート番号）",
-      "UseHTTPProxyForAllProtocols": true,
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Proxy Settings」を有効化し、「Connection Type:」で「Manual proxy configuration」を選択、「HTTP Proxy:」にホスト名とポートを入力、「Use this proxy server for all protocols.」と「Don't allow proxy settings to be changed.」のチェックをON
+    policies_json: |
+      "Proxy": {
+        "Mode": "manual",
+        "HTTPProxy": "（ホスト名）:（ポート番号）",
+        "UseHTTPProxyForAllProtocols": true,
+        "Locked": true
+      }
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Proxy Settings」を有効化し、「Connection Type:」で「Manual proxy configuration」を選択、「HTTP Proxy:」にホスト名とポートを入力、「Use this proxy server for all protocols.」と「Don't allow proxy settings to be changed.」のチェックをON
 
     :3: [廃止] プロキシ自動設定スクリプトを利用する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :8: プロキシ自動設定スクリプトを利用する
 
-    distribution\policies.json:
-    "Proxy": {
-      "Mode": "autoConfig",
-      "AutoConfigURL": "（ファイルのURL）",
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Proxy Settings」を有効化し、「Connection Type:」で「Automatic proxy configuration」を選択、「Automatic proxy configuration URL」にURLを入力、「Don't allow proxy settings to be changed.」のチェックをON
+    policies_json: |
+      "Proxy": {
+        "Mode": "autoConfig",
+        "AutoConfigURL": "（ファイルのURL）",
+        "Locked": true
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Proxy Settings」を有効化し、「Connection Type:」で「Automatic proxy configuration」を選択、「Automatic proxy configuration URL」にURLを入力、「Don't allow proxy settings to be changed.」のチェックをON
 
     :4: [廃止] WPADでネットワークのプロキシ設定を自動検出する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :9: WPADでネットワークのプロキシ設定を自動検出する
 
-    distribution\policies.json:
-    "Proxy": {
-      "Mode": "autoDetect",
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Proxy Settings」を有効化し、「Connection Type:」で「Auto-detect proxy settings」を選択、「Don't allow proxy settings to be changed.」のチェックをON
+    policies_json: |
+      "Proxy": {
+        "Mode": "autoDetect",
+        "Locked": true
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Proxy Settings」を有効化し、「Connection Type:」で「Auto-detect proxy settings」を選択、「Don't allow proxy settings to be changed.」のチェックをON
 
     :5: システムの設定を利用する（既定）
 
@@ -88,89 +90,89 @@ Network-2: プロキシの利用
 
     :10: システムの設定を利用する（明示）
 
-    distribution\policies.json:
-    "Proxy": {
-      "Mode": "system",
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Proxy Settings」を有効化し、「Connection Type:」で「Use system proxy settings」を選択、「Don't allow proxy settings to be changed.」のチェックをON
+    policies_json: |
+      "Proxy": {
+        "Mode": "system",
+        "Locked": true
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Proxy Settings」を有効化し、「Connection Type:」で「Use system proxy settings」を選択、「Don't allow proxy settings to be changed.」のチェックをON
 
 Network-3: [廃止] SSL3.0の利用の可否
 
     :1: [廃止] 許可する
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 禁止する（既定）
 
-    [廃止]
+    deprecated: true
 
 Network-4: NTLM認証によるシングルサインオンの許可
 
     :1: [廃止] 許可する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :2: 許可する
 
-    // SPNEGO: network.negotiate-auth.trusted-uris
-    // Delegated: network.negotiate-auth.delegation-uris
-    // NTLM: network.automatic-ntlm-auth.trusted-uris
-
-    distribution\policies.json:
-    "Authentication": {
-      "SPNEGO": ["https://example.com/"],
-      "Delegated": ["https://example.com/"],
-      "NTLM": ["https://example.com/"]
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Authentication」
-    → 「SPNEGO」を有効化し、オプションでWebサイトを指定
-    → 「Delegated」を有効化し、オプションでWebサイトを指定
-    → 「NTLM」を有効化し、オプションでWebサイトを指定
+    comment: |
+      // SPNEGO: network.negotiate-auth.trusted-uris
+      // Delegated: network.negotiate-auth.delegation-uris
+      // NTLM: network.automatic-ntlm-auth.trusted-uris
+      
+    policies_json: |
+      "Authentication": {
+        "SPNEGO": ["https://example.com/"],
+        "Delegated": ["https://example.com/"],
+        "NTLM": ["https://example.com/"]
+      }      
+      
+    GPO: |
+      カテゴリ「Firefox」→「Authentication」
+      → 「SPNEGO」を有効化し、オプションでWebサイトを指定
+      → 「Delegated」を有効化し、オプションでWebサイトを指定
+      → 「NTLM」を有効化し、オプションでWebサイトを指定
 
     :3: 許可しない
 
-    *.cfg / *.jsc:
-    defaultPref("network.automatic-ntlm-auth.trusted-uris", "");
+    cfg_or_jsc: |
+      defaultPref("network.automatic-ntlm-auth.trusted-uris", "");
 
 Network-5: HTTPの同時接続数
 
     :1: パフォーマンスを優先（既定）
 
-    *.cfg / *.jsc:
-    // 最大同時接続数
-    //defaultPref("network.http.max-connections", 900);
-    // Proxy未使用時・使用時それぞれの、Keep-Aliveでの最大同時維持接続数
-    //defaultPref("network.http.max-persistent-connections-per-server", 6);
-    //defaultPref("network.http.max-persistent-connections-per-proxy", 32);
+    cfg_or_jsc: |
+      // 最大同時接続数
+      //defaultPref("network.http.max-connections", 900);
+      // Proxy未使用時・使用時それぞれの、Keep-Aliveでの最大同時維持接続数
+      //defaultPref("network.http.max-persistent-connections-per-server", 6);
+      //defaultPref("network.http.max-persistent-connections-per-proxy", 32);
 
     :2: トラフィックを抑える事を優先
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.http.max-connections": {
-        "Value": 6,
-        "Status": "locked"
-      },
-      "network.http.max-persistent-connections-per-server": {
-        "Value": 2,
-        "Status": "locked"
-      },
-      "network.http.max-persistent-connections-per-proxy": {
-        "Value": 2,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.http.max-connections": {
+          "Value": 6,
+          "Status": "locked"
+        },
+        "network.http.max-persistent-connections-per-server": {
+          "Value": 2,
+          "Status": "locked"
+        },
+        "network.http.max-persistent-connections-per-proxy": {
+          "Value": 2,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-6: SPDYプロトコルの使用の可否
 
@@ -180,18 +182,17 @@ Network-6: SPDYプロトコルの使用の可否
 
     :2: 禁止する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.http.spdy.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.http.spdy.enabled": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
+            
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-7: TLS/SSLでの脆弱な暗号化アルゴリズム（RC4など）の使用の可否
 
@@ -201,8 +202,8 @@ Network-7: TLS/SSLでの脆弱な暗号化アルゴリズム（RC4など）の�
 
     :2: 特定のホストでのみ許可する
 
-    *.cfg / *.jsc:
-    lockPref("security.tls.insecure_fallback_hosts", "（ホスト名のカンマ区切りのリスト）");
+    cfg_or_jsc: |
+      lockPref("security.tls.insecure_fallback_hosts", "（ホスト名のカンマ区切りのリスト）");
 
 Network-8: IPv6の使用
 
@@ -212,28 +213,27 @@ Network-8: IPv6の使用
 
     :2: 禁止する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.dns.disableIPv6": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.dns.disableIPv6": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-9: [廃止] HTTP Pipeliningの使用
 
     :1: [廃止] 許可する
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 禁止する（既定）
 
-    [廃止]
+    deprecated: true
 
 Network-10: onionドメインの名前解決
 
@@ -243,18 +243,17 @@ Network-10: onionドメインの名前解決
 
     :2: 禁止する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.dns.blockDotOnion": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.dns.blockDotOnion": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-11: UA文字列の変更
 
@@ -264,18 +263,18 @@ Network-11: UA文字列の変更
 
     :2: 任意の値を設定する
 
-    *.cfg / *.jsc:
-    lockPref("general.useragent.override", "（任意の内容）");
+    cfg_or_jsc: |
+      lockPref("general.useragent.override", "（任意の内容）");
 
 Network-12: [廃止] リモートファイルに対するjarプロトコルの使用
 
     :1: [廃止] 許可する（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 禁止する
 
-    [廃止]
+    deprecated: true
 
 Network-13: TLS 1.3の使用
 
@@ -285,108 +284,111 @@ Network-13: TLS 1.3の使用
 
     :2: [廃止] 禁止する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :4: 許可する（明示）
 
-    distribution\policies.json:
-    "SSLVersionMax": "tls1.3",
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.3」を選択
+    policies_json: |
+      "SSLVersionMax": "tls1.3"
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.3」を選択
 
     :3: 禁止する
 
-    distribution\policies.json:
-    "SSLVersionMax": "tls1.2", // "tls1", "tls1.1", "tls1.2" のいずれか
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」から「TLS 1.2」のいずれかを選択
+    policies_json: |
+      "SSLVersionMax": "tls1.2", // "tls1", "tls1.1", "tls1.2" のいずれか
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」から「TLS 1.2」のいずれかを選択
 
 Network-14: SSL/TLSでのSHA-1証明書の使用の可否
 
     :1: 常に受け入れる
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 0);
+    cfg_or_jsc: |
+      lockPref("security.pki.sha1_enforcement_level", 0);
 
     :2: 常に拒否する
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 1);
+    cfg_or_jsc: |
+      lockPref("security.pki.sha1_enforcement_level", 1);
 
     :3: 2016年以前発行の公的な証明書を受け入れる
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 2);
+    cfg_or_jsc: |
+      lockPref("security.pki.sha1_enforcement_level", 2);
 
     :4: インポートした認証局の発行した証明書を受け入れる（既定）
 
-    *.cfg / *.jsc:
-    // lockPref("security.pki.sha1_enforcement_level", 3);
+    cfg_or_jsc: |
+      // lockPref("security.pki.sha1_enforcement_level", 3);
 
     :5: 2016年以前発行の公的な証明書とインポートした認証局の発行した証明書の両方を受け入れる
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 4);
+    cfg_or_jsc: |
+      lockPref("security.pki.sha1_enforcement_level", 4);
 
 Network-15: [廃止] HTTP Pipeliningの最大同時リクエスト数
 
     :1: [廃止] パフォーマンスを優先（既定）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] トラフィックを抑える事を優先
 
-    [廃止]
+    deprecated: true
 
 Network-16: FQDN形式でない（ドットを含まない）ホスト名でのシングルサインオンの許可
 
     :1: [廃止] 許可する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :2: 許可する
 
-    // AllowNonFQDN.SPNEGO: network.negotiate-auth.allow-non-fqdn
-    // AllowNonFQDN.NTLM: network.automatic-ntlm-auth.allow-non-fqdn
-
-    distribution\policies.json:
-    "Authentication": {
-      ...
-      "AllowNonFQDN": {
-        "SPNEGO": true,
-        "NTLM": true
-      }
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「Authentication」
-    → 「Allow Non FQDN」を有効化し、オプションで「Always allow NTLM on non FDNs」と「Always allow SPNEGO on non FDNs」のチェックをON
+    comment: |
+      // AllowNonFQDN.SPNEGO: network.negotiate-auth.allow-non-fqdn
+      // AllowNonFQDN.NTLM: network.automatic-ntlm-auth.allow-non-fqdn
+      
+    policies_json: |
+      "Authentication": {
+        "AllowNonFQDN": {
+          "SPNEGO": true,
+          "NTLM": true
+        }
+      }      
+      
+    GPO: |
+      カテゴリ「Firefox」→「Authentication」
+      → 「Allow Non FQDN」を有効化し、オプションで「Always allow NTLM on non FDNs」と「Always allow SPNEGO on non FDNs」のチェックをON
 
 Network-17: 脆弱なバージョンのTLSの使用
 
     :1: TLS 1.0/1.1の使用を許可する
 
-    // 暗号スイートとして3DESが必要ならNetwork-28を併用する
-    distribution\policies.json:
-    "SSLVersionMin": "tls1",
+    comment: |
+      // 暗号スイートとして3DESが必要ならNetwork-28を併用する
 
-    GPO:
-    カテゴリ「Firefox」
-    → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」を選択
+    policies_json: |
+      "SSLVersionMin": "tls1",
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」を選択
 
     :2: 特定バージョン以上のTLSの使用を強制
 
-    // 暗号スイートとして3DESが必要ならNetwork-28を併用する
-    distribution\policies.json:
-    "SSLVersionMin": "tls1.1", // "tls1", "tls1.1", "tls1.2", "tls1.3" のいずれか
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」から「TLS 1.3」のいずれかを選択
+    comment: |
+      // 暗号スイートとして3DESが必要ならNetwork-28を併用する
+    policies_json: |
+      "SSLVersionMin": "tls1.1", // "tls1", "tls1.1", "tls1.2", "tls1.3" のいずれか
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」から「TLS 1.3」のいずれかを選択
 
     :3: TLS 1.0/1.1の使用を禁止する（既定）
 
@@ -400,8 +402,8 @@ Network-18: navigator.appVersionの変更
 
     :2: 任意の値を設定する
 
-    *.cfg / *.jsc:
-    lockPref("general.appversion.override", "5.0 (Windows)");
+    cfg_or_jsc: |
+      lockPref("general.appversion.override", "5.0 (Windows)");
 
 Network-19: TLSのクライアント証明書を組織内で使用している場合向けの、CORSプロトコルでのGoogle Chrome互換の動作
 
@@ -411,18 +413,17 @@ Network-19: TLSのクライアント証明書を組織内で使用している�
 
     :2: 使用する（Google Chrome互換の動作にする）
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.cors_preflight.allow_client_cert": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.cors_preflight.allow_client_cert": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-20: Google Workspaceへのアクセスを許可するドメイン
 
@@ -432,12 +433,13 @@ Network-20: Google Workspaceへのアクセスを許可するドメイン
 
     :2: 指定のサイトで許可する
 
-    distribution\policies.json:
-    "AllowedDomainsForApps": "example.com,example.org,...",
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Define domains allowed to access Google Workspace」を有効化し、オプションでドメイン名をカンマ区切りで列挙
+    policies_json: |
+      "AllowedDomainsForApps": "example.com,example.org,..."
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Define domains allowed to access Google Workspace」を有効化し、オプションでドメイン名をカンマ区切りで列挙
 
 Network-21: FTPの使用
 
@@ -447,18 +449,17 @@ Network-21: FTPの使用
 
     :2: 使用する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.ftp.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.ftp.enabled": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-22: localhostの名前解決
 
@@ -468,11 +469,10 @@ Network-22: localhostの名前解決
 
     :2: 通常の名前解決を許可する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.proxy.allow_hijacking_localhost": {"Value": true,"Status": "locked"},
-      ...
-    },
+    policies_json: |
+      "Preferences": {
+        "network.proxy.allow_hijacking_localhost": {"Value": true,"Status": "locked"}
+      }
 
 Network-23: 外部アプリケーションの起動の許可
 
@@ -482,16 +482,15 @@ Network-23: 外部アプリケーションの起動の許可
 
     :2: 確認無しで起動を許可する
 
-    distribution\policies.json:
-    "AutoLaunchProtocolsFromOrigins": [
-        {
-          "protocol": "zoommtg",
-          "allowed_origins": [
-            "https://somesite.zoom.us"
-          ]
-        },
-        ...
-    ]
+    policies_json: |
+      "AutoLaunchProtocolsFromOrigins": [
+          {
+            "protocol": "zoommtg",
+            "allowed_origins": [
+              "https://somesite.zoom.us"
+            ]
+          }
+      ]
 
 Network-24: Windowsのシングルサインオン
 
@@ -501,48 +500,50 @@ Network-24: Windowsのシングルサインオン
 
     :2: 使用する
 
-    distribution\policies.json:
-    "WindowsSSO": true
+    policies_json: |
+      "WindowsSSO": true
 
 Network-25: SOCKS v5使用時のDNSに対するプロキシーの仕様
 
     :1: 使用しない（既定）
 
-    distribution\policies.json:
-    "Proxy": {
-      "UseProxyForDNS": false,
-      "Locked": true
-    },
-    
-    単独でロック状態を制御する場合は以下の通り
-    
-    distribution\policies.json:
-    "Preferences": {
-      "network.proxy.socks_remote_dns": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
+    policies_json: |
+      "Proxy": {
+        "UseProxyForDNS": false,
+        "Locked": true
+      }
+      
+    comment: |
+      単独でロック状態を制御する場合は以下の通り
+      
+      policies_json: |
+      "Preferences": {
+        "network.proxy.socks_remote_dns": {
+          "Value": false,
+          "Status": "locked"
+        },
+        ...
+      }
 
     :2: 使用する
 
-    distribution\policies.json:
-    "Proxy": {
-      "UseProxyForDNS": true,
-      "Locked": true
-    },
-    
-    単独でロック状態を制御する場合は以下の通り
-    
-    distribution\policies.json:
-    "Preferences": {
-      "network.proxy.socks_remote_dns": {
-        "Value": true,
-        "Status": "locked"
+    policies_json: |
+      "Proxy": {
+        "UseProxyForDNS": true,
+        "Locked": true
       },
-      ...
-    },
+      
+    comment: |
+      単独でロック状態を制御する場合は以下の通り
+      
+      policies_json: |
+      "Preferences": {
+        "network.proxy.socks_remote_dns": {
+          "Value": true,
+          "Status": "locked"
+        },
+        ...
+      }
 
 Network-26: HTTPS RRによる、DNSでの名前解決時点でのHTTPSへの自動アップグレード
 
@@ -552,38 +553,37 @@ Network-26: HTTPS RRによる、DNSでの名前解決時点でのHTTPSへの自�
 
     :2: 行わない
 
-    *.cfg / *.jsc:
-    lockPref("network.dns.upgrade_with_https_rr", false);
-
-    distribution\policies.json:
-    "Preferences": {
-      "network.dns.upgrade_with_https_rr": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    cfg_or_jsc: |
+      lockPref("network.dns.upgrade_with_https_rr", false);
+      
+    policies_json: |
+      "Preferences": {
+        "network.dns.upgrade_with_https_rr": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-27: 古いバージョンのTLS以外での3DESの使用
 
     :1: 許可する
 
-    *.cfg / *.jsc:
-    lockPref("security.ssl3.deprecated.rsa_des_ede3_sha", false);
-
-    distribution\policies.json:
-    "DisabledCiphers": {
-      "TLS_RSA_WITH_3DES_EDE_CBC_SHA": false,
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Disabled Ciphers」
-    →「TLS_RSA_WITH_3DES_EDE_CBC_SHA」を無効化
+    cfg_or_jsc: |
+      lockPref("security.ssl3.deprecated.rsa_des_ede3_sha", false);
+      
+    policies_json: |
+      "DisabledCiphers": {
+        "TLS_RSA_WITH_3DES_EDE_CBC_SHA": false,
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Disabled Ciphers」
+      →「TLS_RSA_WITH_3DES_EDE_CBC_SHA」を無効化
 
     :2: 禁止する（既定）
 
@@ -593,20 +593,21 @@ Network-28: 古いバージョンのTLS(1.0/1.1)での3DESの使用
 
     :1: 許可する
 
-    // TLS1.0/1.1で通信するときに3DESが使えるようにするにはNetwork-17-1,Network-17-2でTLS1.0/1.1を
-    // 許可するだけでは不十分で以下の設定を併用して明示的に有効化する必要がある
-    distribution\policies.json:
-    "Preferences": {
-      "security.tls.version.enable-deprecated": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    comment: |
+      // TLS1.0/1.1で通信するときに3DESが使えるようにするにはNetwork-17-1,Network-17-2でTLS1.0/1.1を
+      // 許可するだけでは不十分で以下の設定を併用して明示的に有効化する必要がある
+    
+    policies_json: |
+      "Preferences": {
+        "security.tls.version.enable-deprecated": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: 禁止する（既定）
 

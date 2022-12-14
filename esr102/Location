@@ -10,18 +10,18 @@ Location-1: アドレスバーにおけるURLの「http://」の省略表示の�
 
     :2: 省略しない
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.urlbar.trimURLs": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "browser.urlbar.trimURLs": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
+      
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Location-2: アドレスバーにおける国際化ドメインの表示
 
@@ -31,18 +31,17 @@ Location-2: アドレスバーにおける国際化ドメインの表示
 
     :2: 必ずpunycode形式で表示する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.IDN_show_punycode": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "network.IDN_show_punycode": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Location-3: アドレスバーへのURL以外の入力の取り扱い
 
@@ -52,18 +51,17 @@ Location-3: アドレスバーへのURL以外の入力の取り扱い
 
     :2: 入力内容が1単語のみの時、検索を実行する前にローカルドメインのホスト名として名前解決を試みる
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.fixup.dns_first_for_single_words": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    policies_json: |
+      "Preferences": {
+        "browser.fixup.dns_first_for_single_words": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Location-4: Firefox Solution ボタンを含む、アドレスバー候補内へのヒントの表示
 
@@ -73,15 +71,15 @@ Location-4: Firefox Solution ボタンを含む、アドレスバー候補内へ
 
     :2: 表示しない
 
-    distribution\policies.json:
-    "UserMessaging": {
-      "UrlbarInterventions": false,
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」→「User Messaging」
-    → 「Urlbar Interventions」を無効化（設定値の固定は不可能）
+    policies_json: |
+      "UserMessaging": {
+        "UrlbarInterventions": false,
+        "Locked": true
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」→「User Messaging」
+      → 「Urlbar Interventions」を無効化（設定値の固定は不可能）
 
 Location-5: アドレスバー候補内にトップサイトを表示する
 
@@ -91,17 +89,17 @@ Location-5: アドレスバー候補内にトップサイトを表示する
 
     :2: 表示しない
 
-    // Security-15-2 で browser.newtabpage.activity-stream.default.sites と browser.newtabpage.pinned を設定した場合も、これと同様の結果となる
-
-    distribution\policies.json:
-    "Preferences": {
-      "browser.urlbar.suggest.topsites": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    comment: |
+      // Security-15-2 で browser.newtabpage.activity-stream.default.sites と browser.newtabpage.pinned を設定した場合も、これと同様の結果となる
+      
+    policies_json: |
+      "Preferences": {
+        "browser.urlbar.suggest.topsites": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

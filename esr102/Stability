@@ -10,39 +10,39 @@ Stability-1: ハードウェアアクセラレーションを有効化するか�
 
     :4: 有効化する（安定性より描画性能を優先する）
 
-    distribution\policies.json:
-    "HardwareAcceleration": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Hardware Acceleration」を有効化
+    policies_json: |
+      "HardwareAcceleration": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Hardware Acceleration」を有効化
 
     :2: [廃止] 無効化する（MCD）
 
-    [廃止]
+    deprecated: true
 
     :3: 無効化する（描画性能より安定性を優先する）
 
-    distribution\policies.json:
-    "HardwareAcceleration": false,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Hardware Acceleration」を無効化
+    policies_json: |
+      "HardwareAcceleration": false
+      
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Hardware Acceleration」を無効化
 
 Stability-2: [廃止] プロセス分離（e10s）を有効化するかどうか
 
     :1: [廃止] 制御しない（自動的に有効化・無効化が判断される）
 
-    [廃止]
+    deprecated: true
 
     :2: [廃止] 強制的に有効化
 
-    [廃止]
+    deprecated: true
 
     :3: [廃止] 強制的に無効化
 
-    [廃止]
+    deprecated: true
 
 Stability-3: RDPでの音声再生の有効化
 
@@ -52,10 +52,10 @@ Stability-3: RDPでの音声再生の有効化
 
     :2: 有効化する
 
-    *.cfg / *.jsc:
-    // リモートデスクトップ接続で音声が鳴らない不具合を回避する
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=1385207
-    lockPref("security.sandbox.content.level", 2)
+    cfg_or_jsc: |
+      // リモートデスクトップ接続で音声が鳴らない不具合を回避する
+      // https://bugzilla.mozilla.org/show_bug.cgi?id=1385207
+      lockPref("security.sandbox.content.level", 2);
 
 Stability-4: WebRenderの有効化
 
@@ -65,4 +65,5 @@ Stability-4: WebRenderの有効化
 
     :2: 常に無効化する
 
-    システムの環境変数 MOZ_WEBRENDER を 0 に設定する
+    comment: |
+      システムの環境変数 MOZ_WEBRENDER を 0 に設定する

@@ -6,69 +6,69 @@ External-1: ファイルをダウンロードして直接外部アプリケー�
 
     :1: ファイルを読み込み専用で開き、アプリケーション終了後に一時ファイルを削除する（既定）
 
-    // ESR102以降ファイルを読み込み専用で開くためにはDownload-5-2の併用が必要
-    distribution\policies.json:
-    "Preferences": {
-      "browser.helperApps.deleteTempFileOnExit": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    comment: |
+      // ESR102以降ファイルを読み込み専用で開くためにはDownload-5-2の併用が必要
+      
+    policies_json: |
+      "Preferences": {
+        "browser.helperApps.deleteTempFileOnExit": {
+          "Value": true,
+          "Status": "locked"
+        }
+      }
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: ファイルを読み書き可能で開き、アプリケーション終了後に一時ファイルを削除しない
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.helperApps.deleteTempFileOnExit": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
+    policies_json: |
+      "Preferences": {
+        "browser.helperApps.deleteTempFileOnExit": {
+          "Value": false,
+          "Status": "locked"
+        }
+      }
 
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 External-2: 外部アプリケーションで開くためにダウンロードされた一時ファイルの保存先
 
     :1: システムの一時ファイル置き場
 
-    *.cfg / *.jsc:
-    lockPref("browser.download.start_downloads_in_tmp_dir", true);
-
-    distribution\policies.json:
-    "StartDownloadsInTempDirectory": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、以下の要領でJSON文字列を設定{
-      "browser.download.start_downloads_in_tmp_dir": {
-        "Value": true,
-        "Status": "locked"
+    cfg_or_jsc: |
+      lockPref("browser.download.start_downloads_in_tmp_dir", true);
+      
+    policies_json: |
+      "StartDownloadsInTempDirectory": true
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、以下の要領でJSON文字列を設定{
+        "browser.download.start_downloads_in_tmp_dir": {
+          "Value": true,
+          "Status": "locked"
+        },
+        ...
       },
-      ...
-    },
 
     :2: ダウンロード先フォルダー（既定）
 
-    *.cfg / *.jsc:
-    lockPref("browser.download.start_downloads_in_tmp_dir", false);
-
-    distribution\policies.json:
-    "StartDownloadsInTempDirectory": false,
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、以下の要領でJSON文字列を設定{
-      "browser.download.start_downloads_in_tmp_dir": {
-        "Value": false,
-        "Status": "locked"
+    cfg_or_jsc: |
+      lockPref("browser.download.start_downloads_in_tmp_dir", false);
+      
+    policies_json: |
+      "StartDownloadsInTempDirectory": false
+      
+    GPO: |
+      カテゴリ「Firefox」
+      →「Preferences」を有効化し、以下の要領でJSON文字列を設定{
+        "browser.download.start_downloads_in_tmp_dir": {
+          "Value": false,
+          "Status": "locked"
+        },
+        ...
       },
-      ...
-    },
