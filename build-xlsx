@@ -402,6 +402,20 @@ class ConfigurationRow:
                                 self._write_comment(column_offset + column_count + 2, message,
                                                     {'visible': True, 'color': '#ff4b00', 'font_size': 7})
 
+            else:
+                forced_by = self._sheet._metadata[ESR_CURRENT.upper()]['forced_by']
+                if forced_by != None and option_id in forced_by:
+                    for candidate in forced_by[option_id]:
+                        if candidate in conf.keys():
+                            parsed_config = self._parse_config(config)
+                            if type(parsed_config) is dict and 'default' in parsed_config.keys() and parsed_config['default']:
+                                # not selected but if options_id is default, it is ok.
+                                pass
+                            else:
+                                message = "%s は %s の適用により自動的に挙動が決まるため、選択していないと矛盾します。" % (option_id, candidate)
+                                self._write_comment(column_offset + column_count + 2, message,
+                                                {'visible': True, 'color': '#ff4b00', 'font_size': 7})
+
             self._write_column(column_offset + column_count,     self._concat_column_value(None, config), format)
             self._write_column(column_offset + column_count + 1, status, format)
 
