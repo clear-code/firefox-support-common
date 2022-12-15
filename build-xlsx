@@ -59,6 +59,11 @@ ESR_PREVIOUS = 'esr91'
 ESR_CURRENT  = 'esr102'
 CHAPTERS_CSV = 'verify-targets-to-chapters.csv'
 
+# allow to override
+esr_previous_version = ESR_PREVIOUS
+esr_current_version = ESR_CURRENT
+base_dir = BASEDIR
+
 WORKBOOKS = [
     ('基本設定', [
         'Install',
@@ -140,11 +145,13 @@ import pprint
 
 class ConfigurationSheet:
 
-    def __init__(self, confs, formats, sheet):
+    def __init__(self, confs, formats, sheet, esr_previous_version, esr_current_version):
         self._confs   = confs
         self._formats = formats
         self._sheet   = sheet
         self._metadata = {}
+        self._esr_previous_version = esr_previous_version
+        self._esr_current_version = esr_current_version
 
     def iterate_all_confs(self):
         return self._confs.items()
@@ -173,9 +180,9 @@ class ConfigurationSheet:
         column_offset += self._write_header_columns(HEADING_COLUMNS, column_offset)
         column_offset += self._write_header_columns(LEADING_COLUMNS, column_offset)
 
-        last_variation = ESR_PREVIOUS.upper()
+        last_variation = self._esr_previous_version.upper()
         for variation in self._confs.keys():
-            if variation == ESR_PREVIOUS.upper():
+            if variation == self._esr_previous_version.upper():
                 continue
             columns = variation_columns(variation, last_variation)
             column_offset += self._write_header_columns(columns, column_offset)
@@ -270,7 +277,8 @@ class ConfigurationSheet:
 class ConfigurationRow:
 
     def __init__(self, sheet, index, item, option, category,
-                 prev_conf, prev_items, verification_chapters, base_items):
+                 prev_conf, prev_items, verification_chapters, base_items,
+                 esr_previous_version, esr_current_version):
         self._sheet                 = sheet
         self._index                 = index
         self._item                  = item
@@ -284,6 +292,9 @@ class ConfigurationRow:
         self._prev_config           = self._get_option_config(self._prev_conf)
         self._template_prev_config  = self._get_option_config(prev_items)
         self._template_curr_config  = option['config'].strip()
+
+        self._esr_previous_version  = esr_previous_version
+        self._esr_current_version   = esr_current_version
 
     def _get_option_config(self, conf_or_items):
         found_option = conf_or_items.get(self._option['option_id'])
@@ -368,7 +379,7 @@ class ConfigurationRow:
         last_conf   = self._prev_conf
         last_config = self._prev_config
         for version, conf in self._sheet.iterate_all_confs():
-            if version == ESR_PREVIOUS.upper():
+            if version == self._esr_previous_version:
                 continue
 
             config         = self._get_option_config(conf)
@@ -403,7 +414,7 @@ class ConfigurationRow:
                                                     {'visible': True, 'color': '#ff4b00', 'font_size': 7})
 
             else:
-                forced_by = self._sheet._metadata[ESR_CURRENT.upper()]['forced_by']
+                forced_by = self._sheet._metadata[self._esr_current_version.upper()]['forced_by']
                 if forced_by != None and option_id in forced_by:
                     for candidate in forced_by[option_id]:
                         if candidate in conf.keys():
@@ -448,11 +459,11 @@ class ConfigurationRow:
         try:
             valid_last_config = self._validate_syntax(last_config)
         except yaml.YAMLError as e:
-            print('ERROR: %s: syntax of %s is wrong: %s' % (option_id, ESR_PREVIOUS.upper(), last_config))
+            print('ERROR: %s: syntax of %s is wrong: %s' % (option_id, self._esr_previous_version, last_config))
         try:
             valid_config = self._validate_syntax(config)
         except yaml.YAMLError as e:
-            print('ERROR: %s: syntax of %s is wrong: %s' % (option_id, ESR_CURRENT.upper(), config))
+            print('ERROR: %s: syntax of %s is wrong: %s' % (option_id, self._esr_current_version, config))
 
         modified = self._sanitize_config(None, last_config) != self._sanitize_config(None, config)
         check_template = self._is_follow_new_template(option_id, config)
@@ -466,19 +477,20 @@ class ConfigurationRow:
                 format, status = 'selected_changed', '変更あり'
             elif check_template:
                 print('WARNING: %s %s is same as %s, but a bit different from current %s template:' %
-                      (option_id, ESR_CURRENT.upper(), ESR_PREVIOUS.upper(), ESR_CURRENT.upper()))
+                      (option_id, self._esr_current_version,
+                       self._esr_previous_version, self._esr_current_version))
                 format, status = 'mismatched', '反映値要確認(雛形との差分)'
             else:
                 format, status = 'selected', ''
             if check_template_mode:
                 if not valid_last_config and not valid_config:
                     format = 'invalid'
-                    status += '%s & %s %s' % (ESR_PREVIOUS.upper(), ESR_CURRENT.upper(), '反映値要確認(構文エラー)')
+                    status += '%s & %s %s' % (self._esr_previous_version, self._esr_current_version, '反映値要確認(構文エラー)')
                 elif not valid_last_config:
                     format = 'invalid'
-                    status +=  ESR_PREVIOUS.upper() + '反映値要確認(構文エラー)'
+                    status +=  self._esr_previous_version + '反映値要確認(構文エラー)'
                 elif not valid_config:
-                    format, status = 'invalid', ESR_CURRENT.upper() + '反映値要確認(構文エラー)'
+                    format, status = 'invalid', self._esr_current_version + '反映値要確認(構文エラー)'
         elif last_conf == self._prev_conf:
             if self._modified_from_prev_version():
               if self._added_at_this_version():
@@ -643,9 +655,11 @@ class ConfigurationRow:
             return False
         return self._sanitize_config(None, self._template_curr_config) != self._sanitize_config(None, config)
 
-def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
+def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets,
+                  base_dir, esr_previous_version, esr_current_version):
+
     formats = create_formats(workbook)
-    prev_conf = confs[ESR_PREVIOUS.upper()]
+    prev_conf = confs[esr_previous_version.upper()]
 
     for title, sources in WORKBOOKS:
         if title in exclude_worksheets:
@@ -655,6 +669,8 @@ def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
             confs,
             formats,
             workbook.add_worksheet(title),
+            esr_previous_version,
+            esr_current_version
         )
         sheet.write_header()
 
@@ -662,20 +678,36 @@ def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
 
         # Generate metadata for conflict, forced by dependency
         for source in sources:
-            base_items = adlib.load(os.path.join(BASEDIR, ESR_CURRENT, source))
-            prev_items = adlib.load_as_dict(os.path.join(BASEDIR, ESR_PREVIOUS, source))
-            sheet.build_metadata(ESR_PREVIOUS.upper(), prev_items)
-            sheet.build_metadata(ESR_CURRENT.upper(), base_items)
+            source_path = os.path.join(base_dir, esr_current_version, source)
+            if os.path.isfile(source_path):
+                base_items = adlib.load(os.path.join(base_dir, esr_current_version, source))
+                sheet.build_metadata(esr_current_version.upper(), base_items)
+            else:
+                print("WARNING: no %s" % source_path)
+
+            source_path = os.path.join(base_dir, esr_previous_version, source)
+            if os.path.isfile(source_path):
+                prev_items = adlib.load_as_dict(source_path)
+                sheet.build_metadata(esr_previous_version.upper(), prev_items)
+            else:
+                print("WARNING: no %s" % source_path)
 
         for source in sources:
             # We always output items based on sources for the current version.
             # In other words, the "current version" needs to define all deprecated/obsolete items
             # if they still need to be visible in the output sheet.
-            base_items = adlib.load(os.path.join(BASEDIR, ESR_CURRENT, source))
-            prev_items = adlib.load_as_dict(os.path.join(BASEDIR, ESR_PREVIOUS, source))
+            source_path = os.path.join(base_dir, esr_current_version, source)
+            base_items = {}
+            prev_items = {}
+            if os.path.isfile(source_path):
+                base_items = adlib.load(source_path)
+            source_path = os.path.join(base_dir, esr_previous_version, source)
+            if os.path.isfile(source_path):
+                prev_items = adlib.load_as_dict(source_path)
             if verbose_mode:
-                print("Loading: %s" % os.path.join(BASEDIR, ESR_CURRENT, source))
-                print("Loading: %s" % os.path.join(BASEDIR, ESR_PREVIOUS, source))
+                print("Loading: %s" % os.path.join(base_dir, esr_current_version, source))
+                print("Loading: %s" % os.path.join(base_dir, esr_previous_version, source))
+
 
             sheet.merge_category_heading(row_index, base_items)
 
@@ -692,7 +724,9 @@ def generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets):
                         prev_conf,
                         prev_items,
                         verification_chapters,
-                        base_items
+                        base_items,
+                        esr_previous_version,
+                        esr_current_version
                     )
                     row.write()
                     row_index += 1
@@ -726,23 +760,30 @@ def load_verification_chapters(path):
         return {}
 
 def main(args):
-    global check_template_mode
+    global check_template_mode, base_dir, esr_previous_version, esr_current_version
     confs   = {}
     outfile = 'config.xlsx'
     exclude_worksheets = []
 
-    opts, args = getopt.getopt(args, 'o:x:p:c:d:tv')
+    opts, args = getopt.getopt(args, 'b:o:x:p:c:d:tv')
     for key, value in opts:
+        if key == '-b':
+            base_dir = value
         if key == '-o':
             outfile = value
         elif key == '-x':
             exclude_worksheets = value.split(',')
         elif key == '-p':
-            confs[ESR_PREVIOUS.upper()] = value
+            confs[esr_previous_version.upper()] = value
         elif key == '-c':
-            confs[ESR_CURRENT.upper()] = value
+            confs[esr_current_version.upper()] = value
         elif key == '-d':
             parts = value.split(':', 1)
+            # specify previous, current order
+            if not parts[0] in confs.keys():
+                esr_previous_version = parts[0].lower()
+            else:
+                esr_current_version = parts[0].lower()
             confs[parts[0]] = parts[1]
         elif key == '-v':
             verbose_mode = True
@@ -753,12 +794,12 @@ def main(args):
 
     verification_chapters = {}
     for arg in args:
-        if ESR_PREVIOUS in arg and not ESR_PREVIOUS.upper() in confs:
-            print('%s -> %s' % (ESR_PREVIOUS, arg))
-            confs[ESR_PREVIOUS.upper()] = arg
-        elif ESR_CURRENT in arg and not ESR_CURRENT.upper() in confs:
-            print('%s -> %s' % (ESR_CURRENT, arg))
-            confs[ESR_CURRENT.upper()] = arg
+        if esr_previous_version in arg and not esr_previous_version.upper() in confs:
+            print('%s -> %s' % (esr_previous_version, arg))
+            confs[esr_previous_version.upper()] = arg
+        elif esr_current_version in arg and not esr_current_version.upper() in confs:
+            print('%s -> %s' % (esr_current_version, arg))
+            confs[esr_current_version.upper()] = arg
         elif CHAPTERS_CSV in arg:
             print('Loading', os.path.basename(arg))
             verification_chapters = load_verification_chapters(arg)
@@ -767,7 +808,8 @@ def main(args):
         confs[version] = adlib.load_as_dict(path)
 
     with xlsxwriter.Workbook(outfile) as workbook:
-        generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets)
+        generate_xlsx(workbook, confs, verification_chapters, exclude_worksheets,
+                      base_dir, esr_previous_version, esr_current_version)
 
     print('Generated:', workbook.filename)
 
