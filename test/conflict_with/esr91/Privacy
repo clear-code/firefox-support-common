@@ -1,0 +1,111 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Privacy-1: 履歴の保存の可否
+
+    :2: 保存する（既定）
+
+    -
+
+    :5: 履歴を基本的には保存し、ただし（一部項目は）終了時の消去を許可する / 起動時からのプライベートブラウジングの開始を無効
+
+    cfg_or_jsc: |
+      // ポリシーのPreferencesで設定可能な項目だが、policies.jsonの読み込みタイミングが遅いため、ユーザープロファイル内にbrowser.privatebrowsing.autostart=trueが保持されていると、そちらが反映された状態で起動してしまう。
+      // これを防ぐため、この項目はMCDで反映する必要がある。
+      lockPref("browser.privatebrowsing.autostart", false);
+
+    :7: 保存を強制する
+
+    cfg_or_jsc: |
+      lockPref("browser.privatebrowsing.autostart", false);
+      lockPref("privacy.sanitize.sanitizeOnShutdown", false);
+
+    :3: 一切保存しない
+
+    cfg_or_jsc: |
+      lockPref("browser.privatebrowsing.autostart", true);
+      lockPref("privacy.sanitize.sanitizeOnShutdown", true);
+
+    :4: [廃止] 終了時に消去する（MCD）
+
+    deprecated: true
+
+    :6: 終了時に消去する
+
+    comment: |
+      一括で設定する場合
+      distribution\policies.json:
+      "SanitizeOnShutdown": true,
+
+      個別に設定する場合
+      distribution\policies.json:
+      "SanitizeOnShutdown": {
+        "Cache": true,
+        "Cookies": true,
+        "Downloads": true,
+        "FormData": true,
+        "History": true,
+        "Sessions": true,
+        "SiteSettings": true,
+        "OfflineApps": true,
+        "Locked": true
+      },
+
+    GPO: |
+    カテゴリ「Firefox」
+    → 「Clear data when browser is closed (Moved)」を有効化し、削除対象の項目にチェックを入れる
+
+Privacy-2: フォームの入力履歴の保存の可否（Webページ上のフォーム要素、およびWeb検索バーのオートコンプリート機能の無効化）
+
+    :1: 保存する（既定）
+
+    -
+
+    :2: [廃止] 保存しない（MCD）
+
+    deprecated: true
+
+    :3: 保存しない
+
+    policies_json: |
+      "DisableFormHistory": true
+
+    GPO: |
+      カテゴリ「Firefox」
+      → 「Disable Form History」を有効化
+
+Privacy-3: ダウンロード履歴の保存の可否
+
+    :1: 永続的に保存する（既定）
+
+    cfg_or_jsc: |
+      // Privacy-1-3, Privacy-1-4との共存は不可能
+      lockPref("privacy.clearOnShutdown.downloads", false);
+      lockPref("privacy.clearOnShutdown.history", false);
+    conflict_with:
+      - Privacy-1-3
+      - Privacy-1-4
+
+    :2: [廃止] 終了するまで保存する
+
+    deprecated: true
+
+    :3: 保存しない
+
+    cfg_or_jsc: |
+      // Privacy-1-3, Privacy-1-4選択時は強制的にこの動作となる。
+      // Privacy-1-2, Privacy-1-5, Privacy-1-7との共存は不可能。
+      lockPref("privacy.sanitize.sanitizeOnShutdown", true);
+      lockPref("privacy.clearOnShutdown.downloads", true);
+      // downloadsのみの削除はできず、必ずhistoryとセットで削除する必要がある
+      lockPref("privacy.clearOnShutdown.history", true);
+      // 以下は Privacy-1-4 、Privacy-10-2 と矛盾しないようにそちらに合わせる
+      lockPref("privacy.clearOnShutdown.cache", false);
+      lockPref("privacy.clearOnShutdown.cookies", false);
+      lockPref("privacy.clearOnShutdown.formdata", false);
+      lockPref("privacy.clearOnShutdown.offlineApps", false);
+      lockPref("privacy.clearOnShutdown.openWindows", false);
+      lockPref("privacy.clearOnShutdown.sessions", false);
+      lockPref("privacy.clearOnShutdown.siteSettings", false);
+
