@@ -509,6 +509,8 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     * ウェブ閲覧中におすすめの機能を表示しない(Tab-24-2)
 
     上記に加え、以下の設定を行う。
+    ただし、下記設定を行ったとしてもタイマーによる定期的な外部サイトへのリクエスト(remote-settings)が発生することは抑止できない。
+    参考: https://searchfox.org/mozilla-esr102/source/services/settings/servicesSettings.manifest#7
 
     *.cfg / *.jsc:
     // アクセシビリティの情報
