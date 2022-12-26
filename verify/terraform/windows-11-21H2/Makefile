@@ -9,7 +9,7 @@ SHELL=/bin/bash
 all: apply
 
 terraform.tfvars:
-	cat terraform.tfvars.template | sed -e "s/%password%/$$(pwgen -y 20 1 | sed -r -e s/[\'\"$$%{}]/_/)/gi" > terraform.tfvars
+	cat terraform.tfvars.template | sed -e "s/%password%/$$(pwgen -s --remove-chars="\'\"$$%{}" -y 20 1)/gi" > terraform.tfvars
 
 apply: terraform.tfvars
 	terraform init
