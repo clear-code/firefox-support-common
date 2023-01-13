@@ -343,6 +343,12 @@ resource "local_file" "playbook" {
         state: present
         allow_empty_checksums: yes
         ignore_checksums: yes
+    - name: Install vim
+      win_chocolatey:
+        name: vim
+        state: present
+        allow_empty_checksums: yes
+        ignore_checksums: yes
     - name: Download firefox-support-common for testcases
       win_get_url:
         url: "https://github.com/clear-code/firefox-support-common/archive/master.zip"
