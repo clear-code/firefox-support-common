@@ -1,0 +1,8 @@
+namespace = "example-win11-pro-21H2"
+windows-username = "clearcode"
+windows-password = "%PASSWORD%"
+windows-language-pack-url = ""
+flash-installer-url = ""
+hookdate-download-url = ""
+debugview-download-url = ""
+old-ie-download-url = ""
