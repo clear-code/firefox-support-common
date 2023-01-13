@@ -1,4 +1,4 @@
-namespace = "example-win11-pro-21H2"
+namespace = "example-win11-ent-22H2"
 windows-username = "clearcode"
 windows-password = "%PASSWORD%"
 windows-language-pack-url = ""
