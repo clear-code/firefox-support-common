@@ -66,7 +66,7 @@ resource "azurerm_virtual_machine" "firefoxverify_vm" {
   storage_image_reference {
     # Windows 11 Pro 21H2
     publisher = "MicrosoftWindowsDesktop"
-    offer     = "windows11preview"
+    offer     = "Windows-11"
     sku       = "win11-21h2-pro"
     version   = "latest"
   }
