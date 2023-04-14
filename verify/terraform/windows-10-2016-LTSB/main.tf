@@ -266,10 +266,17 @@ resource "local_file" "playbook" {
   filename = "ansible/playbook.yml"
   content  = <<EOL
 - hosts: windows
+  gather_facts: no
   become_method: runas
   vars:
     ansible_become_password: "${var.windows-password}"
   tasks:
+    - name: Wait for reachable by polling after 'delay' until 'timeout'
+      ansible.builtin.wait_for_connection:
+          delay: 10
+          timeout: 300
+    - name: Gathering facts by setup module
+      setup:
     - name: Allow copy and paste to the UAC dialog
       win_regedit:
         key: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System
