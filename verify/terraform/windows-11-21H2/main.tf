@@ -344,9 +344,15 @@ resource "local_file" "playbook" {
       win_chocolatey:
         name: chocolatey
         state: present
-    - name: Install EmEditor
+    - name: Install chocolatey-compatibility.extension to install legacy style package like SakuraEditor
       win_chocolatey:
-        name: emeditor
+        name: chocolatey-compatibility.extension
+        state: present
+        allow_empty_checksums: yes
+        ignore_checksums: yes
+    - name: Install SakuraEditor
+      win_chocolatey:
+        name: sakuraeditor
         state: present
         allow_empty_checksums: yes
         ignore_checksums: yes
