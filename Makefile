@@ -57,10 +57,10 @@ verification-manual:
 migration-report: migration-report-docx migration-report-pdf
 
 migration-report-docx:
-	cd migration && cat esr102.md | pandoc ${PANDOC_OPT_DOCX} -o "../migration-report-esr102-$(DATE).docx"
+	cd migration && cat esr115.md | pandoc ${PANDOC_OPT_DOCX} -o "../migration-report-esr115-$(DATE).docx"
 
 migration-report-pdf:
-	cd migration && cat esr102.md | pandoc ${PANDOC_OPT_PDF} -o "../migration-report-esr102-$(DATE).pdf"
+	cd migration && cat esr115.md | pandoc ${PANDOC_OPT_PDF} -o "../migration-report-esr115-$(DATE).pdf"
 
 clean:
 	rm -f config-*.xlsx
