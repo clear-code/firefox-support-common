@@ -305,32 +305,23 @@ Network-13: TLS 1.3の使用
     カテゴリ「Firefox」
     → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」から「TLS 1.2」のいずれかを選択
 
-Network-14: SSL/TLSでのSHA-1証明書の使用の可否
+Network-14: [廃止] SSL/TLSでのSHA-1証明書の使用の可否
 
-    :1: 常に受け入れる
+    :1: [廃止] 常に受け入れる
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 0);
+    [廃止]
 
-    :2: 常に拒否する
+    :3: [廃止] 2016年以前発行の公的な証明書を受け入れる
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 1);
+    [廃止]
 
-    :3: 2016年以前発行の公的な証明書を受け入れる
+    :4: [廃止] インポートした認証局の発行した証明書を受け入れる（既定）
 
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 2);
+    [廃止]
 
-    :4: インポートした認証局の発行した証明書を受け入れる（既定）
+    :5: [廃止] 2016年以前発行の公的な証明書とインポートした認証局の発行した証明書の両方を受け入れる
 
-    *.cfg / *.jsc:
-    // lockPref("security.pki.sha1_enforcement_level", 3);
-
-    :5: 2016年以前発行の公的な証明書とインポートした認証局の発行した証明書の両方を受け入れる
-
-    *.cfg / *.jsc:
-    lockPref("security.pki.sha1_enforcement_level", 4);
+    [廃止]
 
 Network-15: [廃止] HTTP Pipeliningの最大同時リクエスト数
 
@@ -439,26 +430,15 @@ Network-20: Google Workspaceへのアクセスを許可するドメイン
     カテゴリ「Firefox」
     →「Define domains allowed to access Google Workspace」を有効化し、オプションでドメイン名をカンマ区切りで列挙
 
-Network-21: FTPの使用
+Network-21: [廃止] FTPの使用
 
-    :1: 使用しない（既定）
+    :1: [廃止] 使用しない（既定）
 
     -
 
-    :2: 使用する
+    :2: [廃止] 使用する
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.ftp.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
 Network-22: localhostの名前解決
 
