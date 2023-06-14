@@ -442,22 +442,11 @@ Privacy-12: DOMストレージの利用の可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Privacy-13: Indexed DBの利用の可否
+Privacy-13: [廃止] Indexed DBの利用の可否
 
-    :1: 許可する（既定）
+    :1: [廃止] 許可する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "dom.indexedDB.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
     :2: [廃止] 特定サイトのみ確認なしで許可する
 
@@ -467,20 +456,9 @@ Privacy-13: Indexed DBの利用の可否
 
     [廃止]
 
-    :3: 禁止する
+    :3: [廃止] 禁止する
 
-    distribution\policies.json:
-    "Preferences": {
-      "dom.indexedDB.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
 Privacy-14: 位置情報の利用の可否
 
