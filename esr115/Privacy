@@ -1091,22 +1091,22 @@ Privacy-35: トラッキングの遮断に使用するブロックリストの�
     :1: レベル1（基本）ブロックを初期設定とし、変更を許可（既定）
 
     *.cfg / *.jsc:
-    defaultPref("urlclassifier.trackingTable", "test-track-simple,base-track-digest256");
+    defaultPref("urlclassifier.trackingTable", "moztest-track-simple,ads-track-digest256,social-track-digest256,analytics-track-digest256");
 
     :2: レベル2（厳格）ブロックを初期設定とし、変更を許可
 
     *.cfg / *.jsc:
-    defaultPref("urlclassifier.trackingTable", "test-track-simple,,base-track-digest256,content-track-digest256");
+    defaultPref("urlclassifier.trackingTable", "moztest-track-simple,ads-track-digest256,social-track-digest256,analytics-track-digest256,content-track-digest256");
 
     :3: レベル1（基本）ブロックで固定
 
     *.cfg / *.jsc:
-    lockPref("urlclassifier.trackingTable", "test-track-simple,base-track-digest256");
+    lockPref("urlclassifier.trackingTable", "moztest-track-simple,ads-track-digest256,social-track-digest256,analytics-track-digest256");
 
     :4: レベル2（厳格）ブロックで固定
 
     *.cfg / *.jsc:
-    lockPref("urlclassifier.trackingTable", "test-track-simple,base-track-digest256,content-track-digest256");
+    lockPref("urlclassifier.trackingTable", "moztest-track-simple,ads-track-digest256,social-track-digest256,analytics-track-digest256,content-track-digest256");
 
 Privacy-36: TLS/SSLで保護された通信のコンテンツのディスク上へのキャッシュ
 
@@ -1797,7 +1797,6 @@ Privacy-58: クレジットカード情報の保存
     :1: 保存する
 
     *.cfg / *.jsc:
-    lockPref("dom.payments.defaults.saveCreditCard", true);
     lockPref("extensions.formautofill.creditCards.available", true);
     lockPref("extensions.formautofill.creditCards.enabled", true);
     lockPref("extensions.formautofill.creditCards.hideui", false);
@@ -1805,7 +1804,6 @@ Privacy-58: クレジットカード情報の保存
     :2: 保存しない (既定）
 
     *.cfg / *.jsc:
-    lockPref("dom.payments.defaults.saveCreditCard", false);
     lockPref("extensions.formautofill.creditCards.available", false);
     lockPref("extensions.formautofill.creditCards.enabled", false);
     lockPref("extensions.formautofill.creditCards.hideui", true);
