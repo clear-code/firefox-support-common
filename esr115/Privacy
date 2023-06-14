@@ -2035,3 +2035,37 @@ Privacy-65: 履歴データベースの有効化
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Privacy-66: トラッキング防止時のクロスサイトのトラッキング用URLパラメーターの扱い
+
+    :1: 削除する（既定）
+
+    -
+
+    :2: 削除しない
+
+    *.cfg / *.jsc:
+    lockPref("privacy.query_stripping.enabled", true);
+    lockPref("privacy.query_stripping.enabled.pbmode", true);
+
+Privacy-67: トラッカーのより強力なブロック
+
+    :1: ブロックする
+
+    *.cfg / *.jsc:
+    lockPref("privacy.annotate_channels.strict_list.enabled", true);
+
+    :2: ブロックしない（既定）
+
+    -
+
+Privacy-68: プライベートウィンドウでのトラッカーのより強力なブロック
+
+    :1: ブロックする（既定）
+
+    -
+
+    :2: ブロックしない
+
+    *.cfg / *.jsc:
+    lockPref("privacy.annotate_channels.strict_list.pbmode.enabled", false);
