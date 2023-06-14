@@ -1161,26 +1161,15 @@ Privacy-38: Webビーコンの送信
     *.cfg / *.jsc:
     lockPref("beacon.enabled", false);
 
-Privacy-39: SSL/TLSでないページへのパスワード入力時の警告
+Privacy-39: [廃止] SSL/TLSでないページへのパスワード入力時の警告
 
-    :1: 警告する（既定）
+    :1: [廃止] 警告する（既定）
 
-    -
+    [廃止]
 
-    :2: 警告しない
+    :2: [廃止] 警告しない
 
-    distribution\policies.json:
-    "Preferences": {
-      "security.insecure_field_warning.contextual.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
 Privacy-40: パスワード保存ポップアップにおける、パスワードを平文表示するチェックボックスの表示の可否
 
