@@ -1,0 +1,230 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Ui-1: Firefox組み込みのPDFビューアの使用可否
+
+    :1: 許可する（既定）
+
+    *.cfg / *.jsc:
+    lockPref("pdfjs.disabled", false);
+    lockPref("plugin.disable_full_page_plugin_for_types", "（application/pdfを含まない値）");
+
+    :2: [廃止] 禁止する（MCD）
+
+    [廃止]
+
+    :3: 禁止する
+
+    distribution\policies.json:
+    "DisableBuiltinPDFViewer": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Built-in PDF Viewer (PDF.js)」を有効化
+
+Ui-2: F7キーによるキャレットブラウズモードの開始の可否
+
+    :1: 許可する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "accessibility.browsewithcaret_shortcut.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "accessibility.browsewithcaret_shortcut.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-3: [廃止] タブごとの音声インジケータの利用の許可
+
+    :1: [廃止] 許可する（既定）
+
+    [廃止]
+
+    :2: [廃止] 禁止する
+
+    [廃止]
+
+Ui-4: [廃止] 同一プロキシへの同時アクセスによる認証ダイアログの多重表示の抑止
+
+    :1: [廃止] 抑止する
+
+    [廃止]
+
+    :2: [廃止] 抑止しない
+
+    [廃止]
+
+Ui-5: リーダービュー機能の使用
+
+    :1: 使用する（既定）
+
+    -
+
+    :2: 使用しない
+
+    *.cfg / *.jsc:
+    lockPref("reader.parse-on-load.enabled", false)
+
+Ui-6: スペルチェック機能の使用
+
+    :1: 使用する（既定）
+
+    -
+
+    :2: 使用しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "layout.spellcheckDefault": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-7: FirefoxScreenshots機能の使用
+
+    :1: 使用する（既定）
+
+    -
+
+    :2: [廃止] 使用しない（MCD）
+
+    -
+
+    :3: 使用しない
+
+    distribution\policies.json:
+    "DisableFirefoxScreenshots": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Firefox Screenshots」を有効化
+
+Ui-8: [廃止] アドレスバーの拡大・縮小ボタンの表示
+
+    :1: [廃止] 表示する（既定）
+
+    [廃止]
+
+    :2: [廃止] 表示しない
+
+    [廃止]
+
+Ui-9: Tabキーでのツールバーボタンへのフォーカス移動
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.toolbars.keyboard_navigation": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-10: BackSpace/Shift-BackSpaceに割り当てる動作
+
+    :1: なし（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.backspace_action": {
+        "Value": 2,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 戻る/進む
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.backspace_action": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: 1ページ上にスクロール/下にスクロール
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.backspace_action": {
+        "Value": 1,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-11: サイトごとの表示拡大率の制御
+
+    :1: サイトごとに記憶する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.zoom.siteSpecific": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    :2: サイトごとに記憶しない(リセットされる)
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.zoom.siteSpecific": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+

@@ -1,0 +1,203 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Plugin-1: [廃止] Javaプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）
+
+    [廃止]
+
+Plugin-2: [廃止] Adobe Flashプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する
+
+    -
+
+    :4: [廃止] 常に無効化する（ポリシーで設定）
+
+    -
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :5: [廃止] 常に有効化する（ポリシーで設定）
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）（ポリシーで設定）
+
+    -
+
+Plugin-3: [廃止] Adobe Acrobatプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）
+
+    [廃止]
+
+Plugin-4: [廃止] Shockwaveプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）
+
+    [廃止]
+
+Plugin-5: [廃止] Silverlightプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する
+
+    [廃止]
+    Firefox 53で廃止
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1318833
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）
+
+    [廃止]
+
+Plugin-6: [廃止] Windows Media Playerプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する（既定）
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする
+
+    [廃止]
+
+Plugin-7: [廃止] Cisco WebExプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する（既定）
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする
+
+    [廃止]
+
+Plugin-8: Gecko Media Pluginの利用の可否
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "media.eme.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-eme-adobe.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-eme-adobe.autoupdate": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-gmpopenh264.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-gmpopenh264.autoupdate": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-widevinecdm.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-widevinecdm.autoupdate": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "media.gmp-manager.url": {
+        "Value": "about:blank",
+        "Status": "locked"
+      },
+      "media.gmp-provider.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Plugin-9: [廃止] IcedTeaプラグインの有効・無効の制御
+
+    :1: [廃止] 常に無効化する
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）
+
+    [廃止]
+
+Plugin-10: [廃止] すべてのプラグインの初期状態
+
+    :1: [廃止] 常に無効化する
+
+    [廃止]
+
+    :2: [廃止] 常に有効化する
+
+    [廃止]
+
+    :3: [廃止] クリックされたら有効にする（既定）
+
+    [廃止]
+
+Plugin-11: [廃止] 「Firefoxによるサポートが終了したプラグインは表示されません。」のメッセージ
+
+    :1: [廃止] 表示する(既定)
+
+    [廃止]
+
+    :2: [廃止] 表示しない
+
+    [廃止]
+

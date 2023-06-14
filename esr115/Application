@@ -1,0 +1,145 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Application-1: デスクトップのショートカット
+
+    :1: 既定の内容で作成（既定）
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    DesktopShortcut=true
+
+    :2: 作成しない
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    DesktopShortcut=false
+
+    :3: 任意の内容で作成
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    DesktopShortcut=false
+
+    fainstall.ini:
+    [fainstall]
+    Shortcuts=desktop-shortcut
+
+    [desktop-shortcut]
+    Name=ショートカット名
+    Path=%AppDir%/firefox.exe
+    IconPath=C:/path/to/icon.ico
+    Options=https://example.com/
+    TargetUser=all
+    TargetLocation=C:/Users/Public/Desktop/
+
+Application-2: スタートメニューのショートカット
+
+    :1: 既定の内容で作成（既定）
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    StartMenuShortcuts=true
+    StartMenuDirectoryName=Mozilla Firefox
+
+    :2: 作成しない
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    StartMenuShortcuts=false
+
+    :3: 任意の内容で作成
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    StartMenuShortcuts=false
+
+    fainstall.ini:
+    [fainstall]
+    Shortcuts=startmenu-shortcut
+
+    [startmenu-shortcut]
+    Name=ショートカット名
+    Path=%AppDir%/firefox.exe
+    IconPath=C:/path/to/icon.ico
+    Options=https://example.com/
+    TargetUser=all
+    TargetLocation=C:/ProgramData/Microsoft/Windows/Start Menu/Programs
+
+Application-3: クイック起動のショートカット
+
+    :1: 既定の内容で作成（既定）
+
+    -
+
+    :2: 作成しない
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    QuickLaunchShortcut=false
+
+Application-4: [廃止] メインウィンドウのタイトル
+
+    :1: [廃止] 既定の名前（既定）
+
+    [廃止]
+
+    :2: [廃止] 任意の内容
+
+    [廃止]
+
+Application-5: [廃止] メインウィンドウのアイコン
+
+    :1: [廃止] 既定のアイコン（既定）
+
+    [廃止]
+
+    :2: [廃止] 任意のアイコン
+
+    [廃止]
+
+Application-6: プロファイルの位置
+
+    :1: %AppData%内（既定）
+
+    -
+
+    :2: 任意の位置
+
+    以下は設定例。作成するショートカットの数、位置、プロファイルの設置場所についてはその都度指定が必要。
+
+    fainstall.ini:
+    [fainstall]
+    Shortcuts=desktop-shortcut
+
+    [profile]
+    TargetUser=all
+    Name=NameOfProfile
+    RootPath=X:\Path\To\RootDir
+
+    [desktop-shortcut]
+    Name="Mozilla Firefox"
+    Path=%AppDir%/firefox.exe
+    Options=-p NameOfProfile
+    ;;フルパス指定の場合は以下の通り
+    ;;（フォルダ名をプロファイル名と一致させているため、
+    ;;「-p NameOfProfile」と等価に扱われる）
+    ;Options=-profile X:\Path\To\RootDir\NameOfProfile
+    TargetUser=all
+    TargetLocation=C:/Users/Public/Desktop/
+
+Application-7: ノーブランド化
+
+    :1: しない（オフィシャル版を使用）
+
+    -
+
+    :2: 表示上の名称のみ変更する
+
+    長いブランド名、短いブランド名を指定
+
+    :3: 内部名も含めて変更する
+
+    長いブランド名、短いブランド名を指定
+

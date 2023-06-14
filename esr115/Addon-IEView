@@ -1,0 +1,174 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Addon-IEView-1: IEの起動
+
+    :1: 自動では起動しない（既定）
+
+    -
+
+    :2: 特定サイトでIEを自動起動（MCD）
+
+    *.cfg / *.jsc:
+    lockPref("extensions.ieview.forceielist", "（半角スペース区切りのURLのリスト）");
+
+    :4: 特定サイトでIEを自動起動（ポリシー設定）
+
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "forceielist": "（半角スペース区切りのURLのリスト）"
+        }
+      }
+    },
+
+    :3: 特定サイトをIEを自動起動し、Firefox側のタブを閉じる（MCD）
+
+    *.cfg / *.jsc:
+    lockPref("extensions.ieview.forceielist", "（半角スペース区切りのURLのリスト）");
+    lockPref("extensions.ieview.closeReloadPage", true);
+
+    :5: 特定サイトをIEを自動起動し、Firefox側のタブを閉じる（ポリシー設定）
+
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "forceielist": "（半角スペース区切りのURLのリスト）",
+          "closeReloadPage": true
+        }
+      }
+    },
+
+Addon-IEView-2: 起動するIEの設定
+
+    :1: パスと起動オプションを指定する（MCD）
+
+    *.cfg / *.jsc:
+    lockPref("extensions.ieview.ieapp", "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe");
+    lockPref("extensions.ieview.ieargs", "");
+
+    :2: パスと起動オプションを指定する（ポリシー設定）
+
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "ieapp": "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe",
+          "ieargs": ""
+        }
+      }
+    },
+
+Addon-IEView-3: [廃止] 閲覧中のページへの広告の埋め込み（アドウェアとしての動作）
+
+    :1: [廃止] 許可する（既定）
+
+    [廃止]
+
+    :2: [廃止] 禁止する
+
+    [廃止]
+
+Addon-IEView-4: IE View WEの使用
+
+    :1: サイドローディング形式でインストールする
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "debug": true,
+          "disableForce": false
+        }
+      }
+    },
+    
+    fainstall.ini:
+    [ieview-we@clear-code.com.xpi]
+    AddonId=ieview-we@clear-code.com
+    TargetLocation=%AppDir%/browser/extensions
+    Unpack=false
+
+Addon-IEView-5: IE View WEのコンテキストメニュー
+
+    :1: 使用する（既定）
+
+    -
+
+    :2: 使用しない
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "contextMenu": false
+        }
+      }
+    },
+
+Addon-IEView-6: IEで開かない例外サイト
+
+    :1: 指定しない（既定）
+
+    -
+
+    :2: 指定する
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "disableException": false,
+          "sitesOpenedBySelf": "http://...\r\nhttp://...\r\n"
+        }
+      }
+    },
+
+Addon-IEView-7: IEで開くページの検出対象
+
+    :1: トップレベルのフレームへの読み込みのみ
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "onlyMainFrame": true
+        }
+      }
+    },
+
+    :2: すべてのフレームの読み込み
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "onlyMainFrame": false
+        }
+      }
+    },
+
+Addon-IEView-8: URLのマッチング時にクエリ文字列を無視するかどうか
+
+    :1: 無視する
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "ignoreQueryString": true
+        }
+      }
+    },
+
+    :2: 無視しない
+
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "ieview-we@clear-code.com": {
+          "ignoreQueryString": false
+        }
+      }
+    },
+

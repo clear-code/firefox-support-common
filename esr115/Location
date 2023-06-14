@@ -1,0 +1,107 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Location-1: アドレスバーにおけるURLの「http://」の省略表示の可否
+
+    :1: 省略する（既定）
+
+    -
+
+    :2: 省略しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.urlbar.trimURLs": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Location-2: アドレスバーにおける国際化ドメインの表示
+
+    :1: 原則として国際化ドメインのまま表示する（既定）
+
+    -
+
+    :2: 必ずpunycode形式で表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.IDN_show_punycode": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Location-3: アドレスバーへのURL以外の入力の取り扱い
+
+    :1: 常に検索する（既定）
+
+    -
+
+    :2: 入力内容が1単語のみの時、検索を実行する前にローカルドメインのホスト名として名前解決を試みる
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.fixup.dns_first_for_single_words": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Location-4: Firefox Solution ボタンを含む、アドレスバー候補内へのヒントの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    distribution\policies.json:
+    "UserMessaging": {
+      "UrlbarInterventions": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「User Messaging」
+    → 「Urlbar Interventions」を無効化（設定値の固定は不可能）
+
+Location-5: アドレスバー候補内にトップサイトを表示する
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    // Security-15-2 で browser.newtabpage.activity-stream.default.sites と browser.newtabpage.pinned を設定した場合も、これと同様の結果となる
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.urlbar.suggest.topsites": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
