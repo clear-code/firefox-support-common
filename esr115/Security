@@ -914,16 +914,15 @@ Security-29: [廃止] SSL/TLSでないページでの「secure」属性付きCoo
 
     [廃止]
 
-Security-30: 誤ったMIME Typeが指定されたスクリプトファイルの実行
+Security-30: [廃止] 誤ったMIME Typeが指定されたスクリプトファイルの実行
 
-    :1: 許可する
+    :1: [廃止] 許可する
 
-    *.cfg / *.jsc:
-    lockPref("security.block_script_with_wrong_mime", false);
+    [廃止]
 
-    :2: 禁止する（既定）
+    :2: [廃止] 禁止する（既定）
 
-    -
+    [廃止]
 
 Security-31: [廃止] 危険なFlashコンテンツの読み込み
 
@@ -951,11 +950,11 @@ Security-32: アドオンのインストール時の警告
 
 Security-33: [廃止] 危険ででしゃばりなFlashコンテンツをブロック
 
-    :1: ブロックする（既定）
+    :1: [廃止] ブロックする（既定）
 
     [廃止]
 
-    :2: ブロックしない
+    :2: [廃止] ブロックしない
 
     [廃止]
 
@@ -1145,17 +1144,15 @@ Security-42: [廃止] 過去にデータ流出事故を起こしたWebサービ�
 
     [廃止]
 
-Security-43: ローカルファイルからの同じディレクトリのファイルの参照の可否
+Security-43: [廃止] ローカルファイルからの同じディレクトリのファイルの参照の可否
 
-    :1: 許可する
+    :1: [廃止] 許可する
 
-    *.cfg / *.jsc:
-    lockPref("privacy.file_unique_origin", false);
+    [廃止]
 
-    :2: 禁止する（既定）
+    :2: [廃止] 禁止する（既定）
 
-    *.cfg / *.jsc:
-    lockPref("privacy.file_unique_origin", true);
+    [廃止]
 
 Security-44: HTTPSでないURLのページでのカメラ・マイクの使用の可否
 
