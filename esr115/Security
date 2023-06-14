@@ -1493,3 +1493,27 @@ Security-56: カスタムURLスキームによるアプリケーションの起�
     // permissions.manager.defaultsUrlで既存のpermissionsを上書き指定する
     *.cfg / *.jsc:
     lockPref("permissions.manager.defaultsUrl", "file:///C:/Program Files/Mozilla Firefox/defaults/default.permissions");
+
+Security-57: WindowsのArbitrary Code Guard機能によるメディア再生プロセスの保護
+
+    :1: 有効にする（既定）
+
+    -
+
+    :2: 無効にする
+
+    *.cfg / *.jsc:
+    lockPref("security.sandbox.rdd.acg.enabled", false);
+    lockPref("security.sandbox.utility-wmf.acg.enabled", false);
+
+Security-58: GPUのサンドボックス化による保護
+
+    :1: 有効にする（既定）
+
+    -
+
+    :2: 無効にする
+
+    *.cfg / *.jsc:
+    lockPref("security.sandbox.gpu.level", 0);
+
