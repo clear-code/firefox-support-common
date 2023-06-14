@@ -953,6 +953,27 @@ Privacy-32: リンクのhoverによるリンク先の先読みの可否
 
 Privacy-33: Webサービスによる行動履歴の収集（トラッキング）の遮断の可否
 
+    :6: ブロックリストを取得して、一部の悪質なトラッカーのみ遮断し、Cookieの保存領域を分離する（既定）
+
+    *.cfg / *.jsc:
+    // https://searchfox.org/mozilla-central/rev/fb55a4ee44a9a95d099aa806ca494eb988252ded/browser/components/BrowserGlue.sys.mjs#4808
+    lockPref("browser.contentblocking.category", "standard");
+    lockPref("privacy.trackingprotection.enabled", false);
+    lockPref("privacy.trackingprotection.pbmode.enabled", true);
+    lockPref("network.cookie.cookieBehavior", 5);
+    lockPref("privacy.trackingprotection.socialtracking.enabled", false);
+    lockPref("privacy.trackingprotection.fingerprinting.enabled", true);
+    lockPref("privacy.trackingprotection.cryptomining.enabled", true);
+    lockPref("privacy.trackingprotection.emailtracking.enabled", false);
+    lockPref("privacy.trackingprotection.emailtracking.pbmode.enabled", true);
+    lockPref("notate_channels.strict_list.enabled", false);
+    lockPref("network.http.referer.disallowCrossSiteRelaxingDefault", true);
+    lockPref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", false);
+    lockPref("privacy.partition.network_state.ocsp_cache", false);
+    lockPref("privacy.query_stripping.enabled", false);
+    lockPref("privacy.query_stripping.enabled.pbmode", false);
+    // 通知メッセージの表示に関してはPrivacy-41にて制御の必要あり。
+
     :1: ブロックリストを取得して、プライベートブラウジング時のみトラッキングを遮断する（ESR68で既定）
 
     *.cfg / *.jsc:
@@ -966,18 +987,27 @@ Privacy-33: Webサービスによる行動履歴の収集（トラッキング�
     lockPref("privacy.trackingprotection.fingerprinting.enabled", false);
     lockPref("privacy.trackingprotection.socialtracking.enabled", false);
 
-    :2: ブロックリストを取得して、トラッキングを常に遮断する（既定）
+    :2: ブロックリストを取得して、トラッキングを常にすべて遮断する
 
     *.cfg / *.jsc:
-    // https://searchfox.org/mozilla-central/rev/116bd975c30746ddefc3d20e6947d1871469354f/browser/app/profile/firefox.js#1622
-    // https://searchfox.org/mozilla-central/rev/116bd975c30746ddefc3d20e6947d1871469354f/browser/components/BrowserGlue.jsm#3022
+    // https://searchfox.org/mozilla-central/rev/fb55a4ee44a9a95d099aa806ca494eb988252ded/browser/app/profile/firefox.js#1963
+    // https://searchfox.org/mozilla-central/rev/fb55a4ee44a9a95d099aa806ca494eb988252ded/browser/components/BrowserGlue.sys.mjs#4808
     lockPref("browser.contentblocking.category", "strict");
     lockPref("privacy.trackingprotection.enabled", true);
     lockPref("privacy.trackingprotection.pbmode.enabled", true);
-    lockPref("network.cookie.cookieBehavior", 4);
-    lockPref("privacy.trackingprotection.cryptomining.enabled", true);
     lockPref("privacy.trackingprotection.fingerprinting.enabled", true);
+    lockPref("privacy.trackingprotection.cryptomining.enabled", true);
     lockPref("privacy.trackingprotection.socialtracking.enabled", true);
+    lockPref("privacy.trackingprotection.emailtracking.enabled", true);
+    lockPref("privacy.trackingprotection.emailtracking.pbmode.enabled", true);
+    lockPref("notate_channels.strict_list.enabled", true);
+    lockPref("network.http.referer.disallowCrossSiteRelaxingDefault", true);
+    lockPref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", true);
+    lockPref("privacy.partition.network_state.ocsp_cache", true);
+    lockPref("privacy.query_stripping.enabled", true);
+    lockPref("privacy.query_stripping.enabled.pbmode", true);
+    lockPref("network.cookie.cookieBehavior", 5);
+    lockPref("network.cookie.cookieBehavior.pbmode", 5);
     // 通知メッセージの表示に関してはPrivacy-41にて制御の必要あり。
 
     :4: ブロックリストを取得して、トラッキングを常に遮断する（ポリシー設定を併用）
