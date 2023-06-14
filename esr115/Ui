@@ -216,6 +216,10 @@ Ui-11: サイトごとの表示拡大率の制御
       ...
     },
 
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
     :2: サイトごとに記憶しない(リセットされる)
 
     distribution\policies.json:
@@ -226,4 +230,30 @@ Ui-11: サイトごとの表示拡大率の制御
       },
       ...
     },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-12: タッチパッドでの二本指でのスワイプ操作の振る舞い
+
+    :1: 「戻る」「進む」に割り当てる（既定）
+
+    -
+
+    :2: 何もしない
+
+    distribution\policies.json:
+    "Preferences": {
+      "widget.disable-swipe-tracker": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
 
