@@ -99,3 +99,43 @@ Location-5: アドレスバー候補内にトップサイトを表示する
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Location-6: アドレスバーからの検索結果のページを閲覧中のアドレスバーの表示内容
+
+    :1: 検索結果のページのURLを表示する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.urlbar.showSearchTerms.featureGate": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.urlbar.showSearchTerms.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 検索語句を表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.urlbar.showSearchTerms.featureGate": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "browser.urlbar.showSearchTerms.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
