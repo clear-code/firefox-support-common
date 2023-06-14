@@ -190,3 +190,17 @@ Admin-7: アドオンのインストール
     GPO:
     カテゴリ「Firefox」→「Extensions」
     → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
+
+Admin-8: about:third-partyを用いたユーザー権限でのサードパーティ製モジュールの読み込み停止操作
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    policies.jsonでの設定は無効で、必ずGPOで設定する必要あり
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Third Party Module Blocking」を有効化
