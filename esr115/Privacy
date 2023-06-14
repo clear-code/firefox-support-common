@@ -198,6 +198,15 @@ Privacy-5: パスワードの保存の可否
     カテゴリ「Firefox」
     → 「Password Manager Exceptions」有効化し、パスワードの保存を禁止するWebサイトのオリジンを列挙
 
+    :6: 初期状態では保存しないが、ユーザーが任意で保存できるようにすることを許可
+
+    distribution\policies.json:
+    "OfferToSaveLoginsDefault": false,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Offer to save logins (default)」を有効化
+
 Privacy-6: [廃止] Webアプリのオフラインキャッシュの利用の可否
 
     :1: [廃止] 確認の上で許可する（既定）
