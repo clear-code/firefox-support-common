@@ -53,17 +53,11 @@ Location-3: アドレスバーへのURL以外の入力の取り扱い
     :2: 入力内容が1単語のみの時、検索を実行する前にローカルドメインのホスト名として名前解決を試みる
 
     distribution\policies.json:
-    "Preferences": {
-      "browser.fixup.dns_first_for_single_words": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
+    "GoToIntranetSiteForSingleWordEntryInAddressBar": true,
 
     GPO:
     カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    → 「Force direct internet site navigation on single word entries in the address bar」を有効化
 
 Location-4: Firefox Solution ボタンを含む、アドレスバー候補内へのヒントの表示
 
