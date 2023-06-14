@@ -1517,3 +1517,24 @@ Security-58: GPUのサンドボックス化による保護
     *.cfg / *.jsc:
     lockPref("security.sandbox.gpu.level", 0);
 
+Security-59: パスワード入力フォームの右クリックメニューからのパスワード表示
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "layout.forms.reveal-password-context-menu.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
