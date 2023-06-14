@@ -1015,6 +1015,9 @@ Privacy-33: Webサービスによる行動履歴の収集（トラッキング�
     distribution\policies.json:
     "EnableTrackingProtection": {
       "Value": true,
+      "Cryptomining": true,
+      "Fingerprinting": true,
+      "EmailTracking": true,
       "Locked": true
     },
     "Cookies": {
@@ -1024,13 +1027,14 @@ Privacy-33: Webサービスによる行動履歴の収集（トラッキング�
     GPO:
     カテゴリ「Firefox」→「Tracking Protection」
     → 「Enabled」を有効化
+    → 「Cryptomining」を有効化
+    → 「Fingerprinting」を有効化
+    → 「Cryptomining」を有効化
     → 「Do not allow tracking protection preferences to be changed」を有効化
     カテゴリ「Firefox」→「Cookies」
     → 「Reject trackers」を有効化
 
     *.cfg / *.jsc:
-    lockPref("privacy.trackingprotection.cryptomining.enabled", true);
-    lockPref("privacy.trackingprotection.fingerprinting.enabled", true);
     lockPref("privacy.trackingprotection.socialtracking.enabled", true);
 
     :3: [廃止] ブロックリストを取得せず、トラッキングを遮断しない（MCD）
@@ -1044,6 +1048,9 @@ Privacy-33: Webサービスによる行動履歴の収集（トラッキング�
     distribution\policies.json:
     "EnableTrackingProtection": {
       "Value": false,
+      "Cryptomining": false,
+      "Fingerprinting": false,
+      "EmailTracking": false,
       "Locked": true
     },
 
