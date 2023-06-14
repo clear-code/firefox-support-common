@@ -129,15 +129,11 @@ Security-3: アドオンのインストールの可否
         "Value": "",
         "Status": "default"
       },
-      "extensions.getAddons.recommended.url": {
-        "Value": "",
-        "Status": "default"
-      },
       "extensions.getAddons.search.browseURL": {
         "Value": "",
         "Status": "default"
       },
-      "extensions.getAddons.search.url": {
+      "extensions.getAddons.langpacks.url": {
         "Value": "",
         "Status": "default"
       },
@@ -313,10 +309,6 @@ Security-5: 攻撃サイトに対する警告の可否
         "Status": "locked"
       },
       "browser.safebrowsing.reportMalwareMistakeURL": {
-        "Value": "",
-        "Status": "locked"
-      },
-      "browser.safebrowsing.reportPhishMistakeURL": {
         "Value": "",
         "Status": "locked"
       },
@@ -513,8 +505,6 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     参考: https://searchfox.org/mozilla-esr102/source/services/settings/servicesSettings.manifest#7
 
     *.cfg / *.jsc:
-    // アクセシビリティの情報
-    lockPref("accessibility.support.url", "");
     // 各種詳細説明のURL
     lockPref("app.feedback.baseURL", "");
     lockPref("app.support.baseURL", "");
@@ -530,6 +520,7 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     // トラッキングブロック
     lockPref("browser.contentblocking.report.cookie.url", "");
     lockPref("browser.contentblocking.report.cryptominer.url", "");
+    lockPref("browser.contentblocking.report.endpoint_url", "");
     lockPref("browser.contentblocking.report.fingerprinter.url", "");
     lockPref("browser.contentblocking.report.lockwise.how_it_works.url", "");
     lockPref("browser.contentblocking.report.lockwise.mobile-android.url", "");
@@ -545,26 +536,26 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     lockPref("browser.contentblocking.report.proxy_extension.url", "");
     lockPref("browser.contentblocking.report.social.url", "");
     lockPref("browser.contentblocking.report.tracker.url", "");
+    lockPref("browser.contentblocking.report.vpn.url", "");
+    lockPref("browser.contentblocking.report.vpn-android.url", "");
+    lockPref("browser.contentblocking.report.vpn-ios.url", "");
+    lockPref("browser.contentblocking.report.vpn-promo.url", "");
     lockPref("browser.contentblocking.reportBreakage.url", "");
     // オートコレクト用辞書の取得先URL
     lockPref("browser.dictionaries.download.url", "");
     // 位置情報サービスの説明用URL
     lockPref("browser.geolocation.warning.infoURL", "");
     // 新規タブページ
-    lockPref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+    lockPref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "{}");
     lockPref("browser.newtabpage.activity-stream.default.sites", "");
     lockPref("browser.newtabpage.activity-stream.discoverystream.config", "");
     lockPref("browser.newtabpage.activity-stream.discoverystream.endpointSpocsClear", "");
     lockPref("browser.newtabpage.activity-stream.discoverystream.endpoints", "");
-    lockPref("browser.newtabpage.activity-stream.discoverystream.feeds.seciton.topstories.options", "{}");
     lockPref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "");
     lockPref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint", "");
     lockPref("browser.newtabpage.pinned", "[]");
     // 地域情報をWi-Fiアクセスポイントから取得するためのURL
     lockPref("browser.region.network.url", "");
-    // 地域ごとのデフォルトの検索サービス切り替え
-    lockPref("browser.search.geoSpecificDefaults", false);
-    lockPref("browser.search.geoSpecificDefaults.url", "");
     // 検索プロバイダ（検索エンジン）の取得元URL
     lockPref("browser.search.searchEnginesURL", "");
     // UIツアー
@@ -576,8 +567,6 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     lockPref("captivedetect.canonicalURL", "");
     // 統計情報の案内
     lockPref("datareporting.healthreport.infoURL", "");
-    // 開発ツールで使用するデバイス
-    lockPref("devtools.devices.url", "");
     // 開発者ツールからの外部サイト参照の無効化
     lockPref("devtools.performance.recording.ui-base-url", "");
     lockPref("devtools.remote.adb.extensionURL", "");
@@ -601,7 +590,6 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     lockPref("geo.provider.network.url", "");
     // Firefox Accounts
     lockPref("identity.fxaccounts.service.monitorLoginUrl", "");
-    lockPref("identity.fxaccounts.service.sendLoginUrl", "");
     lockPref("identity.sendtabpromo.url", "");
     lockPref("identity.sync.tokenserver.uri", "");
     // Firefox Sync向けモバイルアプリの宣伝リンク
@@ -620,15 +608,13 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     lockPref("network.connectivity-service.DNSv6.domain", "");
     // DNS over HTTPS
     // Security-36-1/2とは共存不可
-    lockPref("network.trr.resolvers", "[]");
     lockPref("network.trr.uri", "");
+    lockPref("network.trr.credentials", "");
+    lockPref("network.trr.custom_uri", "");
     // ブロックリスト等の取得
-    lockPref("services.settings.server", "localhost");
+    lockPref("services.settings.server", "http://localhost");
     // 中間者攻撃の検出
     lockPref("security.certerrors.mitm.priming.endpoint", "");
-    // Lockwise（パスワードマネージャ）
-    lockPref("signon.management.page.mobileAndroidURL", "");
-    lockPref("signon.management.page.mobileAppleURL", "");
     // 統計情報の送信
     lockPref("toolkit.coverage.endpoint.base", "");
     lockPref("toolkit.datacollection.infoURL", "");
