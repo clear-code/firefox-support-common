@@ -124,14 +124,6 @@ Plugin-8: Gecko Media Pluginの利用の可否
         "Value": false,
         "Status": "locked"
       },
-      "media.gmp-eme-adobe.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "media.gmp-eme-adobe.autoupdate": {
-        "Value": false,
-        "Status": "locked"
-      },
       "media.gmp-gmpopenh264.enabled": {
         "Value": false,
         "Status": "locked"
