@@ -721,10 +721,6 @@ Security-21: 危険なアドオンとプラグインのブロックの可否
         "Value": "",
         "Status": "locked"
       },
-      "extensions.blocklist.url": {
-        "Value": "",
-        "Status": "locked"
-      },
       ...
     },
 
