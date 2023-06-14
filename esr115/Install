@@ -254,3 +254,15 @@ Install-18: BrowserSelectorのインストール
     fainstall.ini:
     [BrowserSelector.ini]
     TargetLocation=%ProgramFiles32%/ClearCode/BrowserSelector
+
+Install-19: 既存のFirefoxの強制的な上書き
+
+    :1: 既定のインストール先、または指定のインストール先にインストールする（既定）
+
+    -
+
+    :2: 旧バージョンのFirefoxがある場合は、そのインストール先に上書きインストールする
+
+    fainstall.ini:
+    [fainstall]
+    AppUseActualInstallDir=true
