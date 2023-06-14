@@ -43,10 +43,6 @@ Download-1: ダウンロードマネージャの利用の可否
 
     distribution\policies.json:
     "Preferences": {
-      "browser.download.animateNotifications": {
-        "Value": false,
-        "Status": "locked"
-      },
       "browser.download.manager.addToRecentDocs": {
         "Value": false,
         "Status": "locked"
