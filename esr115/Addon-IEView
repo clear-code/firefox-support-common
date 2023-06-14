@@ -84,15 +84,6 @@ Addon-IEView-4: IE View WEの使用
         "install_url": "file:///c:/Program%20Files/Mozilla%20Firefox/distribution/ieview-we@clear-code.com.xpi"
       }
     },
-    または
-    "Extensions": {
-      "Install": [
-        "C:\\Program Files\\Mozilla Firefox\\distribution\\ieview-we@clear-code.com.xpi"
-      ],
-      "Locked":  [
-        "ieview-we@clear-code.com"
-      ]
-    },
     
     fainstall.ini:
     [ieview-we@clear-code.com.xpi]
