@@ -261,7 +261,7 @@ Install-19: 既存のFirefoxの強制的な上書き
 
     -
 
-    :2: 旧バージョンのFirefoxがある場合は、そのインストール先に上書きインストールする
+    :2: 既存のFirefoxがある場合は、そのインストール先に上書きインストールする
 
     fainstall.ini:
     [fainstall]
