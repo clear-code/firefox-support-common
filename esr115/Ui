@@ -8,7 +8,6 @@ Ui-1: Firefox組み込みのPDFビューアの使用可否
 
     *.cfg / *.jsc:
     lockPref("pdfjs.disabled", false);
-    lockPref("plugin.disable_full_page_plugin_for_types", "（application/pdfを含まない値）");
 
     :2: [廃止] 禁止する（MCD）
 

@@ -153,21 +153,6 @@ Tab-5: 新しいタブの内容
 
     distribution\policies.json:
     "NewTabPage": false,
-    "Preferences": {
-      "browser.newtabpage.enhanced": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "browser.newtabpage.directory.ping": {
-        "Value": "",
-        "Status": "locked"
-      },
-      "browser.newtabpage.directory.source": {
-        "Value": "about:blank",
-        "Status": "locked"
-      },
-      ...
-    },
 
     GPO:
     カテゴリ「Firefox」
@@ -179,18 +164,6 @@ Tab-5: 新しいタブの内容
 
     distribution\policies.json:
     "Preferences": {
-      "browser.newtabpage.enhanced": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "browser.newtabpage.directory.ping": {
-        "Value": "",
-        "Status": "locked"
-      },
-      "browser.newtabpage.directory.source": {
-        "Value": "about:blank",
-        "Status": "locked"
-      },
       "browser.topsites.contile.enabled": {
         "Value": false,
         "Status": "locked"
