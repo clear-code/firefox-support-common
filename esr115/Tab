@@ -569,37 +569,15 @@ Tab-17: Ctrl-Tabでのタブ切り替え時の挙動
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Tab-18: タブの複数選択
+Tab-18: [廃止] タブの複数選択
 
-    :1: 許可する（既定）
+    :1: [廃止] 許可する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.tabs.multiselect": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
+    [廃止]
 
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    :2: [廃止] 禁止する
 
-    :2: 禁止する
-
-    distribution\policies.json:
-    "Preferences": {
-      "browser.tabs.multiselect": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
 Tab-19: 最近のアクティビティにPocketの項目を表示するかどうか
 
