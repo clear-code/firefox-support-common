@@ -43,7 +43,7 @@ Appearance-2: ツールバー上の項目の初期設定
         "Status": "user"
       },
       "browser.migration.version": {
-        "Value": 78,
+        "Value": 137,
         "Status": "user"
       },
       ...
@@ -178,6 +178,12 @@ Appearance-9: 「Firefoxアカウント」ボタンの表示
     -
 
     :2: 表示しない
+    distribution\policies.json:
+    "DisableFirefoxAccounts": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Firefox Accounts」を有効化
 
     *.cfg / *.jsc:
     lockPref("identity.fxaccounts.toolbar.enabled", false);
@@ -185,6 +191,19 @@ Appearance-9: 「Firefoxアカウント」ボタンの表示
 Appearance-10: ユーザースタイルシートの使用
 
     :1: 使用する
+
+    distribution\policies.json:
+    "Preferences": {
+      "toolkit.legacyUserProfileCustomizations.stylesheets": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     *.cfg:
     // 必ずローカルのMCD用設定ファイルに記入する。
@@ -246,6 +265,10 @@ Appearance-13: 「ローカルワンオフ検索」ショートカットの表�
       },
       ...
     },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Appearance-14: UIの表示言語の変更・カスタマイズの可否
 

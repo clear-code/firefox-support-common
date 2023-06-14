@@ -71,22 +71,33 @@ Addon-IEView-3: [廃止] 閲覧中のページへの広告の埋め込み（ア�
 
 Addon-IEView-4: IE View WEの使用
 
-    :1: サイドローディング形式でインストールする
+    :1: [廃止] サイドローディング形式でインストールする
+
+    [廃止]
+
+    :2: ポリシー設定でインストールする
 
     distribution\policies.json:
-    "3rdparty": {
-      "Extensions": {
-        "ieview-we@clear-code.com": {
-          "debug": true,
-          "disableForce": false
-        }
+    "ExtensionSettings": {
+      "ieview-we@clear-code.com": {
+        "installation_mode": "force_installed",
+        "install_url": "file:///c:/Program%20Files/Mozilla%20Firefox/distribution/ieview-we@clear-code.com.xpi"
       }
+    },
+    または
+    "Extensions": {
+      "Install": [
+        "C:\\Program Files\\Mozilla Firefox\\distribution\\ieview-we@clear-code.com.xpi"
+      ],
+      "Locked":  [
+        "ieview-we@clear-code.com"
+      ]
     },
     
     fainstall.ini:
     [ieview-we@clear-code.com.xpi]
     AddonId=ieview-we@clear-code.com
-    TargetLocation=%AppDir%/browser/extensions
+    TargetLocation=%AppDir%/distribution
     Unpack=false
 
 Addon-IEView-5: IE View WEのコンテキストメニュー

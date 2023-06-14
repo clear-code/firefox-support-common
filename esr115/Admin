@@ -81,10 +81,46 @@ Admin-4: Mozillaにより署名されていないアドオンのインストー�
 
     :1: 許可する
 
+    distribution\policies.json:
+    {
+      "policies": {
+        "Preferences": {
+          "xpinstall.signatures.required": {
+            "Value": false,
+            "Status": "locked"
+          },
+          ...
+        },
+        ...
+      }
+    }
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
     *.cfg / *.jsc:
     lockPref("xpinstall.signatures.required", false);
 
     :2: 禁止する（既定）
+
+    distribution\policies.json:
+    {
+      "policies": {
+        "Preferences": {
+          "xpinstall.signatures.required": {
+            "Value": true,
+            "Status": "locked"
+          },
+          ...
+        },
+        ...
+      }
+    }
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     *.cfg / *.jsc:
     lockPref("xpinstall.signatures.required", true);
