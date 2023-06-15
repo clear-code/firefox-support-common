@@ -164,3 +164,18 @@ Update-8: Firefoxのバックグラウンドでの自動更新の可否
     カテゴリ「Firefox」→「Extensions」
     → 「Background updater」を無効化
 
+Update-9: Firefoxの自動更新の対象とするバージョンの範囲
+
+    :1: すべての更新を受け入れる（既定）
+
+    -
+
+    :2: セキュリティアップデートのみ受け入れる
+
+    distribution\policies.json:
+    "AppUpdatePin": "115.",
+
+    GPO:
+    カテゴリ「Firefox」→「Extensions」
+    → 「Pin updates to a specific version」を有効化し、更新対象とするバージョン番号の固定部分を入力
+

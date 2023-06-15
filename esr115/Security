@@ -1544,3 +1544,23 @@ Security-59: パスワード入力フォームの右クリックメニューか�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
+Security-60: セキュリティデバイスの削除
+
+    :1: 削除しない（既定）
+
+    -
+
+    :2: 削除する
+
+    distribution\policies.json:
+    "SecurityDevices": {
+      "Delete": [
+        "デバイス名1",
+        ...
+      ],
+      ...
+    },
+
+    GPOでの設定は不可能
+
+

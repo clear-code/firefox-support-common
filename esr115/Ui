@@ -256,4 +256,23 @@ Ui-12: タッチパッドでの二本指でのスワイプ操作の振る舞い
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
+Ui-13: 組み込みのPDFビューワー上での編集操作の可否
 
+    :1: 編集を許可する（既定）
+
+    -
+
+    :2: 編集を禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "pdfjs.annotationEditorMode": {
+        "Value": -1,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
