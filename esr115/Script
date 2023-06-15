@@ -571,3 +571,15 @@ Script-28: WebMIDI APIの使用
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Script-29: サードパーティのコンテキストでのストレージとCookieの分離
+
+    :1: 他のブラウザーと同様に分離する（既定）
+
+    -
+
+    :2: 古いFirefoxと同様の動作とする
+
+    *.cfg / *.jsc
+    lockPref("privacy.partition.always_partition_third_party_non_cookie_storage", false);
+    lockPref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", true);

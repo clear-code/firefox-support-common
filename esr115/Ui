@@ -256,7 +256,18 @@ Ui-12: タッチパッドでの二本指でのスワイプ操作の振る舞い
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Ui-13: 組み込みのPDFビューワー上での編集操作の可否
+Ui-13: タッチパッドでの二本指でのスクロール時の、ページ週担当達治のアニメーション効果
+
+    :1: 適用する（既定）
+
+    -
+
+    :2: 適用しない
+
+    *.cfg / *.jsc:
+    lockPref("apz.overscroll.enabled", false)
+
+Ui-14: 組み込みのPDFビューワー上での編集操作の可否
 
     :1: 編集を許可する（既定）
 
@@ -268,6 +279,27 @@ Ui-13: 組み込みのPDFビューワー上での編集操作の可否
     "Preferences": {
       "pdfjs.annotationEditorMode": {
         "Value": -1,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-15: Firefox Relayを使った、Firefoxの資格情報マネージャーからの直接のEメールマスク作成
+
+    :1: 使用する（要Firefoxアカウント）（既定）
+
+    -
+
+    :2: 使用しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "signon.firefoxRelay.feature": {
+        "Value": "disabled",
         "Status": "locked"
       },
       ...
