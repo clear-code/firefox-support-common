@@ -1093,6 +1093,9 @@ Security-39: 特定のWebサイトへのアクセスの遮断
     カテゴリ「Firefox」
     → 「Blocked websites」を有効化し、オプションでURLのパターンを追加
     → 「Exceptions to blocked websites」を有効化し、オプションで例外のURLのパターンを追加
+    または
+    カテゴリ「Firefox」
+    → 「Website Filters (JSON)」を有効化し、「オプション」欄に、policies.jsonにおいて"WebsiteFilter"の値となるJSON文字列を記述
 
 Security-40: アドオンのインストールを遮断した際の追加のメッセージ
 
