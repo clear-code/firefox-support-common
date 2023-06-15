@@ -634,4 +634,34 @@ Network-30: TLSでの通信時の時間短縮とプライバシー向上のた�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
+Network-31: Windowsのシングルサインオン状態を既定以外のコンテナーにも反映するかどうか
 
+    :1: 反映しない（既定）
+
+    -
+
+    :2: 反映する
+
+    *.cfg / *.jsc:
+    lockPref("network.http.windows-sso.container-enabled.(コンテナー名)", true);
+
+Network-32: クライアント認証でのRSA-PSSの使用
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "security.osclientcerts.assume_rsa_pss_support": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
