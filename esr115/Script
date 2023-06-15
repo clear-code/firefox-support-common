@@ -312,6 +312,10 @@ Script-13: サンドボックス化されたiframeの自動ダウンロードの
       ...
     },
 
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
 Script-14: window.nameのクロスオリジン間での共有
 
     :1: 共有を許可しない（既定）
@@ -339,6 +343,10 @@ Script-15: レガシーな`KeyboardEvent.initKeyEvent()`の使用可否
       ...
     },
 
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
     :2: 無効化する（既定）
 
     -
@@ -359,6 +367,10 @@ Script-16: レガシーなWebVR APIの使用可否
       ...
     },
 
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
     :2: 無効化する（既定）
 
     -
@@ -378,6 +390,10 @@ Script-17: レガシーなNetwork Information APIの使用可否
       },
       ...
     },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: 無効化する（既定）
 
@@ -402,3 +418,156 @@ Script-18: スクリプトから開いていないウィンドウをスクリプ
       },
       ...
     },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Script-19: MathMLの非推奨の属性であるlquopteおよびrquoteの使用
+
+    :1: 使用しない（既定）
+
+    -
+
+    :2: 使用する
+
+    *.cfg / *.jsc
+    lockPref("mathml.ms_lquote_rquote_attributes.disabled", false);
+
+Script-20: MathMLのsemanticsおよびmactionで初期状態で表示する内容の制御
+
+    :1: 最初の子要素のみを表示（既定）
+
+    -
+
+    :2: 最初の子要素以外も表示
+
+    *.cfg / *.jsc
+    lockPref("mathml.legacy_maction_and_semantics_implementations.disabled", false);
+
+Script-21: SVG2の非標準のプロパティnearestViewportElementとfarthestViewportElementの使用
+
+    :1: 使用しない（既定）
+
+    -
+
+    :2: 使用する
+
+    *.cfg / *.jsc
+    lockPref("svg.nearestAndFarthestViewportElement.enabled", false);
+
+Script-22: iframe内のSVGに反映するテーマ
+
+    :1: OSやブラウザーの設定よりも埋め込み要素自体のテーマ設定を優先（既定）
+
+    -
+
+    :2: OSやブラウザーの設定を優先
+
+    *.cfg / *.jsc
+    lockPref("svg.embedder-prefers-color-scheme.content.enabled", false);
+
+Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
+
+    :1: 使用しない（既定）
+
+    -
+
+    :2: 使用する
+
+    *.cfg / *.jsc
+    lockPref("security.webauth.u2f", false);
+
+Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
+
+    :1: 安全なコンテキストでのみ使用を許可（既定）
+
+    -
+
+    :2: 安全でないコンテキストでの使用も許可
+
+    *.cfg / *.jsc
+    lockPref("dom.caches.testing.enabled", true);
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.caches.testing.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Script-25: WebRTCのRTCRtpSender.getParameters()、RTCRtpSender.setParameters()、RTCRtpReceiver.getParametersの振る舞い
+
+    :1: 他のブラウザーと互換性のある動作（既定）
+
+    -
+
+    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
+
+    *.cfg / *.jsc
+    lockPref("media.peerconnection.allow_old_setParameters", true);
+
+    distribution\policies.json:
+    "Preferences": {
+      "media.peerconnection.allow_old_setParameters": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Script-26: リッチテキストエディターの振る舞い
+
+    :1: 他のブラウザーと互換性のある動作（既定）
+
+    -
+
+    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
+
+    *.cfg / *.jsc
+    lockPref("editor.join_split_direction.compatible_with_the_other_browsers", false);
+
+Script-27: Total Cookie Protectionが有効な状態での、サードパーティのコンテキストでのService Workerの使用
+
+    :1: 分離されたコンテキストで使用を許可（既定）
+
+    -
+
+    :2: 使用を禁止
+
+    *.cfg / *.jsc
+    lockPref("privacy.partition.serviceWorkers", false);
+
+Script-28: WebMIDI APIの使用
+
+    :1: 分離されたコンテキストで使用を許可（既定）
+
+    -
+
+    :2: 使用を禁止
+
+    *.cfg / *.jsc
+    lockPref("dom.webmidi.enabled", false);
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.webmidi.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

@@ -665,3 +665,32 @@ Network-32: クライアント認証でのRSA-PSSの使用
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Network-33: クロスオリジンのリダイレクトでのAuthorizationヘッダーの引き継ぎ
+
+    :1: 安全を優先し、引き継がない（既定）
+
+    -
+
+    :2: 互換性を優先し、引き継ぐ
+
+    *.cfg / *.jsc
+    lockPref("network.http.redirect.stripAuthHeader", false);
+    lockPref("network.fetch.redirect.stripAuthHeader", false);
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.http.redirect.stripAuthHeader": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "network.fetch.redirect.stripAuthHeader": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
