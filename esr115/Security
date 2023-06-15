@@ -1057,7 +1057,10 @@ Security-38: セキュリティデバイスの登録
 
     distribution\policies.json:
     "SecurityDevices": {
-      "デバイス名1": "C:\\Path\\To\\Library.dll",
+      "Add": {
+        "デバイス名1": "C:\\Path\\To\\Library.dll",
+        ...
+      },
       ...
     },
 
