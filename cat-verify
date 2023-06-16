@@ -36,13 +36,13 @@ except ImportError:
 # GLOBALS
 
 DEFAULT_VAR = {
-    "firefox_version":                "102.0 ESR",
+    "firefox_version":                "115.0 ESR",
     "windows_version":                "Windows 10",
     "configuration_sheet_name":       "configs.xlsx",
     "use_meta_installer":             "true",
     "meta_installer_name":            "Fx Meta Installer",
     "meta_installer_file_name":       "FxMetaInstaller",
-    "meta_installer_version":         "102.0",
+    "meta_installer_version":         "115.0",
     "install_path_base":              "C:\\Program Files (x86)",
     "install_path_base_32bit":        "C:\\Program Files",
     "install_path":                   "C:\\Program Files (x86)\\Mozilla Firefox",
@@ -74,7 +74,7 @@ DEFAULT_VAR = {
     "max_persistent_connections_per_server": "2",
     "max_persistent_connections_per_proxy":  "2",
     "max_pipelining_requests":               "32",
-    "user_agent_name":                "Mozilla/5.0 (X11; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/102.0",
+    "user_agent_name":                "Mozilla/5.0 (X11; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/115.0",
     "navigator_appVersion":           "5.0 (Windows)",
     "imported_certs":                 "検証用証明書（example.com）, (発行者名1)/(証明署名1), (発行者名1)/(証明署名2), ...",
     "flash_download_url":             "https://get.adobe.com/jp/flashplayer/",
