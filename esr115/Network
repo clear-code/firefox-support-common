@@ -654,6 +654,31 @@ Network-31: Windowsのシングルサインオン状態を既定以外のコン�
     // ショッピング
     lockPref("network.http.windows-sso.container-enabled.4", true);
 
+    distribution\policies.json:
+    "Preferences": {
+      "network.http.windows-sso.container-enabled.1": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "network.http.windows-sso.container-enabled.2": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "network.http.windows-sso.container-enabled.3": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "network.http.windows-sso.container-enabled.4": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
     :3: 任意のコンテナーに反映する
 
     *.cfg / *.jsc:
@@ -661,6 +686,19 @@ Network-31: Windowsのシングルサインオン状態を既定以外のコン�
     // ContextualIdentityService.getPublicIdentities()
     // を実行すると調べられる。
     lockPref("network.http.windows-sso.container-enabled.(コンテナーID)", true);
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.http.windows-sso.container-enabled.(コンテナーID)": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 Network-32: クライアント認証でのRSA-PSSの使用
 
