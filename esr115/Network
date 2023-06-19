@@ -643,7 +643,20 @@ Network-31: Windowsのシングルサインオン状態を既定以外のコン�
     :2: 反映する
 
     *.cfg / *.jsc:
-    lockPref("network.http.windows-sso.container-enabled.(コンテナー名)", true);
+    // lockPref("network.http.windows-sso.container-enabled.(コンテナーID)", true);
+    // デフォルトのコンテナー
+    // lockPref("network.http.windows-sso.container-enabled.0", true);
+    // 個人
+    lockPref("network.http.windows-sso.container-enabled.1", true);
+    // 仕事
+    lockPref("network.http.windows-sso.container-enabled.2", true);
+    // 銀行取引
+    lockPref("network.http.windows-sso.container-enabled.3", true);
+    // ショッピング
+    lockPref("network.http.windows-sso.container-enabled.4", true);
+    // ユーザー定義のコンテナーのIDはブラウザーコンソールで
+    // ContextualIdentityService.getPublicIdentities()
+    // を実行すると調べられる。
 
 Network-32: クライアント認証でのRSA-PSSの使用
 
