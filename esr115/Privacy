@@ -1035,10 +1035,6 @@ Privacy-33: Webサービスによる行動履歴の収集（トラッキング�
     → 「Reject trackers」を有効化
 
     *.cfg / *.jsc:
-    lockPref("privacy.trackingprotection.enabled", true);
-    lockPref("privacy.trackingprotection.pbmode.enabled", true);
-    lockPref("privacy.trackingprotection.cryptomining.enabled", true);
-    lockPref("privacy.trackingprotection.fingerprinting.enabled", true);
     lockPref("privacy.trackingprotection.socialtracking.enabled", true);
 
     :3: [廃止] ブロックリストを取得せず、トラッキングを遮断しない（MCD）
