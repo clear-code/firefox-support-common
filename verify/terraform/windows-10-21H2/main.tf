@@ -298,6 +298,8 @@ resource "local_file" "playbook" {
       win_get_url:
         url: "${var.windows-language-pack-url}"
         dest: 'c:\temp\lp.cab'
+        url_username: "${var.download-user}"
+        url_password: "${var.download-token}"
     - name: Install language pack
       when: not "${var.windows-language-pack-url}" == ""
       win_shell: |
@@ -418,11 +420,15 @@ resource "local_file" "playbook" {
       win_get_url:
         url: "${var.flash-installer-url}"
         dest: 'C:\Users\Public\flash_installer.exe'
+        url_username: "${var.download-user}"
+        url_password: "${var.download-token}"
     - name: Download HookDate to override system time for Firefox
       when: not "${var.hookdate-download-url}" == ""
       win_get_url:
         url: "${var.hookdate-download-url}"
         dest: 'C:\Users\Public\hookdate.zip'
+        url_username: "${var.download-user}"
+        url_password: "${var.download-token}"
     - name: Extract contents
       when: not "${var.hookdate-download-url}" == ""
       win_unzip:
@@ -434,12 +440,66 @@ resource "local_file" "playbook" {
       win_get_url:
         url: "${var.debugview-download-url}"
         dest: 'C:\Users\Public\DebugView.zip'
+        url_username: "${var.download-user}"
+        url_password: "${var.download-token}"
     - name: Extract contents
       when: not "${var.old-ie-download-url}" == ""
       win_unzip:
         src: 'C:\Users\Public\DebugView.zip'
         dest: 'c:\Users\Public'
         delete_archive: yes
+    - name: Prepare directory to put policy templates (en-US locale)
+      win_file:
+        path: C:\Windows\PolicyDefinitions\en-US
+        state: directory
+    - name: Prepare directory to put policy templates (ja-JP locale)
+      win_file:
+        path: C:\Windows\PolicyDefinitions\ja-JP
+        state: directory
+    - name: Download Firefox policy template
+      when: not "${var.firefox-policy-template-url}" == ""
+      win_get_url:
+        url: "${var.firefox-policy-template-url}"
+        dest: 'C:\Users\Public\firefox-policy-template.zip'
+    - name: Prepare directory to extract Firefox policy template
+      when: not "${var.firefox-policy-template-url}" == ""
+      win_file:
+        path: 'c:\Users\Public\firefox_policy_templates'
+        state: directory
+    - name: Extract Firefox policy template
+      when: not "${var.firefox-policy-template-url}" == ""
+      win_unzip:
+        src: 'C:\Users\Public\firefox-policy-template.zip'
+        dest: 'c:\Users\Public\firefox_policy_templates'
+        delete_archive: yes
+    - name: Install Firefox policy template (definitions)
+      when: not "${var.firefox-policy-template-url}" == ""
+      win_command: xcopy /y C:\Users\Public\firefox_policy_templates\windows\* C:\Windows\PolicyDefinitions\
+    - name: Install Firefox policy template (en-US locale)
+      when: not "${var.firefox-policy-template-url}" == ""
+      win_command: xcopy /y C:\Users\Public\firefox_policy_templates\windows\en-US C:\Windows\PolicyDefinitions\en-US
+    - name: Download Thunderbird policy template
+      when: not "${var.thunderbird-policy-template-url}" == ""
+      win_get_url:
+        url: "${var.thunderbird-policy-template-url}"
+        dest: 'C:\Users\Public\thunderbird-policy-template.zip'
+    - name: Prepare directory to extract Thunderbird policy template
+      when: not "${var.thunderbird-policy-template-url}" == ""
+      win_file:
+        path: 'c:\Users\Public\thunderbird_policy_templates'
+        state: directory
+    - name: Extract Thunderbird policy template
+      when: not "${var.thunderbird-policy-template-url}" == ""
+      win_unzip:
+        src: 'C:\Users\Public\thunderbird-policy-template.zip'
+        dest: 'c:\Users\Public\thunderbird_policy_templates'
+        delete_archive: yes
+    - name: Install Thunderbird policy template (definitions)
+      when: not "${var.thunderbird-policy-template-url}" == ""
+      win_command: xcopy /y C:\Users\Public\thunderbird_policy_templates\policy-templates-master\templates\central\windows\* C:\Windows\PolicyDefinitions\
+    - name: Install Thunderbird policy template (en-US locale)
+      when: not "${var.thunderbird-policy-template-url}" == ""
+      win_command: xcopy /y C:\Users\Public\thunderbird_policy_templates\policy-templates-master\templates\central\windows\en-US C:\Windows\PolicyDefinitions\en-US
     - name: Create shortcut to Program Files
       win_shortcut:
         src: '%ProgramFiles%'
