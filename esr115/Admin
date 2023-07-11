@@ -216,7 +216,7 @@ Admin-9: アドオンのアンインストール
     distribution\policies.json:
     "Extensions": {
       "Uninstall": [
-        "（任意のIDを記入）:"
+        "（任意のIDを記入）"
       ]
     },
 
