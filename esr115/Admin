@@ -204,3 +204,22 @@ Admin-8: about:third-partyを用いたユーザー権限でのサードパーテ
     GPO:
     カテゴリ「Firefox」
     → 「Disable Third Party Module Blocking」を有効化
+
+Admin-9: アドオンのアンインストール
+
+    :1: アドオンをアンインストールしない（既定）
+
+    -
+
+    :2: アドオンを強制的にアンインストールする
+
+    distribution\policies.json:
+    "Extensions": {
+      "Uninstall": [
+        "（任意のIDを記入）:"
+      ]
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Extensions」
+    → 「Extension to Uninstall」を有効化し、「オプション」の値にIDを記入
