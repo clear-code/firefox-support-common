@@ -259,7 +259,7 @@ class ConfigurationRow:
               row_format = format
 
             if option_id in conf:
-                self._verification_chapter = self._verification_chapters.get(option_id, '省略')
+                self._verification_chapter = self._verification_chapters.get(option_id, '準備中')
 
             self._write_column(column_offset + column_count,     config, format)
             self._write_column(column_offset + column_count + 1, status, format)
