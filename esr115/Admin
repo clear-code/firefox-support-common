@@ -223,3 +223,24 @@ Admin-9: アドオンのアンインストール
     GPO:
     カテゴリ「Firefox」→「Extensions」
     → 「Extension to Uninstall」を有効化し、「オプション」の値にIDを記入
+
+Admin-10: Manifest V3形式アドオンへの対応
+
+    :1: 対応する（既定）
+
+    -
+
+    :2: 対応せず無効化する
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.manifestV3.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
