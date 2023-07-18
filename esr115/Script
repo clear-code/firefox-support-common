@@ -583,3 +583,14 @@ Script-29: サードパーティのコンテキストでのストレージとCoo
     *.cfg / *.jsc
     lockPref("privacy.partition.always_partition_third_party_non_cookie_storage", false);
     lockPref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", true);
+
+Script-30: scrollendイベントによるスクロール操作終了の検知
+
+    :1: 他のブラウザーと同様に許可する（既定）
+
+    -
+
+    :2: 古いFirefoxと同様の動作とする
+
+    *.cfg / *.jsc
+    lockPref("apz.scrollend-event.content.enabled", false);
