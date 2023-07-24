@@ -441,7 +441,7 @@ resource "local_file" "playbook" {
       win_command: xcopy /y C:\Users\Public\firefox_policy_templates\windows\* C:\Windows\PolicyDefinitions\
     - name: Install Firefox policy template (en-US locale)
       when: not "${var.firefox-policy-template-url}" == ""
-      win_command: xcopy /y C:\Users\Public\firefox_policy_templates\windows\en-US C:\Windows\PolicyDefinitions\en-US
+      win_command: xcopy /y C:\Users\Public\firefox_policy_templates\windows\en-US\* C:\Windows\PolicyDefinitions\en-US\
     - name: Download Thunderbird policy template
       when: not "${var.thunderbird-policy-template-url}" == ""
       win_get_url:
@@ -463,7 +463,7 @@ resource "local_file" "playbook" {
       win_command: xcopy /y C:\Users\Public\thunderbird_policy_templates\policy-templates-master\templates\central\windows\* C:\Windows\PolicyDefinitions\
     - name: Install Thunderbird policy template (en-US locale)
       when: not "${var.thunderbird-policy-template-url}" == ""
-      win_command: xcopy /y C:\Users\Public\thunderbird_policy_templates\policy-templates-master\templates\central\windows\en-US C:\Windows\PolicyDefinitions\en-US
+      win_command: xcopy /y C:\Users\Public\thunderbird_policy_templates\policy-templates-master\templates\central\windows\en-US\* C:\Windows\PolicyDefinitions\en-US\
     - name: Create shortcut to Program Files
       win_shortcut:
         src: '%ProgramFiles%'
