@@ -594,3 +594,41 @@ Script-30: scrollendイベントによるスクロール操作終了の検知
 
     *.cfg / *.jsc
     lockPref("apz.scrollend-event.content.enabled", false);
+
+Script-31: Service Workerの使用の可否
+
+    :1: 許可する（既定）
+
+    *.cfg / *.jsc:
+    lockPref("dom.serviceWorkers.enabled", true);
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.serviceWorkers.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 禁止する
+
+    *.cfg / *.jsc:
+    lockPref("dom.serviceWorkers.enabled", false);
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.serviceWorkers.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

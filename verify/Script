@@ -350,3 +350,139 @@ Script-18: スクリプトから開いていないウィンドウをスクリプ
     - window.close()をコンソールで実行する。
     - **確認**
       - ウィンドウが閉じられる。
+
+Script-19: MathMLの非推奨の属性であるlquopteおよびrquoteの使用
+
+    :1: 使用しない（既定）
+
+    - TBD
+
+    :2: 使用する
+
+    - TBD
+
+Script-20: MathMLのsemanticsおよびmactionで初期状態で表示する内容の制御
+
+    :1: 最初の子要素のみを表示（既定）
+
+    - TBD
+
+    :2: 最初の子要素以外も表示
+
+    - TBD
+
+Script-21: SVG2の非標準のプロパティnearestViewportElementとfarthestViewportElementの使用
+
+    :1: 使用しない（既定）
+
+    - TBD
+
+    :2: 使用する
+
+    - TBD
+
+Script-22: iframe内のSVGに反映するテーマ
+
+    :1: OSやブラウザーの設定よりも埋め込み要素自体のテーマ設定を優先（既定）
+
+    - TBD
+
+    :2: OSやブラウザーの設定を優先
+
+    - TBD
+
+Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
+
+    :1: 使用しない（既定）
+
+    - TBD
+
+    :2: 使用する
+
+    - TBD
+
+Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
+
+    :1: 安全なコンテキストでのみ使用を許可（既定）
+
+    - TBD
+
+    :2: 安全でないコンテキストでの使用も許可
+
+    - TBD
+
+Script-25: WebRTCのRTCRtpSender.getParameters()、RTCRtpSender.setParameters()、RTCRtpReceiver.getParametersの振る舞い
+
+    :1: 他のブラウザーと互換性のある動作（既定）
+
+    - TBD
+
+    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
+
+    - TBD
+
+Script-26: リッチテキストエディターの振る舞い
+
+    :1: 他のブラウザーと互換性のある動作（既定）
+
+    - TBD
+
+    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
+
+    - TBD
+
+Script-27: Total Cookie Protectionが有効な状態での、サードパーティのコンテキストでのService Workerの使用
+
+    :1: 分離されたコンテキストで使用を許可（既定）
+
+    - TBD
+
+    :2: 使用を禁止
+
+    - TBD
+
+Script-28: WebMIDI APIの使用
+
+    :1: 分離されたコンテキストで使用を許可（既定）
+
+    - TBD
+
+    :2: 使用を禁止
+
+    - TBD
+
+Script-29: サードパーティのコンテキストでのストレージとCookieの分離
+
+    :1: 他のブラウザーと同様に分離する（既定）
+
+    - TBD
+
+    :2: 古いFirefoxと同様の動作とする
+
+    - TBD
+
+Script-30: scrollendイベントによるスクロール操作終了の検知
+
+    :1: 他のブラウザーと同様に許可する（既定）
+
+    - TBD
+
+    :2: 古いFirefoxと同様の動作とする
+
+    - TBD
+
+Script-31: Service Workerの使用の可否
+
+    :1: 許可する（既定）
+
+    - Firefoxを起動する。
+    - テストケースの browser.html を開く。
+    - **確認**
+        - 「ServiceWorker」欄にenabledと表示される。
+
+    :2: 禁止する
+
+    - Firefoxを起動する。
+    - テストケースの browser.html を開く。
+    - **確認**
+        - 「ServiceWorker」欄にdisabledと表示される。
