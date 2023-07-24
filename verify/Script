@@ -34,7 +34,6 @@ Script-2: プッシュ通知の可否
     ABOUT_CONFIG
 
     - `dom.push.enabled` の値が `true` である。
-    - `dom.serviceWorkers.enabled` の値が `true` である。
 
     :5: 特定サイトのみ初期状態で確認なしで許可/禁止する
 
@@ -43,19 +42,9 @@ Script-2: プッシュ通知の可否
     - **確認**
         - 通知の受信を許可するよう権限が設定されている旨表示される。
 
-    :3: 禁止する（ESR版・既定）: 外部Webサイト（`googlechrome.github.io`）を訪問できる場合
+    :3: 禁止する（ESR版・既定）
 
-    - Firefoxを起動する。
-    - テストケースリストから `https://googlechrome.github.io/samples/service-worker/registration-events/` のリンクをクリックする。
-    - **確認**
-        - ページ内に「Service Workers *are not* available in your browser.」と表示されている。
-
-    :3: 禁止する（ESR版・既定）: 外部Webサイト（`googlechrome.github.io`）を訪問できない場合
-
-    - Firefoxを起動する。
-    - テストケースの browser.html を開く。
-    - **確認**
-        - 「ServiceWorker」欄にdisabledと表示される。
+    - TBD
 
     :6: すべてのサイトについて初期状態で確認無しで禁止する（「通知の許可の要求をブロック」にチェック）
 

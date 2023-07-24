@@ -20,7 +20,7 @@ Script-2: プッシュ通知の可否
 
     *.cfg / *.jsc:
     lockPref("dom.push.enabled", true);
-    lockPref("dom.serviceWorkers.enabled", true);
+    // あわせて、Script-31-1も設定すること
 
     :2: [廃止] 特定サイトのみ確認なしで許可する
 
@@ -31,6 +31,8 @@ Script-2: プッシュ通知の可否
     [廃止]
 
     :5: 特定サイトのみ初期状態で確認なしで許可/禁止する
+
+    // あわせて、Script-31-1も設定すること
 
     distribution\policies.json:
     "Permissions": {
@@ -49,7 +51,6 @@ Script-2: プッシュ通知の可否
 
     *.cfg / *.jsc:
     lockPref("dom.push.enabled", false);
-    lockPref("dom.serviceWorkers.enabled", false);
     lockPref("dom.push.serverURL", "");
     lockPref("permissions.default.desktop-notification", 2);
 
@@ -57,6 +58,7 @@ Script-2: プッシュ通知の可否
 
     *.cfg / *.jsc:
     lockPref("permissions.default.desktop-notification", 2);
+    // あわせて、Script-31-1も設定すること
 
 Script-3: ゲームパッドAPIの利用の可否
 
