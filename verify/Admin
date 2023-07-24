@@ -208,11 +208,15 @@ Admin-8: about:third-partyを用いたユーザー権限でのサードパーテ
 
     :1: 許可する（既定）
 
-    TBD
+    ABOUT_POLICIES
+
+    - `DisableThirdPartyModuleBlocking` が存在しない。
 
     :2: 禁止する
 
-    TBD
+    ABOUT_POLICIES
+
+    - `DisableThirdPartyModuleBlocking` が `true` である。
 
 Admin-9: アドオンのアンインストール
 
