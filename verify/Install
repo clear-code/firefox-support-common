@@ -526,3 +526,13 @@ Install-18: BrowserSelectorのインストール
         - `{{default_install_path_base}}\ClearCode\BrowserSelector\BrowserSelector.ini` {%if install_path_32bit %} \
           （32bit環境では `{{install_path_32bit_base}}\ClearCode\BrowserSelector\BrowserSelector.ini`）{% endif %} \
           が存在する。
+
+Install-19: 既存のFirefoxの強制的な上書き
+
+    :1: 既定のインストール先、または指定のインストール先にインストールする（既定）
+
+    TBD
+
+    :2: 既存のFirefoxがある場合は、そのインストール先に上書きインストールする
+
+    TBD

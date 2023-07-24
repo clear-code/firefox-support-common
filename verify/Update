@@ -131,3 +131,13 @@ Update-8: Firefoxのバックグラウンドでの自動更新の可否
     {% else %}
     - `BackgroundAppUpdate` が `false` に設定されている。
     {% endif %}
+
+Update-9: Firefoxの自動更新の対象とするバージョンの範囲
+
+    :1: すべての更新を受け入れる（既定）
+
+    TBD
+
+    :2: セキュリティアップデートのみ受け入れる
+
+    TBD

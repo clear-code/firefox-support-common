@@ -464,3 +464,57 @@ Network-28: 古いバージョンのTLS(1.0/1.1)での3DESの使用
     ABOUT_CONFIG
 
     - `security.tls.version.enable-deprecated` の値が `false` である。
+
+Network-29: TLSでの通信時のOCSPレスポンダーによる証明書の有効期限の積極的な確認
+
+    :1: 確認する（既定）
+
+    TBD
+
+    :2: 確認しない
+
+    TBD
+
+Network-30: TLSでの通信時の時間短縮とプライバシー向上のためOCSP Staplingの使用
+
+    :1: 使用する（既定）
+
+    TBD
+
+    :2: 使用しない
+
+    TBD
+
+Network-31: Windowsのシングルサインオン状態を既定以外のコンテナーにも反映するかどうか
+
+    :1: 反映しない（既定）
+
+    TBD
+
+    :2: 初期設定のすべてのコンテナーに反映する
+
+    TBD
+
+    :3: 任意のコンテナーに反映する
+
+    TBD
+
+Network-32: クライアント認証でのRSA-PSSの使用
+
+    :1: 許可する（既定）
+
+    TBD
+
+    :2: 禁止する
+
+    TBD
+
+Network-33: クロスオリジンのリダイレクトでのAuthorizationヘッダーの引き継ぎ
+
+    :1: 安全を優先し、引き継がない（既定）
+
+    TBD
+
+    :2: 互換性を優先し、引き継ぐ
+
+    TBD
