@@ -1190,21 +1190,39 @@ Security-56: カスタムURLスキームによるアプリケーションの起�
 
     :1: 確認の上で許可する（既定）
 
-    TBD
+    1. Firefoxを起動する。
+    2. カスタムURLスキームのURLへのリンクを含むページを開く。
+    3. カスタムURLスキームのURLへのリンクをクリックする。
+    - **確認**
+        - リンク先URLを外部アプリケーションで開いてよいかどうかを訊ねる確認が表示される。
 
     :2: 特定サイトのみ初期状態で許可する
 
-    TBD
+    1. Firefoxを起動する。
+    2. 許可対象でないサイトの、カスタムURLスキームのURLへのリンクを含むページを開く。
+    3. カスタムURLスキームのURLへのリンクをクリックする。
+    - **確認**
+        - リンク先URLを外部アプリケーションで開いてよいかどうかを訊ねる確認が表示される。
+    4. 許可対象サイトの、カスタムURLスキームのURLへのリンクを含むページを開く。
+    5. カスタムURLスキームのURLへのリンクをクリックする。
+    - **確認**
+        - リンク先URLが確認なしで外部アプリケーションで開かれる。
 
 Security-57: WindowsのArbitrary Code Guard機能によるメディア再生プロセスの保護
 
     :1: 有効にする（既定）
 
-    TBD
+    ABOUT_CONFIG
+
+    - `security.sandbox.rdd.acg.enabled` の値が `true` である。
+    - `security.sandbox.utility-wmf.acg.enabled` の値が `true` である。
 
     :2: 無効にする
 
-    TBD
+    ABOUT_CONFIG
+
+    - `security.sandbox.rdd.acg.enabled` の値が `false` である。
+    - `security.sandbox.utility-wmf.acg.enabled` の値が `false` である。
 
 Security-58: GPUのサンドボックス化による保護
 
