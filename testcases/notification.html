@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+-->
+<meta charset="UTF-8">
+<title>notification test</title>
+<script type="application/javascript">
+function notify() {
+  if (!("Notification" in window)) {
+    alert("not supported");
+  } else if (Notification.permission === "granted") {
+    const notification = new Notification("Hello!");
+  } else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        const notification = new Notification("Hello!");
+      }
+    });
+  }
+}
+</script>
+<button onclick="notify()">Notify</button>
+
+
