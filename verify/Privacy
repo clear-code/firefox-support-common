@@ -1914,28 +1914,42 @@ Privacy-66: トラッキング防止時のクロスサイトのトラッキン�
 
     :1: 削除する（既定）
 
-    TBD
+    ABOUT_CONFIG
+
+    - `privacy.query_stripping.enabled` の値が `false` である。
+    - `privacy.query_stripping.enabled.pbmode` の値が `false` である。
 
     :2: 削除しない
 
-    TBD
+    ABOUT_CONFIG
+
+    - `privacy.query_stripping.enabled` の値が `true` である。
+    - `privacy.query_stripping.enabled.pbmode` の値が `true` である。
 
 Privacy-67: トラッカーのより強力なブロック
 
     :1: ブロックする
 
-    TBD
+    ABOUT_CONFIG
+
+    - `privacy.annotate_channels.strict_list.enabled` の値が `true` である。
 
     :2: ブロックしない（既定）
 
-    TBD
+    ABOUT_CONFIG
+
+    - `privacy.annotate_channels.strict_list.enabled` の値が `false` である。
 
 Privacy-68: プライベートウィンドウでのトラッカーのより強力なブロック
 
     :1: ブロックする（既定）
 
-    TBD
+    ABOUT_CONFIG
+
+    - `privacy.annotate_channels.strict_list.pbmode.enabled` の値が `true` である。
 
     :2: ブロックしない
 
-    TBD
+    ABOUT_CONFIG
+
+    - `privacy.annotate_channels.strict_list.pbmode.enabled` の値が `false` である。
