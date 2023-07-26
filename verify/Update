@@ -136,8 +136,12 @@ Update-9: Firefoxの自動更新の対象とするバージョンの範囲
 
     :1: すべての更新を受け入れる（既定）
 
-    TBD
+    ABOUT_POLICIES
+
+    - `AppUpdatePin` の値が存在しない。
 
     :2: セキュリティアップデートのみ受け入れる
 
-    TBD
+    ABOUT_POLICIES
+
+    - `AppUpdatePin` の値が `115.` である。
