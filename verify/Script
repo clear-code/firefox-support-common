@@ -378,101 +378,143 @@ Script-21: SVG2の非標準のプロパティnearestViewportElementとfarthestVi
 
     :1: 使用しない（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `svg.nearestAndFarthestViewportElement.enabled` の値が `true` である。
 
     :2: 使用する
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `svg.nearestAndFarthestViewportElement.enabled` の値が `false` である。
 
 Script-22: iframe内のSVGに反映するテーマ
 
     :1: OSやブラウザーの設定よりも埋め込み要素自体のテーマ設定を優先（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `svg.embedder-prefers-color-scheme.content.enabled` の値が `true` である。
 
     :2: OSやブラウザーの設定を優先
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `svg.embedder-prefers-color-scheme.content.enabled` の値が `false` である。
 
 Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
 
     :1: 使用しない（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `security.webauth.u2f` の値が `true` である。
 
     :2: 使用する
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `security.webauth.u2f` の値が `false` である。
 
 Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
 
     :1: 安全なコンテキストでのみ使用を許可（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `dom.caches.testing.enabled` の値が `false` である。
 
     :2: 安全でないコンテキストでの使用も許可
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `dom.caches.testing.enabled` の値が `true` である。
 
 Script-25: WebRTCのRTCRtpSender.getParameters()、RTCRtpSender.setParameters()、RTCRtpReceiver.getParametersの振る舞い
 
     :1: 他のブラウザーと互換性のある動作（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `media.peerconnection.allow_old_setParameters` の値が `false` である。
 
     :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `media.peerconnection.allow_old_setParameters` の値が `true` である。
 
 Script-26: リッチテキストエディターの振る舞い
 
     :1: 他のブラウザーと互換性のある動作（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `editor.join_split_direction.compatible_with_the_other_browsers` の値が `true` である。
 
     :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `editor.join_split_direction.compatible_with_the_other_browsers` の値が `false` である。
 
 Script-27: Total Cookie Protectionが有効な状態での、サードパーティのコンテキストでのService Workerの使用
 
     :1: 分離されたコンテキストで使用を許可（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.partition.serviceWorkers` の値が `true` である。
 
     :2: 使用を禁止
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.partition.serviceWorkers` の値が `false` である。
 
 Script-28: WebMIDI APIの使用
 
     :1: 分離されたコンテキストで使用を許可（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `dom.webmidi.enabled` の値が `true` である。
 
     :2: 使用を禁止
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `dom.webmidi.enabled` の値が `false` である。
 
 Script-29: サードパーティのコンテキストでのストレージとCookieの分離
 
     :1: 他のブラウザーと同様に分離する（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.partition.always_partition_third_party_non_cookie_storage` の値が `true` である。
+    - `privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage` の値が `false` である。
 
     :2: 古いFirefoxと同様の動作とする
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.partition.always_partition_third_party_non_cookie_storage` の値が `false` である。
+    - `privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage` の値が `true` である。
 
 Script-30: scrollendイベントによるスクロール操作終了の検知
 
     :1: 他のブラウザーと同様に許可する（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `apz.scrollend-event.content.enabled` の値が `false` である。
 
     :2: 古いFirefoxと同様の動作とする
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `apz.scrollend-event.content.enabled` の値が `false` である。
 
 Script-31: Service Workerの使用の可否
 
