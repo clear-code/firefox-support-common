@@ -344,21 +344,35 @@ Script-19: MathMLの非推奨の属性であるlquoteおよびrquoteの使用
 
     :1: 使用しない（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースの `mathml.html` を開く。
+    - **確認**
+        - 見出し「lquote, rquote」配下の「abc」の前後に記号が表示されない。
 
     :2: 使用する
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースの `mathml.html` を開く。
+    - **確認**
+        - 見出し「lquote, rquote」配下の「abc」の前後に記号が表示される。
 
 Script-20: MathMLのsemanticsおよびmactionで初期状態で表示する内容の制御
 
     :1: 最初の子要素のみを表示（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースの `mathml.html` を開く。
+    - 見出し「maction」配下の「6/8」をクリックする。
+    - **確認**
+        - 何も起こらない。
 
     :2: 最初の子要素以外も表示
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースの `mathml.html` を開く。
+    - 見出し「maction」配下の「6/8」をクリックする。
+    - **確認**
+        - 表示される式が別の式に切り替わる。
 
 Script-21: SVG2の非標準のプロパティnearestViewportElementとfarthestViewportElementの使用
 
