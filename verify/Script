@@ -340,7 +340,7 @@ Script-18: スクリプトから開いていないウィンドウをスクリプ
     - **確認**
       - ウィンドウが閉じられる。
 
-Script-19: MathMLの非推奨の属性であるlquopteおよびrquoteの使用
+Script-19: MathMLの非推奨の属性であるlquoteおよびrquoteの使用
 
     :1: 使用しない（既定）
 

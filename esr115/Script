@@ -425,7 +425,7 @@ Script-18: スクリプトから開いていないウィンドウをスクリプ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Script-19: MathMLの非推奨の属性であるlquopteおよびrquoteの使用
+Script-19: MathMLの非推奨の属性であるlquoteおよびrquoteの使用
 
     :1: 使用しない（既定）
 
