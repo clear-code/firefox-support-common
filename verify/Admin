@@ -208,28 +208,55 @@ Admin-8: about:third-partyを用いたユーザー権限でのサードパーテ
 
     :1: 許可する（既定）
 
-    TBD
+    ABOUT_POLICIES
+
+    - `DisableThirdPartyModuleBlocking` が存在しない。
 
     :2: 禁止する
 
-    TBD
+    ABOUT_POLICIES
+
+    - `DisableThirdPartyModuleBlocking` が `true` である。
 
 Admin-9: アドオンのアンインストール
 
     :1: アドオンをアンインストールしない（既定）
 
-    TBD
+    - 運用中のアドオンをインストールした状態にする。
+      運用中のアドオンが無い場合は、テストケースの`{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi`を使用する。
+    - Firefoxを起動する。
+    - **確認**
+        - インストールしたアドオンが引き続き動作している。
+          テストケースの`{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi`を使用した場合、テストケースの `image.html` を開き、画像のhover操作で「Clear Code Logo」のツールチップが表示されることを確認する。
+    - テストケースの`{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi`を使用した場合、アドオン「Popup ALT Attributes」を削除する。
 
     :2: アドオンを強制的にアンインストールする
 
-    TBD
+    - `policies.json`の`Extensions.Uninstall`またはグループポリシーの「Extension to Uninstall」によるカスタマイズを一旦無効化し、アドオンをアンインストールしない状態にする。
+    - アンインストール対象とする運用中のアドオンをインストールした状態にする。
+      運用中のアドオンが無い場合は、テストケースの`{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi`を使用する。
+    - `policies.json`の`Extensions.Uninstall`またはグループポリシーの「Extension to Uninstall」によるカスタマイズを有効化する。
+    - Firefoxを起動する。
+    - **確認**
+        - アンインストールするよう指示したアドオンが削除されている。
+          テストケースの`{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi`を使用した場合、テストケースの `image.html` を開き、画像のhover操作で「Clear Code Logo」のツールチップが表示されないことを確認する。
 
 Admin-10: Manifest V3形式アドオンへの対応
 
     :1: 対応する（既定）
 
-    TBD
+    - Firefoxを起動する。
+    - 運用するManifest V3のアドオンをインストールする。
+      運用するアドオンが無い場合は、テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用する。
+    - **確認**
+        - インストールしたアドオンが有効になっている。
+          テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、アドオンマネージャーまたは拡張機能パネルに「ブックマークオーガナイザー」が有効状態で表示されることを確認する。
+    - テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、アドオン「ブックマークオーガナイザー」を削除する。
 
     :2: 対応せず無効化する
 
-    TBD
+    - Firefoxを起動する。
+    - 運用するManifest V3のアドオンをインストールする。
+      運用するアドオンが無い場合は、テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用する。
+    - **確認**
+        - アドオンがインストールされない。
