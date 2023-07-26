@@ -1228,28 +1228,42 @@ Security-58: GPUのサンドボックス化による保護
 
     :1: 有効にする（既定）
 
-    TBD
+    ABOUT_CONFIG
+
+    - `security.sandbox.gpu.level` の値が `1` である。
 
     :2: 無効にする
 
-    TBD
+    ABOUT_CONFIG
+
+    - `security.sandbox.gpu.level` の値が `0` である。
 
 Security-59: パスワード入力フォームの右クリックメニューからのパスワード表示
 
     :1: 許可する（既定）
 
-    TBD
+    - Firefoxを起動する。
+    - テストケースの `password.html` を開く。
+    - パスワード入力欄の上で右クリックする。
+    - **確認**
+        - コンテキストメニュー内に「パスワードを開示」という項目がある。
 
     :2: 禁止する
 
-    TBD
+    - Firefoxを起動する。
+    - テストケースの `password.html` を開く。
+    - パスワード入力欄の上で右クリックする。
+    - **確認**
+        - コンテキストメニュー内に「パスワードを開示」という項目が無い。
 
 Security-60: セキュリティデバイスの削除
 
     :1: 削除しない（既定）
 
-    TBD
+    ABOUT_POLICIES
+
+    - `SecurityDevices` の `Delete` が存在しない。
 
     :2: 削除する
 
-    TBD
+    - `SecurityDevices` の `Delete` の値として、削除対象のセキュリティデバイス名の一覧が表示される。
