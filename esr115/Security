@@ -1280,7 +1280,7 @@ Security-45: 証明書の例外の自動承認
             const browser = tab.linkedBrowser;
             Services.console.logStringMessage(` => try load script`);
             browser.messageManager.loadFrameScript('data:text/javascript,(' + (async (waitUntilEventOrTimeout) => {
-              const doc = docShell.QueryInterface(Components.interfaces.nsIWebNavigation).document;
+              const doc = docShell.getInterface(Components.interfaces.nsIWebNavigation).document;
               const win = doc.defaultView;
               await waitUntilEventOrTimeout(doc, 'AboutNetErrorLoad', 500);
     
@@ -1289,6 +1289,9 @@ Security-45: 証明書の例外の自動承認
                 advancedButton.dispatchEvent(new win.MouseEvent('click', { button: 0 }));
                 const exceptionDialogButton = doc.getElementById('exceptionDialogButton');
                 if (exceptionDialogButton) {
+                  while (exceptionDialogButton.hasAttribute('disabled')) {
+                    await new Promise(resolve => win.setTimeout(resolve, 100));
+                  }
                   exceptionDialogButton.click();
                   return; /* success case, go to next step: exceptionDialog */
                 }
