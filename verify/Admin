@@ -161,16 +161,18 @@ Admin-6: ユーザーが導入済みのアドオンの取り扱い
     - Firefoxを起動して、終了し、ユーザープロファイルが存在する状態にする。
     - テストケースのprofile-with-user-install-addonの内容をFirefoxのユーザープロファイルにコピーし、アドオンをユーザー権限でインストール済みの状態にする。
     - Firefoxを起動する。
+    - 拡張機能パネルを開く。
     - **確認**
-        - アドオン「Simple Tab Groups」がインストールされており、拡張機能パネルからSimpel Tab Groupsの機能を使用できる。
+        - アドオン「Simple Tab Groups」が一覧に表示されており、Simpel Tab Groupsの機能を使用できる。
 
     :2: 使用を許可するアドオン以外すべて削除する
 
     - Firefoxを起動して、終了し、ユーザープロファイルが存在する状態にする。
     - テストケースのprofile-with-user-install-addonの内容をFirefoxのユーザープロファイルにコピーし、アドオンをユーザー権限でインストール済みの状態にする。
     - Firefoxを起動する。
+    - 拡張機能パネルを開く。
     - **確認**
-        - アドオン「Simple Tab Groups」がインストールされておらず、拡張機能パネル上にも項目が表示されていない。
+        - アドオン「Simple Tab Groups」が一覧に表示されていない。
 
 Admin-7: アドオンのインストール
 
