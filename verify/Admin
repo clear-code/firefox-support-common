@@ -96,9 +96,6 @@ Admin-4: Mozillaにより署名されていないアドオンのインストー�
 
     :1: 許可する
 
-    {%if Security_3_3 %}
-    - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
-      {% endif %}
     - アドオンの未署名のインストールパッケージとして、テストケースの `unsigned-sample-addon@clear-code.com.xpi` を用意し、全ユーザーがアクセス可能な位置に配置する。 \
       （`C:\Users\Public\testcases` など）
     - アドオンを強制導入するようにポリシー設定を変更する。
@@ -110,13 +107,10 @@ Admin-4: Mozillaにより署名されていないアドオンのインストー�
               }
       
     - Firefoxを起動する。
-    - アドオンマネージャを開く。
+    - 拡張機能パネルパネルを開く。
     - **確認**
-        - アドオン「Unsigned Sample Addon」が有効になっているか、または、無効の状態から有効化できる。
+        - アドオン「Unsigned Sample Addon」が有効になっているか、または、「拡張機能の管理」で無効の状態から有効化できる{%if Security_3_3 %}（検証のためにはポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく必要あり）{% endif %}。
     - ポリシー設定からアドオン導入のための記述を削除する。
-      {%if Security_3_3 %}
-    - ポリシー設定から一時的に削除した `BlockAboutAddons` を元に戻す。
-      {% endif %}
 
     :2: 禁止する（既定）
 
@@ -164,31 +158,19 @@ Admin-6: ユーザーが導入済みのアドオンの取り扱い
 
     :1: そのまま使用を許可（既定）
 
-    {%if Security_3_3 %}
-    - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
-      {% endif %}
     - Firefoxを起動して、終了し、ユーザープロファイルが存在する状態にする。
     - テストケースのprofile-with-user-install-addonの内容をFirefoxのユーザープロファイルにコピーし、アドオンをユーザー権限でインストール済みの状態にする。
     - Firefoxを起動する。
     - **確認**
-        - アドオン「Simple Tab Groups」がインストールされており、ツールバー上に追加のツールバーボタンが表示されている。
-      {%if Security_3_3 %}
-    - ポリシー設定から一時的に削除した `BlockAboutAddons` を元に戻す。
-      {% endif %}
+        - アドオン「Simple Tab Groups」がインストールされており、拡張機能パネルからSimpel Tab Groupsの機能を使用できる。
 
     :2: 使用を許可するアドオン以外すべて削除する
 
-    {%if Security_3_3 %}
-    - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
-      {% endif %}
     - Firefoxを起動して、終了し、ユーザープロファイルが存在する状態にする。
     - テストケースのprofile-with-user-install-addonの内容をFirefoxのユーザープロファイルにコピーし、アドオンをユーザー権限でインストール済みの状態にする。
     - Firefoxを起動する。
     - **確認**
-        - アドオン「Simple Tab Groups」がインストールされておらず、ツールバー上に追加のツールバーボタンも表示されていない。
-      {%if Security_3_3 %}
-    - ポリシー設定から一時的に削除した `BlockAboutAddons` を元に戻す。
-      {% endif %}
+        - アドオン「Simple Tab Groups」がインストールされておらず、拡張機能パネル上にも項目が表示されていない。
 
 Admin-7: アドオンのインストール
 

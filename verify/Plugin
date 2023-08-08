@@ -15,31 +15,19 @@ Plugin-8: Gecko Media Pluginの利用の可否
 
     :1: 許可する（既定）
 
-    {%if Security_3_3 %}
-    - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
-      {% endif %}
     - Firefoxを起動する。
-    - アドオンマネージャを開き、「プラグイン」を選択する。
+    - `about:plugins` を開く。
     - **確認**
         - OpenH264のプラグインが表示される。
         - 「Primetime Content Decryption Module」が表示される。
         - 「Widevine Content Decryption Module」が表示される。
-      {%if Security_3_3 %}
-    - ポリシー設定から一時的に削除した `BlockAboutAddons` を元に戻す。
-      {% endif %}
 
     :2: 禁止する
 
-    {%if Security_3_3 %}
-    - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
-      {% endif %}
     - Firefoxを起動する。
-    - アドオンマネージャを開き、「プラグイン」を選択する。
+    - `about:plugins` を開く。
     - **確認**
         - OpenH264のプラグインが表示されない。
         - 「Primetime Content Decryption Module」が表示されない。
         - 「Widevine Content Decryption Module」が表示されない。
-      {%if Security_3_3 %}
-    - ポリシー設定から一時的に削除した `BlockAboutAddons` を元に戻す。
-      {% endif %}
 

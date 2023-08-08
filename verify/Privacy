@@ -1504,19 +1504,13 @@ Privacy-51: プライベートウィンドウでのアドオンの動作可否
     {%if MenuShortcut_3_1 %}
     - ポリシー設定から `DisablePrivateBrowsing` を削除し、プライベートウィンドウ機能を一時的に有効化しておく。
       {% endif %}
-      {%if Security_3_3 %}
-    - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
-      {% endif %}
     - Firefoxを起動する。
     - プライベートウィンドウを開く。
     - **確認**
         - アドオンがすべて無効になっている。
-    - アドオンマネージャを開く。
+    - 拡張機能パネルを開く。
     - **確認**
         - アドオンアドオンがすべてプライベートウィンドウでは無効になっている。
-      {%if Security_3_3 %}
-    - ポリシー設定から一時的に削除した `BlockAboutAddons` を元に戻す。
-      {% endif %}
       {%if MenuShortcut_3_1 %}
     - ポリシー設定から一時的に削除した `DisablePrivateBrowsing` を元に戻す。
       {% endif %}
