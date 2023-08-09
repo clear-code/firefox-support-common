@@ -469,16 +469,15 @@ Script-22: iframe内のSVGに反映するテーマ
     *.cfg / *.jsc
     lockPref("svg.embedder-prefers-color-scheme.content.enabled", false);
 
-Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
+Script-23: [廃止] 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
 
-    :1: 使用しない（既定）
+    :1: [廃止] 使用しない（既定）
 
     -
 
-    :2: 使用する
+    :2: [廃止] 使用する
 
-    *.cfg / *.jsc
-    lockPref("security.webauth.u2f", true);
+    -
 
 Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
 
