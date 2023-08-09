@@ -1280,8 +1280,8 @@ Security-45: 証明書の例外の自動承認
             const browser = tab.linkedBrowser;
             Services.console.logStringMessage(` => try load script`);
             browser.messageManager.loadFrameScript('data:text/javascript,(' + (async (waitUntilEventOrTimeout) => {
-              const doc = docShell.getInterface(Components.interfaces.nsIWebNavigation).document;
-              const win = doc.defaultView;
+              const doc = content.document;
+              const win = content;
               await waitUntilEventOrTimeout(doc, 'AboutNetErrorLoad', 500);
     
               const advancedButton = doc.getElementById('advancedButton');
