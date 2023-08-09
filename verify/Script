@@ -45,7 +45,7 @@ Script-2: プッシュ通知の可否
     :3: 禁止する（ESR版・既定）
 
     - Firefoxを起動する。
-    - テストケースの `notification.html` を開く。
+    - `https://piro.sakura.ne.jp/test/notification.html` を開く。
     - 「Notify」ボタンをクリックする。
     - **確認**
         - デスクトップ通知が表示されない。
