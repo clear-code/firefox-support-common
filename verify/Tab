@@ -500,9 +500,13 @@ Tab-22: Mozillaの契約パートナーが提供するPocketの項目の表示
 
     :2: 常に表示する
 
+    ABOUT_POLICIES
+
     - `FirefoxHome` 配下の `SponsoredPocket` と `Locked` の値が `true` である。
 
     :3: 常に非表示にする
+
+    ABOUT_POLICIES
 
     - `FirefoxHome` 配下の `SponsoredPocket` の値が `false`で `Locked` の値が `true` である。
 
