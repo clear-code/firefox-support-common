@@ -513,7 +513,7 @@ Script-30: scrollendイベントによるスクロール操作終了の検知
 
     ABOUT_CONFIG
 
-    - `apz.scrollend-event.content.enabled` の値が `false` である。
+    - `apz.scrollend-event.content.enabled` の値が `true` である。
 
     :2: 古いFirefoxと同様の動作とする
 
