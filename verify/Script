@@ -413,13 +413,13 @@ Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
 
     ABOUT_CONFIG
 
-    - `security.webauth.u2f` の値が `true` である。
+    - `security.webauth.u2f` の値が `false` である。
 
     :2: 使用する
 
     ABOUT_CONFIG
 
-    - `security.webauth.u2f` の値が `false` である。
+    - `security.webauth.u2f` の値が `true` である。
 
 Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
 

@@ -478,7 +478,7 @@ Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
     :2: 使用する
 
     *.cfg / *.jsc
-    lockPref("security.webauth.u2f", false);
+    lockPref("security.webauth.u2f", true);
 
 Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
 
