@@ -506,14 +506,32 @@ Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの�
 
 Script-25: WebRTCのRTCRtpSender.getParameters()、RTCRtpSender.setParameters()、RTCRtpReceiver.getParametersの振る舞い
 
-    :1: 他のブラウザーと互換性のある動作（既定）
+    :1: 他のブラウザーと互換性のある動作
 
-    -
+    *.cfg / *.jsc
+    lockPref("media.peerconnection.allow_old_setParameters", false);
 
-    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
+    または
+
+    distribution\policies.json:
+    "Preferences": {
+      "media.peerconnection.allow_old_setParameters": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作（既定）
 
     *.cfg / *.jsc
     lockPref("media.peerconnection.allow_old_setParameters", true);
+
+    または
 
     distribution\policies.json:
     "Preferences": {
