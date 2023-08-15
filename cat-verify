@@ -108,6 +108,10 @@ TEMPLATE_OPTIONS = """
 - 前項に引き続き検証するか、または以下の状態を整えておく。
     - 作成済みの `{{meta_installer_file_name}}*.exe` を検証用ユーザーとして実行し、カスタマイズ済みFirefoxのインストールを完了している。
       管理者権限を要求された場合は、`管理者`ユーザーで認証する。
+- 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
+  `{{special_profile_path}}` {%if special_profile_actual_path %} \
+  （{{special_profile_actual_path}}）{% endif %} \
+  を削除する。
 
 ## 検証
 
@@ -124,6 +128,10 @@ TEMPLATE_ABOUT_CONFIG = """
 - 前項に引き続き検証するか、または以下の状態を整えておく。
     - 作成済みの `{{meta_installer_file_name}}*.exe` を検証用ユーザーとして実行し、カスタマイズ済みFirefoxのインストールを完了している。
       管理者権限を要求された場合は、`管理者`ユーザーで認証する。
+- 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
+  `{{special_profile_path}}` {%if special_profile_actual_path %} \
+  （{{special_profile_actual_path}}）{% endif %} \
+  を削除する。
 
 ## 検証
 
