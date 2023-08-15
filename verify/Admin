@@ -256,16 +256,17 @@ Admin-10: Manifest V3形式アドオンへの対応
 
     - Firefoxを起動する。
     - 運用するManifest V3のアドオンをインストールする。
-      運用するアドオンが無い場合は、テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用する。
+      運用するアドオンが無い場合は、{%if InstallAddonsPermission %}ポリシー設定から `InstallAddonsPermission` を削除して、アドオンのインストールを一時的に有効化した上で、{% endif %}テストケースの`bookmarksorganizer@agenedia.com.xpi`をインストールする。
     - **確認**
         - インストールしたアドオンが有効になっている。
           テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、アドオンマネージャーまたは拡張機能パネルに「ブックマークオーガナイザー」が有効状態で表示されることを確認する。
-    - テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、アドオン「ブックマークオーガナイザー」を削除する。
+    - テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、アドオン「ブックマークオーガナイザー」を削除する。{%if InstallAddonsPermission %}また、ポリシー設定の `InstallAddonsPermission` を復元して、アドオンのインストールを無効化する。{% endif %}
 
     :2: 対応せず無効化する
 
     - Firefoxを起動する。
     - 運用するManifest V3のアドオンをインストールする。
-      運用するアドオンが無い場合は、テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用する。
+      運用するアドオンが無い場合は、{%if InstallAddonsPermission %}ポリシー設定から `InstallAddonsPermission` を削除して、アドオンのインストールを一時的に有効化した上で、{% endif %}テストケースの`bookmarksorganizer@agenedia.com.xpi`をインストールする。
     - **確認**
         - アドオンがインストールされない。
+    - テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、ポリシー設定の `InstallAddonsPermission` を復元して、アドオンのインストールを無効化する。{% endif %}
