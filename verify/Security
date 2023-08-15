@@ -55,6 +55,7 @@ Security-1: 独自のルート証明書をあらかじめ導入しておく
         - 上記の手順でインポートした場合は `https://untrusted-root.badssl.com/` を開く。
     - **確認**
         - 証明書のエラーが表示されず、Webサイトの内容をそのまま閲覧できる。
+          `https://untrusted-root.badssl.com/` の場合、赤い背景のページが表示される。
     - 検証用に登録した証明書を削除する。
         - コマンドプロンプトで登録した場合は `reg import remove-badssl-com-enterprise-root.reg` を実行する。
         - 「mmc.exe」で登録した場合は、該当する証明書の項目上での右クリックメニューから削除する。
