@@ -62,10 +62,16 @@ Admin-2: 初回起動時のアドオン導入警告の可否
     - アドオンを強制導入するようにポリシー設定を変更する。
       policies.json を使用してテストケースの  `{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi` を導入する場合であれば、`"ExtensionSettings"` に以下を追記する。
       
-              "{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}": {
-                "installation_mode": "force_installed",
-                "install_url": "file:///c:/Users/Public/testcases/{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi"
-              }
+              ...
+              "ExtensionSettings": {
+                ...
+                ,
+                "{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}": {
+                  "installation_mode": "force_installed",
+                  "install_url": "file:///c:/Users/Public/testcases/{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi"
+                }
+              },
+              ...
       
     - Firefoxを起動する。
     - **確認**
@@ -79,10 +85,16 @@ Admin-2: 初回起動時のアドオン導入警告の可否
     - アドオンを強制導入するようにポリシー設定を変更する。
       policies.json を使用してテストケースの  `{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi` を導入する場合であれば、`"ExtensionSettings"` に以下を追記する。
       
-              "{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}": {
-                "installation_mode": "force_installed",
-                "install_url": "file:///c:/Users/Public/testcases/{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi"
-              }
+              ...
+              "ExtensionSettings": {
+                ...
+                ,
+                "{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}": {
+                  "installation_mode": "force_installed",
+                  "install_url": "file:///c:/Users/Public/testcases/{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi"
+                }
+              },
+              ...
       
     - Firefoxを起動する。
     - **確認**
@@ -101,10 +113,16 @@ Admin-4: Mozillaにより署名されていないアドオンのインストー�
     - アドオンを強制導入するようにポリシー設定を変更する。
       policies.json を使用してテストケースの  `unsigned-sample-addon@clear-code.com.xpi` を導入する場合であれば、`"ExtensionSettings"` に以下を追記する。
       
-              "unsigned-sample-addon@clear-code.com": {
-                "installation_mode": "force_installed",
-                "install_url": "file:///c:/Users/Public/testcases/unsigned-sample-addon@clear-code.com.xpi"
-              }
+              ...
+              "ExtensionSettings": {
+                ...
+                ,
+                "unsigned-sample-addon@clear-code.com": {
+                  "installation_mode": "force_installed",
+                  "install_url": "file:///c:/Users/Public/testcases/unsigned-sample-addon@clear-code.com.xpi"
+                }
+              },
+              ...
       
     - Firefoxを起動する。
     - 拡張機能パネルパネルを開く。
@@ -122,10 +140,16 @@ Admin-4: Mozillaにより署名されていないアドオンのインストー�
     - アドオンを強制導入するようにポリシー設定を変更する。
       policies.json を使用してテストケースの  `unsigned-sample-addon@clear-code.com.xpi` を導入する場合であれば、`"ExtensionSettings"` に以下を追記する。
       
-              "unsigned-sample-addon@clear-code.com": {
-                "installation_mode": "force_installed",
-                "install_url": "file:///c:/Users/Public/testcases/unsigned-sample-addon@clear-code.com.xpi"
-              }
+              ...
+              "ExtensionSettings": {
+                ...
+                ,
+                "unsigned-sample-addon@clear-code.com": {
+                  "installation_mode": "force_installed",
+                  "install_url": "file:///c:/Users/Public/testcases/unsigned-sample-addon@clear-code.com.xpi"
+                }
+              },
+              ...
       
     - Firefoxを起動する。
     - アドオンマネージャを開く。
