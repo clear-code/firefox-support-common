@@ -548,7 +548,7 @@ Security-21: 危険なアドオンとプラグインのブロックの可否
     - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
       {% endif %}
     - Firefoxを起動する。
-    - `about:debugging` を開く。
+    - `about:debugging` を開き、「このFirefox」をクリックする。
     - テストケースの `blocked-addon.xpi` を「一時的なアドオンを読み込む」で読み込ませる。
     - **確認**
         - エラーとなり、アドオンの読み込みに失敗する。
@@ -580,7 +580,7 @@ Security-21: 危険なアドオンとプラグインのブロックの可否
     - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
       {% endif %}
     - Firefoxを起動する。
-    - `about:debugging` を開く。
+    - `about:debugging` を開き、「このFirefox」をクリックする。
     - テストケースの `blocked-addon.xpi` を「一時的なアドオンを読み込む」で読み込ませる。
     - **確認**
         - 読み込まれたアドオンが一時的な拡張機能の一覧に表示されている。
