@@ -173,7 +173,7 @@ Ui-12: タッチパッドでの二本指でのスワイプ操作の振る舞い
 
     ABOUT_CONFIG
 
-    - `widget.disable-swipe-tracker` の値が `true` である。
+    - `widget.disable-swipe-tracker` の値が `false` である。
 
     :2: 何もしない: 検証環境がタッチパッドでの二本指ジェスチャに対応している場合
 
@@ -188,7 +188,7 @@ Ui-12: タッチパッドでの二本指でのスワイプ操作の振る舞い
 
     ABOUT_CONFIG
 
-    - `widget.disable-swipe-tracker` の値が `false` である。
+    - `widget.disable-swipe-tracker` の値が `true` である。
 
 Ui-13: タッチパッドでの二本指でのスクロール時の、ページ終端到達時のアニメーション効果
 
