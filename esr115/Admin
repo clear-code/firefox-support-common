@@ -205,6 +205,17 @@ Admin-8: about:third-partyを用いたユーザー権限でのサードパーテ
     カテゴリ「Firefox」
     → 「Disable Third Party Module Blocking」を有効化
 
+    GPOで制御しない場合のfainstall.iniでの代替：
+    [fainstall]
+    ExtraRegistryEntries=DisableThirdPartyModuleBlocking
+    
+    ;Admin-8-2
+    [DisableThirdPartyModuleBlocking]
+    Root=HKLM
+    Path=Software\Policies\Mozilla\Firefox
+    DwordValue0=DisableThirdPartyModuleBlocking
+    DwordData0=0x00000001
+
 Admin-9: アドオンのアンインストール
 
     :1: アドオンをアンインストールしない（既定）
