@@ -43,10 +43,13 @@ Security-1: 独自のルート証明書をあらかじめ導入しておく
         - コマンドプロンプトで登録する場合
             - 管理者権限でcmd.exeを起動し、テストケースのフォルダで `reg import add-badssl-com-enterprise-root.reg` を実行する。
         - 「mmc.exe」で登録する場合
-            - 管理者権限で「mmc.exe」を実行し、「ファイル > スナップインの追加と削除」を選ぶ。
-            - 「証明書 > コンピューターアカウント > ローカル コンピューター」を順番に選択し、「完了」ボタン、「OK」ボタンを順に押下する。
-            - 「コンソール ルート > 証明書（ローカル コンピューター） > 信頼されたルート証明機関 > 証明書」を開き、右クリックメニューから「すべてのタスク > インポート」を選択する。
-            - テストケースの「BadSSLUntrustedRootCertificateAuthority.crt」を選択し、信頼されたルート証明機関に配置する。
+            - 管理者権限で「mmc.exe」を実行し、「ファイル > スナップインの追加と削除（File > Add/Remove Snap-in）」を選ぶ。
+            - ダイアログが表示されるので、左のリストから「証明書（Certificates）」を選び「追加（Add）」をクリックする。
+            - ウィザードが表示されるので、「コンピューターアカウント（Computer account）」を選択して「完了（Finish）」をクリックする。
+            - 「ローカル コンピューター（Local computer）」が選択された状態で「完了（Finish）」をクリックする。
+            - 「OK」をクリックしてダイアログを閉じる。
+            - 左のツリーから「コンソール ルート > 証明書（ローカル コンピューター） > 信頼されたルート証明機関 > 証明書（Console Root > Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates）」と辿り、「証明書（Certificates）」上での右クリックメニューから「すべてのタスク > インポート（All Tasks > Import）」を選択する。
+            - テストケースの「BadSSLUntrustedRootCertificateAuthority.crt」を選択し、「信頼されたルート証明機関（Trusted Root Certification Authorities）」に配置する。
     - Firefoxを起動する。
     - インポートされる事が期待される認証局証明書に対応する認証局で発行された証明書を使用したWebサイトを開く。
         - 上記の手順でインポートした場合は `https://untrusted-root.badssl.com/` を開く。
@@ -54,7 +57,7 @@ Security-1: 独自のルート証明書をあらかじめ導入しておく
         - 証明書のエラーが表示されず、Webサイトの内容をそのまま閲覧できる。
     - 検証用に登録した証明書を削除する。
         - コマンドプロンプトで登録した場合は `reg import remove-badssl-com-enterprise-root.reg` を実行する。
-        - 「mmc.exe」で登録した場合は、右クリックメニューから削除する。
+        - 「mmc.exe」で登録した場合は、該当する証明書の項目上での右クリックメニューから削除する。
 
 Security-3: アドオンのインストールの可否
 
