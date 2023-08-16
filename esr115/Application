@@ -40,28 +40,39 @@ Application-2: スタートメニューのショートカット
 
     Firefox-setup.ini/Thunderbird-setup.ini:
     [Install]
-    StartMenuShortcuts=true
+    StartMenuShortcut=true
+    PrivateBrowsingShortcut=true
     StartMenuDirectoryName=Mozilla Firefox
 
     :2: 作成しない
 
     Firefox-setup.ini/Thunderbird-setup.ini:
     [Install]
-    StartMenuShortcuts=false
+    StartMenuShortcut=false
+    PrivateBrowsingShortcut=false
 
     :3: 任意の内容で作成
 
     Firefox-setup.ini/Thunderbird-setup.ini:
     [Install]
-    StartMenuShortcuts=false
+    StartMenuShortcut=false
+    PrivateBrowsingShortcut=false
 
     fainstall.ini:
     [fainstall]
-    Shortcuts=startmenu-shortcut
+    Shortcuts=startmenu-shortcut|startmenu-private-browsing-shortcut
 
     [startmenu-shortcut]
     Name=ショートカット名
     Path=%AppDir%/firefox.exe
+    IconPath=C:/path/to/icon.ico
+    Options=https://example.com/
+    TargetUser=all
+    TargetLocation=C:/ProgramData/Microsoft/Windows/Start Menu/Programs
+
+    [startmenu-private-browsing-shortcut]
+    Name=ショートカット名
+    Path=%AppDir%/private_browsing.exe
     IconPath=C:/path/to/icon.ico
     Options=https://example.com/
     TargetUser=all
