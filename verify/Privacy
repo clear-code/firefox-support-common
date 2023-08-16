@@ -1719,7 +1719,7 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
            とオリジンのみが表示される。
     - `about:config` を開く。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault` の値が `true` で固定されている。
     {% endif %}
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
@@ -1739,7 +1739,7 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
            と完全なURLが表示される。
     - `about:config` を開く。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `false` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault` の値が `false` で固定されている。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
       {% endif %}
@@ -1759,6 +1759,9 @@ Privacy-61: トップレベルのコンテンツに対するリファラ通知�
 
     :2: クロスオリジンで情報が通知されるような形でのポリシーの緩和を許可する (既定）
 
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - テストケースリストのリンクから \
       `https://labs.w0s.jp/http/referrer-policy/unsafe-url/` \
@@ -1768,13 +1771,19 @@ Privacy-61: トップレベルのコンテンツに対するリファラ通知�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://labs.w0s.jp/http/referrer-policy/unsafe-url/` \
            と表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault.top_naviagtion" の値が `false` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.top_naviagtion` の値が `false` で固定されている。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
 
 Privacy-62: 厳格モードおよびプライベートブラウジング時の、サブリソースに対するリファラ通知ポリシーの緩和の禁止
 
     :1: クロスオリジンで情報が通知されるような形でのポリシーの緩和を禁止する (既定）
 
     {% if not MenuShortcut_3_1 %}
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - プライベートウィンドウを開く。
     - プライベートウィンドウで、テストケースリストのリンクから \
@@ -1784,7 +1793,10 @@ Privacy-62: 厳格モードおよびプライベートブラウジング時の�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/` \
            とオリジンのみが表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault.pbmode" の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode` の値が `true` で固定されている。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
     {% else %}
     - プライベートウィンドウの機能をMenuShortcut-3-1にて無効化しているため検証を省略する。
     {% endif %}
@@ -1792,6 +1804,9 @@ Privacy-62: 厳格モードおよびプライベートブラウジング時の�
     :2: クロスオリジンで情報が通知されるような形でのポリシーの緩和を許可する
 
     {% if not MenuShortcut_3_1 %}
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - プライベートウィンドウを開く。
     - プライベートウィンドウで、テストケースリストのリンクから \
@@ -1801,7 +1816,10 @@ Privacy-62: 厳格モードおよびプライベートブラウジング時の�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/test/iframe-referrer-policy-unsafe-url.html` \
            と完全なURLが表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault.pbmode" の値が `false` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode` の値が `false` で固定されている。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
     {% else %}
     - プライベートウィンドウの機能をMenuShortcut-3-1にて無効化しているため検証を省略する。
     {% endif %}
@@ -1811,6 +1829,9 @@ Privacy-63: 厳格モードおよびプライベートブラウジング時の�
     :1: クロスオリジンで情報が通知されるような形でのポリシーの緩和を禁止する (既定）
 
     {% if not MenuShortcut_3_1 %}
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - プライベートウィンドウを開く。
     - プライベートウィンドウで、テストケースリストのリンクから \
@@ -1821,7 +1842,10 @@ Privacy-63: 厳格モードおよびプライベートブラウジング時の�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://labs.w0s.jp/` \
            と表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault.pbmode.top_navigation" の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode.top_navigation` の値が `true` で固定されている。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
     {% else %}
     - プライベートウィンドウの機能をMenuShortcut-3-1にて無効化しているため検証を省略する。
     {% endif %}
@@ -1829,6 +1853,9 @@ Privacy-63: 厳格モードおよびプライベートブラウジング時の�
     :2: クロスオリジンで情報が通知されるような形でのポリシーの緩和を許可する
 
     {% if not MenuShortcut_3_1 %}
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - プライベートウィンドウを開く。
     - プライベートウィンドウで、テストケースリストのリンクから \
@@ -1839,7 +1866,10 @@ Privacy-63: 厳格モードおよびプライベートブラウジング時の�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://labs.w0s.jp/http/referrer-policy/unsafe-url/` \
            と表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault.pbmode.top_navigation" の値が `false` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode.top_navigation` の値が `false` で固定されている。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
     {% else %}
     - プライベートウィンドウの機能をMenuShortcut-3-1にて無効化しているため検証を省略する。
     {% endif %}
