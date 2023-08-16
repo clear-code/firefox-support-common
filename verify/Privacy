@@ -1707,7 +1707,7 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
     {% if Privacy_44_4 %}
     - `about:config` を開く。
     - **確認**
-        - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault` の値が `true` で固定されている。
           (注: Privacy-44-4はリファラ通知ポリシーが最もゆるいため、ポリシーの緩和を禁止しようとする意図は意味をなさない。)
     {% else %}
     - Firefoxを起動する。
