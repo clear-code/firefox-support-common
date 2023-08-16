@@ -1700,8 +1700,15 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
 
     :1: クロスオリジンで情報が通知されるような形でのポリシーの緩和を禁止する (既定）
 
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
+    - Firefoxを起動する。
     {% if Privacy_44_4 %}
-    - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `true` で固定されている。(注: Privacy-44-4はリファラ通知ポリシーが最もゆるいため、ポリシーの緩和を禁止しようとする意図は意味をなさない。)
+    - `about:config` を開く。
+    - **確認**
+        - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `true` で固定されている。
+          (注: Privacy-44-4はリファラ通知ポリシーが最もゆるいため、ポリシーの緩和を禁止しようとする意図は意味をなさない。)
     {% else %}
     - Firefoxを起動する。
     - テストケースリストのリンクから \
@@ -1710,12 +1717,19 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
     - **確認**
         - `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/` \
            とオリジンのみが表示される。
+    - `about:config` を開く。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
         - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `true` で固定されている。
     {% endif %}
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
 
     :2: クロスオリジンで情報が通知されるような形でのポリシーの緩和を許可する
 
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - テストケースリストのリンクから \
       `https://piro.sakura.ne.jp/test/iframe-referrer-policy-unsafe-url.html` \
@@ -1723,8 +1737,12 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
     - **確認**
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/test/iframe-referrer-policy-unsafe-url.html` \
            と完全なURLが表示される。
+    - `about:config` を開く。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
         - "network.http.referer.disallowCrossSiteRelaxingDefault" の値が `false` で固定されている。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
 
 Privacy-61: トップレベルのコンテンツに対するリファラ通知ポリシーの緩和の禁止
 
