@@ -35,23 +35,19 @@ Appearance-2: ツールバー上の項目の初期設定
     :2: 制御する
 
     // そのバージョンのFirefox上で実際に希望の状態になるようカスタマイズした結果の値を使用すること。
-
-    distribution\policies.json:
-    "Preferences": {
-      "browser.uiCustomization.state": {
-        "Value": "...",
-        "Status": "user"
-      },
-      "browser.migration.version": {
-        "Value": 137,
-        "Status": "user"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    *.cfg / *.jsc:
+    {
+      const setAsUserValueOncePerModification = (key, value) => {
+        const statusKey = `browser.policies.runOncePerModification.${key}`;
+        const oldValue = getPref(statusKey);
+        if (value === oldValue)
+          return;
+        pref(statusKey, value);
+        pref(key, value);
+      };
+      setAsUserValueOncePerModification("browser.uiCustomization.state", JSON.stringify({...}));
+      setAsUserValueOncePerModification("browser.migration.version", 137);
+    }
 
 Appearance-3: アドレスバーと検索バーの統合
 
