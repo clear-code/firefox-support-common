@@ -188,22 +188,9 @@ Appearance-10: ユーザースタイルシートの使用
 
     :1: 使用する
 
-    distribution\policies.json:
-    "Preferences": {
-      "toolkit.legacyUserProfileCustomizations.stylesheets": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
     *.cfg:
     // 必ずローカルのMCD用設定ファイルに記入する。
-    // リモートのMCD用設定ファイルに記入した場合、初期化タイミングに間に合わないため設定が機能しない。
+    // GPOでの指定やpolicies.json、リモートのMCD用設定ファイルに記入した場合、初期化タイミングに間に合わないため設定が機能しない。
     lockPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
     :2: 使用しない（既定）
