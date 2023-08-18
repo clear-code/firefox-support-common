@@ -14,32 +14,44 @@ Download-1: ダウンロードマネージャの利用の可否
     Firefox 31時点で機能が廃止されたためカスタマイズ不可能。
     ダウンロードボタンの機能を可能な限り無効化する設定は以下の通り。
 
-    browser.uiCustomization.state:
+    Firefoxを起動後にbrowser.uiCustomization.stateの値を採取し、「downloads-button」を配置済み項目の中から取り除いた値を、browser.uiCustomization.stateの値として設定する。
+    ツールバーの変更を許容する場合は、browser.uiCustomization.stateは*.cfgまたは*.jscで以下の要領で適用する。
+    （Appearance-2-2を設定する場合、その内容も反映する。）
+
+    *.cfg / *.jsc:
     {
-      "placements":{
-        "widget-overflow-fixed-list":[],
-        "nav-bar":[
-          "back-button",
-          "forward-button",
-          "stop-reload-button",
-          "home-button",
-          "customizableui-special-spring1",
-          "urlbar-container",
-          "customizableui-special-spring2",
-          // "downloads-button",
-          "library-button",
-          "sidebar-button",
-          "fxa-toolbar-menu-button"
-        ],
-        "toolbar-menubar":["menubar-items"],
-        "TabsToolbar":["tabbrowser-tabs", "new-tab-button", "alltabs-button"],
-        "PersonalToolbar":["personal-bookmarks"]
-      },
-      "seen":["developer-button"],
-      "dirtyAreaCache":["nav-bar", "toolbar-menubar", "TabsToolbar", "PersonalToolbar"],
-      "currentVersion":16,
-      "newElementCount":3
+      const setAsUserValueOncePerModification = (key, value) => {
+        const statusKey = `browser.policies.runOncePerModification.${key}`;
+        const oldValue = getPref(statusKey);
+        if (value === oldValue)
+          return;
+        pref(statusKey, value);
+        pref(key, value);
+      };
+      setAsUserValueOncePerModification("browser.uiCustomization.state", JSON.stringify({...}));
+      setAsUserValueOncePerModification("browser.migration.version", 137);
     }
+
+    また、以下のポリシー設定も併用する。
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.manager.addToRecentDocs": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.download.panel.shown": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    ツールバーの変更を許容しない場合は、以下の要領でポリシー設定を適用する。
 
     distribution\policies.json:
     "Preferences": {
