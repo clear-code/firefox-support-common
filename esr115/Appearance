@@ -48,6 +48,12 @@ Appearance-2: ツールバー上の項目の初期設定
       };
       setAsUserValueOncePerModification("browser.uiCustomization.state", JSON.stringify({...}));
       setAsUserValueOncePerModification("browser.migration.version", 137);
+      // この指定が無いと「ホーム」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.home-button.has-used", true);
+      // この指定が無いと「ブラウジングライブラリー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.library-button.has-used", true);
+      // この指定が無いと「サイドバー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.sidebar-button.has-used", true);
     }
 
 Appearance-3: アドレスバーと検索バーの統合

@@ -30,6 +30,12 @@ Download-1: ダウンロードマネージャの利用の可否
       };
       setAsUserValueOncePerModification("browser.uiCustomization.state", JSON.stringify({...}));
       setAsUserValueOncePerModification("browser.migration.version", 137);
+      // この指定が無いと「ホーム」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.home-button.has-used", true);
+      // この指定が無いと「ブラウジングライブラリー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.library-button.has-used", true);
+      // この指定が無いと「サイドバー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.sidebar-button.has-used", true);
     }
 
     また、以下のポリシー設定も併用する。
