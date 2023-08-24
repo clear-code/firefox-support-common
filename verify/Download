@@ -286,6 +286,10 @@ Download-6: 未知の種類のファイルのダウンロード時の既定の�
     :1: ファイルを保存する（既定）
 
     - Firefoxを起動する。
+    - `about:profiles` または `about:support` から、現在のユーザープロファイルフォルダを開く。
+    - Firefoxを終了する。
+    - ユーザープロファイルフォルダの内容をすべて削除する。
+    - Firefoxを起動する。
     - テストケースリストのリンクから `https://piro.sakura.ne.jp/test.html` を開く。
     - 「application/octet-streamで送出されるPDF（拡張子:.bin）」のリンクをクリックする。
     - **確認**
@@ -293,6 +297,10 @@ Download-6: 未知の種類のファイルのダウンロード時の既定の�
 
     :2: ファイルを開くか保存するかを確認する
 
+    - Firefoxを起動する。
+    - `about:profiles` または `about:support` から、現在のユーザープロファイルフォルダを開く。
+    - Firefoxを終了する。
+    - ユーザープロファイルフォルダの内容をすべて削除する。
     - Firefoxを起動する。
     - テストケースリストのリンクから `https://piro.sakura.ne.jp/test.html` を開く。
     - 「application/octet-streamで送出されるPDF（拡張子:.bin）」のリンクをクリックする。
