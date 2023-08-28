@@ -1790,17 +1790,19 @@ Privacy-57: 同一タブ・サイトにおけるマイクとカメラのアク�
 
 Privacy-58: クレジットカード情報の保存
 
-    :1: 保存する
+    :1: 許可された地域で保存する (既定）
 
     *.cfg / *.jsc:
-    lockPref("extensions.formautofill.creditCards.available", true);
+    lockPref("dom.payments.defaults.saveCreditCard", true);
+    lockPref("extensions.formautofill.creditCards.supported", "detect");
     lockPref("extensions.formautofill.creditCards.enabled", true);
     lockPref("extensions.formautofill.creditCards.hideui", false);
 
-    :2: 保存しない (既定）
+    :2: 保存しない
 
     *.cfg / *.jsc:
-    lockPref("extensions.formautofill.creditCards.available", false);
+    lockPref("dom.payments.defaults.saveCreditCard", false);
+    lockPref("extensions.formautofill.creditCards.supported", "off");
     lockPref("extensions.formautofill.creditCards.enabled", false);
     lockPref("extensions.formautofill.creditCards.hideui", true);
 
@@ -2069,3 +2071,19 @@ Privacy-68: プライベートウィンドウでのトラッカーのより強�
 
     *.cfg / *.jsc:
     lockPref("privacy.annotate_channels.strict_list.pbmode.enabled", false);
+
+Privacy-69: 住所情報の保存
+
+    :1: 許可された地域で保存する
+
+    *.cfg / *.jsc:
+    lockPref("dom.payments.defaults.saveAddress", true);
+    lockPref("extensions.formautofill.addresses.supported", "detect");
+    lockPref("extensions.formautofill.addresses.enabled", true);
+
+    :2: 保存しない (既定）
+
+    *.cfg / *.jsc:
+    lockPref("dom.payments.defaults.saveAddress", false);
+    lockPref("extensions.formautofill.addresses.supported", "off");
+    lockPref("extensions.formautofill.addresses.enabled", false);
