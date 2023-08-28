@@ -65,6 +65,7 @@ Appearance-3: アドレスバーと検索バーの統合
 
     :2: 統合しない
 
+    // Appearance-2-2と競合するため、Appearance-2-2併用時はnav-barにsearch-containerを追加しておく必要がある。
     distribution\policies.json:
     "SearchBar": "separate",
 
