@@ -36,6 +36,7 @@ Appearance-2: ツールバー上の項目の初期設定
 
     // browser.uiCustomization.stateおよびbrowser.migration.versionの値は、そのバージョンのFirefox上で実際に希望の状態になるようカスタマイズした結果の値を使用すること。
     // Download-1-2と競合するため、Download-1-2併用時は設定内容を調整する必要がある。
+    // Appearance-3-2と競合するため、Appearance-3-2併用時はnav-barにsearch-containerを追加しておく必要がある。
     *.cfg / *.jsc:
     {
       const setAsUserValueOncePerModification = (key, value) => {
