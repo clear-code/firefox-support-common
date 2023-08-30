@@ -1068,7 +1068,7 @@ Security-47: OSの証明書ストアのクライアント証明書の利用
 
     OPTIONS
 
-    - 「プライバシーとセキュリティ」→「証明書」→「セキュリティデバイス」の「セキュリティモジュールとデバイス」欄で「OS Client Cert Module」配下に「OS Client Cert Slot (Modern)」および「OS Client Cert Slot (Legacy)」という項目が表示される。
+    - 「プライバシーとセキュリティ」→「証明書」→「セキュリティデバイス」の「セキュリティモジュールとデバイス」欄で「OS Client Cert Module」配下に「OS Client Cert Slot」という項目が表示される。
 
     :2: 使用しない
 
