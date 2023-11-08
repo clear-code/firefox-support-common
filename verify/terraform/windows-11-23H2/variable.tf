@@ -1,0 +1,12 @@
+variable "namespace" {}
+variable "windows-username" {}
+variable "windows-password" {}
+variable "windows-language-pack-url" {}
+variable "firefox-policy-template-url" {}
+variable "thunderbird-policy-template-url" {}
+variable "flash-installer-url" {}
+variable "hookdate-download-url" {}
+variable "debugview-download-url" {}
+variable "old-ie-download-url" {}
+variable "download-user" {}
+variable "download-token" {}
