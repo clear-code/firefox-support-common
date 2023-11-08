@@ -52,22 +52,6 @@
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365:19044.2846.230411",
-    "version": "19044.2846.230411"
-  },
-  {
-    "architecture": "x64",
-    "offer": "office-365",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365:19044.2965.230509",
-    "version": "19044.2965.230509"
-  },
-  {
-    "architecture": "x64",
-    "offer": "office-365",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-m365",
     "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365:19044.3086.230621",
     "version": "19044.3086.230621"
   },
@@ -91,17 +75,17 @@
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-m365-g2",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365-g2:19044.2846.230411",
-    "version": "19044.2846.230411"
+    "sku": "win10-21h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365:19044.3448.230912",
+    "version": "19044.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-m365-g2",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365-g2:19044.2965.230509",
-    "version": "19044.2965.230509"
+    "sku": "win10-21h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365:19044.3570.231010",
+    "version": "19044.3570.231010"
   },
   {
     "architecture": "x64",
@@ -131,17 +115,17 @@
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365:19045.2846.230411",
-    "version": "19045.2846.230411"
+    "sku": "win10-21h2-avd-m365-g2",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365-g2:19044.3448.230912",
+    "version": "19044.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365:19045.2965.230509",
-    "version": "19045.2965.230509"
+    "sku": "win10-21h2-avd-m365-g2",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-21h2-avd-m365-g2:19044.3570.231010",
+    "version": "19044.3570.231010"
   },
   {
     "architecture": "x64",
@@ -171,17 +155,17 @@
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-m365-g2",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365-g2:19045.2846.230411",
-    "version": "19045.2846.230411"
+    "sku": "win10-22h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365:19045.3448.230912",
+    "version": "19045.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-m365-g2",
-    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365-g2:19045.2965.230509",
-    "version": "19045.2965.230509"
+    "sku": "win10-22h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365:19045.3570.231010",
+    "version": "19045.3570.231010"
   },
   {
     "architecture": "x64",
@@ -211,17 +195,17 @@
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win11-21h2-avd-m365:22000.1817.230411",
-    "version": "22000.1817.230411"
+    "sku": "win10-22h2-avd-m365-g2",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365-g2:19045.3448.230912",
+    "version": "19045.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win11-21h2-avd-m365:22000.1936.230509",
-    "version": "22000.1936.230509"
+    "sku": "win10-22h2-avd-m365-g2",
+    "urn": "MicrosoftWindowsDesktop:office-365:win10-22h2-avd-m365-g2:19045.3570.231010",
+    "version": "19045.3570.231010"
   },
   {
     "architecture": "x64",
@@ -251,17 +235,17 @@
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win11-22h2-avd-m365:22621.1555.230411",
-    "version": "22621.1555.230411"
+    "sku": "win11-21h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win11-21h2-avd-m365:22000.2416.230912",
+    "version": "22000.2416.230912"
   },
   {
     "architecture": "x64",
     "offer": "office-365",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-avd-m365",
-    "urn": "MicrosoftWindowsDesktop:office-365:win11-22h2-avd-m365:22621.1702.230509",
-    "version": "22621.1702.230509"
+    "sku": "win11-21h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win11-21h2-avd-m365:22000.2538.231010",
+    "version": "22000.2538.231010"
   },
   {
     "architecture": "x64",
@@ -286,6 +270,30 @@
     "sku": "win11-22h2-avd-m365",
     "urn": "MicrosoftWindowsDesktop:office-365:win11-22h2-avd-m365:22621.2134.230808",
     "version": "22621.2134.230808"
+  },
+  {
+    "architecture": "x64",
+    "offer": "office-365",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win11-22h2-avd-m365:22621.2283.230912",
+    "version": "22621.2283.230912"
+  },
+  {
+    "architecture": "x64",
+    "offer": "office-365",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win11-22h2-avd-m365:22621.2428.231010",
+    "version": "22621.2428.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "office-365",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:office-365:win11-23h2-avd-m365:22631.2428.231023",
+    "version": "22631.2428.231023"
   },
   {
     "architecture": "x64",
@@ -524,30 +532,6 @@
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "rs1-enterprise",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise:14393.5921.230506",
-    "version": "14393.5921.230506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprise",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise:14393.5989.230605",
-    "version": "14393.5989.230605"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprise",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise:14393.5996.230622",
-    "version": "14393.5996.230622"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprise",
     "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise:14393.6085.230705",
     "version": "14393.6085.230705"
   },
@@ -571,25 +555,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprise-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise-g2:14393.5921.230506",
-    "version": "14393.5921.230506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprise-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise-g2:14393.5989.230605",
-    "version": "14393.5989.230605"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprise-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise-g2:14393.5996.230622",
-    "version": "14393.5996.230622"
+    "sku": "rs1-enterprise",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -619,25 +587,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprisen",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen:14393.5921.230506",
-    "version": "14393.5921.230506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprisen",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen:14393.5989.230605",
-    "version": "14393.5989.230605"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprisen",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen:14393.5996.230622",
-    "version": "14393.5996.230622"
+    "sku": "rs1-enterprise-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprise-g2:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -667,25 +619,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprisen-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen-g2:14393.5921.230506",
-    "version": "14393.5921.230506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprisen-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen-g2:14393.5989.230605",
-    "version": "14393.5989.230605"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs1-enterprisen-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen-g2:14393.5996.230622",
-    "version": "14393.5996.230622"
+    "sku": "rs1-enterprisen",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -715,33 +651,17 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
+    "sku": "rs1-enterprisen-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs1-enterprisen-g2:14393.6351.231007",
+    "version": "14393.6351.231007"
+  },
+  {
+    "architecture": "x64",
+    "offer": "Windows-10",
+    "publisher": "MicrosoftWindowsDesktop",
     "sku": "rs4-pro-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:rs4-pro-g2:17134.1246.2001090113",
     "version": "17134.1246.2001090113"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprise",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise:17763.4377.230505",
-    "version": "17763.4377.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprise",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise:17763.4499.230606",
-    "version": "17763.4499.230606"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprise",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise:17763.4499.230621",
-    "version": "17763.4499.230621"
   },
   {
     "architecture": "x64",
@@ -771,25 +691,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprise-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise-g2:17763.4377.230505",
-    "version": "17763.4377.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprise-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise-g2:17763.4499.230606",
-    "version": "17763.4499.230606"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprise-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise-g2:17763.4499.230621",
-    "version": "17763.4499.230621"
+    "sku": "rs5-enterprise",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -819,33 +723,17 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
+    "sku": "rs5-enterprise-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise-g2:17763.4974.231003",
+    "version": "17763.4974.231003"
+  },
+  {
+    "architecture": "x64",
+    "offer": "Windows-10",
+    "publisher": "MicrosoftWindowsDesktop",
     "sku": "rs5-enterprise-standard-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprise-standard-g2:17763.1935.2105080716",
     "version": "17763.1935.2105080716"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprisen",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen:17763.4377.230505",
-    "version": "17763.4377.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprisen",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen:17763.4499.230606",
-    "version": "17763.4499.230606"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprisen",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen:17763.4499.230621",
-    "version": "17763.4499.230621"
   },
   {
     "architecture": "x64",
@@ -875,25 +763,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprisen-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen-g2:17763.4377.230505",
-    "version": "17763.4377.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprisen-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen-g2:17763.4499.230606",
-    "version": "17763.4499.230606"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "rs5-enterprisen-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen-g2:17763.4499.230621",
-    "version": "17763.4499.230621"
+    "sku": "rs5-enterprisen",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -918,6 +790,14 @@
     "sku": "rs5-enterprisen-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen-g2:17763.4851.230905",
     "version": "17763.4851.230905"
+  },
+  {
+    "architecture": "x64",
+    "offer": "Windows-10",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "rs5-enterprisen-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:rs5-enterprisen-g2:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -1004,30 +884,6 @@
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-avd",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd:19044.3086.230621",
-    "version": "19044.3086.230621"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd:19044.3208.230708",
     "version": "19044.3208.230708"
   },
@@ -1051,25 +907,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd-g2:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-avd-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd-g2:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-avd",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1099,33 +939,17 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win10-21h2-avd-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd-g2:19044.3570.231001",
+    "version": "19044.3570.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "Windows-10",
+    "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-ent",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent:19044.2130.221006",
     "version": "19044.2130.221006"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent:19044.3086.230621",
-    "version": "19044.3086.230621"
   },
   {
     "architecture": "x64",
@@ -1155,25 +979,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-g2:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-g2:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-ent",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1203,25 +1011,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-ltsc",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-ltsc",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-ltsc",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-ent-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-g2:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1251,25 +1043,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-ltsc-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-ltsc-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc-g2:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-ent-ltsc-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc-g2:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-ent-ltsc",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1299,33 +1075,17 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win10-21h2-ent-ltsc-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-ent-ltsc-g2:19044.3570.231001",
+    "version": "19044.3570.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "Windows-10",
+    "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-entn",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn:19044.2130.221006",
     "version": "19044.2130.221006"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn:19044.3086.230621",
-    "version": "19044.3086.230621"
   },
   {
     "architecture": "x64",
@@ -1355,25 +1115,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-g2:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-g2:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-entn",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1403,25 +1147,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-ltsc",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-ltsc",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-ltsc",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-entn-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-g2:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1451,25 +1179,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-ltsc-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-ltsc-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc-g2:19044.3086.230609",
-    "version": "19044.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-entn-ltsc-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc-g2:19044.3086.230621",
-    "version": "19044.3086.230621"
+    "sku": "win10-21h2-entn-ltsc",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1499,17 +1211,17 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro:19044.2130.221006",
-    "version": "19044.2130.221006"
+    "sku": "win10-21h2-entn-ltsc-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-entn-ltsc-g2:19044.3570.231001",
+    "version": "19044.3570.231001"
   },
   {
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro:19044.2965.230505",
-    "version": "19044.2965.230505"
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro:19044.2130.221006",
+    "version": "19044.2130.221006"
   },
   {
     "architecture": "x64",
@@ -1540,14 +1252,6 @@
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-pro-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-pro-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-g2:19044.3086.230609",
     "version": "19044.3086.230609"
   },
@@ -1558,14 +1262,6 @@
     "sku": "win10-21h2-pro-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-g2:19044.3086.230621",
     "version": "19044.3086.230621"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-zh-cn:19044.2965.230505",
-    "version": "19044.2965.230505"
   },
   {
     "architecture": "x64",
@@ -1588,14 +1284,6 @@
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-pro-zh-cn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-zh-cn-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-pro-zh-cn-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-zh-cn-g2:19044.3086.230609",
     "version": "19044.3086.230609"
   },
@@ -1606,14 +1294,6 @@
     "sku": "win10-21h2-pro-zh-cn-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pro-zh-cn-g2:19044.3086.230621",
     "version": "19044.3086.230621"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-pron",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pron:19044.2965.230505",
-    "version": "19044.2965.230505"
   },
   {
     "architecture": "x64",
@@ -1636,14 +1316,6 @@
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-pron-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pron-g2:19044.2965.230505",
-    "version": "19044.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-21h2-pron-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pron-g2:19044.3086.230609",
     "version": "19044.3086.230609"
   },
@@ -1654,30 +1326,6 @@
     "sku": "win10-21h2-pron-g2",
     "urn": "MicrosoftWindowsDesktop:Windows-10:win10-21h2-pron-g2:19044.3086.230621",
     "version": "19044.3086.230621"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd:19045.3086.230621",
-    "version": "19045.3086.230621"
   },
   {
     "architecture": "x64",
@@ -1707,25 +1355,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd-g2:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd-g2:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-avd-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd-g2:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-avd",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1755,25 +1387,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-avd-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-avd-g2:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1803,25 +1419,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent-g2:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent-g2:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent-g2:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-ent",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1851,25 +1451,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-entn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-entn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-entn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-ent-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-ent-g2:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1899,25 +1483,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-entn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn-g2:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-entn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn-g2:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-entn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn-g2:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-entn",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1947,25 +1515,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-entn-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-entn-g2:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -1995,25 +1547,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-g2:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-g2:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-g2:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-pro",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -2043,25 +1579,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-pro-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-g2:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -2091,25 +1611,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-zh-cn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn-g2:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-zh-cn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn-g2:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pro-zh-cn-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn-g2:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-pro-zh-cn",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -2139,25 +1643,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pron",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pron",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pron",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-pro-zh-cn-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pro-zh-cn-g2:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -2187,25 +1675,9 @@
     "architecture": "x64",
     "offer": "Windows-10",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pron-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron-g2:19045.2965.230505",
-    "version": "19045.2965.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pron-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron-g2:19045.3086.230609",
-    "version": "19045.3086.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "Windows-10",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-pron-g2",
-    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron-g2:19045.3086.230621",
-    "version": "19045.3086.230621"
+    "sku": "win10-22h2-pron",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron:19045.3570.231001",
+    "version": "19045.3570.231001"
   },
   {
     "architecture": "x64",
@@ -2233,35 +1705,19 @@
   },
   {
     "architecture": "x64",
+    "offer": "Windows-10",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win10-22h2-pron-g2",
+    "urn": "MicrosoftWindowsDesktop:Windows-10:win10-22h2-pron-g2:19045.3570.231001",
+    "version": "19045.3570.231001"
+  },
+  {
+    "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win11-21h2-avd",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.1100.221015",
     "version": "22000.1100.221015"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-avd",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-avd",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-avd",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.2057.230621",
-    "version": "22000.2057.230621"
   },
   {
     "architecture": "x64",
@@ -2292,6 +1748,14 @@
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win11-21h2-avd",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.2538.231001",
+    "version": "22000.2538.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-21h2-avd",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.739.220608",
     "version": "22000.739.220608"
   },
@@ -2302,30 +1766,6 @@
     "sku": "win11-21h2-ent",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-ent:22000.1100.221015",
     "version": "22000.1100.221015"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-ent:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-ent:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-ent:22000.2057.230621",
-    "version": "22000.2057.230621"
   },
   {
     "architecture": "x64",
@@ -2356,32 +1796,16 @@
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win11-21h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-ent:22000.2538.231001",
+    "version": "22000.2538.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-21h2-ent",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-ent:22000.739.220608",
     "version": "22000.739.220608"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-entn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-entn:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-entn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-entn:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-entn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-entn:22000.2057.230621",
-    "version": "22000.2057.230621"
   },
   {
     "architecture": "x64",
@@ -2411,25 +1835,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro:22000.2057.230621",
-    "version": "22000.2057.230621"
+    "sku": "win11-21h2-entn",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-entn:22000.2538.231001",
+    "version": "22000.2538.231001"
   },
   {
     "architecture": "x64",
@@ -2459,33 +1867,17 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-21h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro:22000.2538.231001",
+    "version": "22000.2538.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
     "sku": "win11-21h2-pro-zh-cn",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro-zh-cn:22000.1100.221015",
     "version": "22000.1100.221015"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro-zh-cn:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro-zh-cn:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro-zh-cn:22000.2057.230621",
-    "version": "22000.2057.230621"
   },
   {
     "architecture": "x64",
@@ -2515,25 +1907,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pron",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pron:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pron",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pron:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pron",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pron:22000.2057.230621",
-    "version": "22000.2057.230621"
+    "sku": "win11-21h2-pro-zh-cn",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pro-zh-cn:22000.2538.231001",
+    "version": "22000.2538.231001"
   },
   {
     "architecture": "x64",
@@ -2563,25 +1939,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-avd",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-avd:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-avd",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-avd:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-avd",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-avd:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-21h2-pron",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-21h2-pron:22000.2538.231001",
+    "version": "22000.2538.231001"
   },
   {
     "architecture": "x64",
@@ -2611,25 +1971,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-ent:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-ent:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-ent:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-22h2-avd",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-avd:22621.2428.231001",
+    "version": "22621.2428.231001"
   },
   {
     "architecture": "x64",
@@ -2660,32 +2004,16 @@
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
     "sku": "win11-22h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-ent:22621.2428.231001",
+    "version": "22621.2428.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-ent",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-ent:22621.674.221008",
     "version": "22621.674.221008"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-entn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-entn:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-entn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-entn:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-entn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-entn:22621.1848.230621",
-    "version": "22621.1848.230621"
   },
   {
     "architecture": "x64",
@@ -2715,25 +2043,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-22h2-entn",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-entn:22621.2428.231001",
+    "version": "22621.2428.231001"
   },
   {
     "architecture": "x64",
@@ -2763,25 +2075,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro-zh-cn:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro-zh-cn:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro-zh-cn",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro-zh-cn:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-22h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro:22621.2428.231001",
+    "version": "22621.2428.231001"
   },
   {
     "architecture": "x64",
@@ -2811,25 +2107,9 @@
     "architecture": "x64",
     "offer": "windows-11",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pron",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pron:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pron",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pron:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windows-11",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pron",
-    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pron:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-22h2-pro-zh-cn",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pro-zh-cn:22621.2428.231001",
+    "version": "22621.2428.231001"
   },
   {
     "architecture": "x64",
@@ -2854,6 +2134,62 @@
     "sku": "win11-22h2-pron",
     "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pron:22621.2283.230901",
     "version": "22621.2283.230901"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-pron",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-22h2-pron:22621.2428.231001",
+    "version": "22621.2428.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-avd",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-23h2-avd:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-23h2-ent:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-entn",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-23h2-entn:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-23h2-pro:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro-zh-cn",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-23h2-pro-zh-cn:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-11",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pron",
+    "urn": "MicrosoftWindowsDesktop:windows-11:win11-23h2-pron:22631.2428.231023",
+    "version": "22631.2428.231023"
   },
   {
     "architecture": "x64",
@@ -3171,6 +2507,22 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win10-21h2-ent-cpc-m365-g2",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-21h2-ent-cpc-m365-g2:19044.3448.230912",
+    "version": "19044.3448.230912"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win10-21h2-ent-cpc-m365-g2",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-21h2-ent-cpc-m365-g2:19044.3570.231010",
+    "version": "19044.3570.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
     "sku": "win10-21h2-ent-cpc-os",
     "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-21h2-ent-cpc-os:19044.1889.220810",
     "version": "19044.1889.220810"
@@ -3291,17 +2643,17 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-cpc-m365",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-m365:19045.2486.230110",
-    "version": "19045.2486.230110"
+    "sku": "win10-21h2-ent-cpc-os-g2",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-21h2-ent-cpc-os-g2:19044.3448.230912",
+    "version": "19044.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-cpc-m365",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-m365:19045.2604.230214",
-    "version": "19045.2604.230214"
+    "sku": "win10-21h2-ent-cpc-os-g2",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-21h2-ent-cpc-os-g2:19044.3570.231010",
+    "version": "19044.3570.231010"
   },
   {
     "architecture": "x64",
@@ -3363,17 +2715,17 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-cpc-os",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-os:19045.2486.230110",
-    "version": "19045.2486.230110"
+    "sku": "win10-22h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-m365:19045.3448.230912",
+    "version": "19045.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win10-22h2-ent-cpc-os",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-os:19045.2604.230214",
-    "version": "19045.2604.230214"
+    "sku": "win10-22h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-m365:19045.3570.231010",
+    "version": "19045.3570.231010"
   },
   {
     "architecture": "x64",
@@ -3435,17 +2787,17 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent-cpc-m365",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.1455.230110",
-    "version": "22000.1455.230110"
+    "sku": "win10-22h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-os:19045.3448.230912",
+    "version": "19045.3448.230912"
   },
   {
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent-cpc-m365",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.1574.230214",
-    "version": "22000.1574.230214"
+    "sku": "win10-22h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win10-22h2-ent-cpc-os:19045.3570.231010",
+    "version": "19045.3570.231010"
   },
   {
     "architecture": "x64",
@@ -3507,17 +2859,17 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent-cpc-os",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-os:22000.1455.230110",
-    "version": "22000.1455.230110"
+    "sku": "win11-21h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.2416.230912",
+    "version": "22000.2416.230912"
   },
   {
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent-cpc-os",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-os:22000.1574.230214",
-    "version": "22000.1574.230214"
+    "sku": "win11-21h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.2538.231010",
+    "version": "22000.2538.231010"
   },
   {
     "architecture": "x64",
@@ -3579,17 +2931,17 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent-cpc-m365",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-m365:22621.1105.230110",
-    "version": "22621.1105.230110"
+    "sku": "win11-21h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-os:22000.2416.230912",
+    "version": "22000.2416.230912"
   },
   {
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent-cpc-m365",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-m365:22621.1265.230214",
-    "version": "22621.1265.230214"
+    "sku": "win11-21h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-os:22000.2538.231010",
+    "version": "22000.2538.231010"
   },
   {
     "architecture": "x64",
@@ -3651,17 +3003,17 @@
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent-cpc-os",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-os:22621.1105.230110",
-    "version": "22621.1105.230110"
+    "sku": "win11-22h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-m365:22621.2283.230912",
+    "version": "22621.2283.230912"
   },
   {
     "architecture": "x64",
     "offer": "windows-ent-cpc",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent-cpc-os",
-    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-os:22621.1265.230214",
-    "version": "22621.1265.230214"
+    "sku": "win11-22h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-m365:22621.2428.231010",
+    "version": "22621.2428.231010"
   },
   {
     "architecture": "x64",
@@ -3718,6 +3070,46 @@
     "sku": "win11-22h2-ent-cpc-os",
     "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-os:22621.2134.230808",
     "version": "22621.2134.230808"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-os:22621.2283.230912",
+    "version": "22621.2283.230912"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-22h2-ent-cpc-os:22621.2428.231010",
+    "version": "22621.2428.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-23h2-ent-cpc-m365:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-23h2-ent-cpc-os:22631.2428.231023",
+    "version": "22631.2428.231023"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-ent-cpc",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows-ent-cpc:win11-23h2-pro-cpc-m365:22631.2428.231023",
+    "version": "22631.2428.231023"
   },
   {
     "architecture": "x64",
@@ -3864,28 +3256,164 @@
     "version": "22621.521.220910"
   },
   {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
+    "architecture": "x64",
+    "offer": "windows11preview",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-ent:22000.1936.230505",
-    "version": "22000.1936.230505"
+    "sku": "win11-23h2-avd",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-avd:22631.2361.230916",
+    "version": "22631.2361.230916"
   },
   {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
+    "architecture": "x64",
+    "offer": "windows11preview",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-ent:22000.2057.230609",
-    "version": "22000.2057.230609"
+    "sku": "win11-23h2-avd",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-avd:22631.2428.231001",
+    "version": "22631.2428.231001"
   },
   {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
+    "architecture": "x64",
+    "offer": "windows11preview",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-ent:22000.2057.230621",
-    "version": "22000.2057.230621"
+    "sku": "win11-23h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-avd-m365:22631.2361.230925",
+    "version": "22631.2361.230925"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-avd-m365",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-avd-m365:22631.2428.231010",
+    "version": "22631.2428.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-ent:22631.2361.230916",
+    "version": "22631.2361.230916"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-ent:22631.2428.231001",
+    "version": "22631.2428.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-ent-cpc-m365:22631.2361.230926",
+    "version": "22631.2361.230926"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-ent-cpc-m365:22631.2428.231010",
+    "version": "22631.2428.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-ent-cpc-os:22631.2361.230926",
+    "version": "22631.2361.230926"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent-cpc-os",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-ent-cpc-os:22631.2428.231010",
+    "version": "22631.2428.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-entn",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-entn:22631.2361.230916",
+    "version": "22631.2361.230916"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-entn",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-entn:22631.2428.231001",
+    "version": "22631.2428.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pro:22631.2361.230916",
+    "version": "22631.2361.230916"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pro:22631.2428.231001",
+    "version": "22631.2428.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pro-cpc-m365:22631.2361.230926",
+    "version": "22631.2361.230926"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro-cpc-m365",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pro-cpc-m365:22631.2428.231010",
+    "version": "22631.2428.231010"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro-zh-cn",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pro-zh-cn:22631.2361.230916",
+    "version": "22631.2361.230916"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro-zh-cn",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pro-zh-cn:22631.2428.231001",
+    "version": "22631.2428.231001"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pron",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pron:22631.2361.230916",
+    "version": "22631.2361.230916"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows11preview",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pron",
+    "urn": "MicrosoftWindowsDesktop:windows11preview:win11-23h2-pron:22631.2428.231001",
+    "version": "22631.2428.231001"
   },
   {
     "architecture": "Arm64",
@@ -3915,25 +3443,9 @@
     "architecture": "Arm64",
     "offer": "windows11preview-arm64",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-pro:22000.1936.230505",
-    "version": "22000.1936.230505"
-  },
-  {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-pro:22000.2057.230609",
-    "version": "22000.2057.230609"
-  },
-  {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-21h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-pro:22000.2057.230621",
-    "version": "22000.2057.230621"
+    "sku": "win11-21h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-ent:22000.2538.231001",
+    "version": "22000.2538.231001"
   },
   {
     "architecture": "Arm64",
@@ -3963,25 +3475,9 @@
     "architecture": "Arm64",
     "offer": "windows11preview-arm64",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-ent:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-ent:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-ent",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-ent:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-21h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-21h2-pro:22000.2538.231001",
+    "version": "22000.2538.231001"
   },
   {
     "architecture": "Arm64",
@@ -4011,25 +3507,9 @@
     "architecture": "Arm64",
     "offer": "windows11preview-arm64",
     "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-pro:22621.1702.230505",
-    "version": "22621.1702.230505"
-  },
-  {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-pro:22621.1848.230609",
-    "version": "22621.1848.230609"
-  },
-  {
-    "architecture": "Arm64",
-    "offer": "windows11preview-arm64",
-    "publisher": "MicrosoftWindowsDesktop",
-    "sku": "win11-22h2-pro",
-    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-pro:22621.1848.230621",
-    "version": "22621.1848.230621"
+    "sku": "win11-22h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-ent:22621.2428.231001",
+    "version": "22621.2428.231001"
   },
   {
     "architecture": "Arm64",
@@ -4054,5 +3534,29 @@
     "sku": "win11-22h2-pro",
     "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-pro:22621.2283.230901",
     "version": "22621.2283.230901"
+  },
+  {
+    "architecture": "Arm64",
+    "offer": "windows11preview-arm64",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-22h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-22h2-pro:22621.2428.231001",
+    "version": "22621.2428.231001"
+  },
+  {
+    "architecture": "Arm64",
+    "offer": "windows11preview-arm64",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-ent",
+    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-23h2-ent:22631.2428.231001",
+    "version": "22631.2428.231001"
+  },
+  {
+    "architecture": "Arm64",
+    "offer": "windows11preview-arm64",
+    "publisher": "MicrosoftWindowsDesktop",
+    "sku": "win11-23h2-pro",
+    "urn": "MicrosoftWindowsDesktop:windows11preview-arm64:win11-23h2-pro:22631.2428.231001",
+    "version": "22631.2428.231001"
   }
 ]

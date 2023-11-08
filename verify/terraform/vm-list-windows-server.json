@@ -73,6 +73,22 @@
   },
   {
     "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-2022-azure-edition-preview-core",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-2022-azure-edition-preview-core:20348.11.2105262137",
+    "version": "20348.11.2105262137"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-2022-g2",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-2022-g2:20348.587.220303",
+    "version": "20348.587.220303"
+  },
+  {
+    "architecture": "x64",
     "offer": "WindowsServerHPCPack",
     "publisher": "MicrosoftWindowsServerHPCPack",
     "sku": "2016U2CN-WS2012R2",
@@ -113,6 +129,46 @@
   },
   {
     "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25267.1000.221213",
+    "version": "25267.1000.221213"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25314.1000.230304",
+    "version": "25314.1000.230304"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25346.1001.230417",
+    "version": "25346.1001.230417"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25951.1000.230909",
+    "version": "25951.1000.230909"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25977.1000.231018",
+    "version": "25977.1000.231018"
+  },
+  {
+    "architecture": "x64",
     "offer": "WindowsServerHPCPack",
     "publisher": "MicrosoftWindowsServerHPCPack",
     "sku": "2016U2CN-WS2016",
@@ -139,17 +195,41 @@
     "architecture": "x64",
     "offer": "microsoftserveroperatingsystems-previews",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-2022-azure-edition-preview-core",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-2022-azure-edition-preview-core:20348.11.2105262137",
-    "version": "20348.11.2105262137"
+    "sku": "windows-server-vnext-azure-edition-core",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25267.1000.221213",
+    "version": "25267.1000.221213"
   },
   {
     "architecture": "x64",
     "offer": "microsoftserveroperatingsystems-previews",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-2022-g2",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-2022-g2:20348.587.220303",
-    "version": "20348.587.220303"
+    "sku": "windows-server-vnext-azure-edition-core",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25314.1000.230304",
+    "version": "25314.1000.230304"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition-core",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25346.1001.230417",
+    "version": "25346.1001.230417"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition-core",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25951.1000.230909",
+    "version": "25951.1000.230909"
+  },
+  {
+    "architecture": "x64",
+    "offer": "microsoftserveroperatingsystems-previews",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "windows-server-vnext-azure-edition-core",
+    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25977.1000.231018",
+    "version": "25977.1000.231018"
   },
   {
     "architecture": "x64",
@@ -166,30 +246,6 @@
     "sku": "2016U2CN-WS2016-Excel",
     "urn": "MicrosoftWindowsServerHPCPack:WindowsServerHPCPack:2016U2CN-WS2016-Excel:5.2.6292",
     "version": "5.2.6292"
-  },
-  {
-    "architecture": "x64",
-    "offer": "microsoftserveroperatingsystems-previews",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-vnext-azure-edition",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25267.1000.221213",
-    "version": "25267.1000.221213"
-  },
-  {
-    "architecture": "x64",
-    "offer": "microsoftserveroperatingsystems-previews",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-vnext-azure-edition",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25314.1000.230304",
-    "version": "25314.1000.230304"
-  },
-  {
-    "architecture": "x64",
-    "offer": "microsoftserveroperatingsystems-previews",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-vnext-azure-edition",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition:25346.1001.230417",
-    "version": "25346.1001.230417"
   },
   {
     "architecture": "x64",
@@ -241,30 +297,6 @@
   },
   {
     "architecture": "x64",
-    "offer": "microsoftserveroperatingsystems-previews",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-vnext-azure-edition-core",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25267.1000.221213",
-    "version": "25267.1000.221213"
-  },
-  {
-    "architecture": "x64",
-    "offer": "microsoftserveroperatingsystems-previews",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-vnext-azure-edition-core",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25314.1000.230304",
-    "version": "25314.1000.230304"
-  },
-  {
-    "architecture": "x64",
-    "offer": "microsoftserveroperatingsystems-previews",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "windows-server-vnext-azure-edition-core",
-    "urn": "MicrosoftWindowsServer:microsoftserveroperatingsystems-previews:windows-server-vnext-azure-edition-core:25346.1001.230417",
-    "version": "25346.1001.230417"
-  },
-  {
-    "architecture": "x64",
     "offer": "WindowsServerHPCPack",
     "publisher": "MicrosoftWindowsServerHPCPack",
     "sku": "2016u3hn-ws2012r2",
@@ -278,6 +310,38 @@
     "sku": "2016u3hn-ws2012r2",
     "urn": "MicrosoftWindowsServerHPCPack:WindowsServerHPCPack:2016u3hn-ws2012r2:5.3.6450",
     "version": "5.3.6450"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-cvm",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-datacenter-cvm",
+    "urn": "MicrosoftWindowsServer:windows-cvm:2019-datacenter-cvm:17763.2183.2109130127",
+    "version": "17763.2183.2109130127"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-cvm",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-datacenter-cvm",
+    "urn": "MicrosoftWindowsServer:windows-cvm:2019-datacenter-cvm:17763.2452.220107",
+    "version": "17763.2452.220107"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-cvm",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2022-datacenter-cvm",
+    "urn": "MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:20348.230.2109130355",
+    "version": "20348.230.2109130355"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windows-cvm",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2022-datacenter-cvm",
+    "urn": "MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:20348.469.220106",
+    "version": "20348.469.220106"
   },
   {
     "architecture": "x64",
@@ -377,35 +441,35 @@
   },
   {
     "architecture": "x64",
-    "offer": "windows-cvm",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-cvm",
-    "urn": "MicrosoftWindowsServer:windows-cvm:2019-datacenter-cvm:17763.2183.2109130127",
-    "version": "17763.2183.2109130127"
+    "offer": "WindowsServerHPCPack",
+    "publisher": "MicrosoftWindowsServerHPCPack",
+    "sku": "2019hn-ws2019",
+    "urn": "MicrosoftWindowsServerHPCPack:WindowsServerHPCPack:2019hn-ws2019:6.2.7731",
+    "version": "6.2.7731"
   },
   {
     "architecture": "x64",
-    "offer": "windows-cvm",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-cvm",
-    "urn": "MicrosoftWindowsServer:windows-cvm:2019-datacenter-cvm:17763.2452.220107",
-    "version": "17763.2452.220107"
+    "offer": "WindowsServerHPCPack",
+    "publisher": "MicrosoftWindowsServerHPCPack",
+    "sku": "2019hn-ws2019",
+    "urn": "MicrosoftWindowsServerHPCPack:WindowsServerHPCPack:2019hn-ws2019:6.2.7756",
+    "version": "6.2.7756"
   },
   {
     "architecture": "x64",
-    "offer": "windows-cvm",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-cvm",
-    "urn": "MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:20348.230.2109130355",
-    "version": "20348.230.2109130355"
+    "offer": "WindowsServerHPCPack",
+    "publisher": "MicrosoftWindowsServerHPCPack",
+    "sku": "2019hn-ws2019",
+    "urn": "MicrosoftWindowsServerHPCPack:WindowsServerHPCPack:2019hn-ws2019:6.2.7757",
+    "version": "6.2.7757"
   },
   {
     "architecture": "x64",
-    "offer": "windows-cvm",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-cvm",
-    "urn": "MicrosoftWindowsServer:windows-cvm:2022-datacenter-cvm:20348.469.220106",
-    "version": "20348.469.220106"
+    "offer": "WindowsServerHPCPack",
+    "publisher": "MicrosoftWindowsServerHPCPack",
+    "sku": "2019hn-ws2022",
+    "urn": "MicrosoftWindowsServerHPCPack:WindowsServerHPCPack:2019hn-ws2022:6.2.7756",
+    "version": "6.2.7756"
   },
   {
     "architecture": "x64",
@@ -462,30 +526,6 @@
     "sku": "2012-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20190410",
     "version": "3.127.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter:9200.23714.220506",
-    "version": "9200.23714.220506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter:9200.23736.220609",
-    "version": "9200.23736.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter:9200.23771.220708",
-    "version": "9200.23771.220708"
   },
   {
     "architecture": "x64",
@@ -611,25 +651,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-gensecond:9200.23714.220506",
-    "version": "9200.23714.220506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-gensecond:9200.23736.220609",
-    "version": "9200.23736.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-gensecond:9200.23771.220708",
-    "version": "9200.23771.220708"
+    "sku": "2012-Datacenter",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter:9200.24523.231004",
+    "version": "9200.24523.231004"
   },
   {
     "architecture": "x64",
@@ -755,6 +779,14 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
+    "sku": "2012-datacenter-gensecond",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-gensecond:9200.24523.231004",
+    "version": "9200.24523.231004"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
     "sku": "2012-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-smalldisk:3.127.20181010",
     "version": "3.127.20181010"
@@ -798,30 +830,6 @@
     "sku": "2012-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-smalldisk:3.127.20190410",
     "version": "3.127.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-smalldisk:9200.23714.220506",
-    "version": "9200.23714.220506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-smalldisk:9200.23736.220609",
-    "version": "9200.23736.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-smalldisk:9200.23771.220708",
-    "version": "9200.23771.220708"
   },
   {
     "architecture": "x64",
@@ -947,25 +955,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-smalldisk-g2:9200.23714.220506",
-    "version": "9200.23714.220506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-smalldisk-g2:9200.23736.220609",
-    "version": "9200.23736.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-smalldisk-g2:9200.23771.220708",
-    "version": "9200.23771.220708"
+    "sku": "2012-Datacenter-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-smalldisk:9200.24523.231004",
+    "version": "9200.24523.231004"
   },
   {
     "architecture": "x64",
@@ -1091,6 +1083,14 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
+    "sku": "2012-datacenter-smalldisk-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-smalldisk-g2:9200.24523.231004",
+    "version": "9200.24523.231004"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
     "sku": "2012-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-zhcn:3.127.20181010",
     "version": "3.127.20181010"
@@ -1134,30 +1134,6 @@
     "sku": "2012-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-zhcn:3.127.20190410",
     "version": "3.127.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-zhcn:9200.23714.220506",
-    "version": "9200.23714.220506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-zhcn:9200.23736.220609",
-    "version": "9200.23736.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-zhcn:9200.23771.220708",
-    "version": "9200.23771.220708"
   },
   {
     "architecture": "x64",
@@ -1283,25 +1259,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-zhcn-g2:9200.23714.220506",
-    "version": "9200.23714.220506"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-zhcn-g2:9200.23736.220609",
-    "version": "9200.23736.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-zhcn-g2:9200.23771.220708",
-    "version": "9200.23771.220708"
+    "sku": "2012-Datacenter-zhcn",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter-zhcn:9200.24523.231004",
+    "version": "9200.24523.231004"
   },
   {
     "architecture": "x64",
@@ -1427,6 +1387,14 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
+    "sku": "2012-datacenter-zhcn-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-datacenter-zhcn-g2:9200.24523.231004",
+    "version": "9200.24523.231004"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
     "sku": "2012-R2-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:4.127.20180315",
     "version": "4.127.20180315"
@@ -1510,30 +1478,6 @@
     "sku": "2012-R2-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:4.127.20190416",
     "version": "4.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:9600.20371.220504",
-    "version": "9600.20371.220504"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:9600.20402.220611",
-    "version": "9600.20402.220611"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:9600.20478.220708",
-    "version": "9600.20478.220708"
   },
   {
     "architecture": "x64",
@@ -1659,25 +1603,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-gensecond:9600.20371.220504",
-    "version": "9600.20371.220504"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-gensecond:9600.20402.220611",
-    "version": "9600.20402.220611"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-gensecond:9600.20478.220708",
-    "version": "9600.20478.220708"
+    "sku": "2012-R2-Datacenter",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:9600.21620.231004",
+    "version": "9600.21620.231004"
   },
   {
     "architecture": "x64",
@@ -1803,6 +1731,14 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
+    "sku": "2012-r2-datacenter-gensecond",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-gensecond:9600.21620.231004",
+    "version": "9600.21620.231004"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
     "sku": "2012-R2-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-smalldisk:4.127.20180912",
     "version": "4.127.20180912"
@@ -1862,30 +1798,6 @@
     "sku": "2012-R2-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-smalldisk:4.127.20190416",
     "version": "4.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-smalldisk:9600.20371.220504",
-    "version": "9600.20371.220504"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-smalldisk:9600.20402.220611",
-    "version": "9600.20402.220611"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-smalldisk:9600.20478.220708",
-    "version": "9600.20478.220708"
   },
   {
     "architecture": "x64",
@@ -2011,25 +1923,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-smalldisk-g2:9600.20371.220504",
-    "version": "9600.20371.220504"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-smalldisk-g2:9600.20402.220611",
-    "version": "9600.20402.220611"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-smalldisk-g2:9600.20478.220708",
-    "version": "9600.20478.220708"
+    "sku": "2012-R2-Datacenter-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-smalldisk:9600.21620.231004",
+    "version": "9600.21620.231004"
   },
   {
     "architecture": "x64",
@@ -2155,6 +2051,14 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
+    "sku": "2012-r2-datacenter-smalldisk-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-smalldisk-g2:9600.21620.231004",
+    "version": "9600.21620.231004"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
     "sku": "2012-R2-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-zhcn:4.127.20181010",
     "version": "4.127.20181010"
@@ -2206,30 +2110,6 @@
     "sku": "2012-R2-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-zhcn:4.127.20190416",
     "version": "4.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-zhcn:9600.20371.220504",
-    "version": "9600.20371.220504"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-zhcn:9600.20402.220611",
-    "version": "9600.20402.220611"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-R2-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-zhcn:9600.20478.220708",
-    "version": "9600.20478.220708"
   },
   {
     "architecture": "x64",
@@ -2355,25 +2235,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-zhcn-g2:9600.20371.220504",
-    "version": "9600.20371.220504"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-zhcn-g2:9600.20402.220611",
-    "version": "9600.20402.220611"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2012-r2-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-zhcn-g2:9600.20478.220708",
-    "version": "9600.20478.220708"
+    "sku": "2012-R2-Datacenter-zhcn",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter-zhcn:9600.21620.231004",
+    "version": "9600.21620.231004"
   },
   {
     "architecture": "x64",
@@ -2499,25 +2363,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:14393.5291.220808",
-    "version": "14393.5291.220808"
+    "sku": "2012-r2-datacenter-zhcn-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2012-r2-datacenter-zhcn-g2:9600.21620.231004",
+    "version": "9600.21620.231004"
   },
   {
     "architecture": "x64",
@@ -2644,6 +2492,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2016-Datacenter",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:14393.6351.231007",
+    "version": "14393.6351.231007"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2016-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20180613",
     "version": "2016.127.20180613"
   },
@@ -2718,30 +2574,6 @@
     "sku": "2016-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20190416",
     "version": "2016.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gensecond:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gensecond:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gensecond:14393.5291.220808",
-    "version": "14393.5291.220808"
   },
   {
     "architecture": "x64",
@@ -2867,25 +2699,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-gs",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gs:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-gs",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gs:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-gs",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gs:14393.5291.220808",
-    "version": "14393.5291.220808"
+    "sku": "2016-datacenter-gensecond",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gensecond:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -3011,25 +2827,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-Server-Core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-Server-Core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-Server-Core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:14393.5291.220808",
-    "version": "14393.5291.220808"
+    "sku": "2016-datacenter-gs",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-gs:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -3156,6 +2956,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2016-Datacenter-Server-Core",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:14393.6351.231007",
+    "version": "14393.6351.231007"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2016-Datacenter-Server-Core",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20181010",
     "version": "2016.127.20181010"
   },
@@ -3206,30 +3014,6 @@
     "sku": "2016-Datacenter-Server-Core",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core:2016.127.20190416",
     "version": "2016.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-server-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-g2:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-server-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-g2:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-server-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-g2:14393.5291.220808",
-    "version": "14393.5291.220808"
   },
   {
     "architecture": "x64",
@@ -3355,25 +3139,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-Server-Core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-Server-Core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-Server-Core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:14393.5291.220808",
-    "version": "14393.5291.220808"
+    "sku": "2016-datacenter-server-core-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-g2:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -3500,6 +3268,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2016-Datacenter-Server-Core-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:14393.6351.231007",
+    "version": "14393.6351.231007"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2016-Datacenter-Server-Core-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:2016.127.20181010",
     "version": "2016.127.20181010"
   },
@@ -3550,30 +3326,6 @@
     "sku": "2016-Datacenter-Server-Core-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:2016.127.20190416",
     "version": "2016.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-server-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-smalldisk-g2:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-server-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-smalldisk-g2:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-server-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-smalldisk-g2:14393.5291.220808",
-    "version": "14393.5291.220808"
   },
   {
     "architecture": "x64",
@@ -3699,25 +3451,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-smalldisk:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-smalldisk:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-smalldisk:14393.5291.220808",
-    "version": "14393.5291.220808"
+    "sku": "2016-datacenter-server-core-smalldisk-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-server-core-smalldisk-g2:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -3844,6 +3580,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2016-Datacenter-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-smalldisk:14393.6351.231007",
+    "version": "14393.6351.231007"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2016-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-smalldisk:2016.127.20181010",
     "version": "2016.127.20181010"
   },
@@ -3894,30 +3638,6 @@
     "sku": "2016-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-smalldisk:2016.127.20190416",
     "version": "2016.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-smalldisk-g2:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-smalldisk-g2:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-smalldisk-g2:14393.5291.220808",
-    "version": "14393.5291.220808"
   },
   {
     "architecture": "x64",
@@ -4043,25 +3763,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-zhcn:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-zhcn:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-zhcn:14393.5291.220808",
-    "version": "14393.5291.220808"
+    "sku": "2016-datacenter-smalldisk-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-smalldisk-g2:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -4188,6 +3892,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2016-Datacenter-zhcn",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-zhcn:14393.6351.231007",
+    "version": "14393.6351.231007"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2016-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-zhcn:2016.127.20181010",
     "version": "2016.127.20181010"
   },
@@ -4238,30 +3950,6 @@
     "sku": "2016-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter-zhcn:2016.127.20190416",
     "version": "2016.127.20190416"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-zhcn-g2:14393.5192.220612",
-    "version": "14393.5192.220612"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-zhcn-g2:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2016-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-zhcn-g2:14393.5291.220808",
-    "version": "14393.5291.220808"
   },
   {
     "architecture": "x64",
@@ -4387,25 +4075,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:17763.3132.220610",
-    "version": "17763.3132.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:17763.3287.220806",
-    "version": "17763.3287.220806"
+    "sku": "2016-datacenter-zhcn-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2016-datacenter-zhcn-g2:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -4532,6 +4204,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2019-Datacenter",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:17763.4974.231003",
+    "version": "17763.4974.231003"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:2019.0.20181107",
     "version": "2019.0.20181107"
   },
@@ -4582,30 +4262,6 @@
     "sku": "2019-Datacenter",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:2019.0.20190410",
     "version": "2019.0.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-Core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-Core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-Core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:17763.3287.220806",
-    "version": "17763.3287.220806"
   },
   {
     "architecture": "x64",
@@ -4732,6 +4388,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2019-Datacenter-Core",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:17763.4974.231003",
+    "version": "17763.4974.231003"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-Datacenter-Core",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:2019.0.20181107",
     "version": "2019.0.20181107"
   },
@@ -4782,30 +4446,6 @@
     "sku": "2019-Datacenter-Core",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core:2019.0.20190410",
     "version": "2019.0.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-g2:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-g2:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-g2:17763.3287.220806",
-    "version": "17763.3287.220806"
   },
   {
     "architecture": "x64",
@@ -4931,25 +4571,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-Core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-Core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-Core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:17763.3287.220806",
-    "version": "17763.3287.220806"
+    "sku": "2019-datacenter-core-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-g2:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -5076,6 +4700,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2019-Datacenter-Core-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:17763.4974.231003",
+    "version": "17763.4974.231003"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-Datacenter-Core-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:2019.0.20181107",
     "version": "2019.0.20181107"
   },
@@ -5126,30 +4758,6 @@
     "sku": "2019-Datacenter-Core-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:2019.0.20190410",
     "version": "2019.0.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-smalldisk-g2:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-smalldisk-g2:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-smalldisk-g2:17763.3287.220806",
-    "version": "17763.3287.220806"
   },
   {
     "architecture": "x64",
@@ -5275,25 +4883,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gensecond:17763.3132.220610",
-    "version": "17763.3132.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gensecond:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-gensecond",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gensecond:17763.3287.220806",
-    "version": "17763.3287.220806"
+    "sku": "2019-datacenter-core-smalldisk-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-core-smalldisk-g2:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -5419,25 +5011,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-gs",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gs:17763.3132.220610",
-    "version": "17763.3132.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-gs",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gs:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-gs",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gs:17763.3287.220806",
-    "version": "17763.3287.220806"
+    "sku": "2019-datacenter-gensecond",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gensecond:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -5563,25 +5139,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:17763.3287.220806",
-    "version": "17763.3287.220806"
+    "sku": "2019-datacenter-gs",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-gs:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -5708,6 +5268,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2019-Datacenter-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:17763.4974.231003",
+    "version": "17763.4974.231003"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:2019.0.20181107",
     "version": "2019.0.20181107"
   },
@@ -5758,30 +5326,6 @@
     "sku": "2019-Datacenter-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:2019.0.20190410",
     "version": "2019.0.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-smalldisk-g2:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-smalldisk-g2:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-smalldisk-g2:17763.3287.220806",
-    "version": "17763.3287.220806"
   },
   {
     "architecture": "x64",
@@ -5907,25 +5451,9 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-zhcn:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-zhcn:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-Datacenter-zhcn",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-zhcn:17763.3287.220806",
-    "version": "17763.3287.220806"
+    "sku": "2019-datacenter-smalldisk-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-smalldisk-g2:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -6052,6 +5580,14 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2019-Datacenter-zhcn",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-zhcn:17763.4974.231003",
+    "version": "17763.4974.231003"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-zhcn:2019.0.20181107",
     "version": "2019.0.20181107"
   },
@@ -6102,30 +5638,6 @@
     "sku": "2019-Datacenter-zhcn",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter-zhcn:2019.0.20190410",
     "version": "2019.0.20190410"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-zhcn-g2:17763.3046.220610",
-    "version": "17763.3046.220610"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-zhcn-g2:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2019-datacenter-zhcn-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-zhcn-g2:17763.3287.220806",
-    "version": "17763.3287.220806"
   },
   {
     "architecture": "x64",
@@ -6246,6 +5758,14 @@
     "sku": "2019-datacenter-zhcn-g2",
     "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-zhcn-g2:17763.4851.230905",
     "version": "17763.4851.230905"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2019-datacenter-zhcn-g2",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2019-datacenter-zhcn-g2:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -6372,24 +5892,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -6516,24 +6020,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-azure-edition",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -6644,24 +6132,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-azure-edition-core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core:20348.707.220505",
-    "version": "20348.707.220505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition-core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core:20348.707.220609",
-    "version": "20348.707.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition-core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core:20348.825.220705",
-    "version": "20348.825.220705"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -6788,24 +6260,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-azure-edition-core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core-smalldisk:20348.707.220505",
-    "version": "20348.707.220505"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition-core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core-smalldisk:20348.707.220609",
-    "version": "20348.707.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition-core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core-smalldisk:20348.825.220705",
-    "version": "20348.825.220705"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core-smalldisk:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -6851,6 +6307,14 @@
     "architecture": "x64",
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
+    "sku": "2022-datacenter-azure-edition-hotpatch",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-hotpatch:20348.2031.231006",
+    "version": "20348.2031.231006"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-azure-edition-hotpatch-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-hotpatch-smalldisk:20348.1850.230707",
     "version": "20348.1850.230707"
@@ -6870,6 +6334,14 @@
     "sku": "2022-datacenter-azure-edition-hotpatch-smalldisk",
     "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-hotpatch-smalldisk:20348.1850.230906",
     "version": "20348.1850.230906"
+  },
+  {
+    "architecture": "x64",
+    "offer": "WindowsServer",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "2022-datacenter-azure-edition-hotpatch-smalldisk",
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-hotpatch-smalldisk:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -6996,24 +6468,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-azure-edition-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-smalldisk:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-smalldisk:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-azure-edition-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-smalldisk:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-smalldisk:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -7140,24 +6596,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -7284,24 +6724,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-g2:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-g2:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-g2:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-g2:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -7428,24 +6852,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -7572,24 +6980,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk-g2:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk-g2:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-core-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk-g2:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-core-smalldisk-g2:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -7716,24 +7108,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-g2:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -7860,24 +7236,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-smalldisk",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -8004,24 +7364,8 @@
     "offer": "WindowsServer",
     "publisher": "MicrosoftWindowsServer",
     "sku": "2022-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk-g2:20348.768.220609",
-    "version": "20348.768.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk-g2:20348.825.220704",
-    "version": "20348.825.220704"
-  },
-  {
-    "architecture": "x64",
-    "offer": "WindowsServer",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "2022-datacenter-smalldisk-g2",
-    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk-g2:20348.887.220806",
-    "version": "20348.887.220806"
+    "urn": "MicrosoftWindowsServer:WindowsServer:2022-datacenter-smalldisk-g2:20348.2031.231006",
+    "version": "20348.2031.231006"
   },
   {
     "architecture": "x64",
@@ -8046,22 +7390,6 @@
     "sku": "2019-datacenter-gen2",
     "urn": "MicrosoftWindowsServer:windowsserver-gen2preview:2019-datacenter-gen2:2019.0.20190620",
     "version": "2019.0.20190620"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverdotnet",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "ws2016-dotnetcore",
-    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2016-dotnetcore:14393.5246.220705",
-    "version": "14393.5246.220705"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverdotnet",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "ws2016-dotnetcore",
-    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2016-dotnetcore:14393.5291.220808",
-    "version": "14393.5291.220808"
   },
   {
     "architecture": "x64",
@@ -8182,6 +7510,14 @@
     "sku": "ws2016-dotnetcore",
     "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2016-dotnetcore:14393.6252.230905",
     "version": "14393.6252.230905"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windowsserverdotnet",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "ws2016-dotnetcore",
+    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2016-dotnetcore:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -8396,30 +7732,6 @@
     "offer": "windowsserverdotnet",
     "publisher": "MicrosoftWindowsServer",
     "sku": "ws2019-dotnetcore",
-    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2019-dotnetcore:17763.3046.220609",
-    "version": "17763.3046.220609"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverdotnet",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "ws2019-dotnetcore",
-    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2019-dotnetcore:17763.3165.220706",
-    "version": "17763.3165.220706"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverdotnet",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "ws2019-dotnetcore",
-    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2019-dotnetcore:17763.3287.220806",
-    "version": "17763.3287.220806"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverdotnet",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "ws2019-dotnetcore",
     "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2019-dotnetcore:17763.3406.220909",
     "version": "17763.3406.220909"
   },
@@ -8534,6 +7846,14 @@
     "sku": "ws2019-dotnetcore",
     "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2019-dotnetcore:17763.4851.230905",
     "version": "17763.4851.230905"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windowsserverdotnet",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "ws2019-dotnetcore",
+    "urn": "MicrosoftWindowsServer:windowsserverdotnet:ws2019-dotnetcore:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -8868,24 +8188,16 @@
     "offer": "windowsserverupgrade",
     "publisher": "MicrosoftWindowsServer",
     "sku": "server2012upgrade",
+    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2012upgrade:14393.24523.231004",
+    "version": "14393.24523.231004"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windowsserverupgrade",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "server2012upgrade",
     "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2012upgrade:14393.5996.230622",
     "version": "14393.5996.230622"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverupgrade",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "server2016upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2016upgrade:14393.5850.230404",
-    "version": "14393.5850.230404"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverupgrade",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "server2016upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2016upgrade:14393.5921.230506",
-    "version": "14393.5921.230506"
   },
   {
     "architecture": "x64",
@@ -8931,25 +8243,9 @@
     "architecture": "x64",
     "offer": "windowsserverupgrade",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "server2019upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2019upgrade:17763.4131.230311",
-    "version": "17763.4131.230311"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverupgrade",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "server2019upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2019upgrade:17763.4252.230404",
-    "version": "17763.4252.230404"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverupgrade",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "server2019upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2019upgrade:17763.4377.230505",
-    "version": "17763.4377.230505"
+    "sku": "server2016upgrade",
+    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2016upgrade:14393.6351.231007",
+    "version": "14393.6351.231007"
   },
   {
     "architecture": "x64",
@@ -8995,25 +8291,9 @@
     "architecture": "x64",
     "offer": "windowsserverupgrade",
     "publisher": "MicrosoftWindowsServer",
-    "sku": "server2022upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2022upgrade:20348.1607.230310",
-    "version": "20348.1607.230310"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverupgrade",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "server2022upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2022upgrade:20348.1668.230404",
-    "version": "20348.1668.230404"
-  },
-  {
-    "architecture": "x64",
-    "offer": "windowsserverupgrade",
-    "publisher": "MicrosoftWindowsServer",
-    "sku": "server2022upgrade",
-    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2022upgrade:20348.1726.230505",
-    "version": "20348.1726.230505"
+    "sku": "server2019upgrade",
+    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2019upgrade:17763.4974.231003",
+    "version": "17763.4974.231003"
   },
   {
     "architecture": "x64",
@@ -9054,5 +8334,13 @@
     "sku": "server2022upgrade",
     "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2022upgrade:20348.1970.230905",
     "version": "20348.1970.230905"
+  },
+  {
+    "architecture": "x64",
+    "offer": "windowsserverupgrade",
+    "publisher": "MicrosoftWindowsServer",
+    "sku": "server2022upgrade",
+    "urn": "MicrosoftWindowsServer:windowsserverupgrade:server2022upgrade:20348.2031.231006",
+    "version": "20348.2031.231006"
   }
 ]
