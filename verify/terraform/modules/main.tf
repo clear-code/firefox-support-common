@@ -18,9 +18,6 @@ provider "azurerm" {
   features {}
 }
 
-provider "local" {
-}
-
 resource "azurerm_resource_group" "firefoxverify" {
   name     = "FirefoxVerifyResourceGroup-${var.namespace}"
   location = "Japan East"
