@@ -9,10 +9,10 @@ SHELL=/bin/bash
 all: apply
 
 terraform.tfvars:
-	cat terraform.tfvars.template | sed -e "s/%password%/$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)/gi" > terraform.tfvars
+	cat ../../../modules/terraform.tfvars.template | sed -e "s/%password%/$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)/gi" > terraform.tfvars
 
 apply: terraform.tfvars
-	terraform init -upgrade
+	terraform init
 	terraform plan
 	time (terraform apply -auto-approve && ansible-playbook -i ansible/hosts ansible/playbook.yml)
 

@@ -1,4 +1,7 @@
-variable "namespace" {}
+variable "namespace" {
+    description = "The sku type to use as a part of environment name"
+    type        = string
+}
 variable "windows-username" {}
 variable "windows-password" {}
 variable "windows-language-pack-url" {}
