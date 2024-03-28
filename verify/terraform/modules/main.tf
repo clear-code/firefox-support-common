@@ -18,9 +18,6 @@ provider "azurerm" {
   features {}
 }
 
-provider "local" {
-}
-
 resource "azurerm_resource_group" "firefoxverify" {
   name     = "FirefoxVerifyResourceGroup-${var.namespace}"
   location = "Japan East"
@@ -83,7 +80,7 @@ resource "azurerm_virtual_machine" "firefoxverify_vm" {
     computer_name  = "firefoxverify"
     admin_username = var.windows-username
     admin_password = var.windows-password
-    custom_data    = file("./config/settings.ps1")
+    custom_data    = file("${path.module}/config/settings.ps1")
   }
 
   os_profile_windows_config {
@@ -104,7 +101,7 @@ resource "azurerm_virtual_machine" "firefoxverify_vm" {
       pass         = "oobeSystem"
       component    = "Microsoft-Windows-Shell-Setup"
       setting_name = "FirstLogonCommands"
-      content      = file("./config/FirstLogonCommands.xml")
+      content      = file("${path.module}/config/FirstLogonCommands.xml")
     }
   }
 
