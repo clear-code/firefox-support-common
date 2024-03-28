@@ -24,4 +24,3 @@ destroy:
 
 clean:
 	rm -rf terraform.tfvars .terraform terraform.tfstate terraform.tfstate.backup
-
