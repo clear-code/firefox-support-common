@@ -10,7 +10,7 @@ all: apply
 
 terraform.tfvars:
 	cat ../../../modules/terraform.tfvars.template | \
-              sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\" -y 20 1)\"" > terraform.tfvars
+              sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > terraform.tfvars
 apply: terraform.tfvars
 	terraform init
 	terraform plan
