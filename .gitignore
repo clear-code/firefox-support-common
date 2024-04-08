@@ -1,6 +1,8 @@
 configurations/*.xls
 testcases/unsigned-addon/sha1hash.txt
 testcases/unsigned-addon/*.xpi
+verify/terraform/vm-list-windows-desktop.json
+verify/terraform/vm-list-windows-server.json
 *.xlsx
 *.docx
 *.pdf
