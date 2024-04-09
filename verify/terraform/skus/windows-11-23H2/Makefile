@@ -6,13 +6,13 @@
 
 SHELL=/bin/bash
 
-all:
-	clean
+all: clean
 	apply
 
 terraform.tfvars:
 	cat ../../modules/terraform.tfvars.template | \
-              sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > terraform.tfvars
+        sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > terraform.tfvars
+
 apply: terraform.tfvars
 	terraform init
 	terraform plan
@@ -27,4 +27,3 @@ destroy:
 clean:
 	rm -rf .terraform .terraform.lock.hcl password.txt terraform.tfstate terraform.tfstate.backup terraform.tfvars \
 		rdp/add_password.bat rdp/*.rdp
-
