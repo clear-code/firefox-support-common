@@ -2,12 +2,11 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-.PHONY: apply ansible destroy
+.PHONY: all terraform.tfvars apply apply-playbook destroy clean
 
 SHELL=/bin/bash
 
-all: clean
-	apply
+all: clean apply
 
 terraform.tfvars:
 	cat ../../modules/terraform.tfvars.template | \
