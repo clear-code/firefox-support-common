@@ -6,7 +6,9 @@
 
 SHELL=/bin/bash
 
-all: apply
+all:
+	clean
+	apply
 
 terraform.tfvars:
 	cat ../../modules/terraform.tfvars.template | \
@@ -23,4 +25,6 @@ destroy:
 	terraform destroy -auto-approve
 
 clean:
-	rm -rf terraform.tfvars .terraform terraform.tfstate terraform.tfstate.backup
+	rm -rf .terraform .terraform.lock.hcl password.txt terraform.tfstate terraform.tfstate.backup terraform.tfvars \
+		rdp/add_password.bat rdp/*.rdp
+
