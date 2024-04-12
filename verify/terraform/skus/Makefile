@@ -11,7 +11,7 @@ all: clean apply
 terraform.tfvars:
 	cd $(DIR_PATH) && \
 	cat ../../modules/terraform.tfvars.template | \
-        sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > terraform.tfvars
+        sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > $(DIR_PATH)/terraform.tfvars
 
 apply: terraform.tfvars
 	cd $(DIR_PATH) && terraform init
