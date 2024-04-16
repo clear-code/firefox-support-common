@@ -9,22 +9,20 @@ SHELL=/bin/bash
 all: clean apply
 
 terraform.tfvars:
-	cd $(DIR_PATH) && \
 	cat ../../modules/terraform.tfvars.template | \
-        sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > $(DIR_PATH)/terraform.tfvars
+        sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"$$%{} -y 20 1)\"" > terraform.tfvars
 
 apply: terraform.tfvars
-	cd $(DIR_PATH) && terraform init
-	cd $(DIR_PATH) && terraform plan
-	time (cd $(DIR_PATH) && terraform apply -auto-approve && ansible-playbook -i ansible/hosts ansible/playbook.yml)
+	terraform init
+	terraform plan
+	time (terraform apply -auto-approve && ansible-playbook -i ansible/hosts ansible/playbook.yml)
 
 apply-playbook:
-	cd $(DIR_PATH) && ansible-playbook -i ansible/hosts ansible/playbook.yml
+	ansible-playbook -i ansible/hosts ansible/playbook.yml
 
 destroy:
-	cd $(DIR_PATH) && terraform destroy -auto-approve
+	terraform destroy -auto-approve
 
 clean:
-	cd $(DIR_PATH) && \
 	rm -rf .terraform .terraform.lock.hcl password.txt terraform.tfstate terraform.tfstate.backup terraform.tfvars \
 		rdp/add_password.bat rdp/*.rdp
