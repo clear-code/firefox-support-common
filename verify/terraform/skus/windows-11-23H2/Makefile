@@ -3,4 +3,4 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # Include to use Makefile under "skus" directory in common
-include ../Makefile
+include ../use-in-common.mk
