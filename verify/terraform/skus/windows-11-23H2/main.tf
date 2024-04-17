@@ -19,4 +19,8 @@ module "firefox_verify_env" {
 
   namespace         = var.namespace
   windows-password  = var.windows-password
+
+  offer             = var.offer
+  publisher         = var.publisher
+  sku               = var.sku
 }
