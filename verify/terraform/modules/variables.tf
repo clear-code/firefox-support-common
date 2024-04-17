@@ -1,9 +1,13 @@
 variable "namespace" {}
+variable "windows-password" {}
+variable "offer" {}
+variable "publisher" {}
+variable "sku" {}
+
 variable "windows-username" {
     type        = string
     default     = "clearcode"
 }
-variable "windows-password" {}
 variable "windows-language-pack-url" {
     type        = string
     default     = ""

@@ -61,10 +61,10 @@ resource "azurerm_virtual_machine" "firefoxverify_vm" {
   delete_data_disks_on_termination = true
 
   storage_image_reference {
-    # Windows 11 Enterprise 23H2
-    publisher = "MicrosoftWindowsDesktop"
-    offer     = "Windows-11"
-    sku       = "win11-23h2-ent"
+    # Vary with vm to create
+    offer     = "${var.offer}"
+    publisher = "${var.publisher}"
+    sku       = "${var.sku}"
     version   = "latest"
   }
 
