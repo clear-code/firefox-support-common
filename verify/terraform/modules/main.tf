@@ -62,9 +62,9 @@ resource "azurerm_virtual_machine" "firefoxverify_vm" {
 
   storage_image_reference {
     # Vary with vm to create
-    offer     = "${var.offer}"
-    publisher = "${var.publisher}"
-    sku       = "${var.sku}"
+    offer     = var.offer
+    publisher = var.publisher
+    sku       = var.sku
     version   = "latest"
   }
 
