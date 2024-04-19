@@ -4,3 +4,6 @@ terraform.tfvars
 terraform.tfstate
 terraform.tfstate.backup
 /*/rdp/*.rdp
+
+hosts
+playbook.yml
