@@ -57,10 +57,10 @@ verification-manual:
 migration-report: migration-report-docx migration-report-pdf
 
 migration-report-docx:
-	cd migration && cat esr115.md | sed -E -e '/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' | pandoc ${PANDOC_OPT_DOCX} -o "../migration-report-esr115-$(DATE).docx"
+	cd migration && cat esr115.md | sed -E -e 's/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' | pandoc ${PANDOC_OPT_DOCX} -o "../migration-report-esr115-$(DATE).docx"
 
 migration-report-pdf:
-	cd migration && cat esr115.md | sed -E -e '/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' | pandoc ${PANDOC_OPT_PDF} -o "../migration-report-esr115-$(DATE).pdf"
+	cd migration && cat esr115.md | sed -E -e 's/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' | pandoc ${PANDOC_OPT_PDF} -o "../migration-report-esr115-$(DATE).pdf"
 
 clean:
 	rm -f config-*.xlsx
