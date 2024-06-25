@@ -292,6 +292,7 @@ Appearance-15: [廃止] タブバー上のFirefox Viewボタンの表示
     :2: [廃止] 非表示にする
 
     [廃止]
+    // Appearance-2 で代用
 
 Appearance-16: デスクトップ通知をシステムの通知として表示する
 
