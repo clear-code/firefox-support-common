@@ -219,30 +219,15 @@ Download-4: 安全なWebサイトからの安全でないダウンロード、�
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
 
-Download-5: Firefox 98以前からの移行時における、ファイルの種類ごとの取り扱い
+Download-5: [廃止] Firefox 98以前からの移行時における、ファイルの種類ごとの取り扱い
 
-    :1: 「毎回選択する」を既定の挙動に戻す（既定）
+    :1: [廃止] 「毎回選択する」を既定の挙動に戻す（既定）
 
     -
 
-    :2: 何もしない
+    :2: [廃止] 何もしない
 
-    *.cfg / *.jsc:
-    lockPref("browser.download.improvements_to_download_panel", false);
-
-    distribution\policies.json:
-    "Preferences": {
-      "browser.download.improvements_to_download_panel": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
+    [廃止]
 
 Download-6: 未知の種類のファイルのダウンロード時の既定の挙動
 
