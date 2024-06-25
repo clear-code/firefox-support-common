@@ -173,7 +173,7 @@ Update-9: Firefoxの自動更新の対象とするバージョンの範囲
     :2: セキュリティアップデートのみ受け入れる
 
     distribution\policies.json:
-    "AppUpdatePin": "115.",
+    "AppUpdatePin": "128.",
 
     GPO:
     カテゴリ「Firefox」→「Extensions」
