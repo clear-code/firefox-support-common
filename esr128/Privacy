@@ -1782,7 +1782,6 @@ Privacy-58: クレジットカード情報の保存
     :1: 許可された地域で保存する (既定）
 
     *.cfg / *.jsc:
-    lockPref("dom.payments.defaults.saveCreditCard", true);
     lockPref("extensions.formautofill.creditCards.supported", "detect");
     lockPref("extensions.formautofill.creditCards.enabled", true);
     lockPref("extensions.formautofill.creditCards.hideui", false);
@@ -1790,7 +1789,6 @@ Privacy-58: クレジットカード情報の保存
     :2: 保存しない
 
     *.cfg / *.jsc:
-    lockPref("dom.payments.defaults.saveCreditCard", false);
     lockPref("extensions.formautofill.creditCards.supported", "off");
     lockPref("extensions.formautofill.creditCards.enabled", false);
     lockPref("extensions.formautofill.creditCards.hideui", true);
