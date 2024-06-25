@@ -432,9 +432,9 @@ Tab-12: 最近のアクティビティの表示
     カテゴリ「Firefox」
     → 「Customize Firefox Home」を有効化し、「Download History」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
 
-Tab-13: スニペットの表示
+Tab-13: [廃止] スニペットの表示
 
-    :1: 表示する（既定）
+    :1: [廃止] 表示する（既定）
 
     -
 
@@ -442,33 +442,17 @@ Tab-13: スニペットの表示
 
     [廃止]
 
-    :4: 常に表示する
+    :4: [廃止] 常に表示する
 
-    distribution\policies.json:
-    "FirefoxHome": {
-      "Snippets": true,
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Customize Firefox Home」を有効化し、「Snippets」と「Don't allow settings to be changed」のチェックをONにする
+    [廃止]
 
     :3: [廃止] 常に非表示にする（MCD）
 
     [廃止]
 
-    :5: 常に非表示にする
+    :5: [廃止] 常に非表示にする
 
-    distribution\policies.json:
-    "FirefoxHome": {
-      "Snippets": false,
-      "Locked": true
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Customize Firefox Home」を有効化し、「Snippets」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
+    [廃止]
 
 Tab-14: インポートボタンの表示
 
