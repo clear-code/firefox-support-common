@@ -283,26 +283,15 @@ Appearance-14: UIの表示言語の変更・カスタマイズの可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Appearance-15: タブバー上のFirefox Viewボタンの表示
+Appearance-15: [廃止] タブバー上のFirefox Viewボタンの表示
 
-    :1: 表示する（既定）
+    :1: [廃止] 表示する（既定）
 
     -
 
-    :2: 非表示にする
+    :2: [廃止] 非表示にする
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.tabs.firefox-view": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
 Appearance-16: デスクトップ通知をシステムの通知として表示する
 
