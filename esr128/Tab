@@ -1,0 +1,741 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Tab-1: 複数のタブを閉じる際の警告の可否
+
+    :1: 警告する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.warnOnClose": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 警告しない（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.warnOnClose": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: 警告しないが、任意で警告を表示する状態に戻せる
+
+    // ポリシー設定でStatusをuserにした場合、毎回起動時に設定が上書きされてしまうため、MCDを使用する必要がある
+    *.cfg / *.jsc:
+    if (!getPref("browser.tabs.warnOnClose.initialized")) {
+      pref("browser.tabs.warnOnClose", false);
+      pref("browser.tabs.warnOnClose.initialized", true);
+    }
+
+Tab-2: 「他のタブをすべて閉じる」の警告の可否
+
+    :1: 警告する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.warnOnCloseOtherTabs": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 警告しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.warnOnCloseOtherTabs": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: 警告しないが、任意で警告を表示する状態に戻せる
+
+    // ポリシー設定でStatusをuserにした場合、毎回起動時に設定が上書きされてしまうため、MCDを使用する必要がある
+    *.cfg / *.jsc:
+    if (!getPref("browser.tabs.warnOnCloseOtherTabs.initialized")) {
+      pref("browser.tabs.warnOnCloseOtherTabs", false);
+      pref("browser.tabs.warnOnCloseOtherTabs.initialized", true);
+    }
+
+Tab-3: 複数のタブを一度に開く際の警告の可否
+
+    :1: 警告する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.warnOnOpen": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 警告しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.warnOnOpen": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: 警告しないが、任意で警告を表示する状態に戻せる
+
+    // ポリシー設定でStatusをuserにした場合、毎回起動時に設定が上書きされてしまうため、MCDを使用する必要がある
+    *.cfg / *.jsc:
+    if (!getPref("browser.tabs.warnOnOpen.initialized")) {
+      pref("browser.tabs.warnOnOpen", false);
+      pref("browser.tabs.warnOnOpen.initialized", true);
+    }
+
+Tab-4: [廃止] タブバーの表示の可否
+
+    :1: [廃止] 常に表示する
+
+    [廃止]
+
+    :2: [廃止] タブが1つだけの時は隠す
+
+    [廃止]
+
+Tab-5: 新しいタブの内容
+
+    :1: about:newtab（既定）
+
+    -
+
+    :2: [廃止] 何も表示しない
+
+    [廃止]
+
+    :3: [廃止] アドオンを使わず空白ページを表示する（MCD）
+
+    [廃止]
+
+    :4: アドオンを使わず空白ページを表示する
+
+    distribution\policies.json:
+    "NewTabPage": false,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「New Tab Page」を無効化
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :5: スポンサーコンテンツを非表示にする
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.topsites.contile.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.topsites.contile.endpoint": {
+        "Value": "about:blank",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-6: Webページによって開かれる新規ウィンドウを、代わりにタブで開く
+
+    :1: タブで開く（既定）
+
+    -
+
+    :2: 新規ウィンドウで開く
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.link.open_newwindow": {
+        "Value": 1,
+        "Status": "locked"
+      },
+      "browser.link.open_newwindow.restriction": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-7: [廃止] 既定の新しいタブで表示する内容(Tab-5-1が指定されているときに設定可能な項目)
+
+    :1: [廃止] ユーザの設定を優先（既定）
+
+    [廃止]
+
+    :2: [廃止] 「空白ページを表示」で固定（Firefox 38以前では「白紙」で固定）
+
+    [廃止]
+
+    :3: [廃止] 「よく見るサイトを表示」で固定（Firefox 38以前では「クラシック」で固定）
+
+    [廃止]
+
+    :4: [廃止] 「よく見るサイトを表示/おすすめサイトも表示=ON」で固定（Firefox 38以前では「拡張」で固定）
+
+    [廃止]
+
+    :5: [廃止] 「よく見るサイトを表示」以下の「おすすめサイトも表示」のみ選択禁止（Firefox 38以前では「拡張」のみ禁止）
+
+    [廃止]
+
+Tab-8: [廃止] 新しいタブを初めて開いた時の案内の表示
+
+    :1: [廃止] 表示する（既定）
+
+    [廃止]
+
+    :2: [廃止] 表示しない
+
+    [廃止]
+
+Tab-9: 新しいタブを開く操作の高速化
+
+    :1: 事前読み込みで高速化する（既定）
+
+    -
+
+    :2: 高速化しない（Tab-5-2選択時は常にこの動作）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.newtab.preload": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-10: 検索バーの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: [廃止] 常に表示する（MCD）
+
+    [廃止]
+
+    :4: 常に表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Search": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Search」と「Don't allow settings to be changed」のチェックをONにする
+
+    :3: [廃止] 常に非表示にする（MCD）
+
+    [廃止]
+
+    :5: 常に非表示にする
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Search": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Search」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
+
+Tab-11: トップサイトの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: [廃止] 常に表示する（MCD）
+
+    [廃止]
+
+    :3: 常に表示する（2段組）
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "TopSites": true,
+      "Locked": true
+    },
+    "Preferences": {
+      "browser.newtabpage.activity-stream.topSitesRows": {
+        "Value": 2,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Top Sites」と「Don't allow settings to be changed」のチェックをONにする
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :5: 常に表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "TopSites": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Top Sites」と「Don't allow settings to be changed」のチェックをONにする
+
+    :4: [廃止] 常に非表示にする（MCD）
+
+    -
+
+    :6: 常に非表示にする
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "TopSites": false,
+      "Locked": true
+    },
+    "Preferences": {
+      "browser.topsites.contile.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.topsites.contile.endpoint": {
+        "Value": "about:blank",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Top Sites」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :7: 初期状態で特定の行数で表示するが、表示・非表示や行数の変更を許容する
+
+    *.cfg / *.jsc:
+    lockPref("browser.newtabpage.activity-stream.prerender", false);
+    defaultPref("browser.newtabpage.activity-stream.showTopSites", true);
+    {
+      let TOPSITE_INITIAL_VALUE_VERSION = 1;
+      let lastVersion = 0;
+      try {
+        lastVersion = getPref('browser.newtabpage.activity-stream.topSitesRows.lastInitialValueVersion');
+      }
+      catch(e) {
+      }
+      if (lastVersion < TOPSITE_INITIAL_VALUE_VERSION) {
+        pref("browser.newtabpage.activity-stream.topSitesRows", 2);
+        pref("browser.newtabpage.activity-stream.topSitesRows.lastInitialValueVersion", TOPSITE_INITIAL_VALUE_VERSION);
+      }
+    }
+
+Tab-12: 最近のアクティビティの表示
+
+    :1: 表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Highlights": true,
+      "Locked": false
+    },
+
+    :2: [廃止] 常に表示する（MCD）
+
+    [廃止]
+
+    :4: 常に表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Highlights": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Download History」と「Don't allow settings to be changed」のチェックをONにする
+
+    :3: [廃止] 常に非表示にする（MCD）
+
+    [廃止]
+
+    :6: 非表示にする (既定）
+
+    -
+
+    :5: 常に非表示にする
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Highlights": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Download History」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
+
+Tab-13: スニペットの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: [廃止] 常に表示する（MCD）
+
+    [廃止]
+
+    :4: 常に表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Snippets": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Snippets」と「Don't allow settings to be changed」のチェックをONにする
+
+    :3: [廃止] 常に非表示にする（MCD）
+
+    [廃止]
+
+    :5: 常に非表示にする
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Snippets": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Snippets」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
+
+Tab-14: インポートボタンの表示
+
+    :1: [廃止] 表示する（既定）
+
+    [廃止]
+
+    :2: [廃止] 表示しない（MCD）
+
+    [廃止]
+
+    :3: 表示しない
+
+    新規タブの画面にはボタンが存在しなくなっているが、「ブラウジングライブラリー」からのインポート操作には影響する。
+
+    distribution\policies.json:
+    "DisableProfileImport": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Profile Import」を有効化する
+
+Tab-15: [廃止] 新機能のツアーの表示
+
+    :1: [廃止] 表示する（既定）
+
+    [廃止]
+
+    :2: [廃止] 表示しない
+
+    [廃止]
+
+Tab-16: トップサイトに表示されるウェブサイト
+
+    :1: 変更しない（既定）
+
+    -
+
+    :2: 変更する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.newtabpage.activity-stream.default.sites": {
+        "Value": "...",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-17: Ctrl-Tabでのタブ切り替え時の挙動
+
+    :1: 最近使ったタブの順で切り替える（ESR68既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ctrlTab.sortByRecentlyUsed": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: タブバー上の並び順で切り替える（ESR60以前既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ctrlTab.sortByRecentlyUsed": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    ユーザーによる設定変更を許可する場合は以下の通り。
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ctrlTab.sortByRecentlyUsed": {
+        "Value": false,
+        "Status": "default"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-18: [廃止] タブの複数選択
+
+    :1: [廃止] 許可する（既定）
+
+    [廃止]
+
+    :2: [廃止] 禁止する
+
+    [廃止]
+
+Tab-19: 最近のアクティビティにPocketの項目を表示するかどうか
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "Pocket": false,
+      "Locked": true
+    },
+    "Preferences": {
+      "browser.newtabpage.activity-stream.section.highlights.includePocket": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Recommended by Pocket」のチェックをOFF、「Don't allow settings to be changed」のチェックをONにする
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-20: 新規タブに「Firefoxにようこそ」メッセージを表示するかどうか
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    // Firefox ESR78.0では機能しない
+    // Firefox ESR78.1.0以降は、Privacy-22-2 または Privacy-24-3 選択時には常にこの動作となる
+    *.cfg / *.jsc:
+    lockPref("trailhead.firstrun.branches", "nofirstrun-empty");
+
+    distribution\policies.json:
+    "UserMessaging": {
+      "SkipOnboarding": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「User Messaging」
+    → 「Skip Onboarding」を有効化（設定値の固定は不可能）
+
+Tab-21: Mozillaの契約パートナーが提供するトップサイトの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 常に表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "SponsoredTopSites": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Sponsored Top Sites」のチェックをONにする
+
+    :3: 常に非表示にする
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "SponsoredTopSites": false,
+      "Locked": true
+    },
+    "Preferences": {
+      "browser.topsites.contile.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.topsites.contile.endpoint": {
+        "Value": "about:blank",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Sponsored Top Sites」のチェックをOFFにする
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-22: Mozillaの契約パートナーが提供するPocketの項目の表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 常に表示する
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "SponsoredPocket": true,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Sponsored Top Sites」のチェックをONにする
+
+    :3: 常に非表示にする
+
+    distribution\policies.json:
+    "FirefoxHome": {
+      "SponsoredPocket": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Customize Firefox Home」を有効化し、「Sponsored Top Sites」のチェックをOFFにする
+
+Tab-23: ウェブ閲覧中におすすめの拡張を表示する
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    distribution\policies.json:
+    "UserMessaging": {
+      "ExtensionRecommendations": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」→ 「UserMessaging」
+    → 「Extension Recommendations」を有効化（設定値の固定は不可能）
+
+Tab-24: ウェブ閲覧中におすすめの機能を表示する
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    // Privacy-42-2(FirefoxStudies無効)もしくは
+    // Security-3-3(アドオンインストール禁止)を選択した場合常にこの挙動になる
+    distribution\policies.json:
+    "UserMessaging": {
+      "FeatureRecommendations": false,
+      "Locked": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」→ 「UserMessaging」
+    → 「Feature Recommendations」を有効化（設定値の固定は不可能）
