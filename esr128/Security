@@ -1596,3 +1596,36 @@ Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
+Security-63: TLSのポスト量子鍵共有機能の使用可否
+
+    :1: 使用する
+
+    distribution\policies.json:
+    "PostQuantumKeyAgreementEnabled": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Enable post-quantum key agreement」を有効化する
+
+    :2: 使用しない（既定）
+
+    -
+
+Security-64: Firefox 126以前向けの古い署名を含むアドオンのXPIパッケージの使用可否
+
+    :1: 特定のアドオンについて受け付ける
+
+    distribution\policies.json:
+    "ExtensionSettings": {
+      "example@example.com": { // アドオンのID
+        "temporarily_allow_weak_signatures": true
+      }
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Extensions」
+    → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
+
+    :2: 拒否する（既定）
+
+    -

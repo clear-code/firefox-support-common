@@ -1280,6 +1280,8 @@ Security-60: セキュリティデバイスの削除
 
     :2: 削除する
 
+    ABOUT_POLICIES
+
     - `SecurityDevices` の `Delete` の値として、削除対象のセキュリティデバイス名の一覧が表示される。
 
 Security-61: SVGの<use>でのdata: URLの使用
@@ -1309,4 +1311,32 @@ Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め�
     ABOUT_CONFIG
 
     - `security.mixed_content.upgrade_display_content` の値が `false` である。
+
+Security-63: TLSのポスト量子鍵共有機能の使用可否
+
+    :1: 使用する
+
+    ABOUT_POLICIES
+
+    - `PostQuantumKeyAgreementEnabled` の値が `true` である。
+
+    :2: 使用しない（既定）
+
+    ABOUT_POLICIES
+
+    - `PostQuantumKeyAgreementEnabled` の値が `false` である。
+
+Security-64: Firefox 126以前向けの古い署名を含むアドオンのXPIパッケージの使用可否
+
+    :1: 特定のアドオンについて受け付ける
+
+    ABOUT_POLICIES
+
+    - `ExtensionSettings` が存在し、対象アドオンの設定のキーに `"temporarily_allow_weak_signatures":true` が含まれている。
+
+    :2: 拒否する（既定）
+
+    ABOUT_POLICIES
+
+    - `ExtensionSettings` が存在しないか、各アドオンの設定のキーに `"temporarily_allow_weak_signatures"` が含まれていない。
 
