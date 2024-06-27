@@ -2092,6 +2092,6 @@ Privacy-70: 「Do Not Sell」ヘッダの送出の可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :4: 送出しない（既定）
+    :2: 送出しない（既定）
 
     -
