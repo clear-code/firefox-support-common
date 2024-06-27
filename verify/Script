@@ -536,3 +536,13 @@ Script-31: Service Workerの使用の可否
     - テストケースの browser.html を開く。
     - **確認**
         - 「ServiceWorker」欄にdisabledと表示される。
+
+Script-32: Shiftキーを押しながらの右クリックによる、Firefox本来のコンテキストメニューの強制表示
+
+    :1: 使用し、コンテンツによるShiftキーを押しながらの右クリック操作の無効化を禁止（既定）
+
+    TBD
+
+    :2: 使用せず、コンテンツによるShiftキーを押しながらの右クリック操作の無効化を許可
+
+    TBD

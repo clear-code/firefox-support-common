@@ -651,3 +651,24 @@ Script-31: Service Workerの使用の可否
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Script-32: Shiftキーを押しながらの右クリックによる、Firefox本来のコンテキストメニューの強制表示
+
+    :1: 使用し、コンテンツによるShiftキーを押しながらの右クリック操作の無効化を禁止（既定）
+
+    -
+
+    :2: 使用せず、コンテンツによるShiftキーを押しながらの右クリック操作の無効化を許可
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.event.contextmenu.shift_suppresses_event": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
