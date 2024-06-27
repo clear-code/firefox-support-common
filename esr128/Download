@@ -287,3 +287,24 @@ Download-7: Content-Dispositionヘッダーに基づいて、PDFのダウンロ�
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Download-8: 信頼できないURLからのファイルのダウンロードの遮断
+
+    :1: 遮断する（既定）
+
+    -
+
+    :2: 遮断しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.block_download_insecure": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
