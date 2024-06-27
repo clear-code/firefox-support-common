@@ -1575,3 +1575,24 @@ Security-61: SVGの<use>でのdata: URLの使用
 
     -
 
+Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め込まれた画像、動画、音声の取得時の接続方法
+
+    :1: 常に安全な接続（HTTPS）を使用する（既定）
+
+    -
+
+    :2: 安全でない接続（HTTP）であっても、記述された通りのURLを使用する
+
+    distribution\policies.json:
+    "Preferences": {
+      "security.mixed_content.upgrade_display_content": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
