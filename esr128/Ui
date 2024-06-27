@@ -308,3 +308,18 @@ Ui-15: Firefox Relayを使った、Firefoxの資格情報マネージャーか�
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-16: 印刷機能の使用可否
+
+    :1: 印刷を許可する（既定）
+
+    -
+
+    :2: 印刷を禁止する
+
+    distribution\policies.json:
+    "PrintingEnabled": false,
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Printing」を無効化する
