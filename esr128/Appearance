@@ -304,3 +304,24 @@ Appearance-16: デスクトップ通知をシステムの通知として表示�
 
     *.cfg:
     lockPref("alerts.useSystemBackend", false);
+
+Appearance-17: Webページ内のリンクの下線表示
+
+    :1: Webページの指定に従う（既定）
+
+    -
+
+    :2: 常に下線を表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "layout.css.always_underline_links": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
