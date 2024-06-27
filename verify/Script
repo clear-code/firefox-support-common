@@ -541,8 +541,26 @@ Script-32: Shiftキーを押しながらの右クリックによる、Firefox本
 
     :1: 使用し、コンテンツによるShiftキーを押しながらの右クリック操作の無効化を禁止（既定）
 
-    TBD
+    ABOUT_CONFIG
+
+    - `dom.event.contextmenu.shift_suppresses_event` の値が `true` である。
 
     :2: 使用せず、コンテンツによるShiftキーを押しながらの右クリック操作の無効化を許可
 
-    TBD
+    ABOUT_CONFIG
+
+    - `dom.event.contextmenu.shift_suppresses_event` の値が `false` である。
+
+Script-33: Screen Wake Lock APIによる、アイドル時の画面の自動電源オフ動作の停止
+
+    :1: 許可する（既定）
+
+    ABOUT_CONFIG
+
+    - `dom.screenwakelock.enabled` の値が `true` である。
+
+    :2: 禁止する
+
+    ABOUT_CONFIG
+
+    - `dom.screenwakelock.enabled` の値が `false` である。
