@@ -1564,4 +1564,14 @@ Security-60: セキュリティデバイスの削除
 
     GPOでの設定は不可能
 
+Security-61: SVGの<use>でのdata: URLの使用
+
+    :1: 許可する
+
+    *.cfg / *.jsc:
+    lockPref("svg.use-element.data-url-href.allowed", true);
+
+    :2: 禁止する（既定）
+
+    -
 

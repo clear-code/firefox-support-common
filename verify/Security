@@ -1281,3 +1281,18 @@ Security-60: セキュリティデバイスの削除
     :2: 削除する
 
     - `SecurityDevices` の `Delete` の値として、削除対象のセキュリティデバイス名の一覧が表示される。
+
+Security-61: SVGの<use>でのdata: URLの使用
+
+    :1: 許可する
+
+    ABOUT_CONFIG
+
+    - `svg.use-element.data-url-href.allowed` の値が `true` である。
+
+    :2: 禁止する（既定）
+
+    ABOUT_CONFIG
+
+    - `svg.use-element.data-url-href.allowed` の値が `false` である。
+
