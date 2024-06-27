@@ -281,6 +281,14 @@ Ui-14: 組み込みのPDFビューワー上での編集操作の可否
         "Value": -1,
         "Status": "locked"
       },
+      "pdfjs.enableStampEditor": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "pdfjs.enableHighlightEditor": {
+        "Value": false,
+        "Status": "locked"
+      },
       ...
     },
 
