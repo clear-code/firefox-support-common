@@ -537,3 +537,9 @@ MenuShortcut-66: アプリケーションメニュー＞動作しないサイト
     カテゴリ「Firefox」
     → 「Disable Feedback Commands」を有効化
 
+MenuShortcut-67: リンク上のコンテキストメニュー＞サイト追跡を除いたリンクをコピー
+
+    :1: 無効化する
+
+    *.cfg / *.jsc:
+    lockPref("privacy.query_stripping.strip_on_share.enabled", false);
