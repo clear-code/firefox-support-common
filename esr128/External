@@ -72,3 +72,25 @@ External-2: 外部アプリケーションで開くためにダウンロード�
       },
       ...
     },
+
+External-3: Webメールサービスをmailtoリンクの既定のハンドラーとして設定した際に、システム既定のメールクライアントとして設定するかどうか
+
+    :1: 設定する（既定）
+
+    -
+
+    :2: 設定しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.mailto.prompt.os": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
