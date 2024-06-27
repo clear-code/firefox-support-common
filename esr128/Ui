@@ -338,3 +338,28 @@ Ui-17: ファイル選択ダイアログの使用可否
     GPO:
     カテゴリ「Firefox」
     →「Allow File Selection Dialogs」を無効化する
+
+Ui-18: コンテナー機能のUIを表示する
+
+    :1: 機能を有効化し、UIを表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "privacy.userContext.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "privacy.userContext.ui.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :1: 機能を無効化し、UIを隠す（既定）
+
+    -
