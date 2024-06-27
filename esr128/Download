@@ -266,3 +266,24 @@ Download-6: 未知の種類のファイルのダウンロード時の既定の�
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Download-7: Content-Dispositionヘッダーに基づいて、PDFのダウンロード用リンクなどのクリック時に、プレビューしてからダウンロードするかどうか
+
+    :1: プレビューしてからダウンロードする（既定）
+
+    -
+
+    :2: プレビューせずダウンロードする
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.force_save_internally_handled_attachments": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
