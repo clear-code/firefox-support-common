@@ -270,3 +270,17 @@ Ui-16: 印刷機能の使用可否
     - 印刷操作を試みる。
     - **確認**
         - 印刷を行えない。
+
+Ui-17: ファイル選択ダイアログの使用可否
+
+    :1: ファイル選択を許可する（既定）
+
+    ABOUT_POLICIES
+
+    - `AllowFileSelectionDialogs` が存在しない。
+
+    :2: ファイル選択を禁止する
+
+    ABOUT_POLICIES
+
+    - `AllowFileSelectionDialogs` の値が `false` である。
