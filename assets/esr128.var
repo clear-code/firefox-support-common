@@ -1,0 +1,36 @@
+#
+# 検証手順書用設定ファイル
+#
+
+firefox_version:                128.0 ESR
+windows_version:                Windows 11
+configuration_sheet_name:       configs.xlsx
+use_meta_installer:             true
+meta_installer_name:            DemoFxMetaInstaller
+meta_installer_file_name:       DemoFxMetaInstaller
+meta_installer_version:         128.0
+special_profile_path:           %AppData%\Mozilla\Firefox\Profiles
+special_profile_name:           Special
+home_page:                      about:blank
+download_dir:                   C:\Users\（ユーザー名）\Downloads
+proxy_host:                     10.0.0.1
+proxy_auth_user:                clearcode
+pac_url:                        file:///c:/Program Files (x86)/Mozilla%20Firefox/proxy.pac
+pac_url_setup:                  file:///c:/Program Files (x86)/Mozilla%20Firefox/proxy.pac
+max_connections:                       96
+max_persistent_connections_per_server: 6
+max_persistent_connections_per_proxy:  32
+max_pipelining_requests:               8
+dns_disable_prefetch:               false
+imported_certs:                 Test Cert
+
+# 未使用
+install_path_32bit:
+desktop_shortcut_path_32bit:
+start_menu_shortcut_path_32bit:
+
+COVER:
+
+    % Firefoxカスタマイズ内容の検証手順
+    % 株式会社クリアコード
+    % 2024年7月

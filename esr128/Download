@@ -1,0 +1,310 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Download-1: ダウンロードマネージャの利用の可否
+
+    :1: 利用する（既定）
+
+    -
+
+    :2: 利用しない
+
+    [廃止]
+    Firefox 31時点で機能が廃止されたためカスタマイズ不可能。
+    ダウンロードボタンの機能を可能な限り無効化する設定は以下の通り。
+
+    Firefoxを起動後にbrowser.uiCustomization.stateの値を採取し、「downloads-button」を配置済み項目の中から取り除いた値を、browser.uiCustomization.stateの値として設定する。
+    ツールバーの変更を許容する場合は、browser.uiCustomization.stateは*.cfgまたは*.jscで以下の要領で適用する。
+    （Appearance-2-2を設定する場合、その内容も反映する。）
+
+    *.cfg / *.jsc:
+    {
+      const setAsUserValueOncePerModification = (key, value) => {
+        const statusKey = `browser.policies.runOncePerModification.${key}`;
+        const oldValue = getPref(statusKey);
+        if (value === oldValue)
+          return;
+        pref(statusKey, value);
+        pref(key, value);
+      };
+      setAsUserValueOncePerModification("browser.uiCustomization.state", JSON.stringify({...}));
+      setAsUserValueOncePerModification("browser.migration.version", 137);
+      // この指定が無いと「ホーム」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.home-button.has-used", true);
+      // この指定が無いと「ブラウジングライブラリー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.library-button.has-used", true);
+      // この指定が無いと「サイドバー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.sidebar-button.has-used", true);
+    }
+
+    また、以下のポリシー設定も併用する。
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.manager.addToRecentDocs": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.download.panel.shown": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    ツールバーの変更を許容しない場合は、以下の要領でポリシー設定を適用する。
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.manager.addToRecentDocs": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.download.panel.shown": {
+        "Value": true,
+        "Status": "locked"
+      },
+      "browser.uiCustomization.state": {
+        "Value": "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"home-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"customizableui-special-spring2\",\"library-button\",\"sidebar-button\",\"fxa-toolbar-menu-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"toolbar-menubar\",\"TabsToolbar\",\"PersonalToolbar\"],\"currentVersion\":16,\"newElementCount\":3}",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Download-2: ファイルの既定のダウンロード先
+
+    :1: [廃止] 指定する：任意（MCD）
+
+    [廃止]
+
+    :4: 指定する：任意
+
+    // ホームディレクトリを指すプレースホルダとして ${home} を使用可能
+
+    distribution\policies.json:
+    "DefaultDownloadDirectory": "（ディレクトリのパス）",
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Default Download Directory」を有効化し、オプションでパスを指定
+
+    :5: 指定する：任意の場所に固定
+
+    // ホームディレクトリを指すプレースホルダとして ${home} を使用可能
+
+    distribution\policies.json:
+    "DownloadDirectory": "（ディレクトリのパス）",
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Download Directory」を有効化し、オプションでパスを指定
+
+    :2: 指定する：デスクトップ
+
+    *.cfg / *.jsc:
+    defaultPref("browser.open.lastDir", `${getenv("USERPROFILE")}\\Desktop`);
+    pref("browser.download.lastDir", "");
+    pref("browser.download.folderList", 0);
+
+    :3: 指定しない（既定）
+
+    -
+
+Download-3: ファイルのダウンロード先ディレクトリの制御
+
+    :1: 全体で共通のディレクトリにダウンロードする
+
+    *.cfg / *.jsc:
+    lockPref("browser.download.useDownloadDir", true);
+    lockPref("browser.download.lastDir.savePerSite", false);
+
+    distribution\policies.json:
+    "PromptForDownloadLocation": false,
+    "Preferences": {
+      "browser.download.lastDir.savePerSite": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Prompt for download location」を無効化
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: サイトごとにダウンロード先ディレクトリを保持する（既定）
+
+    *.cfg / *.jsc:
+    lockPref("browser.download.useDownloadDir", true);
+    lockPref("browser.download.lastDir.savePerSite", true);
+
+    distribution\policies.json:
+    "PromptForDownloadLocation": false,
+    "Preferences": {
+      "browser.download.lastDir.savePerSite": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Prompt for download location」を無効化
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: [廃止] ダウンロード先を固定せず、常にユーザに選択させる（MCD）
+
+    [廃止]
+
+    :4: ダウンロード先を固定せず、常にユーザに選択させる
+
+    distribution\policies.json:
+    "PromptForDownloadLocation": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Prompt for download location」を有効化
+
+
+Download-4: 安全なWebサイトからの安全でないダウンロード、制限コンテンツからのダウンロードの自動ブロック
+
+    :1: ブロックする（既定）
+
+    *.cfg / *.jsc:
+    lockPref("dom.block_download_insecure", true);
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.block_download_insecure": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: ブロックしない
+
+    *.cfg / *.jsc:
+    lockPref("dom.block_download_insecure", false);
+
+    distribution\policies.json:
+    "PromptForDownloadLocation": false,
+    "Preferences": {
+      "dom.block_download_insecure": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+
+Download-5: [廃止] Firefox 98以前からの移行時における、ファイルの種類ごとの取り扱い
+
+    :1: [廃止] 「毎回選択する」を既定の挙動に戻す（既定）
+
+    -
+
+    :2: [廃止] 何もしない
+
+    [廃止]
+
+Download-6: 未知の種類のファイルのダウンロード時の既定の挙動
+
+    :1: ファイルを保存する（既定）
+
+    *.cfg / *.jsc:
+    lockPref("browser.download.always_ask_before_handling_new_types", false);
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.always_ask_before_handling_new_types": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: ファイルを開くか保存するかを確認する
+
+    *.cfg / *.jsc:
+    lockPref("browser.download.always_ask_before_handling_new_types", true);
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.always_ask_before_handling_new_types": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Download-7: Content-Dispositionヘッダーに基づいて、PDFのダウンロード用リンクなどのクリック時に、プレビューしてからダウンロードするかどうか
+
+    :1: プレビューしてからダウンロードする（既定）
+
+    -
+
+    :2: プレビューせずダウンロードする
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.download.force_save_internally_handled_attachments": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Download-8: 信頼できないURLからのファイルのダウンロードの遮断
+
+    :1: 遮断する（既定）
+
+    -
+
+    :2: 遮断しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.block_download_insecure": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
