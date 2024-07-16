@@ -42,8 +42,6 @@ Privacy-1: 履歴の保存（永続化）の可否
     "SanitizeOnShutdown": {
       "Cache": true,
       "Cookies": true,
-      "Downloads": true,
-      "FormData": true,
       "History": true,
       "Sessions": true,
       "SiteSettings": true,
