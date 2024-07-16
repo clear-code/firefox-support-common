@@ -2093,3 +2093,24 @@ Privacy-70: 「Do Not Sell」ヘッダの送出の可否
     :2: 送出しない（既定）
 
     -
+
+Privacy-71: Privacy Preserving Attribution APIの有効化
+
+    :1: 一部のWebサイトで有効化する（既定）
+
+    -
+
+    :2: 無効化する
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.private-attribution.submission.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
