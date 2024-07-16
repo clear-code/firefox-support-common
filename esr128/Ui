@@ -368,6 +368,6 @@ Ui-18: コンテナー機能のUIを表示する
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :1: 機能を無効化し、UIを隠す（既定）
+    :2: 機能を無効化し、UIを隠す（既定）
 
     -
