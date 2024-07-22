@@ -551,7 +551,7 @@ MenuShortcut-68: 設定＞一般＞一般＞起動＞Firefoxを既定のブラ�
     distribution\policies.json:
     "Preferences": {
       "pref.general.disable_button.default_browser": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -568,15 +568,15 @@ MenuShortcut-69: 設定＞一般＞言語と外観＞言語＞言語設定＞上
     distribution\policies.json:
     "Preferences": {
       "pref.browser.language.disable_button.up": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       "pref.browser.language.disable_button.down": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       "pref.browser.language.disable_button.remove": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -593,7 +593,7 @@ MenuShortcut-70: 設定＞一般＞ファイルとプログラム＞プログラ
     distribution\policies.json:
     "Preferences": {
       "pref.downloads.disable_button.edit_actions": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -610,7 +610,7 @@ MenuShortcut-71: 設定＞一般＞Firefoxの更新＞更新履歴を表示
     distribution\policies.json:
     "Preferences": {
       "app.update.disable_button.showUpdateHistory": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -627,7 +627,7 @@ MenuShortcut-72: 設定＞一般＞ネットワーク設定＞接続設定＞自
     distribution\policies.json:
     "Preferences": {
       "pref.advanced.proxies.disable_button.reload": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -644,7 +644,7 @@ MenuShortcut-73: 設定＞ホーム＞新しいウィンドウとタブ＞カス
     distribution\policies.json:
     "Preferences": {
       "pref.browser.homepage.disable_button.current_page": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -661,7 +661,7 @@ MenuShortcut-74: 設定＞ホーム＞新しいウィンドウとタブ＞カス
     distribution\policies.json:
     "Preferences": {
       "pref.browser.homepage.disable_button.bookmark_page": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -678,7 +678,7 @@ MenuShortcut-75: 設定＞ホーム＞既定値に戻す
     distribution\policies.json:
     "Preferences": {
       "pref.browser.homepage.disable_button.restore_default": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -695,7 +695,7 @@ MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウザ
     distribution\policies.json:
     "Preferences": {
       "pref.privacy.disable_button.tracking_protection_exceptions": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -712,7 +712,7 @@ MenuShortcut-77: 設定＞プライバシーとセキュリティ＞ブラウザ
     distribution\policies.json:
     "Preferences": {
       "pref.privacy.disable_button.cookie_exceptions": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -729,7 +729,7 @@ MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザ
     distribution\policies.json:
     "Preferences": {
       "pref.privacy.disable_button.view_passwords_exceptions": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -746,7 +746,7 @@ MenuShortcut-79: 設定＞プライバシーとセキュリティ＞ブラウザ
     distribution\policies.json:
     "Preferences": {
       "pref.privacy.disable_button.view_passwords": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -763,7 +763,7 @@ MenuShortcut-80: 設定＞プライバシーとセキュリティ＞セキュリ
     distribution\policies.json:
     "Preferences": {
       "security.disable_button.openCertManager": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -780,7 +780,7 @@ MenuShortcut-81: 設定＞プライバシーとセキュリティ＞セキュリ
     distribution\policies.json:
     "Preferences": {
       "security.disable_button.openDeviceManager": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
@@ -797,7 +797,7 @@ MenuShortcut-82: 文字列選択時のコンテキストメニュー＞選択範
     distribution\policies.json:
     "Preferences": {
       "browser.translations.select.enable": {
-        "Value": false,
+        "Value": true,
         "Status": "locked"
       },
       ...
