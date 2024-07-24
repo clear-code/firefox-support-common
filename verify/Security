@@ -409,7 +409,7 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     - ポリシー設定から `BlockAboutAddons` を削除し、アドオンマネージャを一時的に有効化しておく。
       {% endif %}{% endif %}
       {%if UsePACFile %}
-    - プロキシ自動設定スクリプトを参照できない環境で検証する場合、「Network-2-3」または「Network-2-8」でのPACファイルの参照先URLを `data:application/javascript,` と設定する。
+    - プロキシ自動設定スクリプトを参照できない環境で検証する場合、{%if Network_2_3 %}「Network-2-3」{%if Network_2_8 %}または「Network-2-8」{% endif %}での{% endif %}{% else %}{%if Network_2_8 %}「Network-2-8」での{% endif %}{% endif %}PACファイルの参照先URLを `data:application/javascript,` と設定する。
       {% endif %}
     - Firefoxを起動する。
     - `about:profiles` または `about:support` から、現在のユーザープロファイルフォルダを開く。
