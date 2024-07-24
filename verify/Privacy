@@ -1071,34 +1071,19 @@ Privacy-37: ネットワーク経由での先読み機能の全般的な制御
     - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
       {% endif %}
       {%if Privacy_32_1 or Privacy_32_2 %}
-    - {% if Privacy_32_1 %}Privacy-32-1 {% if Privacy_32_2 %}または Privacy-32-2{% endif %}{% else %}{% if Privacy_32_2 %}Privacy-32-2{% endif %}{% endif %} の検証を実施した場合、その時に収集したログを用意する。
-      未実施の場合、以下の手順でログを用意する。
-        - MCD設定ファイルに以下の設定を追加しておく。
-            - `lockPref("logging.nsHttp", 5);`
-            - `lockPref("logging.NetworkPredictor", 5);`
-            - `lockPref("logging.config.sync", true);`
-            - `lockPref("logging.config.add_timestamp", true);`
-            - `lockPref("logging.config.LOG_FILE","C:\\Users\\Public\\http.log");`
-        - `C:\Users\Public\http.log-*` を全て削除しておく。
-        - Firefoxを起動する。
-        - `https://www.clear-code.com/blog/` を開く。
-        - 記事の個別ページを10ページほど訪問する。
-        - Firefoxを終了する。
-        - MCD設定ファイルに追加した設定を削除または無効化する。
-      {% else %}
     - MCD設定ファイルに以下の設定を追加しておく。
-        - `lockPref("logging.nsHttp", 5);`
-        - `lockPref("logging.NetworkPredictor", 5);`
-        - `lockPref("logging.config.sync", true);`
-        - `lockPref("logging.config.add_timestamp", true);`
-        - `lockPref("logging.config.LOG_FILE","C:\\Users\\Public\\http.log");`
+      
+          lockPref("logging.nsHttp", 5);
+          lockPref("logging.NetworkPredictor", 5);
+          lockPref("logging.config.sync", true);
+          lockPref("logging.config.add_timestamp", true);
+          lockPref("logging.config.LOG_FILE","C:\\Users\\Public\\http.log");
     - `C:\Users\Public\http.log-*` を全て削除しておく。
     - Firefoxを起動する。
     - `https://www.clear-code.com/blog/` を開く。
     - 記事の個別ページを10ページほど訪問する。
     - Firefoxを終了する。
     - MCD設定ファイルに追加した設定を削除または無効化する。
-      {% endif %}
     - Firefoxを起動する。
     - テストケースの `httplog.html` を開き、スクリプトをコピーする。
     - `C:\Users\Public\http.log` の位置に出力されているログファイル（複数ある場合はサイズが最も大きい物）をFirefoxで開く。
@@ -1124,34 +1109,19 @@ Privacy-37: ネットワーク経由での先読み機能の全般的な制御
     - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
       {% endif %}
       {%if Privacy_32_1 or Privacy_32_2 %}
-    - {% if Privacy_32_1 %}Privacy-32-1 {% if Privacy_32_2 %}または Privacy-32-2{% endif %}{% else %}{% if Privacy_32_2 %}Privacy-32-2{% endif %}{% endif %} の検証を実施した場合、その時に収集したログを用意する。
-      未実施の場合、以下の手順でログを用意する。
-        - MCD設定ファイルに以下の設定を追加しておく。
-            - `lockPref("logging.nsHttp", 5);`
-            - `lockPref("logging.NetworkPredictor", 5);`
-            - `lockPref("logging.config.sync", true);`
-            - `lockPref("logging.config.add_timestamp", true);`
-            - `lockPref("logging.config.LOG_FILE","C:\\Users\\Public\\http.log");`
-        - `C:\Users\Public\http.log-*` を全て削除しておく。
-        - Firefoxを起動する。
-        - `https://www.clear-code.com/blog/` を開く。
-        - 記事の個別ページを10ページほど訪問する。
-        - Firefoxを終了する。
-        - MCD設定ファイルに追加した設定を削除または無効化する。
-      {% else %}
     - MCD設定ファイルに以下の設定を追加しておく。
-        - `lockPref("logging.nsHttp", 5);`
-        - `lockPref("logging.NetworkPredictor", 5);`
-        - `lockPref("logging.config.sync", true);`
-        - `lockPref("logging.config.add_timestamp", true);`
-        - `lockPref("logging.config.LOG_FILE","C:\\Users\\Public\\http.log");`
+      
+          lockPref("logging.nsHttp", 5);
+          lockPref("logging.NetworkPredictor", 5);
+          lockPref("logging.config.sync", true);
+          lockPref("logging.config.add_timestamp", true);
+          lockPref("logging.config.LOG_FILE","C:\\Users\\Public\\http.log");
     - `C:\Users\Public\http.log-*` を全て削除しておく。
     - Firefoxを起動する。
     - `https://www.clear-code.com/blog/` を開く。
     - 記事の個別ページを10ページほど訪問する。
     - Firefoxを終了する。
     - MCD設定ファイルに追加した設定を削除または無効化する。
-      {% endif %}
     - Firefoxを起動する。
     - テストケースの `httplog.html` を開き、スクリプトをコピーする。
     - `C:\Users\Public\http.log` の位置に出力されているログファイル（複数ある場合はサイズが最も大きい物）をFirefoxで開く。
