@@ -641,6 +641,8 @@ MenuShortcut-73: 設定＞ホーム＞新しいウィンドウとタブ＞カス
 
     :1: 無効化する
 
+    Startup-2-4が反映されている場合は設定不要。
+
     distribution\policies.json:
     "Preferences": {
       "pref.browser.homepage.disable_button.current_page": {
@@ -658,6 +660,8 @@ MenuShortcut-74: 設定＞ホーム＞新しいウィンドウとタブ＞カス
 
     :1: 無効化する
 
+    Startup-2-4が反映されている場合は設定不要。
+
     distribution\policies.json:
     "Preferences": {
       "pref.browser.homepage.disable_button.bookmark_page": {
@@ -674,6 +678,8 @@ MenuShortcut-74: 設定＞ホーム＞新しいウィンドウとタブ＞カス
 MenuShortcut-75: 設定＞ホーム＞既定値に戻す
 
     :1: 無効化する
+
+    Startup-2-4が反映されている場合は設定不要。
 
     distribution\policies.json:
     "Preferences": {
@@ -742,6 +748,8 @@ MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザ
 MenuShortcut-79: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞保存されたパスワード
 
     :1: 無効化する
+
+    Privacy-5-3またはPrivacy-5-4が反映されている場合は設定不要。
 
     distribution\policies.json:
     "Preferences": {
