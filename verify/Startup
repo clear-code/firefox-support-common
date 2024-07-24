@@ -326,6 +326,9 @@ Startup-17: 既定のブラウザーとして設定する場面で、既定のPD
 
     :1: 登録する（既定）
 
+    {％if MenuShortcut_68_1 %}
+    - ポリシー設定から MenuShortcut-68 の `pref.general.disable_button.default_browser` の定義を削除し、「既定のブラウザーにする」ボタンを一時的に有効化しておく。
+      {% endif %}
     - Microsoft Edge、Google Chromeなど、Firefox以外のブラウザーをシステム既定のブラウザーに設定する。
     - Windowsの設定で、PDFファイルの関連付けをFirefox以外に設定しておく。
         - Windows 11の場合：「アプリ」→「既定のアプリ」→「ファイルの種類又はリンクの種類の既定値を設定する」で「.pdf」を検索し、表示された項目が「Firefox」になっていた場合、別のアプリケーションに変更する。
@@ -340,9 +343,15 @@ Startup-17: 既定のブラウザーとして設定する場面で、既定のPD
         - Windows 10の場合：「アプリ」→「既定のアプリ」→「ファイルの種類ごとに既定のアプリを選ぶ」で「.pdf」を検索し、表示された項目の関連付けを確認する。
     - **確認**
         - Firefoxに「.pdf」が関連付けられている。
+      {%if MenuShortcut_68_1 %}
+    - ポリシー設定から一時的に削除した `pref.general.disable_button.default_browser` の定義を元に戻す。
+      {% endif %}
 
     :2: 登録しない
 
+    {％if MenuShortcut_68_1 %}
+    - ポリシー設定から MenuShortcut-68 の `pref.general.disable_button.default_browser` の定義を削除し、「既定のブラウザーにする」ボタンを一時的に有効化しておく。
+      {% endif %}
     - Microsoft Edge、Google Chromeなど、Firefox以外のブラウザーをシステム既定のブラウザーに設定する。
     - Windowsの設定で、PDFファイルの関連付けをFirefox以外に設定しておく。
         - Windows 11の場合：「アプリ」→「既定のアプリ」→「ファイルの種類又はリンクの種類の既定値を設定する」で「.pdf」を検索し、表示された項目が「Firefox」になっていた場合、別のアプリケーションに変更する。
@@ -357,3 +366,6 @@ Startup-17: 既定のブラウザーとして設定する場面で、既定のPD
         - Windows 10の場合：「アプリ」→「既定のアプリ」→「ファイルの種類ごとに既定のアプリを選ぶ」で「.pdf」を検索し、表示された項目の関連付けを確認する。
     - **確認**
         - Firefoxに「.pdf」が関連付けられておらず、別のアプリケーションが関連付けられている。
+      {%if MenuShortcut_68_1 %}
+    - ポリシー設定から一時的に削除した `pref.general.disable_button.default_browser` の定義を元に戻す。
+      {% endif %}
