@@ -190,7 +190,7 @@ Tab-9: 新しいタブを開く操作の高速化
 
     ABOUT_CONFIG
 
-    - `browser.newtab.preload` の値がユーザー設定値の `false` であるか、`false` にロックされている。
+    - `browser.newtab.preload` の値がユーザー設定値の `false` である。
 
 Tab-10: 検索バーの表示
 
