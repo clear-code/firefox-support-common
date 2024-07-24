@@ -561,32 +561,7 @@ MenuShortcut-68: 設定＞一般＞一般＞起動＞Firefoxを既定のブラ�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-69: 設定＞一般＞言語と外観＞言語＞言語設定＞上へ/下へ/削除
-
-    :1: 無効化する
-
-    distribution\policies.json:
-    "Preferences": {
-      "pref.browser.language.disable_button.up": {
-        "Value": true,
-        "Status": "locked"
-      },
-      "pref.browser.language.disable_button.down": {
-        "Value": true,
-        "Status": "locked"
-      },
-      "pref.browser.language.disable_button.remove": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
-MenuShortcut-70: 設定＞一般＞ファイルとプログラム＞プログラム＞ファイルの種類と取り扱い方法の一覧
+MenuShortcut-69: 設定＞一般＞ファイルとプログラム＞プログラム＞ファイルの種類と取り扱い方法の一覧
 
     :1: 無効化する
 
@@ -603,7 +578,7 @@ MenuShortcut-70: 設定＞一般＞ファイルとプログラム＞プログラ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-71: 設定＞一般＞Firefoxの更新＞更新履歴を表示
+MenuShortcut-70: 設定＞一般＞Firefoxの更新＞更新履歴を表示
 
     :1: 無効化する
 
@@ -620,7 +595,7 @@ MenuShortcut-71: 設定＞一般＞Firefoxの更新＞更新履歴を表示
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-72: 設定＞一般＞ネットワーク設定＞接続設定＞自動プロキシー設定スクリプト＞再読み込み
+MenuShortcut-71: 設定＞一般＞ネットワーク設定＞接続設定＞自動プロキシー設定スクリプト＞再読み込み
 
     :1: 無効化する
 
@@ -637,7 +612,7 @@ MenuShortcut-72: 設定＞一般＞ネットワーク設定＞接続設定＞自
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-73: 設定＞ホーム＞新しいウィンドウとタブ＞カスタムURL選択時の「現在のタブグループを使う」
+MenuShortcut-72: 設定＞ホーム＞新しいウィンドウとタブ＞カスタムURL選択時の「現在のページを使用」「現在のタブグループを使用」
 
     :1: 無効化する
 
@@ -656,7 +631,7 @@ MenuShortcut-73: 設定＞ホーム＞新しいウィンドウとタブ＞カス
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-74: 設定＞ホーム＞新しいウィンドウとタブ＞カスタムURL選択時の「ブックマークを使う」
+MenuShortcut-73: 設定＞ホーム＞新しいウィンドウとタブ＞カスタムURL選択時の「ブックマークを使う」
 
     :1: 無効化する
 
@@ -675,7 +650,7 @@ MenuShortcut-74: 設定＞ホーム＞新しいウィンドウとタブ＞カス
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-75: 設定＞ホーム＞既定値に戻す
+MenuShortcut-74: 設定＞ホーム＞既定値に戻す
 
     :1: 無効化する
 
@@ -694,7 +669,7 @@ MenuShortcut-75: 設定＞ホーム＞既定値に戻す
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞強化型トラッキング防止機能＞例外を管理
+MenuShortcut-75: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞強化型トラッキング防止機能＞例外を管理
 
     :1: 無効化する
 
@@ -711,7 +686,7 @@ MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-77: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞Cookieとサイトデータ＞例外を管理
+MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞Cookieとサイトデータ＞例外を管理
 
     :1: 無効化する
 
@@ -728,7 +703,7 @@ MenuShortcut-77: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞例外サイト
+MenuShortcut-77: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞例外サイト
 
     :1: 無効化する
 
@@ -745,7 +720,7 @@ MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-79: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞保存されたパスワード
+MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞保存されたパスワード
 
     :1: 無効化する
 
@@ -764,7 +739,7 @@ MenuShortcut-79: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-80: 設定＞プライバシーとセキュリティ＞セキュリティ＞証明書＞証明書を表示
+MenuShortcut-79: 設定＞プライバシーとセキュリティ＞セキュリティ＞証明書＞証明書を表示
 
     :1: 無効化する
 
@@ -781,7 +756,7 @@ MenuShortcut-80: 設定＞プライバシーとセキュリティ＞セキュリ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-81: 設定＞プライバシーとセキュリティ＞セキュリティ＞証明書＞セキュリティデバイス
+MenuShortcut-80: 設定＞プライバシーとセキュリティ＞セキュリティ＞証明書＞セキュリティデバイス
 
     :1: 無効化する
 
@@ -798,7 +773,7 @@ MenuShortcut-81: 設定＞プライバシーとセキュリティ＞セキュリ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-82: 文字列選択時のコンテキストメニュー＞選択範囲を～に翻訳
+MenuShortcut-81: 文字列選択時のコンテキストメニュー＞選択範囲を～に翻訳
 
     :1: 無効化する
 
