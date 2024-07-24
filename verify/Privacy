@@ -1070,7 +1070,6 @@ Privacy-37: ネットワーク経由での先読み機能の全般的な制御
       {%if DisableDeveloperTools %}
     - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
       {% endif %}
-      {%if Privacy_32_1 or Privacy_32_2 %}
     - MCD設定ファイルに以下の設定を追加しておく。
       
           lockPref("logging.nsHttp", 5);
@@ -1108,7 +1107,6 @@ Privacy-37: ネットワーク経由での先読み機能の全般的な制御
     {%if DisableDeveloperTools %}
     - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
       {% endif %}
-      {%if Privacy_32_1 or Privacy_32_2 %}
     - MCD設定ファイルに以下の設定を追加しておく。
       
           lockPref("logging.nsHttp", 5);
