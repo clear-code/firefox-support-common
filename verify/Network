@@ -115,16 +115,16 @@ Network-5: HTTPの同時接続数
     ABOUT_CONFIG
 
     - `network.http.max-connections` の値が `900` である。
-    - `network.http.max-persistent-connections-per-server` の値が `6` である。
     - `network.http.max-persistent-connections-per-proxy` の値が `32` である。
+    - `network.http.max-persistent-connections-per-server` の値が `6` である。
 
     :2: トラフィックを抑える事を優先
 
     ABOUT_CONFIG
 
     - `network.http.max-connections` の値が `{{max_connections}}` である。
-    - `network.http.max-persistent-connections-per-server` の値が `{{max_persistent_connections_per_server}}` である。
     - `network.http.max-persistent-connections-per-proxy` の値が `{{max_persistent_connections_per_proxy}}` である。
+    - `network.http.max-persistent-connections-per-server` の値が `{{max_persistent_connections_per_server}}` である。
 
 Network-6: SPDYプロトコルの使用の可否
 
