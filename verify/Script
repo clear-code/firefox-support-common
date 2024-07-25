@@ -449,19 +449,15 @@ Script-25: WebRTCのRTCRtpSender.getParameters()、RTCRtpSender.setParameters()�
 
     - `media.peerconnection.allow_old_setParameters` の値が `true` である。
 
-Script-26: リッチテキストエディターの振る舞い
+Script-26: [廃止] リッチテキストエディターの振る舞い
 
-    :1: 他のブラウザーと互換性のある動作（既定）
+    :1: [廃止] 他のブラウザーと互換性のある動作（既定）
 
-    ABOUT_CONFIG
+    [廃止]
 
-    - `editor.join_split_direction.compatible_with_the_other_browsers` の値が `true` である。
+    :2: [廃止] 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
 
-    :2: 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
-
-    ABOUT_CONFIG
-
-    - `editor.join_split_direction.compatible_with_the_other_browsers` の値が `false` である。
+    [廃止]
 
 Script-27: Total Cookie Protectionが有効な状態での、サードパーティのコンテキストでのService Workerの使用
 
