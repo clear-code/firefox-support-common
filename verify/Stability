@@ -46,7 +46,7 @@ Stability-3: RDPでの音声再生の有効化
 
     ABOUT_CONFIG
 
-    - `security.sandbox.content.level` の値が `5` である。
+    - `security.sandbox.content.level` の値が `7` である。
 
     :2: 有効化する
 
