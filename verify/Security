@@ -1318,7 +1318,7 @@ Security-63: TLSのポスト量子鍵共有機能の使用可否
 
     ABOUT_POLICIES
 
-    - `PostQuantumKeyAgreementEnabled` の値が `true` である。
+    - `PostQuantumKeyAgreementEnabled` の値が存在しないか、`true` である。
 
     :2: 使用しない（既定）
 
