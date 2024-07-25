@@ -528,18 +528,12 @@ Network-32: クライアント認証でのRSA-PSSの使用
 
     - `security.osclientcerts.assume_rsa_pss_support` の値が `false` である。
 
-Network-33: クロスオリジンのリダイレクトでのAuthorizationヘッダーの引き継ぎ
+Network-33: [廃止] クロスオリジンのリダイレクトでのAuthorizationヘッダーの引き継ぎ
 
-    :1: 安全を優先し、引き継がない（既定）
+    :1: [廃止] 安全を優先し、引き継がない（既定）
 
-    ABOUT_CONFIG
+    [廃止]
 
-    - `network.http.redirect.stripAuthHeader` の値が `true` である。
-    - `network.fetch.redirect.stripAuthHeader` の値が `true` である。
+    :2: [廃止] 互換性を優先し、引き継ぐ
 
-    :2: 互換性を優先し、引き継ぐ
-
-    ABOUT_CONFIG
-
-    - `network.http.redirect.stripAuthHeader` の値が `false` である。
-    - `network.fetch.redirect.stripAuthHeader` の値が `false` である。
+    [廃止]
