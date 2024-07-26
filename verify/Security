@@ -1318,13 +1318,13 @@ Security-63: TLSのポスト量子鍵共有機能の使用可否
 
     ABOUT_POLICIES
 
-    - `PostQuantumKeyAgreementEnabled` の値が存在しないか、`true` である。
+    - `PostQuantumKeyAgreementEnabled` の値が `true` である。
 
     :2: 使用しない（既定）
 
     ABOUT_POLICIES
 
-    - `PostQuantumKeyAgreementEnabled` の値が `false` である。
+    - `PostQuantumKeyAgreementEnabled` の値が存在しないか、`false` である。
 
 Security-64: Firefox 126以前向けの古い署名を含むアドオンのXPIパッケージの使用可否
 
