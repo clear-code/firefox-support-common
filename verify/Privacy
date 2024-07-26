@@ -1126,8 +1126,9 @@ Privacy-37: ネットワーク経由での先読み機能の全般的な制御
     - 「Ctrl-Shift-K」でコンソールを開く。
     - コピーしたスクリプトを貼り付けて、実行する。
     - **確認**
-        - コンソールに出力された「success」と「fail」の値の合計が0でない。
-        - コンソールに「All cancelled? true」と出力される。
+        - コンソールに「Predictor module is disabled.」と出力される。もしくは、以下の2つの条件を両方とも満たすログが出力されている。
+           - コンソールに出力された「success」と「fail」の値の合計が0でない。
+           - コンソールに「All cancelled? true」と出力される。
       {%if DisableDeveloperTools %}
     - ポリシー設定から一時的に削除した `DisableDeveloperTools` を元に戻す。
       {% endif %}

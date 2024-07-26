@@ -26,11 +26,17 @@ var skipped = text.match(/Transport not created due to existing connection count
 console.log({ requested: requested.length, skipped: skipped.length });
 console.log('All skipped?', requested.length == skipped.length);
 
-var prefetchText = text.match(/^.+D\/NetworkPredictor.+$/gm).join('\n');
-var success = prefetchText.match(/Predictor::Predict.*\n.*called on parent process.*\n.*not enabled/g) || [];
-var fail = prefetchText.match(/Predictor::Predict.*\n.*called on parent process/g) || [];
-console.log({ success: success.length, fail: fail.length });
-console.log('All cancelled?', success.length == fail.length);
+var prefetchLogs = text.match(/^.+D\/NetworkPredictor.+$/gm);
+if (!prefetchLogs) {
+  console.log('Predictor module is disabled.');
+}
+else {
+  let prefetchText = prefetchLogs.join('\n');
+  let success = prefetchText.match(/Predictor::Predict.*\n.*called on parent process.*\n.*not enabled/g) || [];
+  let fail = prefetchText.match(/Predictor::Predict.*\n.*called on parent process/g) || [];
+  console.log({ success: success.length, fail: fail.length });
+  console.log('All cancelled?', success.length == fail.length);
+}
 </pre>
 </body>
 </html>
