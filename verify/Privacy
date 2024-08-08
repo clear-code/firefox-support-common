@@ -1238,25 +1238,25 @@ Privacy-43: 「Do Not Track」ヘッダの送出の可否
 
     OPTIONS
 
-    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"信号を送り、追跡されたくないことを知らせます」の項目で「常に送る」が選択されていない。
+    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"要求を送る」チェックボックスがOFFである。
 
     :2: 常に送る
 
     OPTIONS
 
-    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"信号を送り、追跡されたくないことを知らせます」の項目で「常に送る」が選択されている。
+    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"要求を送る」チェックボックスがONである。
 
     :3: プライベートウィンドウのみ送出
 
     OPTIONS
 
-    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"信号を送り、追跡されたくないことを知らせます」の項目で「常に送る」以外が選択されている。
+    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"要求を送る」チェックボックスがOFFである。
 
     :4: 送出しない
 
     OPTIONS
 
-    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"信号を送り、追跡されたくないことを知らせます」の項目で「常に送る」以外が選択されている。
+    - 「プライバシーとセキュリティ」→「ウェブサイトに"Do Not Track"要求を送る」チェックボックスがOFFである。
 
 Privacy-44: 通常モードでのリファラの通知ポリシー
 
@@ -1677,7 +1677,7 @@ Privacy-60: サブリソースに対するリファラ通知ポリシーの緩�
            とオリジンのみが表示される。
     - `about:config` を開く。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - `network.http.referer.disallowCrossSiteRelaxingDefault` の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault` の値が `true` である。
     {% endif %}
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
@@ -1729,7 +1729,7 @@ Privacy-61: トップレベルのコンテンツに対するリファラ通知�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://labs.w0s.jp/http/referrer-policy/unsafe-url/` \
            と表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - `network.http.referer.disallowCrossSiteRelaxingDefault.top_naviagtion` の値が `false` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.top_naviagtion` の値が `false` である。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
       {% endif %}
@@ -1751,7 +1751,7 @@ Privacy-62: 厳格モードおよびプライベートブラウジング時の�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://piro.sakura.ne.jp/` \
            とオリジンのみが表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode` の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode` の値が `true` である。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
       {% endif %}
@@ -1800,7 +1800,7 @@ Privacy-63: 厳格モードおよびプライベートブラウジング時の�
         1. `https://whatsmyreferer.com/` を経由して `HTTP Referer : https://labs.w0s.jp/` \
            と表示される。
     - **確認(`https://whatsmyreferer.com`にアクセスできない場合)**
-        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode.top_navigation` の値が `true` で固定されている。
+        - `network.http.referer.disallowCrossSiteRelaxingDefault.pbmode.top_navigation` の値が `true` である。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
       {% endif %}

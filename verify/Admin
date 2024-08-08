@@ -10,6 +10,7 @@ Admin-0: 管理用設定の検証
         - 検証用ユーザーとして `{{meta_installer_file_name}}*.exe` を実行する。
         - 管理者権限を要求された場合は、`管理者`ユーザーで認証する。
     {% else %}再ログオン、インストーラの手動実行など、所定の手順でFirefoxのインストール及びカスタマイズを反映済みの状態とする。{% endif %}
+        - セットアップしたFirefoxで1. 事前準備の「検証環境のFirefox拡張機能とレジストリ情報の確認」を実施する
 
 Admin-1: 管理者による設定の制御
 
@@ -252,10 +253,10 @@ Admin-9: アドオンのアンインストール
 
     :2: アドオンを強制的にアンインストールする
 
-    - `policies.json`の`Extensions.Uninstall`またはグループポリシーの「Extension to Uninstall」によるカスタマイズを一旦無効化し、アドオンをアンインストールしない状態にする。
+    - `policies.json`の`ExtensionSettings`またはグループポリシーの「Extension to Uninstall」によるカスタマイズを一旦無効化し、アドオンをアンインストールしない状態にする。
     - アンインストール対象とする運用中のアドオンをインストールした状態にする。
       運用中のアドオンが無い場合は、{%if InstallAddonsPermission %}ポリシー設定から `InstallAddonsPermission` を削除して、アドオンのインストールを一時的に有効化した上で、{% endif %}テストケースの`{61FD08D8-A2CB-46c0-B36D-3F531AC53C12}.xpi`をインストールした状態にする。
-    - `policies.json`の`Extensions.Uninstall`またはグループポリシーの「Extension to Uninstall」によるカスタマイズを有効化する。
+    - `policies.json`の`ExtensionSettings`またはグループポリシーの「Extension to Uninstall」によるカスタマイズを有効化する。
     - Firefoxを起動する。
     - **確認**
         - アンインストールするよう指示したアドオンが削除されている。
