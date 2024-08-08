@@ -492,14 +492,13 @@ def create_template(manual, config, vars, options):
                 suffix = ' (%s)' % (option_id)
             config_list.append(re.sub(LIST_LINE_MATCHER, '\\1    \\2\\3', re.sub(LIST_ITEM_MATCHER, '\\1\\2\\3 %s' % (suffix), text)))
         if options['sort-about-config'] == 'pref':
-            config_list.sort()
-            template += '\n'.join(config_list)
+            template += '\n'.join(sort_by_ascii_part(config_list))
         elif options['sort-about-config'] == 'option':
             # Align by Install, Application, Admin...
             for key in chapter_about_config:
                 for line in config_list:
                     if re.search('\(%s\s?' % key, line):
-                        template += '\n'.join(config_list)
+                        template += '\n'.join(sort_by_ascii_part(config_list))
         template += TEMPLATE_ABOUT_CONFIG_END
         template += '\n'
         chapters['%s' % (first_level_chapter)] = chapter_about_config
@@ -507,13 +506,15 @@ def create_template(manual, config, vars, options):
 
     if items_about_policies:
         template += TEMPLATE_ABOUT_POLICIES
+        config_list = []
         for option_id, dependency, text in items_about_policies:
             if dependency:
                 suffix = ' (%s %s)' % (option_id, dependency)
             else:
                 suffix = ' (%s)' % (option_id)
-            template += re.sub(LIST_LINE_MATCHER, '\\1    \\2\\3', re.sub(LIST_ITEM_MATCHER, '\\1\\2\\3 %s' % (suffix), text))
-            template += '\n'
+            config_list.append(re.sub(LIST_LINE_MATCHER, '\\1    \\2\\3', re.sub(LIST_ITEM_MATCHER, '\\1\\2\\3 %s' % (suffix), text)))
+        template += '\n'.join(sort_by_ascii_part(config_list))
+        template += '\n'
         chapters['%s' % (first_level_chapter)] = chapter_about_policies
         first_level_chapter += 1
 
@@ -547,6 +548,9 @@ def create_template(manual, config, vars, options):
     vars['has_urls'] = len(urls) > 0
 
     return (template, chapters)
+
+def sort_by_ascii_part(strings):
+    return sorted(strings, key=lambda s: re.match(r'^\s*-\s*`?[a-zA-Z0-9\._\-]+', s).group())
 
 def extract_urls(input):
     all_extracted_urls = re.findall('(?P<url>https?://[^/(\s」`]+(?:[^(^\s`」][^\s`」]*)?)', input)
