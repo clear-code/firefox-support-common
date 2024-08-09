@@ -36,13 +36,13 @@ except ImportError:
 # GLOBALS
 
 DEFAULT_VAR = {
-    "firefox_version":                "128.0 ESR",
+    "firefox_version":                "128.1.0 ESR",
     "windows_version":                "Windows 10",
     "configuration_sheet_name":       "configs.xlsx",
     "use_meta_installer":             "true",
     "meta_installer_name":            "Fx Meta Installer",
     "meta_installer_file_name":       "FxMetaInstaller",
-    "meta_installer_version":         "128.0",
+    "meta_installer_version":         "128.1.0",
     "install_path_base":              "C:\\Program Files (x86)",
     "install_path_base_32bit":        "C:\\Program Files",
     "install_path":                   "C:\\Program Files (x86)\\Mozilla Firefox",
