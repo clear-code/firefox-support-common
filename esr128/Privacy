@@ -1227,7 +1227,7 @@ Privacy-42: Firefoxの新機能のテストへの参加の可否
 
 Privacy-43: 「Do Not Track」ヘッダの送出の可否
 
-    :1: トラッキング防止の使用時のみ(既定)
+    :1: プライベートウィンドウもしくはトラッキング防止「厳格」時に送出(既定)
 
     -
 
@@ -1236,15 +1236,13 @@ Privacy-43: 「Do Not Track」ヘッダの送出の可否
     *.cfg / *.jsc:
     lockPref("privacy.donottrackheader.enabled", true);
 
-    :3: プライベートウィンドウのみ送出
+    :3: [廃止] プライベートウィンドウのみ送出
 
-    *.cfg / *.jsc:
-    lockPref("privacy.trackingprotection.pbmode.enabled", true);
-    lockPref("privacy.donottrackheader.enabled", false);
+    [廃止]
 
     :4: 送出しない
 
-    Privacy-33-3も併せて設定する。
+    Privacy-33-5も併せて設定する。
     *.cfg / *.jsc:
     lockPref("privacy.donottrackheader.enabled", false);
     lockPref("privacy.trackingprotection.enabled", false);
