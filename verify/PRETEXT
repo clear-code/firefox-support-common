@@ -14,7 +14,9 @@ PRETEXT-1: 前提条件
 
     {%if use_meta_installer %}
     - メタインストーラの名称は `{{meta_installer_name}}`、ファイル名は `{{meta_installer_file_name}}` とする。
+    {%if Install_9_2 %}
     - メタインストーラの表示バージョンは {{meta_installer_version}} とする。
+    {% endif %}
     - Firefoxは次のパスにインストールする。
         - `{{install_path}}` {%if install_path_32bit %} （32bit環境では `{{install_path_32bit}}`）{% endif %}{%if desktop_shortcut %}
     - デスクトップのショートカットは次のパスに作成する。
