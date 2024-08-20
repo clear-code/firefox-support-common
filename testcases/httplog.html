@@ -27,15 +27,22 @@ console.log({ requested: requested.length, skipped: skipped.length });
 console.log('All skipped?', requested.length == skipped.length);
 
 var prefetchLogs = text.match(/^.+D\/NetworkPredictor.+$/gm);
-if (!prefetchLogs) {
+if (!prefetchLogs ||
+    text.match(/NetworkPredictor\s+not enabled/g)) {
   console.log('Predictor module is disabled.');
 }
 else {
   let prefetchText = prefetchLogs.join('\n');
   let success = prefetchText.match(/Predictor::Predict.*\n.*called on parent process.*\n.*not enabled/g) || [];
   let fail = prefetchText.match(/Predictor::Predict.*\n.*called on parent process/g) || [];
-  console.log({ success: success.length, fail: fail.length });
-  console.log('All cancelled?', success.length == fail.length);
+  if (success.length == 0 &&
+      fail.length == 0) {
+    console.log('No predection is logged.');
+  }
+  else {
+    console.log({ success: success.length, fail: fail.length });
+    console.log('All cancelled?', success.length == fail.length);
+  }
 }
 </pre>
 </body>
