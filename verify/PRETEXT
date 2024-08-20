@@ -38,7 +38,7 @@ PRETEXT-1: 前提条件
         - https://github.com/clear-code/firefox-support-common/
 
     :4: 検証環境のFirefox拡張機能とレジストリ情報の確認
-    - スタートメニューから `appwiz.cpl` （プログラムの機能と削除）を起動し、Mozilla Firefoxが存在していれば以下を実施する。
+    - レジストリーの編集権限がある場合、スタートメニューから `appwiz.cpl` （プログラムの機能と削除）を起動し、Mozilla Firefoxが存在していれば以下を実施する。
         - Firefoxの`about:policies`を開き、`Extensions`ポリシーの値が事前の情報（別途準備する）と一致していることを確認する。
         - スタートメニューから`regedit`（レジストリ エディター）を起動し、下記のキー配下の名前とデータが事前の情報（別途準備する）と一致していることを確認する。
             - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Mozilla\Firefox\Extensions`
