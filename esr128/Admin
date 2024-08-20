@@ -225,15 +225,16 @@ Admin-9: アドオンのアンインストール
     :2: アドオンを強制的にアンインストールする
 
     distribution\policies.json:
-    "Extensions": {
-      "Uninstall": [
-        "（任意のIDを記入）"
-      ]
+    "ExtensionSettings": {
+      ...,
+      "（任意のIDを記入）": {
+        "installation_mode": "blocked"
+      }
     },
 
     GPO:
     カテゴリ「Firefox」→「Extensions」
-    → 「Extension to Uninstall」を有効化し、「オプション」の値にIDを記入
+    → 「Extension Management」を有効化し、policies.jsonの`ExtensionSettings`の設定内容と同等のJSON文字列を記入
 
 Admin-10: Manifest V3形式アドオンへの対応
 
