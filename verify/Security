@@ -39,8 +39,9 @@ Security-1: 独自のルート証明書をあらかじめ導入しておく
 
     :5: Windowsの証明書データベースから自動的にインポートする
 
-    - インポートされることが期待される認証局証明書がWindowsの証明書データベースに含まれる状態にする。
-        - コマンドプロンプトで登録する場合
+    - 自動インポートされることが期待される認証局証明書（「FwdTrustCert」などのSSLプロキシー用ルート証明書、組織内サーバー用ルート証明書など）があること、および、その証明書がWindowsの証明書データベースに存在することを確認する。
+      そのような証明書が無い検証環境では、検証用として、以下の手順でBadSSLのルート証明書（BadSSL Untrusted Root Certificate Authority）をWindowsの証明書データベースに含まれる状態にする。
+        - コマンドプロンプトで登録する場合（要・レジストリーの編集権限）
             - 管理者権限でcmd.exeを起動し、テストケースのフォルダで `reg import add-badssl-com-enterprise-root.reg` を実行する。
         - 「mmc.exe」で登録する場合
             - 管理者権限で「mmc.exe」を実行し、「ファイル > スナップインの追加と削除（File > Add/Remove Snap-in）」を選ぶ。
@@ -51,14 +52,16 @@ Security-1: 独自のルート証明書をあらかじめ導入しておく
             - 左のツリーから「コンソール ルート > 証明書（ローカル コンピューター） > 信頼されたルート証明機関 > 証明書（Console Root > Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates）」と辿り、「証明書（Certificates）」上での右クリックメニューから「すべてのタスク > インポート（All Tasks > Import）」を選択する。
             - テストケースの「BadSSLUntrustedRootCertificateAuthority.crt」を選択し、「信頼されたルート証明機関（Trusted Root Certification Authorities）」に配置する。
     - Firefoxを起動する。
-    - インポートされる事が期待される認証局証明書に対応する認証局で発行された証明書を使用したWebサイトを開く。
-        - 上記の手順でインポートした場合は `https://untrusted-root.badssl.com/` を開く。
+    - 当該認証局証明書に対応する認証局で発行された証明書を使用したWebサイトを開く。
+        - SSLプロキシー用ルート証明書である場合は、任意のWebサイトを開く。
+        - 組織内サーバー用ルート証明書である場合は、組織内サーバーが提供するWebサイトを開く。
+        - 検証用にBadSSLのルート証明書を上記の手順でインポートした場合は `https://untrusted-root.badssl.com/` を開く。
     - **確認**
         - 証明書のエラーが表示されず、Webサイトの内容をそのまま閲覧できる。
           `https://untrusted-root.badssl.com/` の場合、赤い背景のページが表示される。
-    - 検証用に登録した証明書を削除する。
+    - 検証用にBadSSLのルート証明書を登録した場合は、証明書をWindowsの証明書データベースから削除する。
         - コマンドプロンプトで登録した場合は `reg import remove-badssl-com-enterprise-root.reg` を実行する。
-        - 「mmc.exe」で登録した場合は、該当する証明書の項目上での右クリックメニューから削除する。
+        - 「mmc.exe」で登録した場合は、「BadSSL Untrusted Root Certificate Authority」の項目上での右クリックメニューから削除する。
 
 Security-3: アドオンのインストールの可否
 
