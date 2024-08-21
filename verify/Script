@@ -407,20 +407,6 @@ Script-22: iframe内のSVGに反映するテーマ
 
     - `svg.embedder-prefers-color-scheme.content.enabled` の値が `false` である。
 
-Script-23: 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
-
-    :1: 使用しない（既定）
-
-    ABOUT_CONFIG
-
-    - `security.webauth.u2f` の値が `false` である。
-
-    :2: 使用する
-
-    ABOUT_CONFIG
-
-    - `security.webauth.u2f` の値が `true` である。
-
 Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
 
     :1: 安全なコンテキストでのみ使用を許可（既定）
