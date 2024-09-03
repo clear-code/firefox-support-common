@@ -92,6 +92,17 @@ Download-2: ファイルの既定のダウンロード先
 
     distribution\policies.json:
     "DefaultDownloadDirectory": "（ディレクトリのパス）",
+    "Preferences": {
+      "browser.download.lastDir": {
+        "Value": "（ディレクトリのパス）",
+        "Status": "default"
+      },
+      "browser.download.folderList": {
+        "Value": 2,
+        "Status": "default"
+      },
+      ...
+    },
 
     GPO:
     カテゴリ「Firefox」
