@@ -45,8 +45,10 @@ Download-2: ファイルの既定のダウンロード先
 
     - 既定のダウンロード先（ユーザー配下の「ダウンロード」、または`{{download_dir}}`）を用意しておく。
       例えば`Z:\`をダウンロード先とするのであれば、ログオン中の検証用ユーザーで起動したcmd.exeで
-      `md "%temp%\fake-n-drive"; subst N: "%temp%\fake-n-drive"`
-      のようにする。
+      `md "%temp%\fake-z-drive"`
+      および
+      `subst Z: "%temp%\fake-z-drive"`
+      を実行する。
       用意できない場合は、設定の参照先を `C:\` などの実在するパスに変更し、以下の説明も読み替える。
     - Firefoxを起動する。
     - テストケースリストのリンクから `https://www.mozilla.org/ja/firefox/windows/` を開く。
@@ -64,8 +66,10 @@ Download-2: ファイルの既定のダウンロード先
 
     - 既定のダウンロード先（ユーザー配下の「ダウンロード」、または`{{download_dir}}`）を用意しておく。
       例えば`Z:\`をダウンロード先とするのであれば、ログオン中の検証用ユーザーで起動したcmd.exeで
-      `md "%temp%\fake-n-drive"; subst N: "%temp%\fake-n-drive"`
-      のようにする。
+      `md "%temp%\fake-z-drive"`
+      および
+      `subst Z: "%temp%\fake-z-drive"`
+      を実行する。
       用意できない場合は、設定の参照先を `C:\` などの実在するパスに変更し、以下の説明も読み替える。
     - Firefoxを起動する。
     - テストケースリストのリンクから `https://www.mozilla.org/ja/firefox/windows/` を開く。
