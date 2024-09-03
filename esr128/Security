@@ -513,6 +513,7 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     lockPref("app.update.url.manual", "");
     lockPref("browser.chrome.errorReporter.infoURL", "");
     // 統計情報の収集
+    lockPref("app.normandy.enabled", false);
     lockPref("app.normandy.api_url", "");
     lockPref("app.normandy.shieldLearnMoreUrl", "");
     // Webサイトの互換性情報のURL
@@ -610,6 +611,7 @@ Security-15: その他、バックグラウンドで行われる外部への通�
     lockPref("network.trr.credentials", "");
     lockPref("network.trr.custom_uri", "");
     // ブロックリスト等の取得
+    Services.env.set("MOZ_REMOTE_SETTINGS_DEVTOOLS", 1); // https://searchfox.org/mozilla-esr128/rev/564ee8506ed05dfb20fdfb7c4a5609b192b53078/services/settings/Utils.sys.mjs#63
     lockPref("services.settings.server", "http://localhost");
     // 中間者攻撃の検出
     lockPref("security.certerrors.mitm.priming.endpoint", "");
