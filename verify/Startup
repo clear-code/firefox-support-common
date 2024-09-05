@@ -211,13 +211,13 @@ Startup-10: 初回起動時などにダミーのウィンドウを使用して�
 
     ABOUT_CONFIG
 
-    - `media.hardware-video-decoding.failed` の値が固定されていない。
+    - `media.hardware-video-decoding.failed` に何らかのユーザー設定値が存在している。
 
     :2: ハードウェア情報の変更を無視し、性能を測定しない
 
     ABOUT_CONFIG
 
-    - `media.hardware-video-decoding.failed` の値が `true` である。
+    - `media.hardware-video-decoding.failed` のユーザー設定値が存在しない。
 
 Startup-12: 初回起動時のみの特別なスタートページ
 
