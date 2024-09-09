@@ -1,7 +1,34 @@
 variable "namespace" {}
-variable "windows-password" {}
-variable "offer" {}
-variable "publisher" {}
+
+variable "windows-password" {
+    type        = string
+    default     = ""
+    # var.windows-password は 半角英数記号20文字 である
+    validation {
+        condition     = length(var.windows-password) == 20
+        error_message = "The length of var.windows-password must be 20, but it is ${length(var.windows-password)}."
+    }
+}
+
+variable "offer" {
+    type        = string
+    default     = ""
+    # var.offer は Windows-10, Windows-11, WindowsServer のいずれかである
+    validation {
+        condition     = contains(["Windows-10", "Windows-11", "WindowsServer"], var.offer)
+        error_message = "The value of var.offer must be 'Windows-10', 'Windows-11', or 'WindowsServer', but it is '${var.offer}'."
+    }
+}
+
+variable "publisher" {
+    type        = string
+    default     = ""
+    # var.publisher は MicrosoftWindowsDesktop, MicrosoftWindowsServer のいずれかである
+    validation {
+        condition     = contains(["MicrosoftWindowsDesktop", "MicrosoftWindowsServer"], var.publisher)
+        error_message = "The value of var.publisher must be 'MicrosoftWindowsDesktop' or 'MicrosoftWindowsServer', but it is '${var.publisher}'."
+    }
+}
 variable "sku" {}
 
 variable "windows-username" {
