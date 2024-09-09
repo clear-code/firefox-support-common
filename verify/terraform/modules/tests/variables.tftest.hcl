@@ -1,7 +1,15 @@
+# 必須の変数に値を指定しないとエラーとなる
+run "assert_mandatory_valueables" {
+  command = plan
+  expect_failures = [
+    var.namespace, var.windows-password, var.offer, var.publisher, var.sku
+  ]
+}
+
 # var.windows-username のデフォルト値は clearcode である
 run "assert_default_value_1" {
   command = plan
-  # 必須のvariablesを与える。ここではwin11-23h2-entのものを使う
+  # 必須のvariablesを与える。ここではwin11-23h2-entのものを使う。passwordは20字のダミー文字列でよい。
   variables {
     namespace           = "example-win11-ent-23H2"
     windows-password    = "ABCDEfghij0123456789"
@@ -18,7 +26,7 @@ run "assert_default_value_1" {
 # var.download-user のデフォルト値は browser-verify である
 run "assert_default_value_2" {
   command = plan
-  # 必須のvariablesを与える。ここではwin11-23h2-entのものを使う
+  # 必須のvariablesを与える。ここではwin11-23h2-entのものを使う。passwordは20字のダミー文字列でよい。
   variables {
     namespace           = "example-win11-ent-23H2"
     windows-password    = "ABCDEfghij0123456789"
