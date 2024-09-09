@@ -1,6 +1,3 @@
-# var.namespace の末尾は skuタイプ名 である
- #  プレフィックス'example-'を持つ場合もある
-
 # var.windows-username のデフォルト値は clearcode である
 run "assert_default_value_1" {
   command = plan

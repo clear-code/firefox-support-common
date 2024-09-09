@@ -1,4 +1,13 @@
-variable "namespace" {}
+variable "namespace" {
+    type        = string
+    default     = ""
+    # var.namespace の末尾は skuタイプ名 である
+    #  プレフィックス'example-'を持つ場合もある
+    validation {
+        condition     = strcontains(var.namespace, "win10") || strcontains(var.namespace, "win11") ||  strcontains(var.namespace, "windowsserver") || startswith(var.namespace, "ppexample-")
+        error_message = "The value of var.namespace must contain 'win10', 'win11', 'windowsserver' or begin with 'example-', but it is '${var.namespace}'."
+    }
+}
 
 variable "windows-password" {
     type        = string
@@ -36,7 +45,7 @@ variable "sku" {
     # var.sku は win??-??h?-ent または ????-datacenter-g? の形式である
     # 古いものには -pro や -enterprise もある
     validation {
-        condition     = contains(["-ent", "-datacenter-", "-pro", "-enterprise"], var.sku)
+        condition     = endswith(var.sku, "-ent") || strcontains(var.sku, "-datacenter-") || endswith(var.sku, "-pro") || endswith(var.sku, "-enterprise") 
         error_message = "The value of var.sku must contain '-ent', or '-datacenter-', but it is '${var.sku}'."
     }
 }
