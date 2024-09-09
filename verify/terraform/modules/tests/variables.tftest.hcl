@@ -11,7 +11,7 @@ run "assert_default_value_1" {
   # 必須のvariablesを与える。ここではwin11-23h2-entのものを使う
   variables {
     namespace           = "example-win11-ent-23H2"
-    windows-password    = "_6C~f9n)pokxeZt;n;u="
+    windows-password    = "ABCDEfghij0123456789"
     offer               = "Windows-11"
     publisher           = "MicrosoftWindowsDesktop"
     sku                 = "win11-23h2-ent"
@@ -28,7 +28,7 @@ run "assert_default_value_2" {
   # 必須のvariablesを与える。ここではwin11-23h2-entのものを使う
   variables {
     namespace           = "example-win11-ent-23H2"
-    windows-password    = "_6C~f9n)pokxeZt;n;u="
+    windows-password    = "ABCDEfghij0123456789"
     offer               = "Windows-11"
     publisher           = "MicrosoftWindowsDesktop"
     sku                 = "win11-23h2-ent"
