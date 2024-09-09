@@ -29,7 +29,17 @@ variable "publisher" {
         error_message = "The value of var.publisher must be 'MicrosoftWindowsDesktop' or 'MicrosoftWindowsServer', but it is '${var.publisher}'."
     }
 }
-variable "sku" {}
+
+variable "sku" {
+    type        = string
+    default     = ""
+    # var.sku は win??-??h?-ent または ????-datacenter-g? の形式である
+    # 古いものには -pro や -enterprise もある
+    validation {
+        condition     = contains(["-ent", "-datacenter-", "-pro", "-enterprise"], var.sku)
+        error_message = "The value of var.sku must contain '-ent', or '-datacenter-', but it is '${var.sku}'."
+    }
+}
 
 variable "windows-username" {
     type        = string
