@@ -4,7 +4,7 @@ variable "namespace" {
     # var.namespace の末尾は skuタイプ名 である
     #  プレフィックス'example-'を持つ場合もある
     validation {
-        condition     = strcontains(var.namespace, "win10") || strcontains(var.namespace, "win11") ||  strcontains(var.namespace, "windowsserver") || startswith(var.namespace, "ppexample-")
+        condition     = strcontains(var.namespace, "win10") || strcontains(var.namespace, "win11") ||  strcontains(var.namespace, "windowsserver") || startswith(var.namespace, "example-")
         error_message = "The value of var.namespace must contain 'win10', 'win11', 'windowsserver' or begin with 'example-', but it is '${var.namespace}'."
     }
 }
