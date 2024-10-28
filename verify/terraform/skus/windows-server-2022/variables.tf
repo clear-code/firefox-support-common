@@ -21,5 +21,5 @@ variable "publisher" {
 variable "sku" {
     description = "value for storage_image_reference"
     type        = string
-    default     = "2022-Datacenter"
+    default     = "2022-datacenter"
 }
