@@ -42,11 +42,11 @@ variable "publisher" {
 variable "sku" {
     type        = string
     default     = ""
-    # var.sku は win??-??h?-ent または ????-datacenter-g? の形式である
+    # var.sku は win??-??h?-ent の形式か、 ????-datacenter を含む
     # 古いものには -pro や -enterprise もある
     validation {
-        condition     = endswith(var.sku, "-ent") || strcontains(var.sku, "-datacenter-") || endswith(var.sku, "-pro") || endswith(var.sku, "-enterprise") 
-        error_message = "The value of var.sku must contain '-ent', or '-datacenter-', but it is '${var.sku}'."
+        condition     = endswith(var.sku, "-ent") || strcontains(var.sku, "-datacenter") || endswith(var.sku, "-pro") || endswith(var.sku, "-enterprise") 
+        error_message = "The value of var.sku must contain '-ent', or '-datacenter', but it is '${var.sku}'."
     }
 }
 
