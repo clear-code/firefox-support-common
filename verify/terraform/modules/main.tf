@@ -358,6 +358,32 @@ resource "local_file" "playbook" {
       become: yes
       become_user: "ユーザー"
       win_command: reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 0 /f
+    - name: Install Active Directory Domain Service (AD DS) if this is Windows Server
+      win_feature:
+        name: AD-Domain-Services
+        state: present
+        include_management_tools: yes
+      register: add_feature
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Ensure AD DS was successfully installed
+      debug:
+        msg: "AD DS was successfully installed."
+      when: add_feature.changed
+    - name: Promote to a domain controller if this is Windows Server
+      win_command: powershell.exe -command "Install-ADDSForest -DomainName example.local -SafeModeAdministratorPassword (ConvertTo-SecureString '${var.windows-password}' -AsPlainText -Force) -Force"
+      register: promote_dc
+      changed_when: "'The operation completed successfully' in promote_dc.stdout_lines | join(' ')"
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Restart after promotion if this is Windows Server
+      win_reboot:
+      when: promote_dc.changed
+    - name: Wait for the system to be ready after reboot for AD DC promotion
+      wait_for:
+        host: "{{ansible_host}}"
+        port: 5986
+        delay: 10
+        timeout: 300
+      when: promote_dc.changed
     - name: Setup chocolatey
       win_chocolatey:
         name: chocolatey
