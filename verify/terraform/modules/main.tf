@@ -273,9 +273,7 @@ resource "local_file" "playbook" {
     - win_reboot:
       when: not "${var.windows-language-pack-url}" == ""
     - name: Wait for the system to be ready after reboot for language pack
-      wait_for:
-        host: "{{ansible_host}}"
-        port: 5986
+      ansible.builtin.wait_for_connection:
         delay: 10
         timeout: 300
       when: not "${var.windows-language-pack-url}" == ""
@@ -293,9 +291,7 @@ resource "local_file" "playbook" {
       win_shell: Set-ItemProperty 'registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters' -Name 'LayerDriver JPN' -Value 'kbd106.dll'
     - win_reboot:
     - name: Wait for the system to be ready after reboot for locale settings
-      wait_for:
-        host: "{{ansible_host}}"
-        port: 5986
+      ansible.builtin.wait_for_connection:
         delay: 10
         timeout: 300
     - name: Set region globally
@@ -306,9 +302,7 @@ resource "local_file" "playbook" {
         unicode_language: ja-JP
     - win_reboot:
     - name: Wait for the system to be ready after reboot for region settings
-      wait_for:
-        host: "{{ansible_host}}"
-        port: 5986
+      ansible.builtin.wait_for_connection:
         delay: 10
         timeout: 300
     - name: Create administrator user
@@ -378,9 +372,7 @@ resource "local_file" "playbook" {
       win_reboot:
       when: promote_dc.changed
     - name: Wait for the system to be ready after reboot for AD DC promotion
-      wait_for:
-        host: "{{ansible_host}}"
-        port: 5986
+      ansible.builtin.wait_for_connection:
         delay: 10
         timeout: 300
       when: promote_dc.changed
