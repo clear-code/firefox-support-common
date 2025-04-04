@@ -3,4 +3,5 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # Include to use Makefile under "skus" directory in common
-include ../use-in-common.mk
+# Migrate to OpenTofu since April 2025
+include ../tofu-in-common.mk
