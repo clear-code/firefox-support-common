@@ -192,7 +192,7 @@ resource "azurerm_public_ip" "firefoxverify" {
   location                = azurerm_resource_group.firefoxverify.location
   resource_group_name     = azurerm_resource_group.firefoxverify.name
   sku                     = "Standard"
-  allocation_method       = "Dynamic"
+  allocation_method       = "Static"
   idle_timeout_in_minutes = 30
 
   tags = {
