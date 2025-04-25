@@ -15,7 +15,7 @@ terraform {
 }
 
 module "firefox_verify_env" {
-  source            = "../../modules"
+  source            = "../../../terraform/modules"
 
   namespace         = var.namespace
   windows-password  = var.windows-password
