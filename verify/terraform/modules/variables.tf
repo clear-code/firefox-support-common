@@ -45,7 +45,7 @@ variable "sku" {
     # var.sku は win??-??h?-ent の形式か、 ????-datacenter を含む
     # 古いものには -pro や -enterprise もある
     validation {
-        condition     = endswith(var.sku, "-ent") || strcontains(var.sku, "-datacenter") || endswith(var.sku, "-pro") || endswith(var.sku, "-enterprise") 
+        condition     = endswith(var.sku, "-ent") || strcontains(var.sku, "-datacenter") || strcontains(var.sku, "-Datacenter") || endswith(var.sku, "-pro") || endswith(var.sku, "-pron-g2") || endswith(var.sku, "-pron-gensecond") || endswith(var.sku, "-enterprise") 
         error_message = "The value of var.sku must contain '-ent', or '-datacenter', but it is '${var.sku}'."
     }
 }
