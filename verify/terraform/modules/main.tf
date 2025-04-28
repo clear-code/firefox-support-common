@@ -340,6 +340,13 @@ resource "local_file" "playbook" {
       become: yes
       become_user: "ユーザー"
       win_command: reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 0 /f
+    - name: Download Microsoft .NET Framework 4.8 Offline Installer
+      # See also: https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0
+      win_get_url:
+        url: "https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe"
+        dest: 'c:\Users\Public\dotnet48_installer.exe'
+    - name: Install Microsoft .NET Framework 4.8 for chocolatey
+      win_command: c:\Users\Public\dotnet48_installer.exe /Q
     - name: Setup chocolatey
       win_chocolatey:
         name: chocolatey
