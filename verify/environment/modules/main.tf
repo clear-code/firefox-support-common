@@ -353,13 +353,6 @@ resource "local_file" "playbook" {
       become: yes
       become_user: "ユーザー"
       win_command: reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 0 /f
-    - name: Download Microsoft .NET Framework 4.8 Offline Installer
-      # See also: https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0
-      win_get_url:
-        url: "https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe"
-        dest: 'c:\Users\Public\dotnet48_installer.exe'
-    - name: Install Microsoft .NET Framework 4.8 for chocolatey
-      win_command: c:\Users\Public\dotnet48_installer.exe /Q
     - name: Install Active Directory Domain Service (AD DS) if this is Windows Server
       win_feature:
         name: AD-Domain-Services
@@ -373,17 +366,22 @@ resource "local_file" "playbook" {
       when: add_feature.changed
     - name: Promote to a domain controller if this is Windows Server
       win_command: powershell.exe -command "Install-ADDSForest -DomainName example.local -SafeModeAdministratorPassword (ConvertTo-SecureString '${var.windows-password}' -AsPlainText -Force) -Force"
-      register: promote_dc
-      changed_when: "'The operation completed successfully' in promote_dc.stdout_lines | join(' ')"
       when: "'Server' in ansible_facts['distribution']"
     - name: Restart after promotion if this is Windows Server
       win_reboot:
-      when: promote_dc.changed
-    - name: Wait for the system to be ready after reboot for AD DC promotion
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Wait for the system to be ready after AD DC promotion
       ansible.builtin.wait_for_connection:
         delay: 10
         timeout: 300
-      when: promote_dc.changed
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Download Microsoft .NET Framework 4.8 Offline Installer
+      # See also: https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0
+      win_get_url:
+        url: "https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/8494001c276a4b96804cde7829c04d7f/ndp48-x86-x64-allos-enu.exe"
+        dest: 'c:\Users\Public\dotnet48_installer.exe'
+    - name: Install Microsoft .NET Framework 4.8 for chocolatey
+      win_command: c:\Users\Public\dotnet48_installer.exe /Q
     - name: Setup chocolatey
       win_chocolatey:
         name: chocolatey
