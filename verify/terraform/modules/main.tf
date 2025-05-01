@@ -246,7 +246,7 @@ resource "local_file" "playbook" {
         data: 00000000
         datatype: dword
     - name: Set non-ASCII workgroup name
-      win_domain_membership:
+      microsoft.ad.membership:
         domain_admin_user: "${var.windows-username}"
         domain_admin_password: "${var.windows-password}"
         state: workgroup
