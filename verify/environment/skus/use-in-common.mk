@@ -13,9 +13,9 @@ terraform.tfvars:
         sed -e "/^windows-password = \"%PASSWORD%\"/c windows-password = \"$$(pwgen -s --remove-chars=\'\"\`$$%{}\\\<\>\& -y 20 1)\"" > terraform.tfvars
 
 apply: terraform.tfvars
-	terraform init
-	terraform plan
-	time (terraform apply -auto-approve && ansible-playbook -i ansible/hosts ansible/playbook.yml)
+	tofu init
+	tofu plan
+	time (tofu apply -auto-approve && ansible-playbook -i ansible/hosts ansible/playbook.yml)
 
 apply-playbook:
 	ansible-playbook -i ansible/hosts ansible/playbook.yml
