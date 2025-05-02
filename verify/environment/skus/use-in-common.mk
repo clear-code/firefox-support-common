@@ -21,7 +21,7 @@ apply-playbook:
 	ansible-playbook -i ansible/hosts ansible/playbook.yml
 
 destroy:
-	terraform destroy -auto-approve
+	tofu destroy -auto-approve
 
 clean:
 	rm -rf .terraform .terraform.lock.hcl password.txt terraform.tfstate terraform.tfstate.backup terraform.tfvars \
