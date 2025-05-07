@@ -1,7 +1,7 @@
 # How to prepare verification environments
 
 1. Prepare your Azure account.
-2. Install the [terraform client](https://www.terraform.io/downloads.html).
+2. Install [OpenTofu](https://opentofu.org/) instead of the [terraform client](https://www.terraform.io/downloads.html).
 3. Install the [`az` azure command line frontend](https://docs.microsoft.com/ja-jp/cli/azure/install-azure-cli?view=azure-cli-latest).
 4. Prepare your authentication information for Azure.
    1. Run `az login`.
