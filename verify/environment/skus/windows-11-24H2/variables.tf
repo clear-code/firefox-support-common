@@ -1,7 +1,7 @@
 variable "namespace" {
     description = "Prefix example- and the sku type to use as a part of environment name"
     type        = string
-    default     = "example-win11-ent-23H2"
+    default     = "example-win11-ent-24H2"
 }
 variable "windows-password" {
     description = "Windows login password, whose value is in terraform.tfvars"
@@ -21,5 +21,5 @@ variable "publisher" {
 variable "sku" {
     description = "value for storage_image_reference"
     type        = string
-    default     = "win11-23h2-ent"
+    default     = "win11-24h2-ent"
 }
