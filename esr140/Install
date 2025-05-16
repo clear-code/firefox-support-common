@@ -82,8 +82,8 @@ Install-7: Firefox/Thunderbirdの同梱
 
     fainstall.ini:
     [fainstall]
-    AppMinVersion=128.0
-    AppMaxVersion=128.99
+    AppMinVersion=140.0
+    AppMaxVersion=140.99
     AppIsESR=true
     AppIs64bit=true
     ;AppIsDevEdition=true
