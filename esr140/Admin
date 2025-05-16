@@ -1,0 +1,258 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Admin-1: 管理者による設定の制御
+
+    :1: ローカルのファイルで設定する
+
+    defaults\pref\*.js:
+    pref("general.config.obscure_value", 0);
+    pref("general.config.filename", "autoconfig.cfg");
+    pref("general.config.vendor", "autoconfig");
+    pref("general.config.sandbox_enabled", false);
+
+    *.cfg / *.jsc:
+    // the first line is always ignored by Firefox itself
+    …
+
+    :2: リモートのファイルで設定する
+
+    defaults\pref\*.js:
+    pref("general.config.obscure_value", 0);
+    pref("general.config.filename", "autoconfig.cfg");
+    pref("general.config.vendor", "autoconfig");
+    pref("general.config.sandbox_enabled", false);
+
+    *.cfg:
+    // the first line is always ignored by Firefox itself
+    lockPref("autoadmin.global_config_url", "schema://path/to/autoconfig.jsc");
+
+    *.jsc:
+    …
+
+    :3: 設定しない（既定）
+
+    -
+
+Admin-2: 初回起動時のアドオン導入警告の可否
+
+    :1: 警告する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.autoDisableScopes": {
+        "Value": 15,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 警告しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.autoDisableScopes": {
+        "Value": 11,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Admin-3: [廃止] Firefoxバージョンアップ時のアドオン更新確認の可否
+
+    :1: [廃止] 確認する（既定）
+
+    [廃止]
+
+    :2: [廃止] 確認しない
+
+    [廃止]
+
+Admin-4: Mozillaにより署名されていないアドオンのインストールパッケージの使用の可否
+
+    :1: 許可する
+
+    distribution\policies.json:
+    {
+      "policies": {
+        "Preferences": {
+          "xpinstall.signatures.required": {
+            "Value": false,
+            "Status": "locked"
+          },
+          ...
+        },
+        ...
+      }
+    }
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    *.cfg / *.jsc:
+    lockPref("xpinstall.signatures.required", false);
+
+    :2: 禁止する（既定）
+
+    distribution\policies.json:
+    {
+      "policies": {
+        "Preferences": {
+          "xpinstall.signatures.required": {
+            "Value": true,
+            "Status": "locked"
+          },
+          ...
+        },
+        ...
+      }
+    }
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    *.cfg / *.jsc:
+    lockPref("xpinstall.signatures.required", true);
+
+Admin-5: ポリシー設定の使用の可否
+
+    :1: 使用する
+
+    distribution\policies.json:
+    {
+      "policies": {
+        "Preferences": {
+          "browser.policies.loglevel": {
+            "Value": "debug",
+            "Status": "locked"
+          },
+          ...
+        },
+        ...
+      }
+    }
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 使用しない
+
+    -
+
+Admin-6: ユーザーが導入済みのアドオンの取り扱い
+
+    :1: そのまま使用を許可（既定）
+
+    -
+
+    :2: 使用を許可するアドオン以外すべて削除する
+
+    distribution\policies.json:
+    "ExtensionSettings": {
+      "*": {
+        "installation_mode": "blocked"
+      }
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Extensions」
+    → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
+
+Admin-7: アドオンのインストール
+
+    :1: アドオンをインストールしない（既定）
+
+    // 強制でないアドオンのインストールの可否についてはSecurity-3で設定する
+    -
+
+    :2: アドオンを強制的にインストールする
+
+    distribution\policies.json:
+    "ExtensionSettings": {
+      "to-be-installed@example.com": {
+        "installation_mode": "force_installed",
+        "install_url": "file:///..."
+      }
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Extensions」
+    → 「Extension Management」を有効化し、「オプション」欄に、policies.jsonにおいて"ExtensionSettings"の値となるJSON文字列を記述
+
+Admin-8: about:third-partyを用いたユーザー権限でのサードパーティ製モジュールの読み込み停止操作
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    policies.jsonでの設定は無効で、必ずGPOで設定する必要あり
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Third Party Module Blocking」を有効化
+
+    GPOで制御しない場合のfainstall.iniでの代替：
+    [fainstall]
+    ExtraRegistryEntries=DisableThirdPartyModuleBlocking
+    
+    ;Admin-8-2
+    [DisableThirdPartyModuleBlocking]
+    Root=HKLM
+    Path=Software\Policies\Mozilla\Firefox
+    DwordValue0=DisableThirdPartyModuleBlocking
+    DwordData0=0x00000001
+
+Admin-9: アドオンのアンインストール
+
+    :1: アドオンをアンインストールしない（既定）
+
+    -
+
+    :2: アドオンを強制的にアンインストールする
+
+    distribution\policies.json:
+    "ExtensionSettings": {
+      ...,
+      "（任意のIDを記入）": {
+        "installation_mode": "blocked"
+      }
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Extensions」
+    → 「Extension Management」を有効化し、policies.jsonの`ExtensionSettings`の設定内容と同等のJSON文字列を記入
+
+Admin-10: Manifest V3形式アドオンへの対応
+
+    :1: 対応する（既定）
+
+    -
+
+    :2: 対応せず無効化する
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.manifestV3.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

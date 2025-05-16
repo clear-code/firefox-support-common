@@ -1,0 +1,327 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Appearance-1: 表示フォントの明示
+
+    :1: 設定しない（既定）
+
+    -
+
+    :2: 設定する
+
+    *.cfg / *.jsc:
+    lockPref("font.name-list.serif.ja", "（フォントの英語名のカンマ区切りのリスト）");
+    lockPref("font.name-list.sans-serif.ja", "（フォントの英語名のカンマ区切りのリスト）");
+    lockPref("font.name-list.monospace.ja", "（フォントの英語名のカンマ区切りのリスト）");
+    lockPref("font.name-list.emoji", "EmojiOne Mozilla");
+
+    :3: Firefox ESR52と同じに揃える
+
+    *.cfg / *.jsc:
+    defaultPref("font.name-list.monospace.ja", "MS Gothic, MS Mincho, MS PGothic, MS PMincho,Meiryo");
+    defaultPref("font.name-list.sans-serif.ja", "MS PGothic, MS Gothic, MS PMincho, MS Mincho,Meiryo");
+    defaultPref("font.name-list.serif.ja", "MS PMincho, MS Mincho, MS PGothic, MS Gothic,Meiryo");
+    defaultPref("font.name.monospace.ja", "MS Gothic");
+    defaultPref("font.name.sans-serif.ja", "MS PGothic");
+    defaultPref("font.name.serif.ja", "MS PMincho");
+
+Appearance-2: ツールバー上の項目の初期設定
+
+    :1: 制御しない（既定）
+
+    -
+
+    :2: 制御する
+
+    // browser.uiCustomization.stateおよびbrowser.migration.versionの値は、そのバージョンのFirefox上で実際に希望の状態になるようカスタマイズした結果の値を使用すること。
+    // Download-1-2と競合するため、Download-1-2併用時は設定内容を調整する必要がある。
+    // Appearance-3-2と競合するため、Appearance-3-2併用時はnav-barにsearch-containerを追加しておく必要がある。
+    *.cfg / *.jsc:
+    {
+      const setAsUserValueOncePerModification = (key, value) => {
+        const statusKey = `browser.policies.runOncePerModification.${key}`;
+        const oldValue = getPref(statusKey);
+        if (value === oldValue)
+          return;
+        pref(statusKey, value);
+        pref(key, value);
+      };
+      setAsUserValueOncePerModification("browser.uiCustomization.state", JSON.stringify({...}));
+      setAsUserValueOncePerModification("browser.migration.version", 148);
+      // この指定が無いと「ホーム」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.home-button.has-used", true);
+      // この指定が無いと「ブラウジングライブラリー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.library-button.has-used", true);
+      // この指定が無いと「サイドバー」ボタンが削除される
+      setAsUserValueOncePerModification("browser.engagement.sidebar-button.has-used", true);
+    }
+
+Appearance-3: アドレスバーと検索バーの統合
+
+    :1: 統合する（既定）
+
+    -
+
+    :2: 統合しない
+
+    // Appearance-2-2と競合するため、Appearance-2-2併用時はnav-barにsearch-containerを追加しておく必要がある。
+    distribution\policies.json:
+    "SearchBar": "separate",
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Search bar location」を有効化し、オプションで「Separate」を選択
+
+
+Appearance-4: [廃止] ウィンドウコントロールの不具合の回避（Bug 1521692）
+
+    :1: [廃止] 回避する
+
+    [廃止]
+
+    :2: [廃止] 回避しない（既定）
+
+    [廃止]
+
+Appearance-5: 初期状態でのブックマークツールバーの表示
+
+    :1: 表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.toolbars.bookmarks.visibility": {
+        "Value": "always",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 表示しない
+
+    // Startup-2の選択肢をいずれも選択していない場合、about:homeが新規タブ扱いされるため
+    // 起動直後はブックマークツールバーが表示される仕様。
+    // 任意のサイトにアクセスしてブックマークツールバーが表示されなければ期待通り
+    distribution\policies.json:
+    "DisplayBookmarksToolbar": false,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Display Bookmarks Toolbar」を無効化
+    //
+
+    :3: 新しいタブでのみ自動的に表示（既定）
+
+    distribution\policies.json:
+    "DisplayBookmarksToolbar": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Display Bookmarks Toolbar」を有効化
+
+Appearance-6: 初期状態でのメニューバーの表示
+
+    :1: 表示する
+
+    distribution\policies.json:
+    "DisplayMenuBar": "default-on",
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Display Menu Bar」を有効化し、オプションで「On by default」を選択
+
+    :2: 表示しない（既定）
+
+    -
+
+Appearance-7: アプリケーションのUIに使用する言語
+
+    :1: 組み込みの言語（既定）
+
+    -
+
+    :2: 任意の言語
+
+    distribution\policies.json:
+    "RequestedLocales": [
+      "en-US",
+      "ja",
+      ...
+    ],
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Requested locale (string)」を有効化し、オプションで言語名を指定
+
+Appearance-8: ヘルプメニュー配下に登録する独自のサポートページの情報
+
+    :1: 表示しない（既定）
+
+    -
+
+    :2: 表示する
+
+    distribution\policies.json:
+    "SupportMenu": {
+      "Title":     "タイトル",
+      "URL":       "https://example.com/",
+      "AccessKey": "H"
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Support Menu」を有効化し、オプションでタイトル、URL、アクセスキーを指定
+
+Appearance-9: 「Firefoxアカウント」ボタンの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+    distribution\policies.json:
+    "DisableFirefoxAccounts": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Firefox Accounts」を有効化
+
+    *.cfg / *.jsc:
+    lockPref("identity.fxaccounts.toolbar.enabled", false);
+
+Appearance-10: ユーザースタイルシートの使用
+
+    :1: 使用する
+
+    *.cfg:
+    // 必ずローカルのMCD用設定ファイルに記入する。
+    // GPOでの指定やpolicies.json、リモートのMCD用設定ファイルに記入した場合、初期化タイミングに間に合わないため設定が機能しない。
+    lockPref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+
+    :2: 使用しない（既定）
+
+    -
+
+Appearance-11: [廃止] 「新着情報」の通知の表示
+
+    :1: [廃止] 表示する（既定）
+
+    [廃止]
+
+    :2: [廃止] 表示しない
+
+    [廃止]
+
+Appearance-12: 「ホーム」ボタンの表示
+
+    :1: 表示する
+
+    // Startup-2-4,Startup-2-5を選択すると自動的にこの挙動になる
+    // ただし、Appearance-12-2を明示的に選択して表示させないようにすることもできる
+    distribution\policies.json:
+    "ShowHomeButton": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Show Home button on toolbar」を有効化（設定値の固定は不可能）
+
+    :2: 表示しない（既定）
+
+    -
+
+Appearance-13: 「ローカルワンオフ検索」ショートカットの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.browser.urlbar.shortcuts.bookmarks": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.browser.urlbar.shortcuts.history": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.browser.urlbar.shortcuts.tab": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-14: UIの表示言語の変更・カスタマイズの可否
+
+    :1: 許可する
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.getAddons.langpacks.url": {
+        "Value": "",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-15: [廃止] タブバー上のFirefox Viewボタンの表示
+
+    :1: [廃止] 表示する（既定）
+
+    -
+
+    :2: [廃止] 非表示にする
+
+    [廃止]
+    // Appearance-2 で代用
+
+Appearance-16: デスクトップ通知をシステムの通知として表示する
+
+    :1: システムの通知として表示する（既定）
+
+    -
+
+    :2: 独自実装のポップアップウィンドウで表示する
+
+    *.cfg:
+    lockPref("alerts.useSystemBackend", false);
+
+Appearance-17: Webページ内のリンクの下線表示
+
+    :1: Webページの指定に従う（既定）
+
+    -
+
+    :2: 常に下線を表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "layout.css.always_underline_links": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

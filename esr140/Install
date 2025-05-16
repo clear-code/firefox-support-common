@@ -1,0 +1,268 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Install-1: インストーラの表示名
+
+    :1: Fx Meta Installer（既定）
+
+    -
+
+    :2: 任意の名前
+
+    !define PRODUCT_FULL_NAME  "（名前）"
+
+Install-2: インストーラのファイル名
+
+    :1: FxMetaInstaller
+
+    -
+
+    :2: 任意の名前
+
+    !define PRODUCT_NAME  "（名前）"
+
+Install-3: インストーラの動作モード
+
+    :1: ウィザードを表示し、操作確認を求める
+
+    !define PRODUCT_INSTALL_MODE "NORMAL"
+
+    :2: ウィザードを表示し、操作確認を求めない（既定）
+
+    !define PRODUCT_INSTALL_MODE "PASSIVE"
+
+    :3: ウィザードを一切表示しない
+
+    !define PRODUCT_INSTALL_MODE "QUIET"
+
+Install-4: インストール完了後のメッセージ
+
+    :1: 表示しない（既定）
+
+    -
+
+    :2: 表示する
+
+    fainstall.ini:
+    [fainstall]
+    FinishTitle=Fx Meta Installer
+    FinishMessage=インストールが完了しました
+
+Install-5: インストール完了後の再起動要求
+
+    :1: 表示しない（既定）
+
+    -
+
+    :2: 表示する
+
+    fainstall.ini:
+    [fainstall]
+    ConfirmRestartTitle=Fx Meta Installer
+    ConfirmRestartMessage=今すぐコンピュータを再起動しますか？
+
+Install-6: インストーラのウィザードの表示言語
+
+    :1: 日本語（既定）
+
+    !define PRODUCT_LANGUAGE "Japanese"
+
+    :2: 英語
+
+    !define PRODUCT_LANGUAGE "English"
+
+Install-7: Firefox/Thunderbirdの同梱
+
+    :1: 同梱しない（既定）
+
+    -
+
+    :2: 指定バージョンを同梱する
+
+    fainstall.ini:
+    [fainstall]
+    AppMinVersion=128.0
+    AppMaxVersion=128.99
+    AppIsESR=true
+    AppIs64bit=true
+    ;AppIsDevEdition=true
+
+Install-8: Firefox/Thunderbirdのインストール先
+
+    :1: 既定のインストール先（既定）
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    InstallDirectoryName=Mozilla Firefox
+    InstallDirectoryPath=
+
+    :2: 任意のインストール先
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    InstallDirectoryName=
+    InstallDirectoryPath=
+
+Install-9: メタインストーラの表示バージョン
+
+    :1: 更新しない（既定）
+
+    -
+
+    :2: 指定する
+
+    fainstall.ini:
+    [fainstall]
+    DisplayVersion=バージョン番号
+
+Install-10: スタートメニュー、タスクバー上のショートカットの更新
+
+    :1: 更新しない（既定）
+
+    -
+
+    :2: 更新する
+
+    fainstall.ini:
+    [fainstall]
+    UpdatePinnedShortcuts=true
+
+    :3: 削除のみする
+
+    fainstall.ini:
+    [fainstall]
+    UpdatePinnedShortcuts=delete
+
+Install-11: タスクバー上へのピン留め用ショートカットの作成
+
+    :1: 作成する（既定）
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    TaskbarShortcut=true
+
+    :2: 作成しない
+
+    Firefox-setup.ini/Thunderbird-setup.ini:
+    [Install]
+    TaskbarShortcut=false
+
+Install-12: メタインストーラ自身による管理者権限の確認
+
+    :1: 確認する（既定）
+
+    -
+
+    :2: 確認しない
+
+    fainstall.ini:
+    [Install]
+    RequireAdminPrivilege=false
+
+    :3: 特定のフォルダで書き込み可否を判断する
+
+    fainstall.ini:
+    [fainstall]
+    AdminPrivilegeCheckDirectory=C:\Program Files (x86)\
+
+Install-13: インストール前のクリーンアップ処理
+
+    :1: 何もしない
+
+    -
+
+    :2: 旧バージョンのFirefoxを強制的に削除する
+
+    fainstall.ini:
+    [fainstall]
+    AppCleanupDirs=%ProgramFiles32%/Mozilla Firefox|%ProgramFiles64%/Mozilla Firefox
+
+    :3: 特定のフォルダを消去してから同梱のアプリケーションをインストールする
+
+    fainstall.ini:
+    [fainstall]
+    AppCleanupDirs=（消去したいフォルダのパス）
+
+Install-14: Internet Explorerのコンテキストメニューにコマンドを追加登録する
+
+    :1: 登録しない
+
+    -
+
+    :2: 登録する
+
+    menu-command.reg:
+    Windows Registry Editor Version 5.00
+    
+    [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MenuExt]
+    
+    [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MenuExt\コマンド名]
+    @="file:///C:/Program Files/Mozilla Firefox/chrome/menu-command.html"
+    
+    fainstall.ini:
+    [fainstall]
+    ExtraFiles=menu-command.html
+    
+    [menu-command.html]
+    TargetLocation=%AppDir%/chrome/
+
+Install-15: Firefoxのインストーラの動作モード
+
+    :1: Firefoxのインストーラをキックする（既定）
+
+    -
+
+    :2: Firefoxのインストーラをキックせず、ファイルの展開と配置のみ行い、元々インストールされていたFirefoxをFirefoxの最新版として維持する
+
+    !define APP_INSTALL_MODE "EXTRACT"
+
+Install-16: 既存Firefoxのインストール状態
+
+    :1: メタインストーラによってインストールされている（既定）
+
+    -
+
+    :2: メタインストーラを使わずにインストールされている
+
+    -
+
+Install-17: 既存Firefoxとの共存
+
+    :1: その環境で唯一のFirefoxとして使用する（既定）
+
+    -
+
+    :2: その環境に既存のFirefoxと併用する
+
+    -
+
+Install-18: BrowserSelectorのインストール
+
+    :1: インストールしない（既定）
+
+    -
+
+    :2: INIファイルと併せてインストールする
+
+    BrowserSelectorSetup.msiとBrowserSelector.iniを同梱する。
+    
+    BrowserSelector.ini:
+    [Common]
+    ...
+    
+    fainstall.ini:
+    [BrowserSelector.ini]
+    TargetLocation=%ProgramFiles32%/ClearCode/BrowserSelector
+
+Install-19: 既存のFirefoxの強制的な上書き
+
+    :1: 既定のインストール先、または指定のインストール先にインストールする（既定）
+
+    -
+
+    :2: 既存のFirefoxがある場合は、そのインストール先に上書きインストールする
+
+    fainstall.ini:
+    [fainstall]
+    AppUseActualInstallDir=true
