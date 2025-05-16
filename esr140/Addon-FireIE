@@ -1,0 +1,86 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Addon-FireIE-1: [廃止] 動作モード
+
+    :1: [廃止] IE7互換モード（既定）
+
+    [廃止]
+
+    :2: [廃止] IE8互換モード
+
+    [廃止]
+
+    :3: [廃止] IE8標準準拠モード
+
+    [廃止]
+
+    :4: [廃止] IE9互換モード
+
+    [廃止]
+
+    :5: [廃止] IE9標準準拠モード
+
+    [廃止]
+
+    :6: [廃止] IE10互換モード
+
+    [廃止]
+
+    :7: [廃止] IE10標準準拠モード
+
+    [廃止]
+
+    :8: [廃止] IE11 Edgeモード
+
+    [廃止]
+
+    :9: [廃止] IE11 強制Edgeモード
+
+    [廃止]
+
+Addon-FireIE-2: [廃止] モード表示
+
+    :1: [廃止] 表示する（既定）
+
+    [廃止]
+
+    :2: [廃止] 表示しない
+
+    [廃止]
+
+Addon-FireIE-3: [廃止] 定義ファイルの自動更新
+
+    :1: [廃止] 自動更新する（既定）
+
+    [廃止]
+
+    :2: [廃止] 自動更新しない
+
+    [廃止]
+
+Addon-FireIE-4: [廃止] ルールに当てはまらないサイトの取り扱い
+
+    :1: [廃止] 何もしない（既定）
+
+    [廃止]
+
+    :2: [廃止] Firefoxで開く
+
+    [廃止]
+
+    :2: [廃止] IEで開く
+
+    [廃止]
+
+Addon-FireIE-5: [廃止] その他のバックグラウンドでの通信
+
+    :1: [廃止] 許可する（既定）
+
+    [廃止]
+
+    :2: [廃止] 禁止する
+
+    [廃止]
+

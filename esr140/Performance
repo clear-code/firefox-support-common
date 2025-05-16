@@ -1,0 +1,164 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Performance-1: メモリキャッシュのサイズ
+
+    :1: 自動的に決める（既定）
+
+    -
+
+    :2: 明示する
+
+    *.cfg / *.jsc:
+    lockPref("browser.cache.memory.capacity", （整数値、単位：キロバイト）);
+
+Performance-2: コンテンツの再描画間隔
+
+    :1: 120ミリ秒間隔で再描画（既定）
+
+    *.cfg / *.jsc:
+    // defaultPref("content.notify.interval", 120000);
+
+    :2: 再描画間隔を明示する
+
+    *.cfg / *.jsc:
+    lockPref("content.notify.interval", （整数値、単位：マイクロ秒）);
+
+Performance-3: 空きメモリが逼迫した時にバックグラウンドのタブを自動的にアンロードするかどうか
+
+    :1: タブをアンロードして空きメモリを増やす（既定）
+
+    *.cfg / *.jsc:
+    lockPref("browser.tabs.unloadOnLowMemory", true);
+
+    :2: タブをアンロードしない
+
+    *.cfg / *.jsc:
+    lockPref("browser.tabs.unloadOnLowMemory", false);
+
+Performance-4: パフォーマンスに悪影響を与えうるアクセシビリティサービス
+
+    :1: アクセシビリティを優先して有効にする（既定）
+
+    -
+
+    :2: [廃止] パフォーマンスを優先して無効化する（MCD）
+
+    [廃止]
+
+    :3: パフォーマンスを優先して無効化する
+
+    distribution\policies.json:
+    "Preferences": {
+      "accessibility.force_disabled": {
+        "Value": 1,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Performance-5: GCの実行頻度
+
+    :1: GCの実行頻度を上げ、消費メモリ量を削減する
+
+    *.cfg / *.jsc:
+    //セッションごとにページの更新を確認する。
+    lockPref("browser.cache.check_doc_frequency", 0);
+    // 拡大縮小等の過剰なアニメーションを抑制する
+    lockPref("ui.prefersReducedMotion", 1);
+    //スムーズスクロールの無効化
+    lockPref("general.smoothScroll", false);
+    ////セッション復元のための保存間隔の設定
+    lockPref("browser.sessionstore.interval", 300000);
+    //リンクの先読み無効化
+    lockPref("network.predictor.enable-hover-on-ssl",false);
+    lockPref("network.predictor.enable-prefetch",false);
+    
+    // GCを実行する基準にするメモリ消費量（単位：MB）。0〜1000の間で設定。
+    // 数値を小さくする事で、GCの実行頻度を上げ、
+    // パフォーマンス低下と引き替えにメモリ使用量を削減できる可能性がある。
+    // 初期値は30。
+    lockPref("javascript.options.mem.gc_allocation_threshold_mb", 3);
+    
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より小さい場合の
+    // メモリ確保増加量（パーセンテージ）。
+    // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
+    // 削減できる可能性がある。
+    // 初期値は300。
+    lockPref("javascript.options.mem.gc_high_frequency_small_heap_growth", 150);
+    
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より小さい場合の
+    // メモリ確保増加量（パーセンテージ）。
+    // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
+    // 削減できる可能性がある。
+    // 初期値は150。
+    lockPref("javascript.options.mem.gc_high_frequency_large_heap_growth", 150);
+    
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より大きい場合の最小の
+    // メモリ確保増加量（単位：MB）。
+    // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
+    // 削減できる可能性がある。
+    // 初期値は500。
+    lockPref("javascript.options.mem.gc_large_heap_size_min_mb", 100);
+    
+    // 高頻度でGCとメモリ領域の確保が実行される場面での、ヒープ領域がしきい値より小さい場合の最大の
+    // メモリ確保増加量（単位：MB）。
+    // 値を小さくする事で、パフォーマンス低下と引き替えにメモリ使用量を
+    // 削減できる可能性がある。
+    // 初期値は100。
+    lockPref("javascript.options.mem.gc_small_heap_size_max_mb", 100);
+    
+Performance-6: 同時に開けるタブの個数を制限する
+
+    :1: 制限しない。（既定）
+
+    -
+
+    :2: Lean Tab Limiter Advancedで制御する。
+
+    fainstall.ini:
+    [lean_tab_limiter_advanced-x.x-fx.xpi]
+    AddonId=lean-tab-limiter-advanced@clear-code.com
+    TargetLocation=%AppDir%/distribution
+    Unpack=false
+    
+    distribution\policies.json:
+    "3rdparty": {
+      "Extensions": {
+        "lean-tab-limiter-advanced@clear-code.com": {
+          "tab-limit": 10
+        }
+      }
+    },
+    "ExtensionSettings": {
+      "lean-tab-limiter-advanced@clear-code.com": {
+        "installation_mode": "force_installed",
+        "install_url": "file:///C:/Program%20Files/Mozilla%20Firefox/distribution/lean-tab-limiter-advanced@clear-code.com.xpi"
+      }
+    },
+
+Performance-7: マルチプロセス機能で使用するプロセスの最大数
+
+    :1: Firefoxの既定のプロセス数（8）（既定）
+
+    -
+
+    :2: 任意のプロセス数
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.ipc.processCount": {
+        "Value": (整数値),
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
