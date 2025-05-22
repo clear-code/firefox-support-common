@@ -18,7 +18,7 @@ VERIFY_MANUAL_OPT= -c assets/esr128.conf -a assets/esr128.var
 PANDOC_OPT_PDF= -N --toc-depth=2 --table-of-contents \
                 -f markdown \
                 --wrap=preserve \
-                --template=eisvogel.tex \
+                --template=eisvogel.latex \
                 -V documentclass=ltjsarticle \
                 -V classoption=titlepage \
                 --pdf-engine=xelatex
