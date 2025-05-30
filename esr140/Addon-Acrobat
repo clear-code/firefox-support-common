@@ -1,0 +1,149 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Addon-Acrobat-1: 初期設定を変更するかどうか
+
+    :1: 変更する
+
+    *.cfg / *.jsc:
+    // codes to initialize configuration of Adobe Acrobat addon
+    async function setLocalStorageFor(aAddonId, aValues = {}) {
+      const { classes: Cc, interfaces: Ci, utils: Cu } = Components;
+      const { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
+      const { FileUtils } = Cu.import('resource://gre/modules/FileUtils.jsm', {});
+      const { OS } = Cu.import("resource://gre/modules/osfile.jsm", {});
+    
+      const file = Services.dirsvc.get('ProfD', Ci.nsIFile);
+      file.append('browser-extension-data');
+      if (!file.exists())
+        file.create(Ci.nsIFile.DIRECTORY_TYPE, FileUtils.PERMS_DIRECTORY);
+      file.append(aAddonId);
+      if (!file.exists())
+        file.create(Ci.nsIFile.DIRECTORY_TYPE, FileUtils.PERMS_DIRECTORY);
+      file.append('storage.js');
+    
+      let oldValues = {};
+      if (file.exists()) {
+        try {
+          const contents = await OS.File.read(file.path, {});
+          oldValues = JSON.parse(contents);
+        }
+        catch(e) {
+        }
+      }
+      else {
+        const fd = await OS.File.open(file.path, { create: true });
+        fd.close();
+      }
+    
+      const newValues = Object.assign({}, oldValues, aValues);
+      try {
+        await OS.File.writeAtomic(file.path, JSON.stringify(newValues), { tmpPath: `${file.path}.tmp` });
+      }
+      catch(e) {
+      }
+    }
+
+    :2: 変更しない (既定）
+
+    -
+
+Addon-Acrobat-2: 初回起動ページの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    *.cfg / *.jsc:
+    // Addon-Acrobat-1に依存
+    setLocalStorageFor('web2pdfextension.17@acrobat.adobe.com', {
+      // Do not show https://helpx.adobe.com/acrobat/kb/acrobat-pro-firefox-extension.html on firstrun
+      extnfte: { name: 'fte' }
+    });
+
+Addon-Acrobat-3: 使用状況の送信の可否
+
+    :1: 送信する（既定）
+
+    -
+
+    :2: 送信しない
+
+    defaults\chrome\userContent.css:
+    input[class="analytics"],
+    #web2pdfOptions,
+    #web2pdfOptOut,
+    #web2pdfPrivacy,
+    #web2pdfSave {
+      opacity: 0.5 !important;
+      pointer-events: none !important;
+      -moz-user-focus: ignore !important;
+    }
+    
+    fainstall.ini:
+    [userContent.css]
+    TargetLocation=%AppDir%/defaults/chrome/
+    
+    *.cfg / *.jsc:
+    // Addon-Acrobat-1に依存
+    setLocalStorageFor('web2pdfextension.17@acrobat.adobe.com', {
+      analyticspref: { value: false }
+    });
+    
+    // 旧版Adobe Acrobat 2017向け
+    let { classes: Cc, interfaces: Ci, utils: Cu } = Components;
+    let { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
+    function tryInitializeCookie() {
+      let { FileUtils } = Cu.import('resource://gre/modules/FileUtils.jsm', {});
+      let { OS } = Cu.import("resource://gre/modules/osfile.jsm", {});
+      try {
+        let uuids = Services.prefs.getCharPref("extensions.webextensions.uuids");
+        if (uuids) {
+          let json = JSON.parse(uuids);
+          let host = json["web2pdfextension.17@acrobat.adobe.com"];
+          if (host) {
+            let cm = Cc["@mozilla.org/cookiemanager;1"].getService(Ci.nsICookieManager2);
+            let expiry = Date.now() + 24 * 60 * 60 * 1000;
+            if (cm.countCookiesFromHost(host) > 0) {
+              try {
+                cm.remove(host, "logAnalytics", "/", false, "");
+              } catch(e) {
+                // ignore error for missing cookie value
+              }
+            }
+            cm.add(host, "/", "logAnalytics", false, false, false, false, expiry, {});
+          }
+        }
+      } catch (e) {
+      }
+    }
+    tryInitializeCookie();
+    Services.prefs.addObserver("extensions.webextensions.uuids", function(aSubject, aTopic, aData) {
+      if (aData == "extensions.webextensions.uuids" && aTopic == "nsPref:changed")
+        tryInitializeCookie();
+    }, false);
+   
+    // Instal userContent.css
+    (() => {
+      let { classes: Cc, interfaces: Ci, utils: Cu } = Components;
+      let { Services } = Cu.import('resource://gre/modules/Services.jsm', {});
+      let { FileUtils } = Cu.import('resource://gre/modules/FileUtils.jsm', {});
+    
+      let destDir = Services.dirsvc.get('ProfD', Ci.nsIFile);
+      destDir.append('chrome');
+      if (!destDir.exists())
+        destDir.create(Ci.nsIFile.DIRECTORY_TYPE, FileUtils.PERMS_DIRECTORY);
+    
+      let sourceFile = Services.dirsvc.get('GreD', Ci.nsIFile);
+      sourceFile.append('defaults');
+      sourceFile.append('chrome');
+      sourceFile.append('userContent.css');
+      let destFile = destDir.clone();
+      destFile.append('userContent.css');
+      if (destFile.exists())
+        destFile.remove(true);
+      sourceFile.copyTo(destDir, null);
+    })();
