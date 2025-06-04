@@ -10,8 +10,8 @@ import adlib
 #
 # Global settings
 
-ESR_PREVIOUS = 'esr115'
-ESR_CURRENT  = 'esr128'
+ESR_PREVIOUS = 'esr128'
+ESR_CURRENT  = 'esr140'
 
 WORKBOOKS = [
     ('基本設定', [
