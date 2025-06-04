@@ -413,3 +413,35 @@ Ui-20: 設定画面の「Firefox Labs」の表示
     :2: 機能を無効化し、UIを隠す
 
     Privacy-18-3 または Privacy-42-2 を設定する。
+
+Ui-21: 新しいプロファイルマネージャーの使用
+
+    :1: 使用する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.profiles.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 使用しない（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.profiles.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

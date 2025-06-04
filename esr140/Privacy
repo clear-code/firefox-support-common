@@ -2113,3 +2113,59 @@ Privacy-71: Privacy Preserving Attribution APIの有効化
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Privacy-72: ユーザー操作に基づく暗黙的なサード-パーティーコンテンツへのストレージアクセスの許可
+
+    :1: 暗黙的に許可を与える
+
+    *.cfg / *.jsc:
+    lockPref("privacy.restrict3rdpartystorage.heuristic.redirect", true);
+
+    :2: 明示的な許可を必要とする（既定）
+
+    *.cfg / *.jsc:
+    lockPref("privacy.restrict3rdpartystorage.heuristic.redirect", false);
+
+Privacy-73: グローバルプライバシーコントロールによる、ユーザーデータの販売や共有の拒否のWebサイトへの通知
+
+    :1: 通知する
+
+    distribution\policies.json:
+    "Preferences": {
+      "rivacy.globalprivacycontrol.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 通知しない（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "rivacy.globalprivacycontrol.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Privacy-74: 拡張機能のコンテンツスクリプトを利用したユーザー追跡の防止
+
+    :1: 防止する
+
+    *.cfg / *.jsc:
+    lockPref("privacy.antitracking.isolateContentScriptResources", true);
+
+    :2: 防止しない（既定）
+
+    *.cfg / *.jsc:
+    lockPref("privacy.antitracking.isolateContentScriptResources", false);

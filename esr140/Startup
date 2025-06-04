@@ -348,4 +348,3 @@ Startup-17: 既定のブラウザーとして設定する場面で、既定のPD
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
