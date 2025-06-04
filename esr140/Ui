@@ -371,3 +371,45 @@ Ui-18: コンテナー機能のUIを表示する
     :2: 機能を無効化し、UIを隠す（既定）
 
     -
+
+Ui-19: AIチャットボットボタンの表示
+
+    :1: 機能を有効化し、UIを表示する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ml.chat.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 機能を無効化し、UIを隠す
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ml.chat.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-20: 設定画面の「Firefox Labs」の表示
+
+    :1: 機能を有効化し、UIを表示する（既定）
+
+    Privacy-18-1 および Privacy-42-1 を設定する。
+
+    :2: 機能を無効化し、UIを隠す
+
+    Privacy-18-3 または Privacy-42-2 を設定する。

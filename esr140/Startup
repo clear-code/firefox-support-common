@@ -163,15 +163,25 @@ Startup-5: 初期状態のブックマーク
     カテゴリ「Firefox」→「Bookmarks」
     → 「Bookmark 00」から「Bookmark 50」について、必要な分を有効化し、それぞれオプションで項目の情報を定義する
 
-Startup-6: [廃止] 「あなたの権利」の表示の可否
+Startup-6: 利用規約の表示の可否
 
-    :1: [廃止] 許可する（既定）
+    :1: 表示する（既定）
 
-    [廃止]
+    distribution\policies.json:
+    "SkipTermsOfUse": false,
 
-    :2: [廃止] 禁止する
+    GPO:
+    カテゴリ「Firefox」
+    → 「Skip Terms of Use」を無効化または未定義にする
 
-    [廃止]
+    :2: 表示しない
+
+    distribution\policies.json:
+    "SkipTermsOfUse": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Skip Terms of Use」を有効化
 
 Startup-7: 60日以上Firefoxを使用しなかった場合の、次の起動時における設定のリセットの提案の可否
 
