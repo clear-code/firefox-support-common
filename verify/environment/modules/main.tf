@@ -273,6 +273,11 @@ resource "local_file" "playbook" {
         Remove-Item $LpTemp -Force
     - win_reboot:
       when: not "${var.windows-language-pack-url}" == ""
+    - name: Wait for the system to be ready after reboot for language pack
+      ansible.builtin.wait_for_connection:
+        delay: 10
+        timeout: 300
+      when: not "${var.windows-language-pack-url}" == ""
     - win_timezone:
         timezone: Tokyo Standard Time
     - name: Set location
@@ -286,6 +291,10 @@ resource "local_file" "playbook" {
     - name: Set keyboard layout
       win_shell: Set-ItemProperty 'registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters' -Name 'LayerDriver JPN' -Value 'kbd106.dll'
     - win_reboot:
+    - name: Wait for the system to be ready after reboot for locale settings
+      ansible.builtin.wait_for_connection:
+        delay: 10
+        timeout: 300
     - name: Set region globally
       win_region:
         copy_settings: yes
@@ -293,6 +302,10 @@ resource "local_file" "playbook" {
         format: ja-JP
         unicode_language: ja-JP
     - win_reboot:
+    - name: Wait for the system to be ready after reboot for region settings
+      ansible.builtin.wait_for_connection:
+        delay: 10
+        timeout: 300
     - name: Create administrator user
       win_user:
         name: "管理者"
@@ -340,6 +353,28 @@ resource "local_file" "playbook" {
       become: yes
       become_user: "ユーザー"
       win_command: reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v HideFileExt /t REG_DWORD /d 0 /f
+    - name: Install Active Directory Domain Service (AD DS) if this is Windows Server
+      win_feature:
+        name: AD-Domain-Services
+        state: present
+        include_management_tools: yes
+      register: add_feature
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Ensure AD DS was successfully installed
+      debug:
+        msg: "AD DS was successfully installed."
+      when: add_feature.changed
+    - name: Promote to a domain controller if this is Windows Server
+      win_command: powershell.exe -command "Install-ADDSForest -DomainName example.local -SafeModeAdministratorPassword (ConvertTo-SecureString '${var.windows-password}' -AsPlainText -Force) -Force"
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Restart after promotion if this is Windows Server
+      win_reboot:
+      when: "'Server' in ansible_facts['distribution']"
+    - name: Wait for the system to be ready after AD DC promotion
+      ansible.builtin.wait_for_connection:
+        delay: 10
+        timeout: 300
+      when: "'Server' in ansible_facts['distribution']"
     - name: Download Microsoft .NET Framework 4.8 Offline Installer
       # See also: https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0
       win_get_url:
