@@ -1577,9 +1577,9 @@ Security-61: SVGの<use>でのdata: URLの使用
 
     -
 
-Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め込まれた画像、動画、音声の取得時の接続方法
+Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め込まれた画像、動画、音声、Webサイトアイコン（favicon）の取得時の接続方法
 
-    :1: 常に安全な接続（HTTPS）を使用する（既定）
+    :1: 常に安全な接続（HTTPS）を求め、安全でない接続を拒絶する（既定）
 
     -
 
@@ -1631,3 +1631,113 @@ Security-64: Firefox 126以前向けの古い署名を含むアドオンのXPI�
     :2: 拒否する（既定）
 
     -
+
+Security-65: TLS証明書の透明性の要求
+
+    :1: 要求する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "security.pki.certificate_transparency.mode": {
+        "Value": 2,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 要求しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "security.pki.certificate_transparency.mode": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Security-66: BASIC認証の使用可否
+
+    :1: 許可する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.http.basic_http_auth.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.http.basic_http_auth.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Security-67: DLP（Data Loss Prevention、情報漏洩防止）ソフトウェアの使用
+
+    :1: 使用しない（既定）
+
+    -
+
+    :2: 使用する
+
+    使用する情報漏洩防止ソフトウェアの仕様に合わせて設定する。
+
+    distribution\policies.json:
+    "ContentAnalysis": {
+      "AgentName": "My DLP Product",
+      "AgentTimeout": 60,
+      "AllowUrlRegexList": "https://example\.com/.* https://subdomain\.example\.com/.*",
+      "BypassForSameTabOperations": true | false,
+      "ClientSignature": "My DLP Company",
+      "DefaultResult": 0 | 1 | 2,
+      "DenyUrlRegexList": "https://example\.com/.* https://subdomain\.example\.com/.*",
+      "Enabled": true | false,
+      "InterceptionPoints": {
+        "Clipboard": {
+          "Enabled": true | false,
+          "PlainTextOnly": true | false
+        },
+        "DragAndDrop": {
+          "Enabled": true | false,
+          "PlainTextOnly": true | false
+        },
+        "FileUpload": {
+          "Enabled": true | false
+        },
+        "Print": {
+          "Enabled": true | false
+        }
+      },
+      "IsPerUser": true | false,
+      "PipePathName": "pipe_custom_name",
+      "ShowBlockedResult": true | false,
+      "TimeoutResult": 0 | 1 | 2,
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Conetnt Analysis」を有効化し、各パラメーターを設定

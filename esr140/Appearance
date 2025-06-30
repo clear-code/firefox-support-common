@@ -325,3 +325,216 @@ Appearance-17: Webページ内のリンクの下線表示
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-18: タブ上でのプレビュー表示
+
+    :1: 表示する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.hoverPreview.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 表示しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.hoverPreview.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-19: 設定画面でのFirefox Labsの表示
+
+    :1: 表示する（既定）
+
+    Privacy-18-1 および Privacy-42-1 を設定済みの場合は省略。
+
+    distribution\policies.json:
+    "UserMessaging": {
+      "FirefoxLabs": true,
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「User Messaging」
+    →「Firefox Labs」を有効化
+
+    :2: 表示しない
+
+    Privacy-18-3 または Privacy-42-2 を設定済みの場合は省略。
+
+    distribution\policies.json:
+    "UserMessaging": {
+      "FirefoxLabs": false,
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「User Messaging」
+    →「Firefox Labs」を無効化
+
+Appearance-20: AIチャットボットボタンの表示
+
+    :1: 機能を有効化し、UIを表示する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ml.chat.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 機能を無効化し、UIを隠す
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.ml.chat.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-21: ボタン形式の新型サイドバー切り替えUI
+
+    :1: 使用する
+
+    *.cfg / *.jsc:
+    lockPref("sidebar.revamp", true);
+
+    :2: 使用しない（既定）
+
+    *.cfg / *.jsc:
+    lockPref("sidebar.revamp", false);
+
+Appearance-22: タブバーの表示位置
+
+    :1: ウィンドウ上部（水平タブバー）（既定）
+
+    *.cfg / *.jsc:
+    lockPref("sidebar.verticalTabs", false);
+
+    :2: ウィンドウ横（垂直タブバー）
+
+    Appearance-21-1も同時に設定する。
+
+    *.cfg / *.jsc:
+    lockPref("sidebar.verticalTabs", true);
+
+Appearance-23: コンテンツの表示色のコントラスト制御
+
+    :1: 自動/システム設定を使用（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.display.document_color_use": {
+        "Value": 0,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 無効
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.display.document_color_use": {
+        "Value": 1,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: カスタム
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.display.document_color_use": {
+        "Value": 2,
+        "Status": "locked"
+      },
+      "browser.display.background_color": {
+        "Value": "#ffffff",
+        "Status": "locked"
+      },
+      "browser.anchor_color": {
+        "Value": "#0000ee",
+        "Status": "locked"
+      },
+      "browser.visited_color": {
+        "Value": "#551a8b",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-24: ツールバー上の「拡張機能」ボタンの表示
+
+    :1: 常に表示する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.unifiedExtensions.button.always_visible": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 隠す
+
+    distribution\policies.json:
+    "Preferences": {
+      "extensions.unifiedExtensions.button.always_visible": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

@@ -372,49 +372,7 @@ Ui-18: コンテナー機能のUIを表示する
 
     -
 
-Ui-19: AIチャットボットボタンの表示
-
-    :1: 機能を有効化し、UIを表示する（既定）
-
-    distribution\policies.json:
-    "Preferences": {
-      "browser.ml.chat.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
-    :2: 機能を無効化し、UIを隠す
-
-    distribution\policies.json:
-    "Preferences": {
-      "browser.ml.chat.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
-Ui-20: 設定画面の「Firefox Labs」の表示
-
-    :1: 機能を有効化し、UIを表示する（既定）
-
-    Privacy-18-1 および Privacy-42-1 を設定する。
-
-    :2: 機能を無効化し、UIを隠す
-
-    Privacy-18-3 または Privacy-42-2 を設定する。
-
-Ui-21: 新しいプロファイルマネージャーの使用
+Ui-19: 新しいプロファイルマネージャーとプロファイル切り替え機能の使用
 
     :1: 使用する
 
@@ -436,6 +394,134 @@ Ui-21: 新しいプロファイルマネージャーの使用
     distribution\policies.json:
     "Preferences": {
       "browser.profiles.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-20: タブ切り替え時のPicture-in-Pictureへの自動切り替え
+
+    :1: Picture-in-Pictureに切り替える
+
+    distribution\policies.json:
+    "Preferences": {
+      "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 切り替えない（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-21: タブグループ機能の使用可否
+
+    :1: 機能を有効化し、UIを表示する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.groups.enabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 機能を無効化し、UIを隠す（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.groups.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-22: 組み込みのPDFビューワー上でのリンク情報の検知とハイパーリンク表示
+
+    :1: 使用する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "pdfjs.enableAutoLinking": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 機能を無効化し、UIを隠す（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "pdfjs.enableAutoLinking": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-23: 組み込みのPDFビューワー上での署名機能
+
+    :1: 使用する（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "pdfjs.enableSignatureEditor": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: 機能を無効化し、UIを隠す（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "pdfjs.enableSignatureEditor": {
         "Value": false,
         "Status": "locked"
       },

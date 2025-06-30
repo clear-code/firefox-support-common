@@ -537,3 +537,33 @@ Network-33: [廃止] クロスオリジンのリダイレクトでのAuthorizati
     :2: [廃止] 互換性を優先し、引き継ぐ
 
     [廃止]
+
+Network-34: HTTPS DNSレコードの解決でのOSのDNSリゾルバーの使用
+
+    :1: 使用する（既定）
+
+    - TBD
+
+    :2: 使用しない
+
+    - TBD
+
+Network-35: Microsoft Entraによるシングルサインオン（SSO）の可否
+
+    :1: 許可する（既定）
+
+    - TBD
+
+    :2: 許可しない
+
+    - TBD
+
+Network-36: HTTPでの接続を指示されたときのHTTPSでの接続試行（HTTPSファースト）の可否
+
+    :1: HTTPSから試行する（既定）
+
+    - TBD
+
+    :2: HTTPから試行する
+
+    - TBD

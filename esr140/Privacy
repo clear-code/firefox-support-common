@@ -1774,16 +1774,16 @@ Privacy-57: 同一タブ・サイトにおけるマイクとカメラのアク�
     // 単位：ミリ秒
     lockPref("privacy.webrtc.deviceGracePeriodTimeoutMs", 50000);
 
-Privacy-58: クレジットカード情報の保存
+Privacy-58: クレジットカード情報の保存と自動入力
 
-    :1: 許可された地域で保存する (既定）
+    :1: 保存・自動入力する (既定）
 
     *.cfg / *.jsc:
-    lockPref("extensions.formautofill.creditCards.supported", "detect");
+    lockPref("extensions.formautofill.creditCards.supported", "on");
     lockPref("extensions.formautofill.creditCards.enabled", true);
     lockPref("extensions.formautofill.creditCards.hideui", false);
 
-    :2: 保存しない
+    :2: 保存・自動入力しない
 
     *.cfg / *.jsc:
     lockPref("extensions.formautofill.creditCards.supported", "off");
@@ -2114,7 +2114,7 @@ Privacy-71: Privacy Preserving Attribution APIの有効化
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Privacy-72: ユーザー操作に基づく暗黙的なサード-パーティーコンテンツへのストレージアクセスの許可
+Privacy-72: ユーザー操作で新しくウィンドウが開かれたときのサードパーティーコンテンツに対するストレージアクセスの可否
 
     :1: 暗黙的に許可を与える
 
@@ -2169,3 +2169,90 @@ Privacy-74: 拡張機能のコンテンツスクリプトを利用したユー�
 
     *.cfg / *.jsc:
     lockPref("privacy.antitracking.isolateContentScriptResources", false);
+
+Privacy-75: プライベートブラウジングモードの使用
+
+    :1: 使用を許可（既定）
+
+    distribution\policies.json:
+    "PrivateBrowsingModeAvailability": 0,
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Private Browsing Mode Availability」を有効化し、「Allow Private Browsing Mode」を選択
+
+    :1: 使用を禁止
+
+    distribution\policies.json:
+    "PrivateBrowsingModeAvailability": 1,
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Private Browsing Mode Availability」を有効化し、「Disable Private Browsing Mode」を選択
+
+    :1: 使用を強制
+
+    distribution\policies.json:
+    "PrivateBrowsingModeAvailability": 2,
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Private Browsing Mode Availability」を有効化し、「Force Private Browsing Mode」を選択
+
+Privacy-76: サードパーティーCookieの受け容れ可否
+
+    :1: 受け容れる（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.cookie.cookieBehavior.optInPartitioning": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :1: 拒否する
+
+    Privacy-33-2またはPrivacy-33-6（既定値）でのnetwork.cookie.cookieBehavior=5（既定値）と併用する。
+
+    distribution\policies.json:
+    "Preferences": {
+      "network.cookie.cookieBehavior.optInPartitioning": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Privacy-77: Bounce Tracking（中間サイトを介したトラッキング）の可否
+
+    :1: 受け容れる（既定）
+
+    *.cfg / *.jsc:
+    lockPref("privacy.bounceTrackingProtection.mode", 3);
+
+    :1: 拒否する
+
+    *.cfg / *.jsc:
+    lockPref("privacy.bounceTrackingProtection.mode", 1);
+
+Privacy-78: SmartBlockによるソーシャルメディアの埋め込みコンテンツの広範なブロック
+
+    :1: ブロックする
+
+    *.cfg / *.jsc:
+    lockPref("privacy.annotate_channels.strict_list.enabled", true);
+
+    :1: ブロックしない（既定）
+
+    *.cfg / *.jsc:
+    lockPref("privacy.annotate_channels.strict_list.enabled", false);
