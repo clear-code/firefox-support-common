@@ -363,18 +363,17 @@ Privacy-11: Cookie、IndexedDB、Web Storage、およびService Worker用Cache�
 
     :3: セッション中のみ許可する
 
+    Privacy-1-6 を設定済みの場合は省略可。
+
     distribution\policies.json:
-    "Cookies": {
-      "Default": true,
-      "ExpireAtSessionEnd": true,
+    "SanitizeOnShutdown": {
+      "Cookies": true,
       "Locked": true
     },
 
     GPO:
-    カテゴリ「Firefox」→「Cookies」
-    → 「Accept cookies from websites」を有効化
-    → 「Keep cookies until Firefox is closed」を有効化
-    → 「Do not allow preferences to be changed」を有効化
+    カテゴリ「Firefox」
+    → 「Clear data when browser is closed (Moved)」を有効化し、「Cookie」にチェックを入れる
 
     :4: 禁止する
 
