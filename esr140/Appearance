@@ -377,7 +377,7 @@ Appearance-19: 設定画面でのFirefox Labsの表示
 
     :2: 表示しない
 
-    Privacy-18-3 または Privacy-42-2 を設定済みの場合は省略。
+    Privacy-18-3 または Privacy-42-2 を設定済みの場合は省略可。
 
     distribution\policies.json:
     "UserMessaging": {

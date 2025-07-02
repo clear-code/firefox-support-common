@@ -550,11 +550,11 @@ Network-34: HTTPS DNSレコードの解決でのOSのDNSリゾルバーの使用
 
 Network-35: Microsoft Entraによるシングルサインオン（SSO）の可否
 
-    :1: 許可する（既定）
+    :1: 許可する
 
     - TBD
 
-    :2: 許可しない
+    :2: 許可しない（既定）
 
     - TBD
 
