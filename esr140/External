@@ -72,3 +72,35 @@ External-2: 外部アプリケーションで開くためにダウンロード�
       },
       ...
     },
+
+External-3: 画像をクリップボードにコピーする際のデータ形式
+
+    :1: PNG（既定）
+
+    distribution\policies.json:
+    "Preferences": {
+      "clipboard.copy_image.as_png": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :2: DIB（Windowsビットマップ形式）
+
+    distribution\policies.json:
+    "Preferences": {
+      "clipboard.copy_image.as_png": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

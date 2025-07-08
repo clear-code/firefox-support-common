@@ -120,3 +120,13 @@ External-2: 外部アプリケーションで開くためにダウンロード�
     - 設定画面の「一般」→「ファイルとプログラム」→「プログラム」→「他のファイルはFirefoxでどのように扱いますか？」を「ファイルを保存する」に戻す。
     - ポリシー設定から一時的に削除した `browser.download.always_ask_before_handling_new_types` の定義を元に戻す。
       {% endif %}
+
+External-3: 画像をクリップボードにコピーする際のデータ形式
+
+    :1: PNG（既定）
+
+    - TBD
+
+    :2: DIB（Windowsビットマップ形式）
+
+    - TBD

@@ -1303,9 +1303,9 @@ Security-61: SVGの<use>でのdata: URLの使用
 
     - `svg.use-element.data-url-href.allowed` の値が `false` である。
 
-Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め込まれた画像、動画、音声の取得時の接続方法
+Security-62: 安全な接続（HTTPS）で閲覧しているページに埋め込まれた画像、動画、音声、Webサイトアイコン（favicon）の取得時の接続方法
 
-    :1: 常に安全な接続（HTTPS）を使用する（既定）
+    :1: 常に安全な接続（HTTPS）を求め、安全でない接続を拒絶する（既定）
 
     ABOUT_CONFIG
 
@@ -1345,3 +1345,32 @@ Security-64: Firefox 126以前向けの古い署名を含むアドオンのXPI�
 
     - `ExtensionSettings` が存在しないか、各アドオンの設定のキーに `"temporarily_allow_weak_signatures"` が含まれていない。
 
+Security-65: TLS証明書の透明性の要求
+
+    :1: 要求する（既定）
+
+    - TBD
+
+    :2: 要求しない
+
+    - TBD
+
+Security-66: BASIC認証の使用可否
+
+    :1: 許可する（既定）
+
+    - TBD
+
+    :2: 禁止する
+
+    - TBD
+
+Security-67: DLP（Data Loss Prevention、情報漏洩防止）ソフトウェアの使用
+
+    :1: 使用しない（既定）
+
+    - TBD
+
+    :2: 使用する
+
+    - TBD
