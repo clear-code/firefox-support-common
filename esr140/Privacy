@@ -2180,7 +2180,7 @@ Privacy-75: プライベートブラウジングモードの使用
     カテゴリ「Firefox」
     →「Private Browsing Mode Availability」を有効化し、「Allow Private Browsing Mode」を選択
 
-    :1: 使用を禁止
+    :2: 使用を禁止
 
     distribution\policies.json:
     "PrivateBrowsingModeAvailability": 1,
@@ -2189,7 +2189,7 @@ Privacy-75: プライベートブラウジングモードの使用
     カテゴリ「Firefox」
     →「Private Browsing Mode Availability」を有効化し、「Disable Private Browsing Mode」を選択
 
-    :1: 使用を強制
+    :3: 使用を強制
 
     distribution\policies.json:
     "PrivateBrowsingModeAvailability": 2,
@@ -2215,7 +2215,7 @@ Privacy-76: サードパーティーCookieの受け容れ可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :1: 拒否する
+    :2: 拒否する
 
     Privacy-33-2またはPrivacy-33-6（既定値）でのnetwork.cookie.cookieBehavior=5（既定値）と併用する。
 
@@ -2239,7 +2239,7 @@ Privacy-77: Bounce Tracking（中間サイトを介したトラッキング）�
     *.cfg / *.jsc:
     lockPref("privacy.bounceTrackingProtection.mode", 3);
 
-    :1: 拒否する
+    :2: 拒否する
 
     *.cfg / *.jsc:
     lockPref("privacy.bounceTrackingProtection.mode", 1);
@@ -2251,7 +2251,7 @@ Privacy-78: SmartBlockによるソーシャルメディアの埋め込みコン�
     *.cfg / *.jsc:
     lockPref("privacy.annotate_channels.strict_list.enabled", true);
 
-    :1: ブロックしない（既定）
+    :2: ブロックしない（既定）
 
     *.cfg / *.jsc:
     lockPref("privacy.annotate_channels.strict_list.enabled", false);
