@@ -1664,7 +1664,7 @@ Security-65: TLS証明書の透明性の要求
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Security-66: BASIC認証の使用可否
+Security-66: HTTPで接続中のページからのHTTP接続でのBASIC認証の使用可否
 
     :1: 許可する（既定）
 

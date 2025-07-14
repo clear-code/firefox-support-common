@@ -2084,14 +2084,14 @@ Privacy-76: サードパーティーCookieの受け容れ可否
     :1: 受け容れる（既定）
 
     - Firefoxを起動する。
-    - `https://alanhogan.github.io/web-experiments/3rd/third-party-cookies.html` を開く。
+    - テストケースリストのリンクから `https://alanhogan.github.io/web-experiments/3rd/third-party-cookies.html` を開く。
     - **確認**
         - 「Third party cookies are functioning in your browser.」と表示される。
 
     :2: 拒否する
 
     - Firefoxを起動する。
-    - `https://alanhogan.github.io/web-experiments/3rd/third-party-cookies.html` を開く。
+    - テストケースリストのリンクから `https://alanhogan.github.io/web-experiments/3rd/third-party-cookies.html` を開く。
     - **確認**
         - 「Third party cookies appear to be disabled.」と表示される。
 
