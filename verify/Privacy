@@ -2012,72 +2012,155 @@ Privacy-72: ユーザー操作で新しくウィンドウが開かれたとき�
 
     :1: 暗黙的に許可を与える
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.restrict3rdpartystorage.heuristic.redirect` の値が `true` である。
 
     :2: 明示的な許可を必要とする（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.restrict3rdpartystorage.heuristic.redirect` の値が `false` である。
 
 Privacy-73: グローバルプライバシーコントロールによる、ユーザーデータの販売や共有の拒否のWebサイトへの通知
 
     :1: 通知する
 
-    - TBD
+    OPTIONS
+
+    - 「プライバシーとセキュリティ」→「ブラウザープライバシー」→「ウェブサイトのプライバシー設定」で「ウェブサイトにユーザーデータの販売や共有の拒否を通知する」にチェックが入っている。
 
     :2: 通知しない（既定）
 
-    - TBD
+    OPTIONS
+
+    - 「プライバシーとセキュリティ」→「ブラウザープライバシー」→「ウェブサイトのプライバシー設定」で「ウェブサイトにユーザーデータの販売や共有の拒否を通知する」のチェックが外れている。
 
 Privacy-74: 拡張機能のコンテンツスクリプトを利用したユーザー追跡の防止
 
     :1: 防止する
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.antitracking.isolateContentScriptResources` の値が `true` である。
 
     :2: 防止しない（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.antitracking.isolateContentScriptResources` の値が `false` である。
 
 Privacy-75: プライベートブラウジングモードの使用
 
     :1: 使用を許可（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - パネルメニューを開く。
+    - **確認**
+        - 「新しいプライベートウィンドウ」がメニュー内にある。
+    - 「新しいプライベートウィンドウ」を選択する。
+    - **確認**
+        - プライベートウィンドウ固有の外観のウィンドウが開かれ、最初のタブのラベルが「新しいプライベートタブ」となっている。
 
     :2: 使用を禁止
 
-    - TBD
+    - Firefoxを起動する。
+    - パネルメニューを開く。
+    - **確認**
+        - 「新しいプライベートウィンドウ」がメニュー内に無い。
 
     :3: 使用を強制
 
-    - TBD
+    - Firefoxを起動する。
+    - パネルメニューを開く。
+    - **確認**
+        - 「新しいプライベートウィンドウ」がメニュー内に無い。
+    - 「新しいプライベートウィンドウ」を選択する。
+    - **確認**
+        - 通常の外観のウィンドウが開かれ、最初のタブのラベルが「新しいタブ」となっている。
 
 Privacy-76: サードパーティーCookieの受け容れ可否
 
     :1: 受け容れる（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - `https://alanhogan.github.io/web-experiments/3rd/third-party-cookies.html` を開く。
+    - **確認**
+        - 「Third party cookies are functioning in your browser.」と表示される。
 
     :2: 拒否する
 
-    - TBD
+    - Firefoxを起動する。
+    - `https://alanhogan.github.io/web-experiments/3rd/third-party-cookies.html` を開く。
+    - **確認**
+        - 「Third party cookies appear to be disabled.」と表示される。
 
 Privacy-77: Bounce Tracking（中間サイトを介したトラッキング）の可否
 
     :1: 受け容れる（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.bounceTrackingProtection.mode` の値が `3` である。
 
     :2: 拒否する
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `privacy.bounceTrackingProtection.mode` の値が `1` である。
 
 Privacy-78: SmartBlockによるソーシャルメディアの埋め込みコンテンツの広範なブロック
 
     :1: ブロックする
 
-    - TBD
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
+      {%if DisableDeveloperTools %}
+    - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
+      {% endif %}
+    - Firefoxを起動する。
+    - `about:config` を開く。
+    - 以下の設定を行う（設定値が既に指定の通りであればそのままとし、既存の値がない場合は新規に作成する）。
+        - `network.dns.notifyResolution`（真偽型）：`true`
+        - `devtools.chrome.enabled`（真偽型）：`true`
+    - パネルメニューで「その他のツール」をクリックして、サブメニューの「ブラウザーコンソール」をクリックする。
+    - 以下のコードをコンソール内で実行する。
+      
+              TrackingProtection.annotationsLevel2Enabled 
+      
+    - **確認**
+        - `false` というログがブラウザーコンソールに出力される。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
+      {%if DisableDeveloperTools %}
+    - ポリシー設定から一時的に削除した `DisableDeveloperTools` を元に戻す。
+      {% endif %}
 
     :2: ブロックしない（既定）
 
-    - TBD
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
+      {%if DisableDeveloperTools %}
+    - ポリシー設定から `DisableDeveloperTools` を削除し、開発ツールを一時的に有効化しておく。
+      {% endif %}
+    - Firefoxを起動する。
+    - `about:config` を開く。
+    - 以下の設定を行う（設定値が既に指定の通りであればそのままとし、既存の値がない場合は新規に作成する）。
+        - `network.dns.notifyResolution`（真偽型）：`true`
+        - `devtools.chrome.enabled`（真偽型）：`true`
+    - パネルメニューで「その他のツール」をクリックして、サブメニューの「ブラウザーコンソール」をクリックする。
+    - 以下のコードをコンソール内で実行する。
+      
+              TrackingProtection.annotationsLevel2Enabled 
+      
+    - **確認**
+        - `true` というログがブラウザーコンソールに出力される。
+      {%if Security_9_3 %}
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
+      {%if DisableDeveloperTools %}
+    - ポリシー設定から一時的に削除した `DisableDeveloperTools` を元に戻す。
+      {% endif %}
