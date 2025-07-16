@@ -542,28 +542,44 @@ Network-34: HTTPS DNSレコードの解決でのOSのDNSリゾルバーの使用
 
     :1: 使用する（既定）
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `network.dns.native_https_query` の値が `true` である。
 
     :2: 使用しない
 
-    - TBD
+    ABOUT_CONFIG
+
+    - `network.dns.native_https_query` の値が `false` である。
 
 Network-35: Microsoft Entraによるシングルサインオン（SSO）の可否
 
     :1: 許可する
 
-    - TBD
+    ABOUT_POLICIES
+
+    - `MicrosoftEntraSSO` の値が `true` である。
 
     :2: 許可しない（既定）
 
-    - TBD
+    ABOUT_POLICIES
+
+    - `MicrosoftEntraSSO` の値が存在しないか、空である。
 
 Network-36: HTTPでの接続を指示されたときのHTTPSでの接続試行（HTTPSファースト）の可否
 
     :1: HTTPSから試行する（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースの `links.html` を開く。
+    - 「window.open（HTTP）」のリンクをクリックして、タブを開く。
+    - **確認**
+        - `https://example.com/` が開かれる。
 
     :2: HTTPから試行する
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースの `links.html` を開く。
+    - 「window.open（HTTP）」のリンクをクリックして、タブを開く。
+    - **確認**
+        - `http://example.com/` が開かれる。

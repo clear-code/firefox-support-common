@@ -2131,7 +2131,7 @@ Privacy-73: グローバルプライバシーコントロールによる、ユ�
 
     distribution\policies.json:
     "Preferences": {
-      "rivacy.globalprivacycontrol.enabled": {
+      "privacy.globalprivacycontrol.enabled": {
         "Value": true,
         "Status": "locked"
       },
@@ -2146,7 +2146,7 @@ Privacy-73: グローバルプライバシーコントロールによる、ユ�
 
     distribution\policies.json:
     "Preferences": {
-      "rivacy.globalprivacycontrol.enabled": {
+      "privacy.globalprivacycontrol.enabled": {
         "Value": false,
         "Status": "locked"
       },

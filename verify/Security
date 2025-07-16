@@ -1349,28 +1349,44 @@ Security-65: TLS証明書の透明性の要求
 
     :1: 要求する（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースリストのリンクから `https://no-sct.badssl.com/` を開く。
+    - **確認**
+        - Firefoxが提供する接続エラーのページが表示される。
 
     :2: 要求しない
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースリストのリンクから `https://no-sct.badssl.com/` を開く。
+    - **確認**
+        - 赤い背景のページが表示される。
 
-Security-66: BASIC認証の使用可否
+Security-66: HTTPで接続中のページからのHTTP接続でのBASIC認証の使用可否
 
     :1: 許可する（既定）
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースリストのリンクから `http://labs.w0s.jp/http/authorization/` を開く。
+    - **確認**
+        - 認証情報の入力を求められる。
 
     :2: 禁止する
 
-    - TBD
+    - Firefoxを起動する。
+    - テストケースリストのリンクから `http://labs.w0s.jp/http/authorization/` を開く。
+    - **確認**
+        - 認証情報の入力を求められずに、Firefoxが提供する接続エラーのページが表示される。
 
 Security-67: DLP（Data Loss Prevention、情報漏洩防止）ソフトウェアの使用
 
     :1: 使用しない（既定）
 
-    - TBD
+    ABOUT_POLICIES
+
+    - `ContentAnalysis` が存在しない。
 
     :2: 使用する
 
-    - TBD
+    ABOUT_POLICIES
+
+    - `ContentAnalysis` に、指定どおりの設定内容が反映されている。
