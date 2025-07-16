@@ -485,7 +485,7 @@ Ui-22: 組み込みのPDFビューワー上でのリンク情報の検知とハ�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :2: 機能を無効化し、UIを隠す（既定）
+    :2: 使用しない
 
     distribution\policies.json:
     "Preferences": {
@@ -517,7 +517,7 @@ Ui-23: 組み込みのPDFビューワー上での署名機能
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :2: 機能を無効化し、UIを隠す（既定）
+    :2: 使用しない
 
     distribution\policies.json:
     "Preferences": {
