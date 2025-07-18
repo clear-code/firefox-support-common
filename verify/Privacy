@@ -383,7 +383,7 @@ Privacy-11: Cookie、IndexedDB、Web Storage、およびService Worker用Cache�
 
     ABOUT_POLICIES
 
-    - `Cookies` の `ExpireAtSessionEnd` の値が `true` である。
+    - `SanitizeOnShutdown` の `Cookies` と `Locked` の値がどちらも `true` である。
 
     :4: 禁止する
 
