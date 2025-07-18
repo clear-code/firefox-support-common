@@ -270,7 +270,7 @@ Startup-12: 初回起動時のみの特別なスタートページ
     カテゴリ「Firefox」
     → 「Override the first run page」を有効化し、オプションでURLを空に指定
 
-Startup-13: Windows 10の再起動後の自動起動
+Startup-13: Windows 10以降の再起動後の自動起動
 
     :1: 自動起動する（既定）
 

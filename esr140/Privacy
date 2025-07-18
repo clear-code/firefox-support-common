@@ -779,9 +779,9 @@ Privacy-26: 「忘れる」ボタンの利用の可否
     カテゴリ「Firefox」
     → 「Disable Forget Button」を有効化
 
-Privacy-27: Pocket（リーディングリスト機能）の利用の可否
+Privacy-27: [廃止] Pocket（リーディングリスト機能）の利用の可否
 
-    :1: 許可する
+    :1: [廃止] 許可する
 
     -
 
@@ -789,27 +789,9 @@ Privacy-27: Pocket（リーディングリスト機能）の利用の可否
 
     [廃止]
 
-    :3: 禁止する
+    :3: [廃止] 禁止する
 
-    distribution\policies.json:
-    "DisablePocket": true,
-    "Preferences": {
-      "extensions.pocket.api": {
-        "Value": "",
-        "Status": "locked"
-      },
-      "extensions.pocket.site": {
-        "Value": "",
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Pocket」を有効化
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    [廃止]
 
 Privacy-28: [廃止] その他、プライバシー情報に関わる一切の機能の利用の可否
 
