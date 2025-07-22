@@ -390,7 +390,7 @@ Privacy-11: Cookie、IndexedDB、Web Storage、およびService Worker用Cache�
 
     ABOUT_POLICIES
 
-    - `Cookies` の `Default` の値が `true` である。
+    - `SanitizeOnShutdown` の `Cookies` の値が `true` である。
 
     :6: 既定では禁止し、特定サイトのみ永続的に許可する
 
@@ -423,7 +423,7 @@ Privacy-11: Cookie、IndexedDB、Web Storage、およびService Worker用Cache�
     ABOUT_POLICIES
 
     - `Cookies` の `Default` の値が `false` である。
-    - `Cookies` の `AllowSession` の値として許可サイトが列挙されている。
+    - `SanitizeOnShutdown` の `Cookies` の値が `true` である。
 
 Privacy-12: DOMストレージの利用の可否
 
