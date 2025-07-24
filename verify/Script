@@ -381,13 +381,13 @@ Script-20: MathMLのsemanticsおよびmactionで初期状態で表示する内�
 
 Script-21: SVG2の非標準のプロパティnearestViewportElementとfarthestViewportElementの使用
 
-    :1: 使用しない（既定）
+    :1: 使用する
 
     ABOUT_CONFIG
 
     - `svg.nearestAndFarthestViewportElement.enabled` の値が `true` である。
 
-    :2: 使用する
+    :2: 使用しない（既定）
 
     ABOUT_CONFIG
 
