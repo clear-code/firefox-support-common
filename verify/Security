@@ -1361,7 +1361,7 @@ Security-65: TLS証明書の透明性の要求
     - **確認**
         - 赤い背景のページが表示される。
 
-Security-66: HTTPで接続中のページからのHTTP接続でのBASIC認証の使用可否
+Security-66: HTTPで接続中のページからのHTTP接続でのBasic認証の使用可否
 
     :1: 許可する（既定）
 
