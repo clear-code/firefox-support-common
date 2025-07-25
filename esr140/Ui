@@ -374,7 +374,7 @@ Ui-18: コンテナー機能のUIを表示する
 
 Ui-19: 新しいプロファイルマネージャーとプロファイル切り替え機能の使用
 
-    :1: 使用する
+    :1: 使用を強制する
 
     distribution\policies.json:
     "Preferences": {
@@ -389,7 +389,7 @@ Ui-19: 新しいプロファイルマネージャーとプロファイル切り�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :2: 使用しない（既定）
+    :2: 使用を禁止する
 
     distribution\policies.json:
     "Preferences": {
@@ -403,6 +403,10 @@ Ui-19: 新しいプロファイルマネージャーとプロファイル切り�
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+    :3: 初期状態では無効とし、ユーザーの任意での使用を許可する（既定）
+
+    -
 
 Ui-20: タブ切り替え時のPicture-in-Pictureへの自動切り替え
 
@@ -421,37 +425,15 @@ Ui-20: タブ切り替え時のPicture-in-Pictureへの自動切り替え
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-    :2: 切り替えない（既定）
+    :2: Picture-in-Pictureに切り替えない（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
 Ui-21: タブグループ機能の使用可否
 
     :1: 機能を有効化し、UIを表示する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.tabs.groups.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 機能を無効化し、UIを隠す
 
@@ -472,18 +454,7 @@ Ui-22: 組み込みのPDFビューワー上でのリンク情報の検知とハ�
 
     :1: 使用する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "pdfjs.enableAutoLinking": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 使用しない
 
@@ -504,18 +475,7 @@ Ui-23: 組み込みのPDFビューワー上での署名機能
 
     :1: 使用する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "pdfjs.enableSignatureEditor": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 使用しない
 

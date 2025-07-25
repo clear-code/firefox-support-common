@@ -104,22 +104,7 @@ Location-6: アドレスバーからの検索結果のページを閲覧中の�
 
     :1: 検索結果のページのURLを表示する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.urlbar.showSearchTerms.featureGate": {
-        "Value": false,
-        "Status": "locked"
-      },
-      "browser.urlbar.showSearchTerms.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 検索語句を表示する
 
@@ -140,16 +125,16 @@ Location-6: アドレスバーからの検索結果のページを閲覧中の�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Location-7: アドレスバーからスキーマ指定を省略したURLを開いた時に最初に接続を試行するプロトコル
-
-    :1: HTTPSから試行する（既定）
-
-    Network-36-1選択時は常にこの動作となる。
+    :3: 常に検索結果のページのURLを表示する
 
     distribution\policies.json:
     "Preferences": {
-      "dom.security.https_first_schemeless": {
-        "Value": true,
+      "browser.urlbar.showSearchTerms.featureGate": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.urlbar.showSearchTerms.enabled": {
+        "Value": false,
         "Status": "locked"
       },
       ...
@@ -158,6 +143,14 @@ Location-7: アドレスバーからスキーマ指定を省略したURLを開�
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Location-7: アドレスバーからスキーマ指定を省略したURLを開いた時に最初に接続を試行するプロトコル
+
+    :1: HTTPSから試行する（既定）
+
+    Network-36-1選択時は常にこの動作となる。
+
+    -
 
     :2: HTTPから試行する
 
@@ -180,18 +173,7 @@ Location-8: アドレスバーの電卓機能の使用可否
 
     :1: 使用する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "browser.urlbar.suggest.calculator": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 使用しない
 

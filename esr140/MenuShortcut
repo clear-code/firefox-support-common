@@ -789,3 +789,20 @@ MenuShortcut-81: 文字列選択時のコンテキストメニュー＞選択範
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+MenuShortcut-82: タブのコンテキストメニュー＞タブを解放
+
+    :1: 無効化する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.unloadTabInContextMenu": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
