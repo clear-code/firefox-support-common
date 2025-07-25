@@ -2104,8 +2104,7 @@ Privacy-72: ユーザー操作で新しくウィンドウが開かれたとき�
 
     :2: 明示的な許可を必要とする（既定）
 
-    *.cfg / *.jsc:
-    lockPref("privacy.restrict3rdpartystorage.heuristic.redirect", false);
+    -
 
 Privacy-73: グローバルプライバシーコントロールによる、ユーザーデータの販売や共有の拒否のWebサイトへの通知
 
@@ -2126,18 +2125,7 @@ Privacy-73: グローバルプライバシーコントロールによる、ユ�
 
     :2: 通知しない（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "privacy.globalprivacycontrol.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
 Privacy-74: 拡張機能のコンテンツスクリプトを利用したユーザー追跡の防止
 
@@ -2148,19 +2136,13 @@ Privacy-74: 拡張機能のコンテンツスクリプトを利用したユー�
 
     :2: 防止しない（既定）
 
-    *.cfg / *.jsc:
-    lockPref("privacy.antitracking.isolateContentScriptResources", false);
+    -
 
 Privacy-75: プライベートブラウジングモードの使用
 
     :1: 使用を許可（既定）
 
-    distribution\policies.json:
-    "PrivateBrowsingModeAvailability": 0,
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Private Browsing Mode Availability」を有効化し、「Allow Private Browsing Mode」を選択
+    -
 
     :2: 使用を禁止
 
@@ -2184,18 +2166,7 @@ Privacy-76: サードパーティーCookieの受け容れ可否
 
     :1: 受け容れる（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.cookie.cookieBehavior.optInPartitioning": {
-        "Value": false,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 拒否する
 
@@ -2218,8 +2189,7 @@ Privacy-77: Bounce Tracking（中間サイトを介したトラッキング）�
 
     :1: 受け容れる（既定）
 
-    *.cfg / *.jsc:
-    lockPref("privacy.bounceTrackingProtection.mode", 3);
+    -
 
     :2: 拒否する
 
@@ -2235,5 +2205,4 @@ Privacy-78: SmartBlockによるソーシャルメディアの埋め込みコン�
 
     :2: ブロックしない（既定）
 
-    *.cfg / *.jsc:
-    lockPref("privacy.annotate_channels.strict_list.enabled", false);
+    -

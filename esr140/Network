@@ -736,18 +736,7 @@ Network-34: HTTPS DNSレコードの解決でのOSのDNSリゾルバーの使用
 
     :1: 使用する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.dns.native_https_query": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 使用しない
 
@@ -773,25 +762,13 @@ Network-35: Microsoft Entraによるシングルサインオン（SSO）の可�
 
     :2: 許可しない（既定）
 
-    distribution\policies.json:
-    "MicrosoftEntraSSO": false,
+    -
 
 Network-36: HTTPでの接続を指示されたときのHTTPSでの接続試行（HTTPSファースト）の可否
 
     :1: HTTPSから試行する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "dom.security.https_first": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: HTTPから試行する
 

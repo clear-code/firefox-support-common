@@ -167,12 +167,7 @@ Startup-6: 利用規約の表示の可否
 
     :1: 表示する（既定）
 
-    distribution\policies.json:
-    "SkipTermsOfUse": false,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Skip Terms of Use」を無効化または未定義にする
+    -
 
     :2: 表示しない
 

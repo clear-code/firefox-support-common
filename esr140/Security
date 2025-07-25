@@ -1636,18 +1636,7 @@ Security-65: TLS証明書の透明性の要求
 
     :1: 要求する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "security.pki.certificate_transparency.mode": {
-        "Value": 2,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 要求しない
 
@@ -1668,18 +1657,7 @@ Security-66: HTTPで接続中のページからのHTTP接続でのBASIC認証の
 
     :1: 許可する（既定）
 
-    distribution\policies.json:
-    "Preferences": {
-      "network.http.basic_http_auth.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
-
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    -
 
     :2: 禁止する
 
