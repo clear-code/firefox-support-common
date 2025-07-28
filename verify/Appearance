@@ -118,16 +118,16 @@ Appearance-2: ツールバー上の項目の初期設定
             - 進む
             - 再読み込み
             - 空白
+            - 統合された検索ボタン
             - アドレスバー
             - 空白
-              {%if not Privacy_27_3 %}
-            - Pocket
-              {% endif %}
             - ダウンロード（ダウンロード未実施時は非表示）
               {%if not DisableFirefoxAccount %}
             - Firefoxアカウント
               {% endif %}
+              {%if not Appearance_24_2 %}
             - 拡張機能パネル
+              {% endif %}
             - パネルメニューボタン
         - ブックマークツールバーが以下の既定の内容である。
             - ブックマークツールバーの項目
@@ -153,16 +153,16 @@ Appearance-2: ツールバー上の項目の初期設定
             - 進む
             - 再読み込み
             - 空白
+            - 統合された検索ボタン
             - アドレスバー
             - 空白
-              {%if not Privacy_27_3 %}
-            - Pocket
-              {% endif %}
             - ダウンロード（ダウンロード未実施時は非表示）
               {%if not DisableFirefoxAccount %}
             - Firefoxアカウント
               {% endif %}
+              {%if not Appearance_24_2 %}
             - 拡張機能パネル
+              {% endif %}
             - パネルメニューボタン
         - ブックマークツールバーが指定の内容になっている。参考に、以下に既定の内容を示す。 \
           （ブックマークツールバーの内容をカスタマイズしている場合、ツールバーの内容が以下と異なる状態になっている事が期待される。）
@@ -486,7 +486,7 @@ Appearance-19: 設定画面でのFirefox Labsの表示
 
     - 「Firefox Labs」が表示されていない。
 
-Appearance-20: AIチャットボットボタンを表示する
+Appearance-20: AIチャットボット機能を使用する
 
     :1: 機能を有効化し、UIを表示する（既定）
 
