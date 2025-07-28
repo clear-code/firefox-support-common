@@ -125,7 +125,9 @@ Appearance-2: ツールバー上の項目の初期設定
               {%if not DisableFirefoxAccount %}
             - Firefoxアカウント
               {% endif %}
+              {%if not Appearance_24_2 %}
             - 拡張機能パネル
+              {% endif %}
             - パネルメニューボタン
         - ブックマークツールバーが以下の既定の内容である。
             - ブックマークツールバーの項目
@@ -158,7 +160,9 @@ Appearance-2: ツールバー上の項目の初期設定
               {%if not DisableFirefoxAccount %}
             - Firefoxアカウント
               {% endif %}
+              {%if not Appearance_24_2 %}
             - 拡張機能パネル
+              {% endif %}
             - パネルメニューボタン
         - ブックマークツールバーが指定の内容になっている。参考に、以下に既定の内容を示す。 \
           （ブックマークツールバーの内容をカスタマイズしている場合、ツールバーの内容が以下と異なる状態になっている事が期待される。）
