@@ -118,11 +118,9 @@ Appearance-2: ツールバー上の項目の初期設定
             - 進む
             - 再読み込み
             - 空白
+            - 統合された検索ボタン
             - アドレスバー
             - 空白
-              {%if not Privacy_27_3 %}
-            - Pocket
-              {% endif %}
             - ダウンロード（ダウンロード未実施時は非表示）
               {%if not DisableFirefoxAccount %}
             - Firefoxアカウント
@@ -153,11 +151,9 @@ Appearance-2: ツールバー上の項目の初期設定
             - 進む
             - 再読み込み
             - 空白
+            - 統合された検索ボタン
             - アドレスバー
             - 空白
-              {%if not Privacy_27_3 %}
-            - Pocket
-              {% endif %}
             - ダウンロード（ダウンロード未実施時は非表示）
               {%if not DisableFirefoxAccount %}
             - Firefoxアカウント
