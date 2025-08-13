@@ -107,10 +107,12 @@ Location-6: アドレスバーからの検索結果のページを閲覧中の�
     distribution\policies.json:
     "Preferences": {
       "browser.urlbar.showSearchTerms.featureGate": {
-        "Value": false
+        "Value": false,
+        "Status": "default"
       },
       "browser.urlbar.showSearchTerms.enabled": {
-        "Value": false
+        "Value": false,
+        "Status": "default"
       },
       ...
     },
