@@ -2153,7 +2153,7 @@ Privacy-78: SmartBlockによるソーシャルメディアの埋め込みコン�
               TrackingProtection.annotationsLevel2Enabled 
       
     - **確認**
-        - `false` というログがブラウザーコンソールに出力される。
+        - `true` というログがブラウザーコンソールに出力される。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
       {% endif %}
@@ -2180,7 +2180,7 @@ Privacy-78: SmartBlockによるソーシャルメディアの埋め込みコン�
               TrackingProtection.annotationsLevel2Enabled 
       
     - **確認**
-        - `true` というログがブラウザーコンソールに出力される。
+        - `false` というログがブラウザーコンソールに出力される。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
       {% endif %}
