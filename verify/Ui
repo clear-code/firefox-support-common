@@ -352,7 +352,7 @@ Ui-20: タブ切り替え時のPicture-in-Pictureへの自動切り替え
     :1: Picture-in-Pictureに切り替える
 
     - Firefoxを起動する。
-    - テストケースリストのリンクから `https://www.clear-code.com/blog/2020/9/24.html` を開く。
+    - テストケースリストのリンクから `https://kakonacl.xsrv.jp/h265_vp9/h264_mediacoder_html5.html` を開く。
     - ページ中に埋め込まれた動画の再生を開始する。
     - 新しいタブを開く。
     - **確認**
@@ -361,7 +361,7 @@ Ui-20: タブ切り替え時のPicture-in-Pictureへの自動切り替え
     :2: Picture-in-Pictureに切り替えない（既定）
 
     - Firefoxを起動する。
-    - テストケースリストのリンクから `https://www.clear-code.com/blog/2020/9/24.html` を開く。
+    - テストケースリストのリンクから `https://kakonacl.xsrv.jp/h265_vp9/h264_mediacoder_html5.html` を開く。
     - ページ中に埋め込まれた動画の再生を開始する。
     - 新しいタブを開く。
     - **確認**
