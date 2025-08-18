@@ -2061,6 +2061,7 @@ Privacy-70: [廃止] 「Do Not Sell」ヘッダの送出の可否
 
     :2: [廃止] 送出しない（既定）
 
+    [廃止]
     Privacy-73へ統合
 
 Privacy-71: Privacy Preserving Attribution APIの有効化
