@@ -2053,26 +2053,15 @@ Privacy-69: 住所情報の保存
     lockPref("extensions.formautofill.addresses.supported", "off");
     lockPref("extensions.formautofill.addresses.enabled", false);
 
-Privacy-70: 「Do Not Sell」ヘッダの送出の可否
+Privacy-70: [廃止] 「Do Not Sell」ヘッダの送出の可否
 
-    :1: 送出する
+    :1: [廃止] 送出する
 
-    distribution\policies.json:
-    "Preferences": {
-      "privacy.globalprivacycontrol.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-      ...
-    },
+    [廃止]
 
-    GPO:
-    カテゴリ「Firefox」
-    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+    :2: [廃止] 送出しない（既定）
 
-    :2: 送出しない（既定）
-
-    -
+    Privacy-73へ統合
 
 Privacy-71: Privacy Preserving Attribution APIの有効化
 
