@@ -780,7 +780,7 @@ MenuShortcut-81: 文字列選択時のコンテキストメニュー＞選択範
     distribution\policies.json:
     "Preferences": {
       "browser.translations.select.enable": {
-        "Value": true,
+        "Value": false,
         "Status": "locked"
       },
       ...
