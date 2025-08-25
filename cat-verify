@@ -100,7 +100,7 @@ TEMPLATE_PRETEXT = """
 {config}
 """
 
-TEMPLATE_OPTIONS = """
+TEMPLATE_OPTIONS = r"""
 # 設定画面を使用した検証
 
 ## 事前準備
@@ -117,7 +117,7 @@ TEMPLATE_OPTIONS = """
 - **確認**
 """
 
-TEMPLATE_ABOUT_CONFIG = """
+TEMPLATE_ABOUT_CONFIG = r"""
 # about:configを使用した検証
 
 ## 事前準備
@@ -277,7 +277,7 @@ def parse_special(text):
 
     return ('', text)
 
-DISABLED_ITEM_KEY_MATCHER = re.compile('(DISABLED_[A-Z_]+):\s+(.+)\Z')
+DISABLED_ITEM_KEY_MATCHER = re.compile(r'(DISABLED_[A-Z_]+):\s+(.+)\Z')
 
 def shift_disabled_item(text):
     ht = text.split('\n', maxsplit=1)
@@ -291,9 +291,9 @@ def shift_disabled_item(text):
 
     return ('', '', text)
 
-PRETEXT_OPTION_MATCHER = re.compile('^[^-]+-0-[0-9]+\Z')
-LIST_ITEM_MATCHER = re.compile('^(\s*)(- )?(.*[^\\\\])$', re.MULTILINE)
-LIST_LINE_MATCHER = re.compile('^(\s*)(- )?(.+)$', re.MULTILINE)
+PRETEXT_OPTION_MATCHER = re.compile(r'^[^-]+-0-[0-9]+\Z')
+LIST_ITEM_MATCHER = re.compile(r'^(\s*)(- )?(.*[^\\\\])$', re.MULTILINE)
+LIST_LINE_MATCHER = re.compile(r'^(\s*)(- )?(.+)$', re.MULTILINE)
 
 def create_template(manual, config, vars, options):
     items_options               = []
@@ -497,7 +497,7 @@ def create_template(manual, config, vars, options):
             # Align by Install, Application, Admin...
             for key in chapter_about_config:
                 for line in config_list:
-                    if re.search('\(%s\s?' % key, line):
+                    if re.search(r'\(%s\s?' % key, line):
                         template += '\n'.join(sort_by_ascii_part(config_list))
         template += TEMPLATE_ABOUT_CONFIG_END
         template += '\n'
@@ -553,7 +553,7 @@ def sort_by_ascii_part(strings):
     return sorted(strings, key=lambda s: re.match(r'^\s*-\s*`?[a-zA-Z0-9\._\-]+', s).group())
 
 def extract_urls(input):
-    all_extracted_urls = re.findall('(?P<url>https?://[^/(\s」`]+(?:[^(^\s`」][^\s`」]*)?)', input)
+    all_extracted_urls = re.findall(r'(?P<url>https?://[^/(\s」`]+(?:[^(^\s`」][^\s`」]*)?)', input)
     wildcard_replaced_urls = list(map(lambda url: re.sub('[~～]$', '*', url), all_extracted_urls))
     sorted_urls = sorted(list(set(wildcard_replaced_urls)))
     shortened_urls = re.sub("(https?://[^\n]+)(\n\\1[^\n]+)+", "\\1*", "\n".join(sorted_urls)).split("\n")
