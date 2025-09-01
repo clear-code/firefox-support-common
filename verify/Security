@@ -1367,6 +1367,7 @@ Security-66: HTTPで接続中のページからのHTTP接続でのBasic認証の
 
     - Firefoxを起動する。
     - テストケースリストのリンクから `http://labs.w0s.jp/http/authorization/` を開く。
+    - HTTP＞Basic Authentication リンクをクリックする
     - **確認**
         - 認証情報の入力を求められる。
 
@@ -1374,6 +1375,7 @@ Security-66: HTTPで接続中のページからのHTTP接続でのBasic認証の
 
     - Firefoxを起動する。
     - テストケースリストのリンクから `http://labs.w0s.jp/http/authorization/` を開く。
+    - HTTP＞Basic Authentication リンクをクリックする
     - **確認**
         - 認証情報の入力を求められずに、Firefoxが提供する接続エラーのページが表示される。
 
