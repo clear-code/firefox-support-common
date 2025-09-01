@@ -1353,6 +1353,9 @@ Security-65: TLS証明書の透明性の要求
     - テストケースリストのリンクから `https://no-sct.badssl.com/` を開く。
     - **確認**
         - Firefoxが提供する接続エラーのページが表示される。
+    - 赤い背景のページが表示される場合は、about:configを開き次の設定値を確認する。
+    - **確認**
+        - `security.pki.certificate_transparency.mode` の値が `2` である。
 
     :2: 要求しない
 
