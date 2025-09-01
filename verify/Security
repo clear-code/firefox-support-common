@@ -1353,6 +1353,9 @@ Security-65: TLS証明書の透明性の要求
     - テストケースリストのリンクから `https://no-sct.badssl.com/` を開く。
     - **確認**
         - Firefoxが提供する接続エラーのページが表示される。
+    - 赤い背景のページが表示される場合は、about:configを開き次の設定値を確認する。
+    - **確認**
+        - `security.pki.certificate_transparency.mode` の値が `2` である。
 
     :2: 要求しない
 
@@ -1366,14 +1369,16 @@ Security-66: HTTPで接続中のページからのHTTP接続でのBasic認証の
     :1: 許可する（既定）
 
     - Firefoxを起動する。
-    - テストケースリストのリンクから `http://labs.w0s.jp/http/authorization/` を開く。
+    - アドレスバーに `http://labs.w0s.jp/http/authorization/` と入力しページを開く。
+    - HTTP＞Basic Authentication リンクをクリックする
     - **確認**
         - 認証情報の入力を求められる。
 
     :2: 禁止する
 
     - Firefoxを起動する。
-    - テストケースリストのリンクから `http://labs.w0s.jp/http/authorization/` を開く。
+    - アドレスバーに `http://labs.w0s.jp/http/authorization/` と入力しページを開く。
+    - HTTP＞Basic Authentication リンクをクリックする
     - **確認**
         - 認証情報の入力を求められずに、Firefoxが提供する接続エラーのページが表示される。
 
