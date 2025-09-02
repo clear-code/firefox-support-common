@@ -322,7 +322,7 @@ class ConfigurationRow:
         return re.sub(' *[^:]+:\n', '', config).strip()
 
     def _omit_redundant_config(self, config):
-        config = re.sub('.*\*\.cfg', '*.cfg', config, flags=(re.DOTALL)).strip()
+        config = re.sub(r'.*\*\.cfg', '*.cfg', config, flags=(re.DOTALL)).strip()
         config = self._omit_gpo_config(config)
         return config
 
