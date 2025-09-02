@@ -26,8 +26,9 @@ imported_certs:                 Test Cert
 
 # 未使用
 install_path_32bit:
-desktop_shortcut_path_32bit:
-start_menu_shortcut_path_32bit:
+Application_1_3_desktop_shortcut_path_32bit:
+Application_2_3_start_menu_shortcut_path_32bit:
+Application_6_2_special_profile_actual_path:
 
 COVER:
 
