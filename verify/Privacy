@@ -953,8 +953,8 @@ Privacy-34: フォームへのユーザー入力値のセッション情報へ�
     :1: 許可する（既定）
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を削除する。
     - Firefoxを起動する。
     - テストケースの `password.html` を開く。
@@ -969,8 +969,8 @@ Privacy-34: フォームへのユーザー入力値のセッション情報へ�
     :2: 一切禁止する
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を削除する。
     - Firefoxを起動する。
     - テストケースの `password.html` を開く。
@@ -1032,7 +1032,7 @@ Privacy-36: TLS/SSLで保護された通信のコンテンツのディスク上�
     - 先ほど開いたディスクキャッシュの保存先フォルダを開き、その1つ上位のフォルダに移動して、中にある `thumbnails` フォルダを消去する。
       {% endif %}
       {% if Application_6_2 %}
-    - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル `{{special_profile_path}}` {%if special_profile_actual_path %} （{{special_profile_actual_path}}）{% endif %} 内のファイルを削除する。
+    - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} （{{Application_6_2_special_profile_actual_path}}）{% endif %} 内のファイルを削除する。
       {% endif %}
     - Firefoxを起動する。
       {%if Tab_17_2 %}
@@ -1069,7 +1069,7 @@ Privacy-36: TLS/SSLで保護された通信のコンテンツのディスク上�
     - 先ほど開いたディスクキャッシュの保存先フォルダを開き、その1つ上位のフォルダに移動して、中にある `thumbnails` フォルダを消去する。
       {% endif %}
       {% if Application_6_2 %}
-    - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル `{{special_profile_path}}` {%if special_profile_actual_path %} （{{special_profile_actual_path}}）{% endif %} 内のファイルを削除する。
+    - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} （{{Application_6_2_special_profile_actual_path}}）{% endif %} 内のファイルを削除する。
       {% endif %}
     - Firefoxを起動する。
       {%if Tab_17_2 %}
@@ -1545,8 +1545,8 @@ Privacy-52: プライバシーに関する通知タブの表示の可否
     :1: 表示する（既定）: not Privacy_18_3
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を空にする。
     - Firefoxを起動する。
     - **確認**
@@ -1568,8 +1568,8 @@ Privacy-52: プライバシーに関する通知タブの表示の可否
     :2: 表示しない: not Privacy_18_3
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を空にする。
     - Firefoxを起動する。
     - **確認**
@@ -1866,8 +1866,8 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
     :1: クロスサイトでの送信を常に許可 (既定）
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を削除する。
     - Firefoxを起動する。
     - テストケースリストのリンクから \
@@ -1882,8 +1882,8 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
     :2: クロスサイトでの送信をサブリソースに対しては禁止する
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を削除する。
     - Firefoxを起動する。
     - テストケースリストのリンクから \
@@ -1898,8 +1898,8 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
     :3: クロスサイトでの送信をサブリソースに対しては禁止し、特定サイトでのみクロスサイトでの送信を常に許可
 
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を削除する。
     - Firefoxを起動する。
     - テストケースリストのリンクから \
@@ -1912,8 +1912,8 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
         - 遷移後のページの `noCokkie` に `◯` が表示されていない。
     - ポリシー設定を変更し `demo.isystk.com` をクロスサイトでのCookie送信許可サイトに加える。
     - 今バージョンのメタインストーラで導入したFirefoxのユーザープロファイル \
-      `{{special_profile_path}}` {%if special_profile_actual_path %} \
-      （{{special_profile_actual_path}}）{% endif %} \
+      `{{special_profile_path}}` {%if Application_6_2_special_profile_actual_path %} \
+      （{{Application_6_2_special_profile_actual_path}}）{% endif %} \
       を削除する。
     - Firefoxを起動する。
     - テストケースリストのリンクから \
