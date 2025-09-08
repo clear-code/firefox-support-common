@@ -20,9 +20,9 @@ PRETEXT-1: 前提条件
     - Firefoxは次のパスにインストールする。
         - `{{install_path}}` {%if install_path_32bit %} （32bit環境では `{{install_path_32bit}}`）{% endif %}{%if desktop_shortcut %}
     - デスクトップのショートカットは次のパスに作成する。
-        - `{{desktop_shortcut_path}}` {%if desktop_shortcut_path_32bit %} （32bit環境では `{{desktop_shortcut_path_32bit}}`）{% endif %}{% endif %}{%if start_menu_shortcut %}
+        - `{{desktop_shortcut_path}}` {%if Application_1_3_desktop_shortcut_path_32bit %} （32bit環境では `{{Application_1_3_desktop_shortcut_path_32bit}}`）{% endif %}{% endif %}{%if start_menu_shortcut %}
     - スタートメニューのショートカットは次のパスに作成する。
-        - `{{start_menu_shortcut_path}}` {%if start_menu_shortcut_path_32bit %} （32bit環境では `{{start_menu_shortcut_path_32bit}}`）{% endif %}{% endif %}
+        - `{{start_menu_shortcut_path}}` {%if Application_2_3_start_menu_shortcut_path_32bit %} （32bit環境では `{{Application_2_3_start_menu_shortcut_path_32bit}}`）{% endif %}{% endif %}
     {% endif %}
 
     :3: 検証の準備
