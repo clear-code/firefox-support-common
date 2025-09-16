@@ -950,7 +950,7 @@ Privacy-34: フォームへのユーザー入力値のセッション情報へ�
     - ユーザID欄に「ユーザ入力値」と入力し、20秒待つ。
     - ユーザープロファイル内の `sessionstore-backups` フォルダを開く。
     - `recovery.jsonlz4` の内容を確認する。
-        - Windowsの場合: https://github.com/jusw85/mozlz4/releases で公開されているバイナリを使って `mozlz4-win64.exe recovery.jzonlz4` を実行してJSONに変換し、Firefoxで開く。"ユーザー入力値"が見つかるかどうかを調べる。
+        - Windowsの場合: https://github.com/jusw85/mozlz4/releases で公開されているバイナリを使って `mozlz4-win64.exe recovery.jsonlz4` を実行してJSONに変換し、Firefoxで開く。"ユーザー入力値"が見つかるかどうかを調べる。
 	- Linuxの場合: `sudo npm install -g mozlz4a` で必要なコマンドをインストールした後、`mozlz4a-decompress recovery.jsonlz4  | jq . | grep "ユーザ入力値"` を実行して、行が見つかるかどうかを調べる。
     - **確認**
         - ファイル内に「ユーザ入力値」という文字列が含まれている。
@@ -969,7 +969,7 @@ Privacy-34: フォームへのユーザー入力値のセッション情報へ�
         - `recovery.jsonlz4` が存在しない。
           存在する場合は以下の手順を続けて行う。
     - `recovery.jsonlz4` の内容を確認する。
-        - Windowsの場合: https://github.com/jusw85/mozlz4/releases で公開されているバイナリを使って `mozlz4-win64.exe recovery.jzonlz4` を実行してJSONに変換し、Firefoxで開く。"ユーザー入力値"が見つかるかどうかを調べる。
+        - Windowsの場合: https://github.com/jusw85/mozlz4/releases で公開されているバイナリを使って `mozlz4-win64.exe recovery.jsonlz4` を実行してJSONに変換し、Firefoxで開く。"ユーザー入力値"が見つかるかどうかを調べる。
         - Linuxの場合: `sudo npm install -g mozlz4a` で必要なコマンドをインストールした後、`mozlz4a-decompress recovery.jsonlz4  | jq . | grep "ユーザ入力値"` を実行して、行が見つかるかどうかを調べる。
     - **確認**
         - ファイル内に「ユーザ入力値」という文字列が含まれていない。
