@@ -205,24 +205,6 @@ Privacy-5: パスワードの保存の可否
     カテゴリ「Firefox」
     → 「Offer to save logins (default)」を有効化
 
-Privacy-6: [廃止] Webアプリのオフラインキャッシュの利用の可否
-
-    :1: [廃止] 確認の上で許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 特定サイトのみ確認なしで許可する
-
-    [廃止]
-
-    :4: [廃止] 特定サイトのみ初期状態で確認無しで許可する
-
-    [廃止]
-
-    :3: [廃止] 禁止する
-
-    [廃止]
-
 Privacy-7: リンク先の先読みの可否
 
     :1: 許可する（既定）
@@ -439,24 +421,6 @@ Privacy-12: DOMストレージの利用の可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Privacy-13: [廃止] Indexed DBの利用の可否
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 特定サイトのみ確認なしで許可する
-
-    [廃止]
-
-    :4: [廃止] 特定サイトのみ初期状態で確認なしで許可する
-
-    [廃止]
-
-    :3: [廃止] 禁止する
-
-    [廃止]
-
 Privacy-14: 位置情報の利用の可否
 
     :1: 確認の上で許可する（既定）
@@ -523,16 +487,6 @@ Privacy-14: 位置情報の利用の可否
         "Allow": ["https://www.example.com", ... ]
       }
     },
-
-Privacy-15: [廃止] 検索結果のローカライズ用地域コードの位置情報に基づく推定の可否
-
-    :1: [廃止] 許可する（既定）
-
-    -
-
-    :2: [廃止] 禁止する
-
-    [廃止]
 
 Privacy-16: DNSの先読みの可否
 
@@ -637,24 +591,6 @@ Privacy-19: セキュリティエラーレポートの送信の可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Privacy-20: [廃止] 「Do Not Track」ヘッダの送出の可否
-
-    :1: [廃止] 許可で送出する
-
-    [廃止]
-
-    :2: [廃止] 禁止で送出する
-
-    [廃止]
-
-    :3: [廃止] 一切送出しない（既定）
-
-    [廃止]
-
-    :4: [廃止] 一切送出しないことを強制
-
-    [廃止]
-
 Privacy-21: クラッシュレポートの送信の可否
 
     :1: 許可する（既定）
@@ -725,16 +661,6 @@ Privacy-22: Firefox Syncの利用の可否
 
     [廃止]
 
-Privacy-23: [廃止] ソーシャルAPIの利用の可否
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
-
 Privacy-24: Firefoxアカウントの利用の可否
 
     :1: 許可する（既定）
@@ -754,16 +680,6 @@ Privacy-24: Firefoxアカウントの利用の可否
     カテゴリ「Firefox」
     → 「Disable Firefox Accounts」を有効化
 
-Privacy-25: [廃止] Firefox Helloの利用の可否
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
-
 Privacy-26: 「忘れる」ボタンの利用の可否
 
     :1: 許可する（既定）
@@ -778,30 +694,6 @@ Privacy-26: 「忘れる」ボタンの利用の可否
     GPO:
     カテゴリ「Firefox」
     → 「Disable Forget Button」を有効化
-
-Privacy-27: [廃止] Pocket（リーディングリスト機能）の利用の可否
-
-    :1: [廃止] 許可する
-
-    -
-
-    :2: [廃止] 禁止する（MCD）
-
-    [廃止]
-
-    :3: [廃止] 禁止する
-
-    [廃止]
-
-Privacy-28: [廃止] その他、プライバシー情報に関わる一切の機能の利用の可否
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
 
 Privacy-29: 履歴・ブックマーク用データベースの自動最適化
 
@@ -876,16 +768,6 @@ Privacy-30: ディスクキャッシュの最大サイズ制限
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
-Privacy-31: [廃止] Firefoxのユーザー評価の送信の可否
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
 
 Privacy-32: リンクのhoverによるリンク先の先読みの可否
 
@@ -1135,16 +1017,6 @@ Privacy-38: Webビーコンの送信
 
     *.cfg / *.jsc:
     lockPref("beacon.enabled", false);
-
-Privacy-39: [廃止] SSL/TLSでないページへのパスワード入力時の警告
-
-    :1: [廃止] 警告する（既定）
-
-    [廃止]
-
-    :2: [廃止] 警告しない
-
-    [廃止]
 
 Privacy-40: パスワード保存ポップアップにおける、パスワードを平文表示するチェックボックスの表示の可否
 
@@ -1604,16 +1476,6 @@ Privacy-50: プライベートブラウジングモードでの行動履歴の�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Privacy-51: [廃止] プライベートウィンドウでのアドオンの動作可否
-
-    :1: [廃止] 原則として禁止し、個別に許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 原則として許可する
-
-    https://bugzilla.mozilla.org/show_bug.cgi?id=1661517 によりFirefox 91から機能が廃止された。
-
 Privacy-52: プライバシーに関する通知タブの表示の可否
 
     :1: 表示する（既定）
@@ -2052,17 +1914,6 @@ Privacy-69: 住所情報の保存
     lockPref("dom.payments.defaults.saveAddress", false);
     lockPref("extensions.formautofill.addresses.supported", "off");
     lockPref("extensions.formautofill.addresses.enabled", false);
-
-Privacy-70: [廃止] 「Do Not Sell」ヘッダの送出の可否
-
-    :1: [廃止] 送出する
-
-    [廃止]
-
-    :2: [廃止] 送出しない（既定）
-
-    [廃止]
-    Privacy-73へ統合
 
 Privacy-71: Privacy Preserving Attribution APIの有効化
 
