@@ -123,16 +123,6 @@ Script-5: DOMイベントによるコンテキストメニュー操作のオー�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Script-6: [廃止] 左クリック以外のクリック操作によるイベントの発火
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
-
 Script-7: 動画・音声の自動再生の可否
 
     :1: 許可する
@@ -469,16 +459,6 @@ Script-22: iframe内のSVGに反映するテーマ
     *.cfg / *.jsc
     lockPref("svg.embedder-prefers-color-scheme.content.enabled", false);
 
-Script-23: [廃止] 非推奨のU2F（Universal 2nd Factor） JavaScript APIの使用
-
-    :1: [廃止] 使用しない（既定）
-
-    -
-
-    :2: [廃止] 使用する
-
-    -
-
 Script-24: caches、CacheStorage、Cacheを使用可能なコンテキストの制限緩和
 
     :1: 安全なコンテキストでのみ使用を許可（既定）
@@ -545,17 +525,6 @@ Script-25: WebRTCのRTCRtpSender.getParameters()、RTCRtpSender.setParameters()�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Script-26: [廃止] リッチテキストエディターの振る舞い
-
-    :1: [廃止] 他のブラウザーと互換性のある動作（既定）
-
-    [廃止]
-    https://bugzilla.mozilla.org/show_bug.cgi?id=1859245 により常にこの動作となった。
-
-    :2: [廃止] 他のブラウザーとは非互換の、古いFirefoxと互換性のある動作
-
-    [廃止]
-
 Script-27: Total Cookie Protectionが有効な状態での、サードパーティのコンテキストでのService Workerの使用
 
     :1: 分離されたコンテキストで使用を許可（既定）
@@ -602,17 +571,6 @@ Script-29: サードパーティのコンテキストでのストレージとCoo
     *.cfg / *.jsc
     lockPref("privacy.partition.always_partition_third_party_non_cookie_storage", false);
     lockPref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", true);
-
-Script-30: [廃止] scrollendイベントによるスクロール操作終了の検知
-
-    :1: [廃止] 他のブラウザーと同様に許可する（既定）
-
-    [廃止]
-    https://bugzilla.mozilla.org/show_bug.cgi?id=1872772 により常に有効となった。
-
-    :2: [廃止] 古いFirefoxと同様の動作とする
-
-    [廃止]
 
 Script-31: Service Workerの使用の可否
 
