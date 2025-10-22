@@ -108,16 +108,6 @@ Update-4: 「Mozilla Maintenance Service」のインストールの可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Update-5: [廃止] 軽量テーマの自動更新の可否
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
-
 Update-6: システムアドオンの自動更新の可否
 
     :1: 許可する（既定）
