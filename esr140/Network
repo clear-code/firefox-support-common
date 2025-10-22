@@ -98,16 +98,6 @@ Network-2: プロキシの利用
     カテゴリ「Firefox」
     → 「Proxy Settings」を有効化し、「Connection Type:」で「Use system proxy settings」を選択、「Don't allow proxy settings to be changed.」のチェックをON
 
-Network-3: [廃止] SSL3.0の利用の可否
-
-    :1: [廃止] 許可する
-
-    [廃止]
-
-    :2: [廃止] 禁止する（既定）
-
-    [廃止]
-
 Network-4: NTLM認証によるシングルサインオンの許可
 
     :1: [廃止] 許可する（MCD）
@@ -225,16 +215,6 @@ Network-8: IPv6の使用
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-Network-9: [廃止] HTTP Pipeliningの使用
-
-    :1: [廃止] 許可する
-
-    [廃止]
-
-    :2: [廃止] 禁止する（既定）
-
-    [廃止]
-
 Network-10: onionドメインの名前解決
 
     :1: 許可する（既定）
@@ -267,16 +247,6 @@ Network-11: UA文字列の変更
     *.cfg / *.jsc:
     lockPref("general.useragent.override", "（任意の内容）");
 
-Network-12: [廃止] リモートファイルに対するjarプロトコルの使用
-
-    :1: [廃止] 許可する（既定）
-
-    [廃止]
-
-    :2: [廃止] 禁止する
-
-    [廃止]
-
 Network-13: TLS 1.3の使用
 
     :1: 許可する（既定）
@@ -304,34 +274,6 @@ Network-13: TLS 1.3の使用
     GPO:
     カテゴリ「Firefox」
     → 「Maximum SSL version enabled」を有効化し、オプションで「TLS 1.0」から「TLS 1.2」のいずれかを選択
-
-Network-14: [廃止] SSL/TLSでのSHA-1証明書の使用の可否
-
-    :1: [廃止] 常に受け入れる
-
-    [廃止]
-
-    :3: [廃止] 2016年以前発行の公的な証明書を受け入れる
-
-    [廃止]
-
-    :4: [廃止] インポートした認証局の発行した証明書を受け入れる（既定）
-
-    [廃止]
-
-    :5: [廃止] 2016年以前発行の公的な証明書とインポートした認証局の発行した証明書の両方を受け入れる
-
-    [廃止]
-
-Network-15: [廃止] HTTP Pipeliningの最大同時リクエスト数
-
-    :1: [廃止] パフォーマンスを優先（既定）
-
-    [廃止]
-
-    :2: [廃止] トラフィックを抑える事を優先
-
-    [廃止]
 
 Network-16: FQDN形式でない（ドットを含まない）ホスト名でのシングルサインオンの許可
 
@@ -429,16 +371,6 @@ Network-20: Google Workspaceへのアクセスを許可するドメイン
     GPO:
     カテゴリ「Firefox」
     →「Define domains allowed to access Google Workspace」を有効化し、オプションでドメイン名をカンマ区切りで列挙
-
-Network-21: [廃止] FTPの使用
-
-    :1: [廃止] 使用しない（既定）
-
-    -
-
-    :2: [廃止] 使用する
-
-    [廃止]
 
 Network-22: localhostの名前解決
 
@@ -720,17 +652,6 @@ Network-32: クライアント認証でのRSA-PSSの使用
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
-
-Network-33: [廃止] クロスオリジンのリダイレクトでのAuthorizationヘッダーの引き継ぎ
-
-    :1: [廃止] 安全を優先し、引き継がない（既定）
-
-    [廃止]
-    https://bugzilla.mozilla.org/show_bug.cgi?id=1894288 により常にこの動作となった。
-
-    :2: [廃止] 互換性を優先し、引き継ぐ
-
-    [廃止]
 
 Network-34: HTTPS DNSレコードの解決でのOSのDNSリゾルバーの使用
 
