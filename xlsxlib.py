@@ -35,7 +35,6 @@ WORKBOOKS = [
         'Appearance',
         'Performance',
         'Addon-IEView',
-        'Addon-FireIE',
         'Addon-Acrobat',
         'Addon-Skysea',
     ]),
