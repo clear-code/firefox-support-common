@@ -192,9 +192,9 @@ resource "azurerm_network_security_group" "firefoxverify" {
     }
   }
 
-# 特定条件（resource_group_nameに"windows-server"を含む場合のみ）
+# 特定条件（resource_group_nameに"-IIS"を含む場合のみ適用）
   dynamic "security_rule" {
-    for_each = can(regex("windows-server", azurerm_resource_group.firefoxverify.name)) ? [
+    for_each = can(regex("-IIS", azurerm_resource_group.firefoxverify.name)) ? [
       {
         name                       = "Allow-HTTP-Inbound"
         priority                   = 200
