@@ -141,40 +141,84 @@ resource "azurerm_network_security_group" "firefoxverify" {
   location            = "Japan East"
   resource_group_name = azurerm_resource_group.firefoxverify.name
 
-  security_rule {
-    name                       = "RDP"
-    priority                   = 100
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "3389"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
+# 共通のルール
+  dynamic "security_rule" {
+    for_each = [
+      {
+        name                       = "RDP"
+        priority                   = 100
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "3389"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+      },
+      {
+        name                       = "WinRM"
+        priority                   = 998
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "5986"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+      },
+      {
+        name                       = "WinRM-out"
+        priority                   = 100
+        direction                  = "Outbound"
+        access                     = "Allow"
+        protocol                   = "*"
+        source_port_range          = "*"
+        destination_port_range     = "5985"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+      }
+    ]
+
+    content {
+      name                       = security_rule.value.name
+      priority                   = security_rule.value.priority
+      direction                  = security_rule.value.direction
+      access                     = security_rule.value.access
+      protocol                   = security_rule.value.protocol
+      source_port_range           = security_rule.value.source_port_range
+      destination_port_range      = security_rule.value.destination_port_range
+      source_address_prefix       = security_rule.value.source_address_prefix
+      destination_address_prefix  = security_rule.value.destination_address_prefix
+    }
   }
 
-  security_rule {
-    name                       = "WinRM"
-    priority                   = 998
-    direction                  = "Inbound"
-    access                     = "Allow"
-    protocol                   = "Tcp"
-    source_port_range          = "*"
-    destination_port_range     = "5986"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+# 特定条件（resource_group_nameに"-IIS"を含む場合のみ適用）
+  dynamic "security_rule" {
+    for_each = can(regex("-IIS", azurerm_resource_group.firefoxverify.name)) ? [
+      {
+        name                       = "Allow-HTTP-Inbound"
+        priority                   = 200
+        direction                  = "Inbound"
+        access                     = "Allow"
+        protocol                   = "Tcp"
+        source_port_range          = "*"
+        destination_port_range     = "80"
+        source_address_prefix      = "*"
+        destination_address_prefix = "*"
+      }
+    ]: []
 
-  security_rule {
-    name                       = "WinRM-out"
-    priority                   = 100
-    direction                  = "Outbound"
-    access                     = "Allow"
-    protocol                   = "*"
-    source_port_range          = "*"
-    destination_port_range     = "5985"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
+    content {
+      name                       = security_rule.value.name
+      priority                   = security_rule.value.priority
+      direction                  = security_rule.value.direction
+      access                     = security_rule.value.access
+      protocol                   = security_rule.value.protocol
+      source_port_range           = security_rule.value.source_port_range
+      destination_port_range      = security_rule.value.destination_port_range
+      source_address_prefix       = security_rule.value.source_address_prefix
+      destination_address_prefix  = security_rule.value.destination_address_prefix
+    }
   }
 
   tags = {
