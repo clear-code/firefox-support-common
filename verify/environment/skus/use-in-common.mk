@@ -6,7 +6,7 @@
 
 SHELL=/bin/bash
 
-all: clean apply
+all: clean apply apply-playbook
 
 terraform.tfvars:
 	cat ../../modules/terraform.tfvars.template | \
@@ -15,10 +15,10 @@ terraform.tfvars:
 apply: terraform.tfvars
 	tofu init
 	tofu plan
-	time (tofu apply -auto-approve && ansible-playbook -i ansible/hosts ansible/playbook.yml)
+	time (tofu apply -auto-approve)
 
 apply-playbook:
-	ansible-playbook -i ansible/hosts ansible/playbook.yml
+	time (ansible-playbook -i ansible/hosts ansible/playbook.yml)
 
 destroy:
 	tofu destroy -auto-approve
