@@ -4,7 +4,7 @@ CJKoptions:
   - BoldFont=Noto Sans CJK JP Bold
 title:     企業でのメール運用を簡単に - Thunderbirdのご紹介
 author:    株式会社クリアコード
-date:      2021年10月1日
+date:      2026年2月2日
 logo: thunderbird/clear-code.png
 logo-width: 220
 titlepage: true
@@ -19,7 +19,7 @@ toc-own-page: true
 そんなメールソフトがThunderbirdです。
 
 ThunderbirdはMozilla Foundation傘下のMZLA Technologies Corporationが開発するオープンソースソフトウェアです。
-2004年のリリースから15年以上に渡って、世界中の企業や公官庁で利用されています。
+2004年のリリースから20年以上に渡って、世界中の企業や公官庁で利用されています。
 
 ![](thunderbird/menu.png)
 
@@ -92,7 +92,7 @@ https://www.clear-code.com/blog/2025/4/14/thunderbird-136-startup-error.html
 
 クリアコードは、2006年7月にフリーソフトウェア開発者を中心に設立したソフトウェア開発会社です。
 
-私たちはこれまで15年以上にわたってThunderbirdの導入支援を行ってきました。
+私たちはこれまで20年以上にわたってThunderbirdの導入支援を行ってきました。
 Thunderbirdの初期導入時の総合的なサポートや、障害発生時のトラブル対応、
 またお客様の事情に合わせたThunderbirdのカスタマイズなどの各種のご要望に対応しています。
 
