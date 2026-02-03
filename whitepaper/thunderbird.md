@@ -73,19 +73,19 @@ RedThunderMineBird Plusは、Thunderbirdで受信したメールとRedmine上の
 # これまでにあったトラブル対応の事例紹介
 
 Thunderbirdを既定のクライアントに設定しても他のアプリからOutlookが起動され続けてしまう問題
-https://www.clear-code.com/blog/2023/6/8/thunderbird-system-relationship.html
+[https://www.clear-code.com/blog/2023/6/8/thunderbird-system-relationship.html](https://www.clear-code.com/blog/2023/6/8/thunderbird-system-relationship.html)
 
 IMAPアカウントのメールフォルダーが破損する・増殖する問題
-https://www.clear-code.com/blog/2024/11/8/thunderbird-mbox-corruption.html
+[https://www.clear-code.com/blog/2024/11/8/thunderbird-mbox-corruption.html](https://www.clear-code.com/blog/2024/11/8/thunderbird-mbox-corruption.html)
 
 特定のメールフォルダーが重複表示されたり内容が表示されなくなったりする問題
-https://www.clear-code.com/blog/2023/6/8/tb-mbox-folder-name.html
+[https://www.clear-code.com/blog/2023/6/8/tb-mbox-folder-name.html](https://www.clear-code.com/blog/2023/6/8/tb-mbox-folder-name.html)
 
 Thunderbird 128.11以降でファイル共有サーバー上のemlファイルを開けない問題
-https://www.clear-code.com/blog/2025/9/12/thunderbird-profile-on-remote-fileserver.html
+[https://www.clear-code.com/blog/2025/9/12/thunderbird-profile-on-remote-fileserver.html](https://www.clear-code.com/blog/2025/9/12/thunderbird-profile-on-remote-fileserver.html)
 
 Thunderbird 136の起動時に「設定ファイルを正常に読み込めませんでした。システム管理者に問い合わせてください。」とメッセージが表示される問題
-https://www.clear-code.com/blog/2025/4/14/thunderbird-136-startup-error.html
+[https://www.clear-code.com/blog/2025/4/14/thunderbird-136-startup-error.html](https://www.clear-code.com/blog/2025/4/14/thunderbird-136-startup-error.html)
 
 
 # クリアコードについて
