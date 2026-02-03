@@ -5,8 +5,8 @@ CJKoptions:
 title:     企業でのメール運用を簡単に - Thunderbirdのご紹介
 author:    株式会社クリアコード
 date:      2026年2月2日
-logo: thunderbird/clear-code.png
-logo-width: 220
+titlepage-logo: thunderbird/clear-code.png
+logo-width: 6.5cm
 titlepage: true
 colorlinks: true
 toc-title: 目次
