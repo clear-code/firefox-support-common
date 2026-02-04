@@ -13,7 +13,7 @@ VERIFY_MANUAL_OPT= -c assets/esr78.conf -a assets/esr78.var
 #
 PANDOC_OPT_PDF= --toc-depth=2 --table-of-contents -f markdown \
                 --wrap=preserve \
-                --template=eisvogel.tex \
+                --template=template/eisvogel.latex \
                 -V documentclass=ltjsarticle \
                 -V classoption=titlepage \
                 --pdf-engine=xelatex

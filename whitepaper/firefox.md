@@ -5,8 +5,8 @@ CJKoptions:
 title:     Mozilla Firefoxで実現するスムーズなブラウザ運用
 author:    株式会社クリアコード
 date:      2021年10月15日
-logo: firefox/clear-code.png
-logo-width: 220
+titlepage-logo: thunderbird/clear-code.png
+logo-width: 6.5cm
 titlepage: true
 colorlinks: true
 toc-title: 目次
