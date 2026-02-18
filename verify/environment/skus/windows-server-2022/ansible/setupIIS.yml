@@ -1,0 +1,60 @@
+- name: Setup IIS with Windows Authentication on Windows Server
+  hosts: windows
+  gather_facts: yes
+  vars:
+    iis_features:
+      - Web-Server                  # IIS Web Server
+      - Web-WebServer               # Web Server
+      - Web-Common-Http             # Common HTTP Features
+      - Web-Default-Doc             # Default Document
+      - Web-Dir-Browsing            # Directory Browsing
+      - Web-Http-Errors             # HTTP Errors
+      - Web-Static-Content          # Static Content
+      - Web-Http-Redirect           # HTTP Redirect
+      - Web-Health                  # Health and Diagnostics
+      - Web-Http-Logging            # HTTP Logging
+      - Web-Performance             # Performance
+      - Web-Security                # Security
+      - Web-Filtering               # Request Filtering
+      - Web-Windows-Auth            # Windows Authentication
+      - Web-Mgmt-Tools              # Management Tools
+      - Web-Mgmt-Console            # IIS Management Console
+
+  tasks:
+    - name: Install IIS and required features
+      win_feature:
+        name: "{{ iis_features }}"
+        state: present
+        include_sub_features: yes
+        include_management_tools: yes
+
+    - name: Ensure IIS service is running
+      win_service:
+        name: W3SVC
+        start_mode: auto
+        state: started
+
+    - name: Enable Windows Authentication for Default Web Site
+      win_iis_webapppool:
+        name: "DefaultAppPool"
+        managed_pipeline_mode: Integrated
+        state: started
+
+    - name: Unlock anonymous authentication section via appcmd
+      win_shell: |
+        & "$env:SystemRoot\system32\inetsrv\appcmd.exe" unlock config `
+          -section:system.webServer/security/authentication/anonymousAuthentication
+
+    - name: Unlock windows authentication section via appcmd
+      win_shell: |
+        & "$env:SystemRoot\system32\inetsrv\appcmd.exe" unlock config `
+          -section:system.webServer/security/authentication/windowsAuthentication
+
+    - name: Disable Anonymous Authentication
+      win_shell: |
+        Set-WebConfigurationProperty -Filter '/system.webServer/security/authentication/anonymousAuthentication' -Name 'enabled' -Value 'False' -PSPath 'IIS:\Sites\Default Web Site'
+
+    - name: Enable Windows Authentication
+      win_shell: |
+        Set-WebConfigurationProperty -Filter '/system.webServer/security/authentication/windowsAuthentication' -Name 'enabled' -Value 'True' -PSPath 'IIS:\Sites\Default Web Site'
+        
