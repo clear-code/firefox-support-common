@@ -20,6 +20,9 @@ apply: terraform.tfvars
 apply-playbook:
 	time (ansible-playbook -i ansible/hosts ansible/playbook.yml)
 
+apply-IIS-playbook:
+	time (ansible-playbook -i ansible/hosts ansible/setupIIS.yml)
+
 destroy:
 	tofu destroy -auto-approve
 
