@@ -1,7 +1,7 @@
 variable "namespace" {
     description = "Prefix example- and the sku type to use as a part of environment name"
     type        = string
-    default     = "example-windows-server-2022"
+    default     = "windowsserver-2022-IIS"
 }
 variable "windows-password" {
     description = "Windows login password, whose value is in terraform.tfvars"
