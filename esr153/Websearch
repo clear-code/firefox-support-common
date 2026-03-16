@@ -1,0 +1,61 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Websearch-1: 検索エンジンの追加・削除の可否
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: [廃止] 追加と削除を禁止する
+
+    [廃止]
+
+    :3: 追加を禁止する
+
+    distribution\policies.json:
+    "SearchEngines": {
+      "PreventInstalls": true
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Search」
+    → 「Prevent Search Engine Installs」を有効化
+
+Websearch-2: 初期設定から取り除く検索エンジン
+
+    :1: すべて使用する（既定）
+
+    -
+
+    :2: [廃止] 限定する
+
+    -
+
+    :3: 一部の検索エンジンを取り除く
+
+    distribution\policies.json:
+    "SearchEngines": {
+      "Remove": ["初期状態で取り除く検索エンジン名", ...]
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「Search」
+    → 「Remove Search Engines」を有効化し、「オプション」で削除対象の検索エンジンを設定
+
+Websearch-3: 初期状態で追加する検索エンジン
+
+    :1: 追加する
+
+    distribution\policies.json:
+    "Add": [
+      { "Name": "検索エンジン名",
+        "URLTemplate": "http://example.com/?q={searchTerms}" },
+      ...
+    ],
+
+    GPO:
+    カテゴリ「Firefox」→「Search」
+    → 「Search Engine One」から「Search Engine Five」までを必要なだけ有効化し、「オプション」で検索エンジンの設定を指定
+
