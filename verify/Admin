@@ -17,11 +17,9 @@ Admin-1: 管理者による設定の制御
     :1: ローカルのファイルで設定する
 
     - **確認**
-        - `{{install_path}}\{{mcd_local_file}}` {%if install_path_32bit %} \
-          （32bit環境では `{{install_path_32bit}}\{{mcd_local_file}}`）{% endif %} \
+        - `{{install_path}}\{{mcd_local_file}}` \
           が存在する。
-        - `{{install_path}}\defaults\pref\*.js` {%if install_path_32bit %} \
-          （32bit環境では `{{install_path_32bit}}\defaults\pref\*.js`）{% endif %} \
+        - `{{install_path}}\defaults\pref\*.js` \
           の位置に、`{{mcd_local_file}}` を読み込ませる指定を含むファイルが存在する。
 
     :2: リモートのファイルで設定する
@@ -31,11 +29,9 @@ Admin-1: 管理者による設定の制御
     - ポリシー設定から `BlockAboutSupport` を削除し、`about:support` を一時的に有効化しておく。
       {% endif %}
     - **確認**
-        - `{{install_path}}\{{mcd_local_file}}` {%if install_path_32bit %} \
-          （32bit環境では `{{install_path_32bit}}\{{mcd_local_file}}`）{% endif %} \
+        - `{{install_path}}\{{mcd_local_file}}` \
           が存在する。
-        - `{{install_path}}\defaults\pref\*.js` {%if install_path_32bit %} \
-          （32bit環境では `{{install_path_32bit}}\defaults\pref\*.js`）{% endif %} \
+        - `{{install_path}}\defaults\pref\*.js` \
           の位置に、`{{mcd_local_file}}` を読み込ませる指定を含むファイルが存在する。
     - メタインストーラによって導入されたFirefoxを起動する。
     - `about:profiles` または `about:support` から、現在のユーザープロファイルフォルダを開く。
@@ -50,8 +46,7 @@ Admin-1: 管理者による設定の制御
     :3: 設定しない（既定）
 
     - **確認**
-        - `{{install_path}}\*.cfg` {%if install_path_32bit %} \
-          （32bit環境では `{{install_path_32bit}}\*.cfg`）{% endif %} \
+        - `{{install_path}}\*.cfg` \
           が存在しない。
 
 Admin-2: 初回起動時のアドオン導入警告の可否
