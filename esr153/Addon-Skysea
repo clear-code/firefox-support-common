@@ -1,0 +1,18 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+Addon-Skysea-1: Skyseaのインストール
+
+    :1: インストールしない（既定）
+
+    -
+
+    :2: インストールする
+
+    distribution\policies.json:
+    "Extensions": {
+      "Install": ["C:\\Program Files (x86)\\Sky Product\\SKYSEA Client View\\FxAddonSigned\\skysea-fxaddonWebExt2.xpi.16.1.1.216"],
+      "Locked":  ["addon-firefox-WebExt2@skysea.skygroup.jp"],
+      "Uninstall": ["addon-firefox-WebExt2@skysea.skygroup.jp.16.1.1.216"]
+    },
