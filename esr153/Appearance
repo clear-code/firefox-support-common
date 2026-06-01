@@ -512,3 +512,48 @@ Appearance-24: ツールバー上の「拡張機能」ボタンの表示
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-25: 分割ビュー機能の使用可否
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.splitView.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-26: プライベート翻訳機能の使用可否
+
+    :1: 許可する（既定）
+
+    Ui-27-2 選択時は共存不可。
+
+    -
+
+    :2: 禁止する
+
+    // Ui-27-2 選択時は設定不要。
+    distribution\policies.json:
+    "AIControls": {
+      "Translations": {
+        "Value": "blocked",
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

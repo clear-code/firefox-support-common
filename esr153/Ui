@@ -491,3 +491,112 @@ Ui-23: 組み込みのPDFビューワー上での署名機能
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-24: リンクの長押しによるリンク先のプレビュー表示
+
+    :1: 使用する（既定）
+
+    -
+
+    :2: 使用しない
+
+    distribution\policies.json:
+    "AIControls": {
+      "LinkPreviewKeyPoints": {
+        "Value": false,
+        "Locked": true
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「AI Controls」
+    →「Link Preview Key Points」を無効化
+
+Ui-25: Webページ上でのコンテキストメニューの「選択部分へのリンクをコピー」の使用可否
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "dom.text_fragments.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-26: 組み込みのPDFビューワー上でのページ結合操作の可否
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "pdfjs.enableMerge": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Ui-27: AI機能の包括的な制御
+
+    :1: AI機能を有効化する（既定）
+
+    -
+
+    :2: AI機能を無効化する
+
+    distribution\policies.json:
+    "AIControls": {
+      "Default": {
+        "Value": "blocked",
+        "Locked": true
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「AI Controls」
+    →「Default」を無効化
+
+Ui-28: ユーザープロファイルの自動バックアップ
+
+    :1: ユーザによる任意の有効化を許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.backup.scheduled.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      "browser.backup.scheduled.user-disabled": {
+        "Value": true,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定

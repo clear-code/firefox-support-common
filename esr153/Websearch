@@ -59,3 +59,23 @@ Websearch-3: 初期状態で追加する検索エンジン
     カテゴリ「Firefox」→「Search」
     → 「Search Engine One」から「Search Engine Five」までを必要なだけ有効化し、「オプション」で検索エンジンの設定を指定
 
+Websearch-4: 画像ファイル上の右クリックメニューからの「Google Lens で画像を検索」の実行可否
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.search.visualSearch.featureGate": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
