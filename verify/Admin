@@ -278,3 +278,17 @@ Admin-10: Manifest V3形式アドオンへの対応
     - **確認**
         - アドオンがインストールされない。
     - テストケースの`bookmarksorganizer@agenedia.com.xpi`を使用した場合、ポリシー設定の `InstallAddonsPermission` を復元して、アドオンのインストールを無効化する。{% endif %}
+
+Admin-11: リモート改善設定の反映
+
+    :1: 許可する（既定）
+
+    ABOUT_POLICIES
+
+    - `DisableRemoteImprovements` が存在しない。
+
+    :2: 禁止する
+
+    ABOUT_POLICIES
+
+    - `DisableRemoteImprovements` が `true` である。
