@@ -67,7 +67,7 @@ Websearch-4: 画像ファイル上の右クリックメニューからの「Goog
 
     - Firefoxを起動する。
     - 設定→検索→既定の検索エンジンが「Google」であることを確認する。他の検索エンジンである場合はGoogleに変更する。
-    - テストケースリストのリンクから `https://addons.mozilla.org/` を開く。■画像がある任意のページでよい
+    - `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img` を開く。
     - 画像ファイル上で右クリックする
     - **確認**
         - 右クリックメニューに「Google Lens で画像を検索」が表示される。
@@ -77,7 +77,7 @@ Websearch-4: 画像ファイル上の右クリックメニューからの「Goog
 
     - Firefoxを起動する。
     - 設定→検索→既定の検索エンジンが「Google」であることを確認する。他の検索エンジンである場合はGoogleに変更する。
-    - テストケースリストのリンクから `https://addons.mozilla.org/` を開く。■画像がある任意のページでよい
+    - `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img` を開く。
     - 画像ファイル上で右クリックする
     - **確認**
         - 右クリックメニューに「Google Lens で画像を検索」が表示されない。
