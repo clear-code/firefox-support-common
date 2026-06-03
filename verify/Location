@@ -168,3 +168,40 @@ Location-8: アドレスバーの電卓機能の使用可否
     - **確認**
         - 「コピー」のアイコンを伴った項目として「=3」が表示されない。
           （虫眼鏡のアイコンを伴った項目はGoogle Suggest由来なので無視する）
+
+Location-9: オンラインサービスに依拠したキーワード検索時の候補について、検索結果ページに遷移せずに検索結果を直接開く操作の可否
+
+    :1: 許可する（既定）
+
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
+    - Firefoxを起動する。
+    - テストケースリストのリンクから `https://www.aa.com/` （アメリカン航空のWebサイト）を開く。
+    - 「Flight status（運行状況）」で、TYO（東京）からNYC（ニューヨーク）までの便を検索する。
+    - 検索結果に表れた便のうちひとつの番号を控える（例：168便）。
+    - アドレスバーに `aa (先程控えた便の番号)` と入力する（例：`aa 168`）。
+    - **確認**
+        - アドレスバーの検索結果候補内に当該便の運行状況が直接埋め込まれて表示される。
+    - 当該便の運行状況が表示されない場合、機能の有効化ロールアウト対象になっていない可能性があるため、`about:config` で以下の設定の値がすべて `true` になっているか、または既定値（太字で表示されていない）且つ変更可能（斜体で表示されていない）であることを確認する。
+        - `browser.urlbar.quicksuggest.enabled`
+        - `browser.urlbar.quicksuggest.online.available`
+        - `browser.urlbar.suggest.quicksuggest.all`
+        - `browser.urlbar.flightStatus.featureGate`
+
+    :2: 禁止する
+
+    {%if Security_9_3 %}
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
+    - Firefoxを起動する。
+    - テストケースリストのリンクから `https://www.aa.com/` （アメリカン航空のWebサイト）を開く。
+    - 「Flight status（運行状況）」で、TYO（東京）からNYC（ニューヨーク）までの便を検索する。
+    - 検索結果に表れた便のうちひとつの番号を控える（例：168便）。
+    - アドレスバーに `aa (先程控えた便の番号)` と入力する（例：`aa 168`）。
+    - **確認**
+        - アドレスバーの検索結果候補内に当該便の運行状況が直接埋め込まれて表示されない。
+    - 単に機能の有効化ロールアウト対象になっていない可能性があるため、`about:config` で以下の設定の値がすべて `false` で固定されている（太字で表示されておらず、斜体になっている）ことも併せて確認する。
+        - `browser.urlbar.quicksuggest.enabled`
+        - `browser.urlbar.quicksuggest.online.available`
+        - `browser.urlbar.suggest.quicksuggest.all`

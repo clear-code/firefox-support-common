@@ -257,3 +257,18 @@ Admin-10: Manifest V3形式アドオンへの対応
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Admin-11: リモート改善設定の反映
+
+    :1: 許可する（既定）
+
+    -
+
+    :2: 禁止する
+
+    distribution\policies.json:
+    "DisableRemoteImprovements": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Remote Improvements」を有効化
