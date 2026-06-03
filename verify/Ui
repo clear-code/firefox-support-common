@@ -512,17 +512,8 @@ Ui-28: ユーザープロファイルの自動バックアップ
 
     - 「同期」→「バックアップ」が「バックアップ: 有効」となっている
 
-    ABOUT_CONFIG
-
-    - `browser.backup.scheduled.enabled` の値が `true` である。
-
     :2: 禁止する
 
     OPTIONS
 
     - 「同期」→「バックアップ」が「バックアップ: 無効」となっている
-
-    ABOUT_CONFIG
-
-    - `browser.backup.scheduled.enabled` の値が `false` である。
-    - `browser.backup.scheduled.user-disabled` の値が `true` である。
