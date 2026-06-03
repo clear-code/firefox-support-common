@@ -450,13 +450,13 @@ Tab-19: 最近のアクティビティにおすすめの項目を表示するか
 
     ABOUT_POLICIES
 
-    - `DisableStories` が存在しないか、値が `false` である。■ポリシー名要確認
+    - `SponsoredStories` が存在しないか、値が `false` である。
 
     :2: 表示しない
 
     ABOUT_POLICIES
 
-    - `DisableStories` の値が `true` である。
+    - `SponsoredStories"` の値が `true` である。
 
 Tab-20: 新規タブに「Firefoxにようこそ」メッセージを表示するかどうか
 
