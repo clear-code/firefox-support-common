@@ -777,7 +777,7 @@ Tab-27: 新しいタブの壁紙のユーザーによるカスタマイズ可否
     // Tab-5-4(新しいタブを空白ページにする)を選択した場合常にこの挙動になる
     distribution\policies.json:
     "Preferences": {
-      "browser.newtabpage.activity-stream.newtabWallpapers.user.enabled": {
+      "browser.newtabpage.activity-stream.newtabWallpapers.enabled": {
         "Value": false,
         "Status": "locked"
       },
