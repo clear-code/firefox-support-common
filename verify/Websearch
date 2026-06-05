@@ -61,3 +61,24 @@ Websearch-3: 初期状態で追加する検索エンジン
 
     - 「検索」→「ワンクリック検索エンジン」の一覧に、追加するよう指定した検索エンジンが表示されている。
 
+Websearch-4: 画像ファイル上の右クリックメニューからの「Google Lens で画像を検索」の実行可否
+
+    :1: 許可する（既定）
+
+    - Firefoxを起動する。
+    - 設定→検索→既定の検索エンジンが「Google」であることを確認する。他の検索エンジンである場合はGoogleに変更する。
+    - `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img` を開く。
+    - 画像ファイル上で右クリックする
+    - **確認**
+        - 右クリックメニューに「Google Lens で画像を検索」が表示される。
+    - 既定の検索エンジンを元に戻す。
+
+    :2: 禁止する
+
+    - Firefoxを起動する。
+    - 設定→検索→既定の検索エンジンが「Google」であることを確認する。他の検索エンジンである場合はGoogleに変更する。
+    - `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img` を開く。
+    - 画像ファイル上で右クリックする
+    - **確認**
+        - 右クリックメニューに「Google Lens で画像を検索」が表示されない。
+    - 既定の検索エンジンを元に戻す。

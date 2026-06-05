@@ -590,10 +590,6 @@ Ui-28: ユーザープロファイルの自動バックアップ
         "Value": false,
         "Status": "locked"
       },
-      "browser.backup.scheduled.user-disabled": {
-        "Value": true,
-        "Status": "locked"
-      },
       ...
     },
 
