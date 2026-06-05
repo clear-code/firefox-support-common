@@ -573,12 +573,31 @@ Tab-26: 新しいタブへの天気予報の表示可否
     {%if Tab_5_4 %}
     - Tab-5-4 選択時は共存不可。
     {% else %}
-    - TBD
+    - Firefoxを起動する。
+    - 新しい空のタブを開く。
+    - **確認**
+        - 天気予報ウィジェットが表示される。
+    - Firefoxを終了する。
+    - 表示されない場合、以下の手順で設定値を確認する。
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+    - Firefoxを起動する。
+    - `about:config` を開く。
+    - **確認**
+        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`true` である。
+        - `browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`true` である。
+    - Firefoxを終了する。
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
     {% endif %}
 
     :2: 表示しない
 
-    - TBD
+    - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+    - Firefoxを起動する。
+    - `about:config` を開く。
+    - **確認**
+        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`false` である。または、`browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`false` である。
+    - Firefoxを終了する。
+    - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
 
 Tab-27: 新しいタブの壁紙のユーザーによるカスタマイズ可否
 
