@@ -10,8 +10,8 @@ import adlib
 #
 # Global settings
 
-ESR_PREVIOUS = 'esr128'
-ESR_CURRENT  = 'esr140'
+ESR_PREVIOUS = 'esr140'
+ESR_CURRENT  = 'esr153'
 
 WORKBOOKS = [
     ('基本設定', [
@@ -35,7 +35,6 @@ WORKBOOKS = [
         'Appearance',
         'Performance',
         'Addon-IEView',
-        'Addon-FireIE',
         'Addon-Acrobat',
         'Addon-Skysea',
     ]),
