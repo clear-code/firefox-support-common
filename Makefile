@@ -41,7 +41,7 @@ list-untracked-policies:
 
 list-unverified-configs:
 	grep -h "\(^[A-Z]\|:[0-9]:\)" verify/*  | grep -v 事前準備 | grep -v '\-0' > list-verify.txt
-	grep -h "\(^[A-Z]\|:[0-9]:\)" esr153/*  | grep -v 廃止 > list-esr140.txt
+	grep -h "\(^[A-Z]\|:[0-9]:\)" esr153/*  | grep -v 廃止 > list-esr153.txt
 	diff -U 6 list-esr153.txt list-verify.txt
 
 verify-targets-to-chapters.csv:
