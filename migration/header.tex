@@ -1,0 +1,4 @@
+\usepackage{seqsplit}
+
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{\oldtexttt{\seqsplit{#1}}}

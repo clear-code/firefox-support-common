@@ -19,6 +19,7 @@ PANDOC_OPT_PDF= -N --toc-depth=2 --table-of-contents \
                 -f markdown \
                 --wrap=preserve \
                 --template=eisvogel.latex \
+                --include-in-header=header.tex \
                 -V documentclass=ltjsarticle \
                 -V classoption=titlepage \
                 --pdf-engine=xelatex
