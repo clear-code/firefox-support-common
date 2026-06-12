@@ -24,7 +24,7 @@ PANDOC_OPT_DOCX= --toc-depth=2 --table-of-contents \
                  --reference-doc="$(BASE)/assets/template.docx"
 
 
-all: thunderbird firefox thunderbird-esr-manual-update thunderbird-profile-migration-across-devices
+all: thunderbird firefox thunderbird-how-to-activate-autoupdate thunderbird-profile-migration-across-devices
 
 firefox:
 	cat firefox.md | pandoc ${PANDOC_OPT_PDF} -o "firefox-${TODAY}.pdf"
@@ -32,8 +32,8 @@ firefox:
 thunderbird:
 	cat thunderbird.md | pandoc ${PANDOC_OPT_PDF} -o "thunderbird-${TODAY}.pdf"
 
-thunderbird-esr-manual-update:
-	cat thunderbird-esr-manual-update.md | pandoc ${PANDOC_OPT_PDF} -o "thunderbird-esr-manual-update-${TODAY}.pdf"
+thunderbird-how-to-activate-autoupdate:
+	cat thunderbird-how-to-activate-autoupdate.md | pandoc ${PANDOC_OPT_PDF} -o "thunderbird-how-to-activate-autoupdate-${TODAY}.pdf"
 
 thunderbird-profile-migration-across-devices:
 	cat thunderbird-profile-migration-across-devices.md | pandoc ${PANDOC_OPT_PDF} -o "thunderbird-profile-migration-across-devices-${TODAY}.pdf"
@@ -41,4 +41,4 @@ thunderbird-profile-migration-across-devices:
 clean:
 	rm -f *.pdf
 
-.PHONY: firefox thunderbird thunderbird-esr-manual-update thunderbird-profile-migration-across-devices clean
+.PHONY: firefox thunderbird thunderbird-how-to-activate-autoupdate thunderbird-profile-migration-across-devices clean
