@@ -6,7 +6,7 @@ title: |
   PC更改に際しての  
   Thunderbirdのデータ移行手順
 subject: PC更改に際してのThunderbirdのデータ移行手順
-date: 2025/11/14
+date: 2025年11月14日
 author: 株式会社クリアコード
 titlepage-logo: thunderbird/clear-code.png
 logo-width: 6.5cm
