@@ -6,7 +6,10 @@ title: Thunderbirdの更新手順
 subject: Thunderbirdの更新手順
 date: 2026/4/10
 author: 株式会社クリアコード
+titlepage-logo: thunderbird/clear-code.png
+logo-width: 6.5cm
 titlepage: true
+colorlinks: true
 toc-title: 目次
 toc-own-page: true
 ---

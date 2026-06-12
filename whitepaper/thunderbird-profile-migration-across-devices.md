@@ -8,7 +8,10 @@ title: |
 subject: PC更改に際してのThunderbirdのデータ移行手順
 date: 2025/11/14
 author: 株式会社クリアコード
+titlepage-logo: thunderbird/clear-code.png
+logo-width: 6.5cm
 titlepage: true
+colorlinks: true
 toc-title: 目次
 toc-own-page: true
 ---
