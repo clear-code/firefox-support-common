@@ -58,10 +58,10 @@ verification-manual:
 migration-report: migration-report-docx migration-report-pdf
 
 migration-report-docx:
-	cd migration && cat esr153.md | sed -E -e 's/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' -e 's;(https?://[^ ]+);[\1](\1);g' | pandoc ${PANDOC_OPT_DOCX} -o "../migration-report-esr153-$(DATE).docx"
+	cd migration && cat esr153.md | sed -E -e 's/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' -e 's;(^|[^()])(https?://[^ )\n]+);\1[\2](\2);g' | pandoc ${PANDOC_OPT_DOCX} -o "../migration-report-esr153-$(DATE).docx"
 
 migration-report-pdf:
-	cd migration && cat esr153.md | sed -E -e 's/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' -e 's;(https?://[^ ]+);[\1](\1);g' | pandoc ${PANDOC_OPT_PDF} -o "../migration-report-esr153-$(DATE).pdf"
+	cd migration && cat esr153.md | sed -E -e 's/<!--.*-->//g' -e '/<!--/{:a;N;/-->/!ba;d}' -e 's;(^|[^()])(https?://[^ )\n]+);\1[\2](\2);g' | pandoc ${PANDOC_OPT_PDF} -o "../migration-report-esr153-$(DATE).pdf"
 
 clean:
 	rm -f config-*.xlsx
