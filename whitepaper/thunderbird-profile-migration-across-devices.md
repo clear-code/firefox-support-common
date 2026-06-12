@@ -74,7 +74,7 @@ toc-own-page: true
    * `saved-telemetry-pings`（フォルダー）
    * `shader-cache`（フォルダー）
    * `addonStartup.json.lz4`（ファイル）
-   * `compatibility.ini`（ファイル）
+   * `compatibility.ini`（ファイル）  
    ![スクリーンショット：プロファイルフォルダー内の一部のファイルとフォルダーを削除しようとしている様子。](./thunderbird-profile-migration-across-devices/explorer-delete-files-in-profile.png){ width=500 }
 8. エクスプローラーを開き、アドレスバーに `%LocalAppData%` と入力してEnterキーを押してフォルダーを開きます。  
    ![スクリーンショット：移行先PCのエクスプローラーのアドレスバーに「%LocalAppData%」と入力している様子。](./thunderbird-profile-migration-across-devices/explorer-input-localappdata.png){ width=500 }
