@@ -744,13 +744,13 @@ Tab-26: 新しいタブへの天気予報の表示可否
 
     :1: 表示する（既定）
 
-    Tab-5-4 選択時は共存不可。
+    Tab-5-4 または Tab-28-2 選択時は共存不可。
 
     -
 
     :2: 表示しない
 
-    // Tab-5-4(新しいタブを空白ページにする)を選択した場合常にこの挙動になる
+    // Tab-5-4(新しいタブを空白ページにする)またはTab-28-2(ウィジェット無効化)を選択した場合常にこの挙動になる
     distribution\policies.json:
     "Preferences": {
       "browser.newtabpage.activity-stream.widgets.system.weather.enabled": {
@@ -788,3 +788,26 @@ Tab-27: 新しいタブの壁紙のユーザーによるカスタマイズ可否
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
+Tab-28: 新しいタブへのウィジェット全般の表示可否
+
+    :1: 表示する（既定）
+
+    Tab-5-4 選択時は共存不可。
+
+    -
+
+    :2: 表示しない
+
+    // Tab-5-4(新しいタブを空白ページにする)を選択した場合常にこの挙動になる
+    distribution\policies.json:
+    "Preferences": {
+      "browser.newtabpage.activity-stream.widgets.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
