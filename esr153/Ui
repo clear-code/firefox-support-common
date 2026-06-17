@@ -503,7 +503,7 @@ Ui-24: リンクの長押しによるリンク先のプレビュー表示
     distribution\policies.json:
     "AIControls": {
       "LinkPreviewKeyPoints": {
-        "Value": false,
+        "Value": "blocked",
         "Locked": true
       },
       ...
