@@ -557,3 +557,24 @@ Appearance-26: プライベート翻訳機能の使用可否
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-27: ツールバー上の「共有」ボタンの表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 隠す
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.toolbars.share-button.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
