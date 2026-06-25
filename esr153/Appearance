@@ -578,3 +578,35 @@ Appearance-27: ツールバー上の「共有」ボタンの表示
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-28: 折りたたまれたタブグループ内のタブのプレビュー表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.groups.hoverPreview.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Appearance-29: トラストパネルでのウェブサイト認証のための適格証明書（QWAC）の状態の表示
+
+    :1: 表示する（既定）
+
+    -
+
+    :2: 表示しない
+
+    *.cfg:
+    lockPref("security.qwacs.enabled", false);
