@@ -245,3 +245,22 @@ Location-10: アドレスバーの単位変換機能の使用可否
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Location-11: カラーピッカーの使用可否
+
+    :1: 使用する（既定）
+
+    Privacy-17-3、MenuShortcut-10～18、MenuShortcut-21～25、MenuShortcut-28～29、MenuShortcut-57のいずれかの選択時は共存不可。
+
+    -
+
+    :2: 使用しない
+
+    MenuShortcut-10～18、MenuShortcut-21～25、MenuShortcut-28～29、MenuShortcut-57が連動して選択される。
+
+    distribution\policies.json:
+    "DisableDeveloperTools": true,
+
+    GPO:
+    カテゴリ「Firefox」
+    → 「Disable Developer Tools」を有効化
