@@ -811,3 +811,24 @@ Tab-28: 新しいタブへのウィジェット全般の表示可否
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+Tab-29: ドラッグ＆ドロップでのタブグループ作成の可否
+
+    :1: タブ上へのタブのドロップでタブグループを作成する（既定）
+
+    -
+
+    :2: タブ上へのタブのドロップでタブグループを作成しない
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.tabs.dragDrop.createGroup.enabled": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
