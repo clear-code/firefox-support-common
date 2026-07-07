@@ -496,10 +496,23 @@ Ui-24: リンクの長押しによるリンク先のプレビュー表示
 
     :1: 使用する（既定）
 
-    -
+    // Ui-27-2 選択時に設定要。
+    distribution\policies.json:
+    "AIControls": {
+      "LinkPreviewKeyPoints": {
+        "Value": "available",
+        "Locked": true
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」→「AI Controls」
+    →「Link Preview Key Points」を有効化
 
     :2: 使用しない
 
+    // Ui-27-2 選択時は設定不要。
     distribution\policies.json:
     "AIControls": {
       "LinkPreviewKeyPoints": {
