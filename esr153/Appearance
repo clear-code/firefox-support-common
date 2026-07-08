@@ -538,9 +538,19 @@ Appearance-26: プライベート翻訳機能の使用可否
 
     :1: 許可する（既定）
 
-    Ui-27-2 選択時は共存不可。
+    // Ui-27-2 選択時に設定要。
+    distribution\policies.json:
+    "AIControls": {
+      "Translations": {
+        "Value": "available",
+        "Status": "locked"
+      },
+      ...
+    },
 
-    -
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
     :2: 禁止する
 
