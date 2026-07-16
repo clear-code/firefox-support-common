@@ -547,7 +547,7 @@ Tab-25: 垂直タブバー最上部へのタブのドラッグ＆ドロップで
     :1: ピン留めする（既定）
 
     - Firefoxを起動する。
-    - 設定→一般→ブラウザーレイアウト「垂直タブ」を選択し、「サイドバーを表示」にチェックを入れる
+    - 設定→「タブとブラウジング」→「ブラウザーレイアウト」で「垂直タブ」を選択し、「サイドバーを表示」にチェックを入れる
     - 新しい空のタブを開く。
     - タブをサイドバーの最上部へドラッグし、1秒ほど待つ。
     - **確認**
@@ -558,7 +558,7 @@ Tab-25: 垂直タブバー最上部へのタブのドラッグ＆ドロップで
     :2: ピン留めしない
 
     - Firefoxを起動する。
-    - 設定→一般→ブラウザーレイアウト「垂直タブ」を選択し、「サイドバーを表示」にチェックを入れる
+    - 設定→「タブとブラウジング」→「ブラウザーレイアウト」で「垂直タブ」を選択し、「サイドバーを表示」にチェックを入れる
     - 新しい空のタブを開く。
     - タブをサイドバーの最上部へドラッグし、1秒ほど待つ。
     - **確認**
@@ -576,24 +576,33 @@ Tab-26: 新しいタブへの天気予報の表示可否
         - 天気予報ウィジェットが表示される。
     - Firefoxを終了する。
     - 表示されない場合、以下の手順で設定値を確認する。
+      {%if Security_9_3 %}
     - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - `about:config` を開く。
     - **確認**
-        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`true` である。
-        - `browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`true` である。
+        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`true`であるか、既定値で`false`である。
+        - `browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`true`であるか、既定値で`false`である。
     - Firefoxを終了する。
+      {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
 
     :2: 表示しない
 
+    {%if Security_9_3 %}
     - ポリシー設定から `BlockAboutConfig` を削除し、`about:config` を一時的に有効化しておく。
+      {% endif %}
     - Firefoxを起動する。
     - `about:config` を開く。
     - **確認**
-        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`false` である。または、`browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`false` である。
+        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`false` である。
+          または、`browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`false` である。
     - Firefoxを終了する。
+      {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
+      {% endif %}
 
 Tab-27: 新しいタブの壁紙のユーザーによるカスタマイズ可否
 
@@ -623,7 +632,8 @@ Tab-28: 新しいタブへのウィジェット全般の表示可否
     - 新しい空のタブを開く。
     - 右下の「カスタマイズ」ボタンをクリックする。
     - **確認**
-        - 「ウィジェット」のチェックが有効になっている。
+        - 「ウィジェット」のチェックがある場合、有効になっている。
+        - 「天気予報」のチェックがある場合、有効になっている。
     - Firefoxを起動する。
 
     :2: 表示しない
@@ -632,7 +642,8 @@ Tab-28: 新しいタブへのウィジェット全般の表示可否
     - 新しい空のタブを開く。
     - 右下の「カスタマイズ」ボタンをクリックする。
     - **確認**
-        - 「ウィジェット」のチェックが無効になっており、変更できない。
+        - 「ウィジェット」のチェックが存在しないか、無効になっており変更できない。
+        - 「天気予報」のチェックが存在しないか、無効になっており変更できない。
     - Firefoxを終了する。
 
 Tab-29: ドラッグ＆ドロップでのタブグループ作成の可否
