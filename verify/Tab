@@ -582,8 +582,8 @@ Tab-26: 新しいタブへの天気予報の表示可否
     - Firefoxを起動する。
     - `about:config` を開く。
     - **確認**
-        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`true` である。
-        - `browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`true` である。
+        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`true`であるか、既定値で`false`である。
+        - `browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`true`であるか、既定値で`false`である。
     - Firefoxを終了する。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
@@ -597,7 +597,8 @@ Tab-26: 新しいタブへの天気予報の表示可否
     - Firefoxを起動する。
     - `about:config` を開く。
     - **確認**
-        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`false` である。または、`browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`false` である。
+        - `browser.newtabpage.activity-stream.widgets.system.weather.enabled` の値が`false` である。
+          または、`browser.newtabpage.activity-stream.widgets.weather.enabled` の値が`false` である。
     - Firefoxを終了する。
       {%if Security_9_3 %}
     - ポリシー設定から一時的に削除した `BlockAboutConfig` を元に戻す。
