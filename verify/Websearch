@@ -37,15 +37,13 @@ Websearch-2: 初期設定から取り除く検索エンジン
 
     - 「検索」→「追加の検索エンジン」の一覧に、以下の検索エンジンがすべて登録されており、有効化されている。
         - Google
-        - Yahoo! JAPAN
         - Bing
-        - Amazon.co.jp
-        - 楽天市場
-        - ヤフオク！
-        - 教えて！goo
-        - Twitter
-        - Wikipedia (ja)
         - DuckDuckGo
+        - Perprexity
+        - Wikipedia (ja)
+        - Yahoo! JAPAN
+        - Yahoo!オークション
+        - 楽天市場
 
     :3: 一部の検索エンジンを取り除く
 
