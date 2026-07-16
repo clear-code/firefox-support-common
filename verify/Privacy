@@ -2199,13 +2199,13 @@ Privacy-80: トラッカーなどのWebサイトのスクリプトによるロ�
 
     ABOUT_POLICIES
 
-    - `EnableTrackingProtection` 配下の `Enabled`、`BlockTrackers`、`EnablePrompting`、`Locked` の値がすべて `true` である。
+    - `LocalNetworkAccess` 配下の `Enabled`、`BlockTrackers`、`EnablePrompting`、`Locked` の値がすべて `true` である。
 
     :3: 常に遮断する
 
     ABOUT_POLICIES
 
-    - `EnableTrackingProtection` 配下の `Enabled`、`BlockTrackers`、`Locked` の値が `true` 、`EnablePrompting` の値が `false` である。
+    - `LocalNetworkAccess` 配下の `Enabled`、`BlockTrackers`、`Locked` の値が `true` 、`EnablePrompting` の値が `false` である。
 
 Privacy-81: 位置情報の取得時に、必要なシステムレベルの許可の変更を求めるかどうか
 
