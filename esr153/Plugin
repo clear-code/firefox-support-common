@@ -140,6 +140,10 @@ Plugin-8: Gecko Media Pluginの利用の可否
         "Value": false,
         "Status": "locked"
       },
+      "media.gmp-manager.chromium-update-url": {
+        "Value": "about:blank",
+        "Status": "locked"
+      },
       "media.gmp-manager.url": {
         "Value": "about:blank",
         "Status": "locked"

@@ -300,6 +300,34 @@ Security-5: 攻撃サイトに対する警告の可否
         "Value": "",
         "Status": "locked"
       },
+      "browser.safebrowsing.provider.google5.advisoryURL": {
+        "Value": "",
+        "Status": "locked"
+      },
+      "browser.safebrowsing.provider.google5.gethashURL": {
+        "Value": "",
+        "Status": "locked"
+      },
+      "browser.safebrowsing.provider.google5.reportMalwareMistakeURL": {
+        "Value": "",
+        "Status": "locked"
+      },
+      "browser.safebrowsing.provider.google5.reportPhishMistakeURL": {
+        "Value": "",
+        "Status": "locked"
+      },
+      "browser.safebrowsing.provider.google5.dataSharingURL": {
+        "Value": "",
+        "Status": "locked"
+      },
+      "browser.safebrowsing.provider.google5.reportURL": {
+        "Value": "",
+        "Status": "locked"
+      },
+      "browser.safebrowsing.provider.google5.updateURL": {
+        "Value": "",
+        "Status": "locked"
+      },
       "browser.safebrowsing.provider.mozilla.gethashURL": {
         "Value": "",
         "Status": "locked"
