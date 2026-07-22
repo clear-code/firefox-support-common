@@ -544,7 +544,7 @@ MenuShortcut-67: リンク上のコンテキストメニュー＞サイト追跡
     *.cfg / *.jsc:
     lockPref("privacy.query_stripping.strip_on_share.enabled", false);
 
-MenuShortcut-68: 設定＞一般＞一般＞起動＞Firefoxを既定のブラウザーに設定する
+MenuShortcut-68: 設定＞ホームと起動＞既定のブラウザー＞既定のブラウザーにする
 
     :1: 無効化する
 
@@ -561,7 +561,7 @@ MenuShortcut-68: 設定＞一般＞一般＞起動＞Firefoxを既定のブラ�
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-69: 設定＞一般＞ファイルとプログラム＞プログラム＞ファイルの種類と取り扱い方法の一覧
+MenuShortcut-69: 設定＞ダウンロード＞ファイルとプログラム＞ファイルの種類と取り扱い方法の一覧
 
     :1: 無効化する
 
@@ -612,7 +612,7 @@ MenuShortcut-71: 設定＞一般＞ネットワーク設定＞接続設定＞自
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-72: 設定＞ホーム＞新しいウィンドウとタブ＞カスタムURL選択時の「現在のページを使用」「現在のタブグループを使用」
+MenuShortcut-72: 設定＞ホームと起動＞新しいウィンドウ＞カスタムURL選択時の「現在開いているページ」
 
     :1: 無効化する
 
@@ -650,7 +650,7 @@ MenuShortcut-73: 設定＞ホーム＞新しいウィンドウとタブ＞カス
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-74: 設定＞ホーム＞既定値に戻す
+MenuShortcut-74: 設定＞ホームと起動＞ホームページ＞既定値に戻す
 
     :1: 無効化する
 
@@ -669,7 +669,7 @@ MenuShortcut-74: 設定＞ホーム＞既定値に戻す
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-75: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞強化型トラッキング防止機能＞例外を管理
+MenuShortcut-75: 設定＞プライバシーとセキュリティ＞強化型トラッキング防止＞例外を管理
 
     :1: 無効化する
 
@@ -686,7 +686,7 @@ MenuShortcut-75: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞Cookieとサイトデータ＞例外を管理
+MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウジングデータ＞例外を管理
 
     :1: 無効化する
 
@@ -703,7 +703,7 @@ MenuShortcut-76: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-77: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞例外サイト
+MenuShortcut-77: 設定＞パスワードと自動入力＞パスワード＞パスワードの例外サイトを管理
 
     :1: 無効化する
 
@@ -720,7 +720,7 @@ MenuShortcut-77: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザープライバシー＞パスワード＞保存されたパスワード
+MenuShortcut-78: 設定＞パスワードと自動入力＞パスワード＞保存されたパスワードを管理
 
     :1: 無効化する
 
@@ -739,7 +739,7 @@ MenuShortcut-78: 設定＞プライバシーとセキュリティ＞ブラウザ
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
 
-MenuShortcut-79: 設定＞プライバシーとセキュリティ＞セキュリティ＞証明書＞証明書を表示
+MenuShortcut-79: 設定＞プライバシーとセキュリティ＞接続とソフトウェアのセキュリティ＞証明書＞証明書を管理
 
     :1: 無効化する
 
