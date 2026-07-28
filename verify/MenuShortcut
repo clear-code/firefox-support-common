@@ -94,7 +94,7 @@ MenuShortcut-18: ツール＞その他のツール＞開発ツールバー (Shif
     DISABLED_SHORTCUT: 「Shitf-F2」で開発ツールバーが開かれない。
     DISABLED_DEVTOOL_MENU: 「開発ツールバー」が存在しない。
 
-MenuShortcut-21: ツール＞その他のツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
+MenuShortcut-21: ツール＞ブラウザーツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
 
     :1: 無効化する
 

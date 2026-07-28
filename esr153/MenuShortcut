@@ -172,7 +172,7 @@ MenuShortcut-20: [廃止] ツール＞その他のツール＞WebIDE (Shift-F8)
 
     [廃止] Firefox 71でWebIDEが削除されたため廃止
 
-MenuShortcut-21: ツール＞その他のツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
+MenuShortcut-21: ツール＞ブラウザーツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
 
     :1: 無効化する
 
