@@ -59,13 +59,6 @@ MenuShortcut-13: Webコンソール (Ctrl-Shift-K)
     DISABLED_SHORTCUT: 「Ctrl-Shift-K」でWebコンソールが開かれない。
     DISABLED_DEVTOOL_MENU: 「Webコンソール」が存在しない。
 
-MenuShortcut-14: ツール＞その他のツール＞デバッガー (Ctrl-Shift-S)
-
-    :1: 無効化する
-
-    DISABLED_SHORTCUT: 「Ctrl-Shift-S」でデバッガーが開かれない。
-    DISABLED_DEVTOOL_MENU: 「デバッガー」が存在しない。
-
 MenuShortcut-15: スタイルエディター (Shift-F7)
 
     :1: 無効化する
@@ -86,13 +79,6 @@ MenuShortcut-17: ネットワーク (Ctrl-Shift-E)
 
     DISABLED_SHORTCUT: 「Ctrl-Shift-E」でネットワークモニターが開かれない。
     DISABLED_DEVTOOL_MENU: 「ネットワークモニター」が存在しない。
-
-MenuShortcut-18: ツール＞その他のツール＞開発ツールバー (Shift-F2)
-
-    :1: 無効化する
-
-    DISABLED_SHORTCUT: 「Shitf-F2」で開発ツールバーが開かれない。
-    DISABLED_DEVTOOL_MENU: 「開発ツールバー」が存在しない。
 
 MenuShortcut-21: ツール＞ブラウザーツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
 
@@ -120,31 +106,6 @@ MenuShortcut-24: ツール＞ブラウザーツール＞スポイト
     :1: 無効化する
 
     DISABLED_DEVTOOL_MENU: 「スポイト」が存在しない。
-
-MenuShortcut-25: ツール＞その他のツール＞スクラッチパッド (Shift-F4)
-
-    :1: 無効化する
-
-    DISABLED_SHORTCUT: 「Shift-F4」でスクラッチパッドが開かれない。
-    DISABLED_DEVTOOL_MENU: 「スクラッチパッド」が存在しない。
-
-MenuShortcut-26: ツール＞その他のツール＞ページのソース (Ctrl-U)
-
-    :1: 無効化する
-
-    DISABLED_DEVTOOL_MENU: 「ページのソース」が存在しない。
-
-MenuShortcut-28: ツール＞その他のツール＞接続...
-
-    :1: 無効化する
-
-    DISABLED_DEVTOOL_MENU: 「接続...」が存在しない。
-
-MenuShortcut-29: ツール＞その他のツール＞その他のツールを入手
-
-    :1: 無効化する
-
-    DISABLED_DEVTOOL_MENU: 「その他のツールを入手」が存在しない。
 
 MenuShortcut-35: ヘルプ＞他のトラブルシューティング情報
 
@@ -196,23 +157,6 @@ MenuShortcut-38: ヘルプ＞詐欺サイトを報告
     - **確認**
         - 「詐欺サイトを報告」が存在しないか無効化されている。
 
-MenuShortcut-39: ヘルプ＞誤警告を報告
-
-    :1: 無効化する
-
-    {%if not Security_6_2 %}
-    - Firefoxを起動する。
-    - `https://itisatrap.org/firefox/its-a-trap.html` を開く。
-    - 「ヘルプ」メニューを開く。
-    - **確認**
-        - 「詐欺サイトの誤警告を指摘」が存在しないか無効化されている。
-    - パネルメニューを開き、パネルメニュー内の「ヘルプ」をクリックする。
-    - **確認**
-        - 「詐欺サイトの誤警告を指摘」が存在しないか無効化されている。
-    {% else %}
-    - 機能が無効のため、検証を省略する。
-    {% endif %}
-
 MenuShortcut-44: ブックマーク＞ブックマークツールバー（およびそれに付随する各項目）
 
     :1: 無効化する
@@ -251,18 +195,6 @@ MenuShortcut-57: コンテンツ領域のコンテキストメニュー＞調査
     - ページ内の、画像や文字が無い空白領域で右クリックする。
     - **確認**
         - 「調査」が存在しない。
-
-MenuShortcut-64: ツール＞その他のツール＞Service Worker
-
-    :1: 無効化する
-
-    DISABLED_DEVTOOL_MENU: 「Service Worker」が存在しない。
-
-MenuShortcut-65: ツール＞その他のツール＞ブラウザーコンテンツツールボックス
-
-    :1: 無効化する
-
-    DISABLED_DEVTOOL_MENU: 「ブラウザーコンテンツツールボックス」が存在しない。
 
 MenuShortcut-66: パネルメニュー＞動作しないサイトを報告
 

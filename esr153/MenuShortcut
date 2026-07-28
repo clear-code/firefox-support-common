@@ -105,16 +105,11 @@ MenuShortcut-13: Webコンソール (Ctrl-Shift-K)
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-14: ツール＞その他のツール＞デバッガー (Ctrl-Shift-S)
+MenuShortcut-14: [廃止] ツール＞その他のツール＞デバッガー (Ctrl-Shift-S)
 
-    :1: 無効化する
+    :1: [廃止] 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    [廃止]
 
 MenuShortcut-15: スタイルエディター (Shift-F7)
 
@@ -149,16 +144,11 @@ MenuShortcut-17: ネットワーク (Ctrl-Shift-E)
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-18: ツール＞その他のツール＞開発ツールバー (Shift-F2)
+MenuShortcut-18: [廃止] ツール＞その他のツール＞開発ツールバー (Shift-F2)
 
-    :1: 無効化する
+    :1: [廃止] 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    [廃止]
 
 MenuShortcut-19: [廃止] ツール＞その他のツール＞アプリマネージャ (Firefox 38で廃止)
 
@@ -216,16 +206,11 @@ MenuShortcut-24: ツール＞ブラウザーツール＞スポイト
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-25: ツール＞その他のツール＞スクラッチパッド (Shift-F4)
+MenuShortcut-25: [廃止] ツール＞その他のツール＞スクラッチパッド (Shift-F4)
 
-    :1: 無効化する
+    :1: [廃止] 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    [廃止]
 
 MenuShortcut-26: [廃止] ツール＞その他のツール＞ページのソース (Ctrl-U)
 
@@ -240,27 +225,17 @@ MenuShortcut-27: [廃止] ツール＞その他のツール＞エラーコンソ
 
     [廃止]
 
-MenuShortcut-28: ツール＞その他のツール＞接続...
+MenuShortcut-28: [廃止] ツール＞その他のツール＞接続...
 
-    :1: 無効化する
+    :1: [廃止] 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
+    [廃止]
 
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+MenuShortcut-29: [廃止] ツール＞その他のツール＞その他のツールを入手
 
-MenuShortcut-29: ツール＞その他のツール＞その他のツールを入手
+    :1: [廃止] 無効化する
 
-    :1: 無効化する
-
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    [廃止]
 
 MenuShortcut-30: [廃止] ヘルプ＞Firefoxヘルプ（旧バージョンでは「ヘルプ」）
 
@@ -336,18 +311,11 @@ MenuShortcut-38: ヘルプ＞詐欺サイトを報告
     カテゴリ「Firefox」
     → 「Disable Feedback Commands」を有効化
 
-MenuShortcut-39: ヘルプ＞誤警告を報告
+MenuShortcut-39: [廃止] ヘルプ＞誤警告を報告
 
-    :1: 無効化する
+    :1: [廃止] 無効化する
 
-    // Security-6-2 選択時は指定不要
-
-    distribution\policies.json:
-    "DisableFeedbackCommands": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Feedback Commands」を有効化
+    [廃止]
 
 MenuShortcut-40: [廃止] ヘルプ＞Firefoxについて のセパレータ
 
@@ -504,27 +472,17 @@ MenuShortcut-63: [廃止] コンテンツ領域のコンテキストメニュー
 
     [廃止]
 
-MenuShortcut-64: ツール＞その他のツール＞Service Worker
+MenuShortcut-64: [廃止] ツール＞その他のツール＞Service Worker
 
-    :1: 無効化する
+    :1: [廃止] 無効化する
 
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
+    [廃止]
 
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+MenuShortcut-65: [廃止] ツール＞その他のツール＞ブラウザーコンテンツツールボックス
 
-MenuShortcut-65: ツール＞その他のツール＞ブラウザーコンテンツツールボックス
+    :1: [廃止] 無効化する
 
-    :1: 無効化する
-
-    distribution\policies.json:
-    "DisableDeveloperTools": true,
-
-    GPO:
-    カテゴリ「Firefox」
-    → 「Disable Developer Tools」を有効化
+    [廃止]
 
 MenuShortcut-66: パネルメニュー＞動作しないサイトを報告
 
