@@ -45,14 +45,14 @@ MenuShortcut-11: ツール＞ブラウザーツール＞ウェブ開発ツール
     DISABLED_SHORTCUT: 「F12」で開発ツールが開かれない。
     DISABLED_DEVTOOL_MENU: 「ウェブ開発ツール」が存在しない。
 
-MenuShortcut-12: ツール＞その他のツール＞インスペクタ (Ctrl-Shift-C)
+MenuShortcut-12: インスペクタ (Ctrl-Shift-C)
 
     :1: 無効化する
 
     DISABLED_SHORTCUT: 「Ctrl-Shift-C」でインスペクタが開かれない。
     DISABLED_DEVTOOL_MENU: 「インスペクタ」が存在しない。
 
-MenuShortcut-13: ツール＞その他のツール＞Webコンソール (Ctrl-Shift-K)
+MenuShortcut-13: Webコンソール (Ctrl-Shift-K)
 
     :1: 無効化する
 
@@ -66,21 +66,21 @@ MenuShortcut-14: ツール＞その他のツール＞デバッガー (Ctrl-Shift
     DISABLED_SHORTCUT: 「Ctrl-Shift-S」でデバッガーが開かれない。
     DISABLED_DEVTOOL_MENU: 「デバッガー」が存在しない。
 
-MenuShortcut-15: ツール＞その他のツール＞スタイルエディタ (Shift-F7)
+MenuShortcut-15: スタイルエディター (Shift-F7)
 
     :1: 無効化する
 
-    DISABLED_SHORTCUT: 「Shift-F7」でスタイルエディタが開かれない。
-    DISABLED_DEVTOOL_MENU: 「スタイルエディタ」が存在しない。
+    DISABLED_SHORTCUT: 「Shift-F7」でスタイルエディターが開かれない。
+    DISABLED_DEVTOOL_MENU: 「スタイルエディター」が存在しない。
 
-MenuShortcut-16: ツール＞その他のツール＞パフォーマンス（旧バージョンでは「プロファイラ」） (Shift-F5)
+MenuShortcut-16: パフォーマンス (Shift-F5)
 
     :1: 無効化する
 
     DISABLED_SHORTCUT: 「Shift-F5」でプロファイラが開かれない。
     DISABLED_DEVTOOL_MENU: 「パフォーマンス」が存在しない。
 
-MenuShortcut-17: ツール＞その他のツール＞ネットワーク (Ctrl-Shift-E)
+MenuShortcut-17: ネットワーク (Ctrl-Shift-E)
 
     :1: 無効化する
 

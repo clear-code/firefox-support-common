@@ -83,7 +83,7 @@ MenuShortcut-11: ツール＞ブラウザーツール＞ウェブ開発ツール
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-12: ツール＞その他のツール＞インスペクタ (Ctrl-Shift-C)
+MenuShortcut-12: インスペクタ (Ctrl-Shift-C)
 
     :1: 無効化する
 
@@ -94,7 +94,7 @@ MenuShortcut-12: ツール＞その他のツール＞インスペクタ (Ctrl-Sh
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-13: ツール＞その他のツール＞Webコンソール (Ctrl-Shift-K)
+MenuShortcut-13: Webコンソール (Ctrl-Shift-K)
 
     :1: 無効化する
 
@@ -116,7 +116,7 @@ MenuShortcut-14: ツール＞その他のツール＞デバッガー (Ctrl-Shift
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-15: ツール＞その他のツール＞スタイルエディタ (Shift-F7)
+MenuShortcut-15: スタイルエディター (Shift-F7)
 
     :1: 無効化する
 
@@ -127,7 +127,7 @@ MenuShortcut-15: ツール＞その他のツール＞スタイルエディタ (S
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-16: ツール＞その他のツール＞パフォーマンス（旧バージョンでは「プロファイラ」） (Shift-F5)
+MenuShortcut-16: パフォーマンス (Shift-F5)
 
     :1: 無効化する
 
@@ -138,7 +138,7 @@ MenuShortcut-16: ツール＞その他のツール＞パフォーマンス（旧
     カテゴリ「Firefox」
     → 「Disable Developer Tools」を有効化
 
-MenuShortcut-17: ツール＞その他のツール＞ネットワーク (Ctrl-Shift-E)
+MenuShortcut-17: ネットワーク (Ctrl-Shift-E)
 
     :1: 無効化する
 
