@@ -2184,7 +2184,7 @@ Privacy-79: 未知のフィンガープリント採取と疑わしい情報ア�
 
     ABOUT_POLICIES
 
-    - `EnableTrackingProtection` およびその配下の `SuspectedFingerprinting` の値が存在しないか、空である。
+    - `EnableTrackingProtection` 配下の `SuspectedFingerprinting` の値が存在しないか、空である。または、`EnableTrackingProtection`が存在しない。
 
     :2: 防止しない
 
