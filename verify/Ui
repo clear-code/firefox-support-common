@@ -17,13 +17,13 @@ Ui-1: Firefox組み込みのPDFビューアの使用可否
 
     OPTIONS
 
-    - 「一般」→「ファイルとプログラム」→「プログラム」でファイルの種類「PDF文書（PDF）」、「Adobe Acrobat Document」、「Portable Document Format (PDF)」、または「PDFファイル」の取り扱い方法が「Firefoxで開く」となっている。
+    - 「ダウンロード」→「ファイルとプログラム」→「プログラム」でファイルの種類「PDF文書（PDF）」、「Adobe Acrobat Document」、「Portable Document Format (PDF)」、または「PDFファイル」の取り扱い方法が「Firefoxで開く」となっている。
 
     :3: 禁止する
 
     OPTIONS
 
-    - 「一般」→「ファイルとプログラム」→「プログラム」でファイルの種類「PDF文書（PDF）」、「Adobe Acrobat Document」、「Portable Document Format (PDF)」、または「PDFファイル」の取り扱い方法の選択肢に「Firefoxで開く」が存在しない。
+    - 「ダウンロード」→「ファイルとプログラム」→「プログラム」でファイルの種類「PDF文書（PDF）」、「Adobe Acrobat Document」、「Portable Document Format (PDF)」、または「PDFファイル」の取り扱い方法の選択肢に「Firefoxで開く」が存在しない。
 
 Ui-2: F7キーによるキャレットブラウズモードの開始の可否
 
