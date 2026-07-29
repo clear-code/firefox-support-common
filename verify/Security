@@ -438,7 +438,9 @@ Security-15: その他、バックグラウンドで行われる外部への通�
                  - `https://firefox-settings-attachments.cdn.mozilla.net/~`
                  - `https://content-signature.cdn.mozilla.net/～`
                  - `https://content-signature-2.cdn.mozilla.net/～`
-                 - `https://safebrowsing.googleapis.com/v4/～`
+                 - `https://safebrowsing.googleapis.com/～`
+                 - `https://update.googleapis.com/～`
+                 - `https://www.google.com/～`
                  - `https://shaver.services.mozila.com/～`
                  - `https://services.addons.mozilla.org/api/v4/addons/search/?guid=～`（`extensions.getAddons.get.url` で参照される、アドオンの対応バージョンなどのメタ情報取得用の通信）
                  - `https://location.services.mozilla.com/v1/country?key=～`（`browser.region.network.url` で参照される、使用地域判定用の通信）
