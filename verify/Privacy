@@ -2209,6 +2209,8 @@ Privacy-81: 位置情報の取得時に、必要なシステムレベルの許�
     :1: システムでの許可を自動的に求める（既定）
 
     - Windowsの設定→「プライバシーとセキュリティ」→「位置情報」を開き、「アプリに位置情報へのアクセスを許可する」をオフにする。
+    {%if Privacy_14_8 %}- ポリシー設定の `Permissions`→`Location`→`Allow` に、テストケースの `browser.html` のFile URL（`C:\Users\Public\testcases\browser.html` の位置に設置したのであれば `file:///C:/Users/Public/testcases/browser.html`）を追加する。
+    {% endif %}
     - Firefoxを起動する。
     - テストケースの `browser.html` を開く。
     - 「geolocation」欄の「exec」をクリックする。
@@ -2216,10 +2218,14 @@ Privacy-81: 位置情報の取得時に、必要なシステムレベルの許�
     - **確認**
         - システムの位置情報アクセスの設定画面が開かれる。
     - Windowsの設定→「プライバシーとセキュリティ」→「位置情報」を開き、「アプリに位置情報へのアクセスを許可する」を元に戻す。
+    {%if Privacy_14_8 %}- ポリシー設定の `Permissions`→`Location`→`Allow` から、テストケースの `browser.html` のFile URLを削除する。
+    {% endif %}
 
     :2: システムでの許可を求めず、位置情報の取得を断念させる
 
     - Windowsの設定→「プライバシーとセキュリティ」→「位置情報」を開き、「アプリに位置情報へのアクセスを許可する」をオフにする。
+    {%if Privacy_14_8 %}- ポリシー設定の `Permissions`→`Location`→`Allow` に、テストケースの `browser.html` のFile URL（`C:\Users\Public\testcases\browser.html` の位置に設置したのであれば `file:///C:/Users/Public/testcases/browser.html`）を追加する。
+    {% endif %}
     - Firefoxを起動する。
     - テストケースの `browser.html` を開く。
     - 「geolocation」欄の「exec」をクリックする。
@@ -2227,6 +2233,8 @@ Privacy-81: 位置情報の取得時に、必要なシステムレベルの許�
     - **確認**
         - システムの位置情報アクセスの設定画面が開かれない。
     - Windowsの設定→「プライバシーとセキュリティ」→「位置情報」を開き、「アプリに位置情報へのアクセスを許可する」を元に戻す。
+    {%if Privacy_14_8 %}- ポリシー設定の `Permissions`→`Location`→`Allow` から、テストケースの `browser.html` のFile URLを削除する。
+    {% endif %}
 
 Privacy-82: プライベートウィンドウでのセッション情報の即時消去操作
 
