@@ -324,12 +324,9 @@ def create_template(manual, config, vars, options):
 
     vars['DisableDeveloperTools'] = anyof(vars,
         'MenuShortcut_10_1', 'MenuShortcut_11_1', 'MenuShortcut_12_1',
-        'MenuShortcut_13_1', 'MenuShortcut_14_1', 'MenuShortcut_15_1',
-        'MenuShortcut_16_1', 'MenuShortcut_17_1', 'MenuShortcut_18_1',
-        'MenuShortcut_21_1', 'MenuShortcut_22_1', 'MenuShortcut_23_1',
-        'MenuShortcut_24_1', 'MenuShortcut_25_1', 'MenuShortcut_26_1',
-        'MenuShortcut_28_1', 'MenuShortcut_29_1', 'MenuShortcut_57_1',
-        'MenuShortcut_64_1', 'MenuShortcut_65_1')
+        'MenuShortcut_13_1', 'MenuShortcut_15_1', 'MenuShortcut_16_1',
+        'MenuShortcut_17_1', 'MenuShortcut_21_1', 'MenuShortcut_22_1',
+        'MenuShortcut_23_1', 'MenuShortcut_24_1', 'MenuShortcut_57_1')
 
     vars['not DisableDeveloperTools'] = not vars['DisableDeveloperTools']
 
