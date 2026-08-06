@@ -30,9 +30,6 @@ MenuShortcut-10: ツール＞ブラウザーツール（開発ツールボタン
     :1: 無効化する
 
     - Firefoxを起動する。
-    - 「ツール」メニューを開く。
-    - **確認**
-        - 「ブラウザーツール」に「ウェブ開発ツール」が存在しない。
     - パネルメニュー内の「その他のツール」→「ツールバーをカスタマイズ」をクリックしてツールバーのカスタマイズ画面を開く。
     - **確認**
         - 「開発ツール」が存在しない。
@@ -41,8 +38,8 @@ MenuShortcut-11: ツール＞ブラウザーツール＞ウェブ開発ツール
 
     :1: 無効化する
 
-    DISABLED_SHORTCUT: 「Ctrl-Shift-I」で開発ツールが開かれない。
-    DISABLED_SHORTCUT: 「F12」で開発ツールが開かれない。
+    DISABLED_SHORTCUT: 「Ctrl-Shift-I」でウェブ開発ツールが開かれない。
+    DISABLED_SHORTCUT: 「F12」でウェブ開発ツールが開かれない。
     DISABLED_DEVTOOL_MENU: 「ウェブ開発ツール」が存在しない。
 
 MenuShortcut-12: インスペクタ (Ctrl-Shift-C)
@@ -70,7 +67,7 @@ MenuShortcut-16: パフォーマンス (Shift-F5)
 
     :1: 無効化する
 
-    DISABLED_SHORTCUT: 「Shift-F5」でプロファイラが開かれない。
+    DISABLED_SHORTCUT: 「Shift-F5」で「パフォーマンス」が開かれない。
     DISABLED_DEVTOOL_MENU: 「パフォーマンス」が存在しない。
 
 MenuShortcut-17: ネットワーク (Ctrl-Shift-E)
@@ -78,7 +75,7 @@ MenuShortcut-17: ネットワーク (Ctrl-Shift-E)
     :1: 無効化する
 
     DISABLED_SHORTCUT: 「Ctrl-Shift-E」でネットワークモニターが開かれない。
-    DISABLED_DEVTOOL_MENU: 「ネットワークモニター」が存在しない。
+    DISABLED_DEVTOOL_MENU: 「ネットワーク」が存在しない。
 
 MenuShortcut-21: ツール＞ブラウザーツール＞ブラウザーツールボックス (Ctrl-Shift-Alt-I)
 
@@ -98,8 +95,8 @@ MenuShortcut-23: ツール＞ブラウザーツール＞レスポンシブデザ
 
     :1: 無効化する
 
-    DISABLED_SHORTCUT: 「Ctrl-Shift-M」でレスポンシブデザインビューが開かれない。
-    DISABLED_DEVTOOL_MENU: 「レスポンシブデザインビュー」が存在しない。
+    DISABLED_SHORTCUT: 「Ctrl-Shift-M」でレスポンシブデザインモードが開かれない。
+    DISABLED_DEVTOOL_MENU: 「レスポンシブデザインモード」が存在しない。
 
 MenuShortcut-24: ツール＞ブラウザーツール＞スポイト
 
