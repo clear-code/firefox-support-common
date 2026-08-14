@@ -1943,9 +1943,6 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
 
     :1: クロスサイトでの送信を常に許可 (既定）
 
-    *.cfg / *.jsc:
-    lockPref("network.cookie.sameSite.laxByDefault", false);
-
     distribution\policies.json:
     "LegacySameSiteCookieBehaviorEnabled": true,
 
@@ -1955,9 +1952,6 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
 
     :2: クロスサイトでの送信をサブリソースに対しては禁止する
 
-    *.cfg / *.jsc:
-    lockPref("network.cookie.sameSite.laxByDefault", true);
-
     distribution\policies.json:
     "LegacySameSiteCookieBehaviorEnabled": false,
 
@@ -1966,10 +1960,6 @@ Privacy-64: SameSite指定が無いCookieの取り扱い
     →「Revert to legacy SameSite behavior」を無効化
 
     :3: クロスサイトでの送信をサブリソースに対しては禁止し、特定サイトでのみクロスサイトでの送信を常に許可
-
-    *.cfg / *.jsc:
-    lockPref("network.cookie.sameSite.laxByDefault", true);
-    lockPref("network.cookie.sameSite.laxByDefault.disabledHosts", "example.com,example.org,...");
 
     distribution\policies.json:
     "LegacySameSiteCookieBehaviorEnabled": false,
