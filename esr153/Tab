@@ -589,11 +589,6 @@ Tab-20: 新規タブに「Firefoxにようこそ」メッセージを表示す�
 
     :2: 表示しない
 
-    // Firefox ESR78.0では機能しない
-    // Firefox ESR78.1.0以降は、Privacy-22-2 または Privacy-24-3 選択時には常にこの動作となる
-    *.cfg / *.jsc:
-    lockPref("trailhead.firstrun.branches", "nofirstrun-empty");
-
     distribution\policies.json:
     "UserMessaging": {
       "SkipOnboarding": true,

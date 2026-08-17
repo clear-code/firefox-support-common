@@ -465,17 +465,15 @@ Tab-20: 新規タブに「Firefoxにようこそ」メッセージを表示す�
 
     :1: 表示する（既定）
 
-    - Firefoxを起動する。
-    - 新しい空のタブを開く。
-    - **確認**
-        - 新規タブページの最上部に「Firefoxにようこそ」が表示されている。
+    ABOUT_POLICIES
+
+    - `UserMessaging` 配下の `SkipOnboarding` が存在しないか、値が `false` である。
 
     :2: 表示しない
 
-    - Firefoxを起動する。
-    - 新しい空のタブを開く。
-    - **確認**
-        - 新規タブページの最上部に「Firefoxにようこそ」が表示されていない。
+    ABOUT_POLICIES
+
+    - `UserMessaging` 配下の `SkipOnboarding` の値が `true` である。
 
 Tab-21: Mozillaの契約パートナーが提供するトップサイトの表示
 
