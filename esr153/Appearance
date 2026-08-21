@@ -538,6 +538,8 @@ Appearance-26: プライベート翻訳機能の使用可否
 
     :1: 許可する（既定）
 
+    Security-15-2 選択時は共存不可。
+
     // Ui-27-2 選択時に設定要。
     distribution\policies.json:
     "AIControls": {
