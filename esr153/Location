@@ -250,13 +250,13 @@ Location-11: カラーピッカーの使用可否
 
     :1: 使用する（既定）
 
-    Privacy-17-3、MenuShortcut-10～18、MenuShortcut-21～25、MenuShortcut-28～29、MenuShortcut-57のいずれかの選択時は共存不可。
+    Privacy-17-3、MenuShortcut-10～17、MenuShortcut-21～24、MenuShortcut-57のいずれかの選択時は共存不可。
 
     -
 
     :2: 使用しない
 
-    MenuShortcut-10～18、MenuShortcut-21～25、MenuShortcut-28～29、MenuShortcut-57が連動して選択される。
+    MenuShortcut-10～17、MenuShortcut-21～24、MenuShortcut-57が連動して選択される。
 
     distribution\policies.json:
     "DisableDeveloperTools": true,
