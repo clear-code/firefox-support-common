@@ -764,3 +764,20 @@ MenuShortcut-82: タブのコンテキストメニュー＞タブを解放
     GPO:
     カテゴリ「Firefox」
     →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
+
+MenuShortcut-83: タブのコンテキストメニュー＞共有，ファイル＞共有
+
+    :1: 無効化する
+
+    distribution\policies.json:
+    "Preferences": {
+      "browser.menu.share_url.allow": {
+        "Value": false,
+        "Status": "locked"
+      },
+      ...
+    },
+
+    GPO:
+    カテゴリ「Firefox」
+    →「Preferences」を有効化し、policies.jsonのPreferencesに設定する内容と同等のJSON文字列を設定
