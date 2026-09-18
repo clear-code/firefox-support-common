@@ -2210,15 +2210,15 @@ Privacy-79: 未知のフィンガープリント採取と疑わしい情報ア�
 
 Privacy-80: トラッカーなどのWebサイトのスクリプトによるローカルネットワークリソースへのアクセス可否
 
-    :1: 強化型トラッキング防止機能の「厳格」モードでのみ、ユーザーへ確認を求めた上で許容し、それ以外の場合は常に許容する（既定）
+    :1: ユーザーへ確認を求めた上で許容する（既定）
 
     -
 
-    :2: ユーザーへ確認を求めた上で許容する
+    :2: ユーザーへ確認を求めず常に許容する
 
     distribution\policies.json:
     "LocalNetworkAccess": {
-      "Enabled": true,
+      "Enabled": false,
       "BlockTrackers": true,
       "EnablePrompting": true,
       "Locked": true,
@@ -2227,13 +2227,11 @@ Privacy-80: トラッカーなどのWebサイトのスクリプトによるロ�
 
     GPO:
     カテゴリ「Firefox」→「Local Network Access」
-    → 「Enabled」を有効化
+    → 「Enabled」を無効化
     → 「Block trackers」を有効化
     → 「Enable prompting」を有効化
 
-    -
-
-    :3: 常に遮断する
+    :3: ユーザーへ確認を求めず常に遮断する
 
     distribution\policies.json:
     "LocalNetworkAccess": {
