@@ -60,7 +60,7 @@ variable "windows-language-pack-url" {
 }
 variable "firefox-policy-template-url" {
     type        = string
-    default     = "https://github.com/mozilla/policy-templates/releases/download/v4.12/policy_templates_v4.12.zip"
+    default     = "https://github.com/mozilla/policy-templates/releases/download/v8.3/policy_templates_v8.3.zip"
 }
 variable "thunderbird-policy-template-url" {
     type        = string
